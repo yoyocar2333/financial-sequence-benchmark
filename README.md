@@ -27,7 +27,7 @@ The broader project has two different prediction tasks:
 
 Keeping them separate avoids mixing targets, metrics, and experimental assumptions while still presenting them as two branches of one research project.
 
-Companion repository: https://github.com/yoyocar2333/stock2
+Companion repository: https://github.com/yoyocar2333/stockllm-pit-news
 
 ## Research-integrity decisions
 
