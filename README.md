@@ -16,7 +16,7 @@ Models:
 - Mamba
 - Multi-scale LSTM Hybrid
 
-Primary metric: **MAPE**.
+Primary metric: **MAPE**.\n\nRecorded result table: [RESULTS.md](RESULTS.md).
 
 ## Why this repository is separate
 
