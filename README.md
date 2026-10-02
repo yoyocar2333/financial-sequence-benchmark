@@ -1,11 +1,14 @@
-# Stock Market Sequence Model Benchmark
+# Market-Model Benchmark — Financial Time-Series Forecasting
 
-This repository contains the **structured market-data branch** of my undergraduate research project on financial time-series prediction.
+Structured-data branch of my undergraduate research project on high-noise financial time series.
 
-The project compares classical machine learning, regime-aware models, recurrent neural networks, and selective state-space models under the same chronological evaluation setup.
+This repository compares classical machine learning, latent-regime modeling, recurrent neural networks, and selective state-space models under one chronological evaluation framework.
 
-## Models
+## Research task
 
+**Next-trading-day price regression** on AAPL and TSLA.
+
+Models:
 - Naive persistence baseline
 - XGBoost
 - Gaussian HMM + Decision Tree
@@ -13,53 +16,45 @@ The project compares classical machine learning, regime-aware models, recurrent 
 - Mamba
 - Multi-scale LSTM Hybrid
 
-## Task
-
-**Next-trading-day price regression** for AAPL and TSLA.
-
 Primary metric: **MAPE**.
 
-## Research emphasis
+## Why this repository is separate
 
-The goal is not to claim that a more complex model is always better. The notebook emphasizes:
+The broader project has two different prediction tasks:
 
-- chronological evaluation instead of random train/test splitting;
-- strong simple baselines;
-- causal rolling features without backward filling;
-- real `mamba_ssm` execution with no identity fallback;
-- clear separation between the price-regression branch and the news/LLM branch;
-- reproducible daily predictions and optional multi-seed stability analysis.
+1. **Structured market data → next-day price regression** — this repository.
+2. **Financial news → next-day direction classification** — companion StockLLM repository.
 
-## Important cleanup from the exploratory notebook
+Keeping them separate avoids mixing targets, metrics, and experimental assumptions while still presenting them as two branches of one research project.
 
-The public notebook intentionally removes several exploratory components that are not valid research evidence:
+Companion repository: https://github.com/yoyocar2333/stock2
 
-1. an early prototype sentiment feature that used `future_return` and therefore caused look-ahead leakage;
-2. an old Mamba import fallback that behaved like an identity layer when `mamba_ssm` was unavailable;
-3. simulated prediction-trajectory visualizations.
+## Research-integrity decisions
 
-The resulting notebook keeps only the auditable market-model benchmark.
+The public notebook was cleaned before publication:
 
-## Repository structure
+- chronological evaluation only;
+- rolling features are never back-filled from future observations;
+- a real `mamba_ssm` model is required — no identity fallback;
+- an earlier prototype sentiment feature that used `future_return` was removed because it introduced look-ahead leakage;
+- simulated prediction trajectories were removed;
+- HMM+DT is described accurately as Gaussian HMM + Decision Tree, not as a full HHMM reproduction;
+- the multi-scale Hybrid is a moving-average decomposition inspired by decomposition methods, not MEMD.
 
-```
-notebooks/
-  stock_market_models.ipynb
-README.md
-requirements.txt
-.gitignore
-```
+## Quick start
 
-## Companion project
+Open:
 
-The non-structured news branch — Gemini, FinBERT, Point-in-Time alignment, Time Decay, paired evaluation, and Market + News fusion — is maintained separately in:
+`notebooks/stock_market_models.ipynb`
 
-**StockLLM / news prediction:** https://github.com/yoyocar2333/stock2
+The notebook downloads market data with `yfinance`, trains each model chronologically, exports daily predictions and a MAPE summary to `outputs/`.
 
-Together, the two repositories correspond to one broader research project: structured market modeling + non-structured news information fusion.
+Recommended environment: Google Colab or a CUDA-enabled Python environment compatible with `mamba-ssm`.
 
-## Notes
+## Reproducibility
 
-- The HMM implementation is Gaussian HMM + Decision Tree, inspired by regime-aware hybrid forecasting literature; it is not a full HHMM + rough-set reproduction.
-- The multi-scale Hybrid uses a lightweight moving-average decomposition and should not be interpreted as MEMD.
-- This repository is for research and reproducibility, not trading advice.
+The notebook controls random seeds and includes an optional multi-seed stability diagnostic for LSTM, Mamba and the Hybrid model.
+
+## Limitations
+
+AAPL/TSLA and one fixed month are not sufficient to establish universal model superiority. The repository is intended as an auditable benchmark and research artifact, not as trading advice.
