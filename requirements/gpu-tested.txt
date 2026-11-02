@@ -1,0 +1,10 @@
+# Recorded tested stack, not a universal wheel/build installation recipe.
+# Keep the existing E0 requirements.txt separate. See docs/REPRODUCIBILITY.md.
+torch==2.6.0+cu124
+mamba-ssm==2.2.4
+causal-conv1d==1.5.0.post8
+triton==3.2.0
+einops==0.8.1
+transformers==4.48.3
+xgboost-cpu==3.0.5
+lightgbm==4.6.0

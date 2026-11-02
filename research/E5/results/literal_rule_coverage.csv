@@ -1,0 +1,15 @@
+ticker,method,active_n,coverage,active_direction_accuracy,literal_position
+AAPL,bollinger,63,0.13070539419087138,0.5555555555555556,long if raw score>0 else cash; distinct from calibrated forecasts
+AAPL,breakout_volume,19,0.03941908713692946,0.42105263157894735,long if raw score>0 else cash; distinct from calibrated forecasts
+AAPL,ma20_60,482,1.0,0.578838174273859,long if raw score>0 else cash; distinct from calibrated forecasts
+AAPL,macd,482,1.0,0.45643153526970953,long if raw score>0 else cash; distinct from calibrated forecasts
+AAPL,relative_strength,482,1.0,0.4979253112033195,long if raw score>0 else cash; distinct from calibrated forecasts
+AAPL,rsi14,68,0.14107883817427386,0.6176470588235294,long if raw score>0 else cash; distinct from calibrated forecasts
+AAPL,rule_hybrid,482,1.0,0.5414937759336099,long if raw score>0 else cash; distinct from calibrated forecasts
+TSLA,bollinger,59,0.12240663900414937,0.4067796610169492,long if raw score>0 else cash; distinct from calibrated forecasts
+TSLA,breakout_volume,20,0.04149377593360996,0.4,long if raw score>0 else cash; distinct from calibrated forecasts
+TSLA,ma20_60,482,1.0,0.47925311203319504,long if raw score>0 else cash; distinct from calibrated forecasts
+TSLA,macd,482,1.0,0.5435684647302904,long if raw score>0 else cash; distinct from calibrated forecasts
+TSLA,relative_strength,482,1.0,0.5062240663900415,long if raw score>0 else cash; distinct from calibrated forecasts
+TSLA,rsi14,67,0.13900414937759337,0.373134328358209,long if raw score>0 else cash; distinct from calibrated forecasts
+TSLA,rule_hybrid,482,1.0,0.47717842323651455,long if raw score>0 else cash; distinct from calibrated forecasts

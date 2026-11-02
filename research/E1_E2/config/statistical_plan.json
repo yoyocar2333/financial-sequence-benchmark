@@ -1,0 +1,42 @@
+{
+  "stage": "exploratory stability on already-inspected 2024-2025 sample; not preregistration or new confirmation",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "new_training_seeds": [
+    43,
+    44,
+    45,
+    46
+  ],
+  "loss_differential": "abs(error_E1) - abs(error_E2b); positive favors E2b",
+  "hypothesis": "two-sided zero mean daily absolute-loss differential",
+  "primary_inference": "Newey-West/Bartlett HAC, fixed lag 10, normal approximation, no small-sample correction",
+  "bootstrap": "circular fixed-length blocks of consecutive retained trading observations; all paired losses kept together",
+  "bootstrap_replicates": 9999,
+  "bootstrap_rng_seed": 20261020,
+  "primary_block_length": 10,
+  "sensitivity_lengths": [
+    5,
+    20
+  ],
+  "bootstrap_p": "null-centered bootstrap mean, two-sided absolute statistic, plus-one Monte Carlo correction",
+  "bootstrap_ci": "basic 95% interval, nominal not simultaneous",
+  "multiplicity": "one pre-specified family of 12 comparisons (2 tickers x [5 same-seed pairs + daily seed-average]); Holm across 12 separately for each fixed method/bandwidth",
+  "decision_rule": "primary HAC lag10 Holm-adjusted p<0.05; bootstrap is corroboration, not an alternative significance selector",
+  "aggregate_unit": "501 dates; average five same-date seed loss differentials before HAC/bootstrap; never pool seeds as independent days",
+  "seed_sd": "sample standard deviation ddof=1 across five seeds; not a test-data standard error",
+  "extremes": "same training-target p95 thresholds as seed42; retrospective outcome stratum",
+  "market_regimes": "cutoff VXN >= training VXN p75 versus lower; year2024/year2025; descriptive only, no regime p-value selection",
+  "nonstationarity_limit": "HAC/bootstrap require weak dependence/approximate stationarity; regime shifts and small tail samples limit inference",
+  "references": [
+    "https://www.statsmodels.org/stable/generated/statsmodels.stats.sandwich_covariance.cov_hac.html",
+    "https://bashtage.github.io/arch/bootstrap/generated/arch.bootstrap.CircularBlockBootstrap.html",
+    "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html"
+  ],
+  "frozen_utc": "2026-10-19T16:30:00.773229+00:00"
+}

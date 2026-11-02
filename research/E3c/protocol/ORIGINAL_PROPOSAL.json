@@ -1,0 +1,63 @@
+{
+  "status": "PROPOSAL_ONLY_NOT_EXECUTED",
+  "created_utc": "2026-10-26T05:23:45.569606+00:00",
+  "reason": "No confirmed timing signal in E3c; optional one-time independent verification must be registered before any2026 inspection",
+  "candidate": "same XGBoost gated-event family for BOTH stocks, not test-ranked AAPL-XGB/TSLA-LR mixture",
+  "nomination_basis": "XGBoost joint pre-test expanding CV Brier lower than LR in both stocks; model-family choice is a proposal, not independent evidence",
+  "configs": {
+    "AAPL": {
+      "max_depth": 2,
+      "min_child_weight": 20,
+      "n_estimators": 100,
+      "reg_lambda": 20.0,
+      "learning_rate": 0.03
+    },
+    "TSLA": {
+      "max_depth": 1,
+      "min_child_weight": 10,
+      "n_estimators": 50,
+      "reg_lambda": 20.0,
+      "learning_rate": 0.03
+    }
+  },
+  "event_cutoffs": {
+    "AAPL": {
+      "past5_q10": -4.327494956355071,
+      "past5_q90": 4.97620172552543,
+      "VIX_median": 15.934999942779541,
+      "VXN_median": 18.40999984741211
+    },
+    "TSLA": {
+      "past5_q10": -8.454812020006298,
+      "past5_q90": 9.482740815258984,
+      "VIX_median": 15.934999942779541,
+      "VXN_median": 18.40999984741211
+    }
+  },
+  "features": "same frozen38 compact E3c columns; no event cutoff refit",
+  "refit": "2012-2024 fit only; scaler fit through2024, event cutoffs fixed2012-2022;2025H2 calibration,2025H1 unused; same20-label purge; no new hyperparameter search",
+  "calibration": "same identity-prior Platt lambda20 and projected Newton numerical solver; fixed before evaluation",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "comparators": [
+    "event_prior",
+    "state_prior alpha100 for both stocks"
+  ],
+  "holdout": "2026 full sealed period, evaluate once only after complete data availability; t+20 must stay within2026 to keep current cohort rule",
+  "primary": "4 Brier hypotheses =2 stocks x2 priors, mean seed daily losses, Holm4, HAC20/circular block20 bootstrap19999;block60 sensitivity",
+  "secondary": "2 within-state AUC>0.5 hypotheses, two-sided bootstrap9999 and Holm2; require positive Brier gains vs BOTH priors plus corrected ranking evidence for timing claim",
+  "minimum_support": "20 event dates;10 reversals and10 continuations for confirmatory ranking and20 same-state positive-negative pairs; otherwise report insufficient support without changing thresholds",
+  "constraints": [
+    "No interim optional stopping or retuning",
+    "No architecture changes",
+    "If anyone used2026 to choose rules, replace holdout with a later unseen period",
+    "Few annual event clusters may give low power; a null result is not proof of no signal"
+  ],
+  "training_started": false,
+  "2026_data_loaded": false
+}

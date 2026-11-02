@@ -1,0 +1,7 @@
+timing,candidate,reference,difference,bootstrap_holm2
+next_session,lr_S,lr_P,0.0225692220974362,0.1512
+next_session,lr_T,lr_S,-0.0012482214808305,0.3445
+delay1,lr_S,lr_P,0.0226375200916949,0.1084
+delay1,lr_T,lr_S,0.0008594342921569,0.7632
+delay2,lr_S,lr_P,0.010191782936299,0.543
+delay2,lr_T,lr_S,0.0010265735590579,0.849

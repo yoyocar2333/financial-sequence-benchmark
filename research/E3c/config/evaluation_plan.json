@@ -1,0 +1,133 @@
+{
+  "version": "E3c-1.0 numerical solver revision1.1",
+  "task": "5-session reversal after E3a raw five-session tail event; exploratory viewed2024-2025; no2026",
+  "event": "past5 <= train2012-2022 q10 or >=q90, same E3a exact cutoffs; fold-specific same quantile rule fit on earlier fit-calendar only",
+  "target": "E3b sign(past5)*100*log(C[t+5]/Open[t+1])<0; future flats nonreversal, known flat reference excluded",
+  "samples": "Same E3b 60-history-complete dates, max20-label purge in every block, test482 dates per stock",
+  "split": {
+    "fit_end": "2022-12-31",
+    "stop_start": "2023-01-01",
+    "stop_end": "2023-06-30",
+    "cal_start": "2023-07-01",
+    "cal_end": "2023-12-31",
+    "test_start": "2024-01-01",
+    "test_end": "2025-12-31"
+  },
+  "folds": [
+    {
+      "name": "2016",
+      "fit_end": "2016-06-30",
+      "stop_start": "2016-07-01",
+      "stop_end": "2016-12-31",
+      "eval_start": "2017-01-01",
+      "eval_end": "2018-12-31"
+    },
+    {
+      "name": "2018",
+      "fit_end": "2018-06-30",
+      "stop_start": "2018-07-01",
+      "stop_end": "2018-12-31",
+      "eval_start": "2019-01-01",
+      "eval_end": "2020-12-31"
+    },
+    {
+      "name": "2020",
+      "fit_end": "2020-06-30",
+      "stop_start": "2020-07-01",
+      "stop_end": "2020-12-31",
+      "eval_start": "2021-01-01",
+      "eval_end": "2022-12-31"
+    }
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "new_representation": "Same compact causal current-state features for new LR/XGB full/event variants; historical horizons5/20/60/120 included. Existing E3b60-window models are archived reference packages, not pure architecture comparisons",
+  "complexity_gate": {
+    "new_neural_event_expert_min_train_events": 1000,
+    "min_5session_thinned_train_events": 300,
+    "min_calibration_events_each_fold": 50,
+    "reason": "pragmatic predeclared sample-support gate, not a theorem; no new neural weights if unmet. Existing genuine Mamba/LSTM weights stay frozen"
+  },
+  "search": {
+    "candidates": {
+      "lr": [
+        {
+          "C": 0.01
+        },
+        {
+          "C": 0.1
+        },
+        {
+          "C": 1.0
+        }
+      ],
+      "xgb": [
+        {
+          "max_depth": 1,
+          "min_child_weight": 10,
+          "n_estimators": 50,
+          "reg_lambda": 20.0,
+          "learning_rate": 0.03
+        },
+        {
+          "max_depth": 2,
+          "min_child_weight": 20,
+          "n_estimators": 100,
+          "reg_lambda": 20.0,
+          "learning_rate": 0.03
+        },
+        {
+          "max_depth": 3,
+          "min_child_weight": 30,
+          "n_estimators": 150,
+          "reg_lambda": 20.0,
+          "learning_rate": 0.03
+        }
+      ],
+      "prior": [
+        10.0,
+        30.0,
+        100.0
+      ]
+    },
+    "seed": 42,
+    "criterion": "mean three outer-fold event Brier; LR/XGB config chosen jointly by equal mean of all-date and gated-event variant scores to hold capacity fixed between variants",
+    "all_search_before_test": true,
+    "stopping": "No early stopping on4-10-event blocks; fixed tree rounds are candidate hyperparameters. Inner stop block reused as independent calibration block, not outer labels"
+  },
+  "hybrid": "event model trained on tail dates; all-date model trained on all dates with same features/config. Gate expert on events, shared all-date branch off events; global calibration fitted separately for each complete pipeline",
+  "calibration": "Fixed identity-prior Platt on ALL inner-calibration dates; eta=a*logit(p)+b, penalty .5*20*((a-1)^2+b^2), slope bound0..3. Same procedure for new models and train-count priors. Sparse event-only sigmoid/isotonic not fitted",
+  "priors": "global Beta1,1; event Beta1,1; direction->long120_ex5 sign->VIX median hierarchical pseudo-count alpha10/30/100 selected in expanding CV. recent_event_prior uses cal event counts plus20 pseudo-events at historical event rate, no extra calibration",
+  "conditional_heads": "Existing E3b B LSTM/Mamba global Platt kept, add event-only logit intercept fitted on2023H2 event labels with lambda50 identity shrink; no neural retraining, event ordering mathematically unchanged",
+  "metrics": [
+    "Brier primary, LogLoss,ROC_AUC,PR_AUC,BA,MCC,ECE10,bias",
+    "within-coarse-state pair-weighted AUC and within-state probability SD",
+    "calibration-period fixed probability quintile bins",
+    "signed reversal amplitude separate from probability; historical state/class severity two-part projection, not a directly learned magnitude network"
+  ],
+  "inference": "mean per-date five-seed losses before calendar ratio HAC20/circular-block20 bootstrap19999; block60 sensitivity. Masks retained on full482-date calendar. minimum20 events and99% nonempty bootstrap. No independent-seed replication",
+  "families": "48 primary event-Brier comparisons across both stocks; separate18 within-state AUC tests (new4 + all E3b5 B per stock) Holm. subgroup CIs descriptive; nonoverlap5 sensitivity repeats48 family; nonoverlap20 descriptive when<20 events",
+  "ranking_bootstrap": "9999 resamples, block20/60, average seed-specific concordance kernels before bootstrap, compare within-state AUC to0.5; two-sided Holm18",
+  "signal_criterion": "Evidence beyond coarse historical averages requires positive event Brier gain versus state_prior with BOTH primary corrected HAC/bootstrap<.05 AND within-state AUC>.5 with corrected bootstrap<.05; isolated calibration/mean gain is not timing skill",
+  "resources": "CPU only, two threads, no GPU execution/new packages; genuine E3b neural results reused. Preserve old studies and qua_tum",
+  "limits": "Two stocks; fixed existing retrospective adjusted Yahoo snapshot, not point-in-time; thresholds/cells fixed before E3c fitting; previously viewed test remains exploratory",
+  "references": [
+    "https://scikit-learn.org/stable/modules/calibration.html",
+    "https://scikit-learn.org/stable/modules/model_evaluation.html",
+    "https://xgboost.readthedocs.io/en/release_3.0.0/python/python_api.html",
+    "https://stat.ethz.ch/R-manual/R-devel/library/boot/html/tsboot.html"
+  ],
+  "numerical_repair": {
+    "original_output": "outputs/e3c_20261026",
+    "original_error": "L-BFGS-B ABNORMAL with gradient8.57e-7",
+    "change": "projected damped Newton for identical strictly convex 2-parameter objective, penalty20 and slope bounds0..3; no research/model/statistics changes",
+    "test_predictions_before_repair": 0,
+    "verified_raw_model_fits_reused": 66
+  },
+  "frozen_utc": "2026-10-26T05:12:24.325849+00:00"
+}

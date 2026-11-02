@@ -1,0 +1,10 @@
+timing,partition,n_dates,n_events,event_reversals,event_continuations,events_with_retained_news,date_min,date_max,last_label_end20
+next_session,train,224,28,11,17,28,2023-01-11,2023-11-30,2023-12-29
+next_session,validation,232,36,22,14,32,2024-01-02,2024-12-02,2024-12-31
+next_session,test,230,65,42,23,59,2025-01-02,2025-12-02,2025-12-31
+delay1,train,224,28,11,17,28,2023-01-11,2023-11-30,2023-12-29
+delay1,validation,232,36,22,14,31,2024-01-02,2024-12-02,2024-12-31
+delay1,test,230,65,42,23,59,2025-01-02,2025-12-02,2025-12-31
+delay2,train,224,28,11,17,28,2023-01-11,2023-11-30,2023-12-29
+delay2,validation,232,36,22,14,32,2024-01-02,2024-12-02,2024-12-31
+delay2,test,230,65,42,23,58,2025-01-02,2025-12-02,2025-12-31

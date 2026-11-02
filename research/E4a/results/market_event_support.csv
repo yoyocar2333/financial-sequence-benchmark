@@ -1,0 +1,7 @@
+ticker,partition,eligible_dates,event_dates,event_reversals,event_continuations,reversal_rate,signed_amplitude_mean_pp,strict_news_feature_event_dates,metadata_subset_last5_event_dates,complete_news_observation_dates,true_news_coverage_rate
+AAPL,fit,2746,546,262,284,0.47985347985347987,0.1544158753894156,0,0,0,
+AAPL,validation,230,29,12,17,0.41379310344827586,-0.5016849140894688,0,19,0,
+AAPL,test,482,101,64,37,0.6336633663366337,1.5123094752409134,0,0,0,
+TSLA,fit,2745,539,270,269,0.5009276437847866,0.032392062477715,0,0,0,
+TSLA,validation,230,60,24,36,0.4,-2.9664895672369878,0,0,0,
+TSLA,test,482,122,59,63,0.48360655737704916,-0.13673304249042192,0,0,0,

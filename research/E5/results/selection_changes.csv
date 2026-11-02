@@ -1,0 +1,11 @@
+ticker,model,B_config,T_config,same_config,B_CV_brier,T_CV_brier
+AAPL,logistic,"{""C"": 0.001}","{""C"": 0.001}",True,0.30931584710437704,0.3160514442644942
+AAPL,xgboost,"{""learning_rate"": 0.02, ""max_depth"": 4, ""min_child_weight"": 50, ""reg_lambda"": 40}","{""learning_rate"": 0.03, ""max_depth"": 3, ""min_child_weight"": 30, ""reg_lambda"": 20}",False,0.24531979858875275,0.24497312307357788
+AAPL,lightgbm,"{""learning_rate"": 0.02, ""min_child_samples"": 80, ""num_leaves"": 16, ""reg_lambda"": 40}","{""learning_rate"": 0.03, ""min_child_samples"": 60, ""num_leaves"": 8, ""reg_lambda"": 20}",False,0.24574627779809013,0.24529759962464692
+AAPL,lstm,"{""lr"": 0.001, ""weight_decay"": 0.01, ""width"": 32}","{""lr"": 0.0003, ""weight_decay"": 0.01, ""width"": 32}",False,0.24776604513582914,0.24559117102357877
+AAPL,mamba,"{""lr"": 0.0003, ""weight_decay"": 0.01, ""width"": 64}","{""lr"": 0.0003, ""weight_decay"": 0.01, ""width"": 32}",False,0.24572693902534248,0.2490328063106372
+TSLA,logistic,"{""C"": 0.001}","{""C"": 0.001}",True,0.3266491155774508,0.3193325646315
+TSLA,xgboost,"{""learning_rate"": 0.03, ""max_depth"": 3, ""min_child_weight"": 30, ""reg_lambda"": 20}","{""learning_rate"": 0.03, ""max_depth"": 3, ""min_child_weight"": 30, ""reg_lambda"": 20}",True,0.24886936446030936,0.24924382070700327
+TSLA,lightgbm,"{""learning_rate"": 0.02, ""min_child_samples"": 80, ""num_leaves"": 16, ""reg_lambda"": 40}","{""learning_rate"": 0.02, ""min_child_samples"": 80, ""num_leaves"": 16, ""reg_lambda"": 40}",True,0.24938102721810107,0.24943847753983137
+TSLA,lstm,"{""lr"": 0.0003, ""weight_decay"": 0.01, ""width"": 32}","{""lr"": 0.001, ""weight_decay"": 0.01, ""width"": 32}",False,0.2574957861154619,0.2510937607089592
+TSLA,mamba,"{""lr"": 0.0003, ""weight_decay"": 0.01, ""width"": 32}","{""lr"": 0.0003, ""weight_decay"": 0.01, ""width"": 64}",False,0.2537733938347941,0.25377203395719206
