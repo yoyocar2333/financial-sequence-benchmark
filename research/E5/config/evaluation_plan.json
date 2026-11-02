@@ -1,0 +1,236 @@
+{
+  "version": "E5-1.0",
+  "locked_before_new_fits": true,
+  "scope": "Exploratory already-viewed 2024-2025 only. No2026 prices/news loaded; E3c sealed protocol unchanged. This is NOT preregistered confirmation.",
+  "task": "h5 reversal, same next adjusted Open to day t+5 adjusted Close, known past5 sign; direction probability is algebraically mapped, no flat test returns",
+  "secondary_scope": "No new h1/h20 or magnitude fits. Event, conflict, ADX and volatility subgroups descriptive. Direction probability is mapped from reversal, not an independently trained direction task.",
+  "feature_B": [
+    "Open",
+    "High",
+    "Low",
+    "Close",
+    "Volume",
+    "MA5",
+    "MA20",
+    "Volatility_10",
+    "RV5",
+    "RV20",
+    "VXN",
+    "VXN_Change",
+    "VIX",
+    "VIX_Change",
+    "reference_sign",
+    "past5",
+    "past20",
+    "past60",
+    "past120",
+    "z5",
+    "z20",
+    "z60",
+    "z120",
+    "context60_ex5",
+    "context60_ex5_z",
+    "context60_ex20",
+    "context60_ex20_z",
+    "context120_ex5",
+    "context120_ex5_z",
+    "context120_ex20",
+    "context120_ex20_z",
+    "sigma60",
+    "tail_up",
+    "tail_down",
+    "ztail_up",
+    "ztail_down",
+    "VIX_high",
+    "VXN_high"
+  ],
+  "feature_T_extra": [
+    "ma_gap_atr",
+    "ma_cross",
+    "rsi_center",
+    "macd_hist_atr",
+    "bb_z",
+    "bb_width",
+    "range_position20",
+    "breakout20",
+    "volume_logratio20",
+    "breakout_confirmed",
+    "adx_scaled",
+    "di_balance",
+    "relative_qqq20"
+  ],
+  "feature_C_extra": [
+    "relative_qqq20"
+  ],
+  "technical_definitions": {
+    "MA": "SMA20 vs SMA60, cross flag from sign change",
+    "RSI": "Wilder14 seeded with first14 mean;70/30 fixed",
+    "MACD": "EMA12-EMA26; signal EMA9; pandas adjust=False, 2010 warmup",
+    "Bollinger": "SMA20 +/-2 population SD (ddof0)",
+    "support_resistance": "prior20 rolling High max/Low min, shifted1; close breakout",
+    "volume": "current Volume/prior20 mean>=1.5, prior window excludes today",
+    "ADX": "Wilder14 ATR,DM,DX and ADX; >=25 trend, <20 range,20-25 transition",
+    "relative": "20day stock log return minus QQQ, scaled stock sigma60*sqrt20"
+  },
+  "hypothesis": "Compact investor representations may help finite models; deterministic transformations do not create independent price information; QQQ control isolates genuinely additional source.",
+  "rules": [
+    "ma20_60",
+    "rsi14",
+    "macd",
+    "bollinger",
+    "breakout_volume",
+    "relative_strength",
+    "rule_hybrid"
+  ],
+  "rule_probabilities": "fixed score s in[-1,1], p_up=sigmoid(2s), mapped to reversal with past5 sign; C1 ridge Platt2023H2 for comparison; save literal raw AND calibrated and calibration slopes. Negative slope can invert rule; report it.",
+  "hybrid": "Fixed ADX gate 0/.5/1 mixes smooth momentum and MR; learned six-feature ridge Logistic adds gated expert interactions; four-feature ungated control includes same experts/gate/reference; C=.001,.01,.1. No complex hybrid escalation based on test scores.",
+  "fairness": "T all5 models same 60x51 observations, C same60x39 for Logistic/XGB. B existing60x38 E3b completed predictions/CV reused with hashes; no old model overwritten/retrained. Same3 candidates x same3 folds, seed42 selection. Compact hybrid is information compression, not an equal-capacity architectural comparison.",
+  "folds": [
+    {
+      "name": "2016",
+      "fit_end": "2016-06-30",
+      "stop_start": "2016-07-01",
+      "stop_end": "2016-12-31",
+      "eval_start": "2017-01-01",
+      "eval_end": "2018-12-31"
+    },
+    {
+      "name": "2018",
+      "fit_end": "2018-06-30",
+      "stop_start": "2018-07-01",
+      "stop_end": "2018-12-31",
+      "eval_start": "2019-01-01",
+      "eval_end": "2020-12-31"
+    },
+    {
+      "name": "2020",
+      "fit_end": "2020-06-30",
+      "stop_start": "2020-07-01",
+      "stop_end": "2020-12-31",
+      "eval_start": "2021-01-01",
+      "eval_end": "2022-12-31"
+    }
+  ],
+  "split": {
+    "fit_end": "2022-12-31",
+    "stop_start": "2023-01-01",
+    "stop_end": "2023-06-30",
+    "cal_start": "2023-07-01",
+    "cal_end": "2023-12-31",
+    "test_start": "2024-01-01",
+    "test_end": "2025-12-31"
+  },
+  "purge": "all blocks t+20 stays in block and full60 history; identical482 test dates per stock",
+  "search_configs": {
+    "logistic": [
+      {
+        "C": 0.001
+      },
+      {
+        "C": 0.01
+      },
+      {
+        "C": 0.1
+      }
+    ],
+    "xgboost": [
+      {
+        "max_depth": 2,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "learning_rate": 0.03
+      },
+      {
+        "max_depth": 3,
+        "min_child_weight": 30,
+        "reg_lambda": 20,
+        "learning_rate": 0.03
+      },
+      {
+        "max_depth": 4,
+        "min_child_weight": 50,
+        "reg_lambda": 40,
+        "learning_rate": 0.02
+      }
+    ],
+    "lightgbm": [
+      {
+        "num_leaves": 4,
+        "min_child_samples": 40,
+        "reg_lambda": 10,
+        "learning_rate": 0.03
+      },
+      {
+        "num_leaves": 8,
+        "min_child_samples": 60,
+        "reg_lambda": 20,
+        "learning_rate": 0.03
+      },
+      {
+        "num_leaves": 16,
+        "min_child_samples": 80,
+        "reg_lambda": 40,
+        "learning_rate": 0.02
+      }
+    ],
+    "lstm": [
+      {
+        "width": 32,
+        "lr": 0.001,
+        "weight_decay": 0.01
+      },
+      {
+        "width": 32,
+        "lr": 0.0003,
+        "weight_decay": 0.01
+      },
+      {
+        "width": 64,
+        "lr": 0.0003,
+        "weight_decay": 0.01
+      }
+    ],
+    "mamba": [
+      {
+        "width": 32,
+        "lr": 0.001,
+        "weight_decay": 0.01
+      },
+      {
+        "width": 32,
+        "lr": 0.0003,
+        "weight_decay": 0.01
+      },
+      {
+        "width": 64,
+        "lr": 0.0003,
+        "weight_decay": 0.01
+      }
+    ]
+  },
+  "new_CV_fits": 162,
+  "new_final_fits": 90,
+  "reused_B_final_fits": 50,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "training": "Reuse unchanged E3b fitting module: neural batch64,max24,patience4,AdamW,BCE,clip1,dropout.1; trees300,max earlystop25; CPU2 threads. Input width only changes. One GPU process,allocator.10,duty.50,>=2GiB admission,actualCUDA errors stop own queue, no external-growth stop.",
+  "calibration": "Same E3b unconstrained C1 ridge Platt2023H2; all primary metrics calibrated, raw retained. No test-based choice between calibration methods.",
+  "selection": "Only expanding CV raw Brier selects model configuration; all selection locked before writing new test predictions. Baseline old B configs frozen, not chosen from test ranking.",
+  "primary_inference": "8 tests = 2stocks x4 architectures T vs B; positive=Brier_reference-Brier_candidate. seed losses averaged on each date, HAC20 & circular block20 bootstrap9999, each Holm8; block60 sensitivity. Raw p and CIs retained, significance requires both corrected p<.05 and positive gain.",
+  "secondary_families": {
+    "control": 4,
+    "architecture": 12,
+    "hybrid": 12,
+    "rules": 14
+  },
+  "secondary_detail": "control T vs C for Logistic/XGB; architecture all6pairs in T; hybrid_H vs H0,rule_hybrid,momentum20,mean_reversion5,state_prior,logistic_B; 7rules vs cal_prior. Separate Holm families plus globalHolm50 over primary+secondary. No claim total research selection controlled.",
+  "ranking": "Events same cells = past5 direction x long120ex5 sign x VIX high. Per-seed concordance averaged before calendar bootstrap9999, Holm12 for 4T+H+rule_hybrid x2stocks; never multiply n by seeds.",
+  "regime_stability": "Regime frequencies, one-day switching, persistence and ADX20/25 transition band; descriptive, no threshold winner selected.",
+  "backtest": "Secondary long/cash only, same h5 nextOpen-to-t+5Close; signals every5 trading sessions for5 fixed offset schedules, no overlapping positions/leverage. p_up>=.55 fixed. Costs each side fee5bps+slippage5bps primary, total5/20bps sensitivities; daily NAV, turnover,exposure,maxDD; cash0, adjusted-price proxy, no shorting. BuyHold samefirstentry/lastexit and soft momentum20. All schedules and costs reported, no best-offset selection; investment metrics not prediction evidence.",
+  "independent_validation": "E5 not added to E3c2026 protocol; later E5 holdout requires separate future preregistration and access audit."
+}
