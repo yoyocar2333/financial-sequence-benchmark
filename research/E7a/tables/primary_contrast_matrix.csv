@@ -1,0 +1,7 @@
+comparison_id,hypothesis,candidate,reference,interpretation
+C1,H1,Early_PMF,Early_PM_zero_padding,Numeric fundamentals beyond availability metadata
+C2,H1,Early_PMF,Early_PM_duplicate_P,Numeric fundamentals beyond duplicated representation
+C3,H1,Early_PMF,strong_P,Improvement beyond a strong price baseline
+C4,H3,Late_PF,same_weight_constant_blend,Complement beyond identical-weight shrinkage
+C5,H3,Late_PF,independently_tuned_constant_blend,Complement beyond optimized shrinkage
+C6,H3,Late_PF,development_selected_best_single,Complement beyond selecting a single expert

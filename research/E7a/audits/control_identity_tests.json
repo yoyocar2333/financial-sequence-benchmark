@@ -1,0 +1,6 @@
+{
+  "quadratic_loss_identity": "PASSED",
+  "synthetic_seed": 20261106,
+  "real_model_fits": 0,
+  "warning": "Beating a matched constant blend alone does not prove new information: duplicated P can beat an unnecessarily shrunk P. Also require best-single and tuned-shrink controls."
+}

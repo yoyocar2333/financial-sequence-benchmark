@@ -1,0 +1,21 @@
+{
+  "stages": [
+    "E0",
+    "E1_E2",
+    "E3a",
+    "E3b",
+    "E3c_v1.1",
+    "E4a",
+    "E4b",
+    "E4c",
+    "E5",
+    "E6"
+  ],
+  "heldout_existing_results_read_for_review": true,
+  "existing_test_values_used_for_new_model_selection": false,
+  "new_market_fits": 0,
+  "new_real_test_predictions": 0,
+  "power_predictions_only2017_2022": true,
+  "no2026_validation": true,
+  "data_contract_not_sufficient_to_authenticate_vendor_assertions": true
+}
