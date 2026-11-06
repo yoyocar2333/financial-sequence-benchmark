@@ -1,0 +1,285 @@
+{
+  "version": "E7a-design-candidate-1.0-20261106",
+  "status": "NOT_EXTERNALLY_REGISTERED_NOT_EXECUTED",
+  "registration_gate": "Data, sample manifest, inference calibration and power must pass before a final timestamped external registration. No performance-dependent amendments.",
+  "scope": [
+    "H1_information_increment",
+    "H3_complementarity"
+  ],
+  "H2_primary": false,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "selection_seed": 42,
+  "sequence_length": 60,
+  "information_cutoff": "17:00 America/New_York on trading session t; market finalization and each source clock must be verified; source not actually available is excluded",
+  "entry": "next trading session official opening auction, with tradable corporate-action wealth accounting",
+  "exit": "session t+5 official close; delisting/merger settlement follows frozen corporate-action policy",
+  "target": "1{sign(log(C_t/C_t-5))*log(wealth_t+5/entry_open_t+1)<0}; past flat excluded, future flat=0",
+  "secondary_target": "1{future executable wealth return >0}; no separate winning claim without secondary correction",
+  "primary_population": "all eligible dates, not only price extremes; event-only results secondary",
+  "features": {
+    "P": "E5 T51 feature definitions, audited point-in-time market inputs; 60-day common information window",
+    "M": [
+      "release_age_days_clipped180",
+      "7_numeric_missing_flags",
+      "4_source_quality_indicators_SEC_original_issuer_original_licensed_asreported_arrival_certified",
+      "4_predefined_industry_indicators"
+    ],
+    "F_values": [
+      "revenue_yoy",
+      "eps_yoy_symmetric",
+      "gross_margin",
+      "net_margin",
+      "operating_margin",
+      "cfo_margin",
+      "cash_asset_ratio"
+    ],
+    "F_expert": "M + seven numeric values + reference_sign; latest daily vector, explicitly lower-dimensional",
+    "duplicate_controls": [
+      "past5",
+      "past20",
+      "past60",
+      "past120",
+      "RV5",
+      "RV20",
+      "Close"
+    ],
+    "news": "Excluded from initial confirmatory module: current retrospective corpus lacks strict historical PIT; future separately registered module only",
+    "analyst_expectations": "Excluded unless licensed historical received-time vintages pass a separately frozen module; never synthesize surprise"
+  },
+  "primary_architectures": [
+    "logistic",
+    "xgboost",
+    "lightgbm"
+  ],
+  "primary_selection": "One common architecture and config index selected using only nested pre2023 development, lowest P-only development Brier across the fixed architecture/config grid. Same selected architecture/config for C1-C3, no test architecture winner.",
+  "candidate_grid": {
+    "logistic": [
+      {
+        "C": 0.001
+      },
+      {
+        "C": 0.01
+      },
+      {
+        "C": 0.1
+      }
+    ],
+    "xgboost": [
+      {
+        "max_depth": 2,
+        "min_child_weight": 20,
+        "reg_lambda": 10,
+        "learning_rate": 0.03
+      },
+      {
+        "max_depth": 3,
+        "min_child_weight": 30,
+        "reg_lambda": 20,
+        "learning_rate": 0.03
+      },
+      {
+        "max_depth": 4,
+        "min_child_weight": 50,
+        "reg_lambda": 40,
+        "learning_rate": 0.02
+      }
+    ],
+    "lightgbm": [
+      {
+        "num_leaves": 4,
+        "min_child_samples": 40,
+        "reg_lambda": 10,
+        "learning_rate": 0.03
+      },
+      {
+        "num_leaves": 8,
+        "min_child_samples": 60,
+        "reg_lambda": 20,
+        "learning_rate": 0.03
+      },
+      {
+        "num_leaves": 16,
+        "min_child_samples": 80,
+        "reg_lambda": 40,
+        "learning_rate": 0.02
+      }
+    ]
+  },
+  "nested_development": {
+    "outer_eval": [
+      "2017-2018",
+      "2019-2020",
+      "2021-2022"
+    ],
+    "outer_fit_ends": [
+      "2016-12-31",
+      "2018-12-31",
+      "2020-12-31"
+    ],
+    "inner_eval": "two calendar years immediately before each outer start; train through preceding year, last half of preceding year reserved for stopping",
+    "outer_role": "Evaluate selection procedure without using that outer outcome to select its own forecast; final fixed choice uses all pre2023 forward folds only",
+    "tree_round_cap": 300,
+    "tree_patience": 25,
+    "stop_min_delta": 1e-05,
+    "tie_break": "lowest architecture order then config index; no score within 1e-6 distinguishes ties"
+  },
+  "late_expert": "Logistic M+F values, three C candidates on same development dates; one common F expert for all price architectures",
+  "alpha_grid": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "alpha_selection": "pre2023 OOF Brier only, tie smallest alpha; tuned shrink alpha independently uses exactly same grid/budget",
+  "constants": "Beta(1,1) training prior and same calibration-period prior are reported; matched and tuned blends use common training prior, not test mean",
+  "conditional_prior": "Beta shrinkage to training prior, strength20, cells reference_sign x train-median VIX; thresholds train-only, no H2 regime fitting",
+  "calibration": {
+    "primary": "fixed monotone ridge Platt",
+    "objective": "sum binary log loss +20*((slope-1)^2+intercept^2)",
+    "slope_bounds": [
+      0,
+      3
+    ],
+    "intercept_bounds": [
+      -5,
+      5
+    ],
+    "probability_clip": 1e-06,
+    "initial_parameters": [
+      1,
+      0
+    ],
+    "equal_budget": "each complete pipeline calibrated independently with same dates and objective; constants use same calibration dates as comparator",
+    "raw": "retained fixed secondary factorial, never choose raw vs calibrated on test"
+  },
+  "final_fit_candidate": "After final registry only: fixed config and pre2023-derived median stopping iteration refit2012-2024; fixed calibration2025 only. No new config/weight/feature selection using2024-2025. No fits in current E7a.",
+  "purge": "label exit must stay in its partition; additionally exclude last20 trading dates of all development/fit/calibration/test blocks; history can precede block but not use future values",
+  "primary_forecast": "mean probability of five seeds; seed-loss distribution secondary, seeds never independent observations",
+  "primary_metric": "issuer-equal mean of date-paired Brier loss difference, positive=candidate better; within issuer dates equal weighted",
+  "primary_contrasts": [
+    {
+      "id": "C1",
+      "hypothesis": "H1",
+      "candidate": "Early_PMF",
+      "reference": "Early_PM_zero_padding",
+      "meaning": "Numeric fundamentals beyond availability metadata"
+    },
+    {
+      "id": "C2",
+      "hypothesis": "H1",
+      "candidate": "Early_PMF",
+      "reference": "Early_PM_duplicate_P",
+      "meaning": "Numeric fundamentals beyond duplicated representation"
+    },
+    {
+      "id": "C3",
+      "hypothesis": "H1",
+      "candidate": "Early_PMF",
+      "reference": "strong_P",
+      "meaning": "Improvement beyond a strong price baseline"
+    },
+    {
+      "id": "C4",
+      "hypothesis": "H3",
+      "candidate": "Late_PF",
+      "reference": "same_weight_constant_blend",
+      "meaning": "Complement beyond identical-weight shrinkage"
+    },
+    {
+      "id": "C5",
+      "hypothesis": "H3",
+      "candidate": "Late_PF",
+      "reference": "independently_tuned_constant_blend",
+      "meaning": "Complement beyond optimized shrinkage"
+    },
+    {
+      "id": "C6",
+      "hypothesis": "H3",
+      "candidate": "Late_PF",
+      "reference": "development_selected_best_single",
+      "meaning": "Complement beyond selecting a single expert"
+    }
+  ],
+  "multiplicity": "two-sided Holm across exactly six primary contrasts, alpha .05; H1 requires C1-C3 all positive corrected; H3 requires C4-C6 all positive corrected plus interior alpha",
+  "SESOI_absolute_Brier": 0.001,
+  "planning_target_Brier": 0.0025,
+  "inference_candidate": {
+    "primary": "resample issuer histories and synchronized calendar blocks, 20000 centered studentized bootstrap replicates; validate null size before registration",
+    "block_sessions": 120,
+    "sensitivity_blocks": [
+      60,
+      250
+    ],
+    "seed": 20261106,
+    "sensitivity": "calendar cross-sectional mean HAC120 and two-way issuer/calendar-quarter cluster SE; small-time-cluster caveat",
+    "gate": "Realistic development-only null/coverage simulations at nominal .05: 2000 or more replicates; reject method if type-I upper95% binomial bound >.075. If fail, revise and register before independent period, never after its scores."
+  },
+  "secondary_metrics": [
+    "LogLoss",
+    "ROC_AUC",
+    "BalancedAccuracy_at_.5",
+    "MCC_at_.5",
+    "ECE10_fixed_bins",
+    "calibration_slope_intercept",
+    "within_existing_state_AUC"
+  ],
+  "secondary_rules": "Holm within all reported secondary model-pair score contrasts; event/state and individual stock plots descriptive; no secondary finding rescues a failed H1/H3",
+  "universe_candidate": {
+    "asof": "2025-12-31",
+    "stocks": 200,
+    "strata_SIC2digit_ranges": [
+      [
+        10,
+        19
+      ],
+      [
+        20,
+        39
+      ],
+      [
+        40,
+        59
+      ],
+      [
+        70,
+        89
+      ]
+    ],
+    "per_stratum": 50,
+    "max_per_SIC2": 20,
+    "eligibility": "US primary common stock, asof price>=5 USD, preceding60-session median dollar volume>=1e6, >=250 past price observations and >=4 historical reports; licensed inactive and corporate-action coverage required",
+    "sampling": "sort SHA256(20261106|CIK) within strata, fill50 subject to SIC2 cap, freeze complete eligible pool before outcomes; no forced AAPL/TSLA inclusion",
+    "manifest_status": "NOT_YET_OBTAINED; no claim of an existing200-stock dataset",
+    "attrition": "retain eligible exits/delistings and settlement; no replacement using future performance"
+  },
+  "independent_period_candidate": {
+    "start": "2027-10-01",
+    "end": "2031-09-30",
+    "quarters": 16,
+    "lock_deadline": "2027-09-15",
+    "warmup": "2027 pre-start price history >=180 sessions; no2026 label or price context needed",
+    "predictions": "daily append-only hashes and source-receipt ledger; custodian seals outcomes until maturity/end; all fixed models evaluated once",
+    "power_gate": "all six contrast variances and dependence estimated using >=100 development issuers and >=40 calendar quarters; worst plausible scenario must give joint80% power for planning target, else not ready",
+    "if_gate_fails": "do not start this candidate; publish new prospective dates/design before unseen outcomes, no outcome-dependent extension"
+  },
+  "data_gates": {
+    "PIT_eligible_used_records": "100% traceable original accession/version/timezone, no unverifiable backfill",
+    "numeric_cells_coverage_per_corefield": 0.8,
+    "daily_primary_availability": 0.9,
+    "manual_stratified_document_sample": 200,
+    "critical_clock_or_revision_errors_allowed": 0,
+    "noncritical_numeric_agreement_min": 0.99,
+    "market_action_return_reconciliation_min": 0.999,
+    "data_missingness_policy": "train-only imputation and common missing flags; report exclusions, never encode absent data as absence of economic event"
+  },
+  "E3c_2026": "UNCHANGED_NOT_EXECUTED_NOT_EXTENDED_TO_E6_E7",
+  "known_exposure": "2024-2025 repeatedly reviewed; earlier2026 news aggregates and E6 search snippets containing actual earnings headline figures incidentally seen; not zero-exposure claim",
+  "current_execution": "CPU audit, old pre2023 fixedconfig predictions, synthetic controls, no new financial fit; no large search, no2026 validation"
+}

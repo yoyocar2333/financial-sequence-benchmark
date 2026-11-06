@@ -1,0 +1,7 @@
+{
+  "quarter_SD_reference": 0.0059531805226298,
+  "definition": "maximum pre2023 fixedconfig0 raw matched-shrink contrast quarter SD across two stocks/two price models",
+  "no_observed_test_effect_used": true,
+  "population_correlation_unknown": true,
+  "small_Q_and_two_issuers_limit_inference": true
+}

@@ -1,0 +1,8 @@
+{
+  "initial_design_lock_sha": "a90340e997fad509a0eb7c9bb6188886bde12a68b81bb89abb0bd014c1ceeaa9",
+  "initial_family": 5,
+  "final_family": 6,
+  "reason": "Primary duplicated-price representation control added after literature and synthetic design audit; E7a is protocol-development, not an already registered study. No new financial fit or heldout score selection.",
+  "previous_power_planning_preserved": "drafts/five_contrast_planning",
+  "all_six_primary_contrasts_are_future_only": true
+}

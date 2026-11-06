@@ -1,0 +1,13 @@
+{
+  "included_unique_works": 41,
+  "topics": 24,
+  "deduplication": "author/year/work identity; author preprint and publisher version counted once",
+  "inclusion": "primary paper/publisher/author source relevant to the control or validation question",
+  "excluded": "marketing stock-prediction blogs, unverified bibliographic summaries, reddit assertions, lookalike publisher domains; no fulltext redistribution",
+  "not_exhaustive": true,
+  "not_PRISMA_meta_analysis": true,
+  "no_subscription_database_export": true,
+  "no_claim_no_prior_paper_exists": true,
+  "lookalike_domain_excluded": "sciencedirectelsevier.com is not used as an Elsevier source",
+  "unverified_venue_feature": "PLOS Registered Reports URL inaccessible; not asserted as a checked submission option"
+}

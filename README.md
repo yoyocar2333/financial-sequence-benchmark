@@ -1,4 +1,4 @@
-# Financial Sequence Benchmark — E0–E5
+# Financial Sequence Benchmark — E0–E7a
 
 以AAPL、TSLA為主，研究從隔日股價預測、波動幅度、多尺度趨勢／反轉，到新聞條件與投資者技術分析的可辨識資訊。這是可稽核的研究基準，不預設複雜模型、均值回歸或新聞一定有效。
 
@@ -17,6 +17,8 @@
 | [E4b](research/E4b/README.md) | 歷史新聞恢復與來源品質 | 重建448篇Apple全文；回溯頁面不等於當年PIT |
 | [E4c](research/E4c/README.md) | AAPL新聞增量預測 | 2025僅65事件；Logistic情緒增益p=.1512，未證明可靠排序 |
 | [E5](research/E5/README.md) | Investor-Inspired Hybrid | 技術規則＋四架構＋狀態Hybrid；8個主要特徵增益均未顯著 |
+| [E6](research/E6/README.md) | 基本面資訊與融合 | 反轉H1 0/8、H3 0/20；目前來源未達嚴格PIT |
+| [E7a](research/E7a/README.md) | 論文設計與驗證規劃 | 資訊／metadata／校準／收縮六控制；協定候選未註冊，尚缺跨股PIT及獨立驗證 |
 
 E0的MAPE、E1的報酬百分點與E3–E5的Brier不能直接橫向排名。E3a收盤至收盤、E3b後next-open標籤、E4c的2023／2024／2025切分也不能混用。[跨實驗摘要](docs/RESEARCH_SUMMARY_ZH_TW.md)整理具體數字與限制。
 
@@ -46,4 +48,15 @@ python -m venv .venv-public
 
 [資料與權利邊界](docs/DATA_POLICY.md) · [公開來源索引](provenance/public_sources.csv) · [程式入口索引](scripts/RESEARCH_CODE_INDEX.md) · [發布檢查](docs/PUBLICATION_CHECKS.md)
 
-Financial time-series research artifacts. Exploratory findings are not confirmed model superiority or investment advice. E0 legacy files and history are retained; E1–E5 use distinct targets and evaluation cohorts.
+Financial time-series research artifacts. Exploratory findings are not confirmed model superiority or investment advice. E0 legacy files and history are retained; E1–E6 use distinct targets and evaluation cohorts.
+
+## 最新研究設計與公開重現
+
+[E7a完整設計](research/E7a/E7A_RESEARCH_DESIGN.md)整理E0–E6證據與41篇快速文獻回顧。研究貢獻候選是增益來源的可重現稽核；不宣稱已發現基本面／新聞優勢，亦未完成外部預註冊。200股與未來16季度只是通過資料／功效門檻後的候選方案。
+
+```bash
+.venv-public/bin/python scripts/e7a_public_replay.py --bundle research/E7a --output-dir outputs/e7a_replay
+E7A_OUTPUT=research/E7a .venv-public/bin/python scripts/test_e7a.py
+```
+
+E6過去搜尋曾意外看到2026財報標題數字；已補[完整性揭露](docs/RESEARCH_INTEGRITY.md)，不能宣稱零接觸。E3c舊2026協定不變、未執行、不加入E6/E7。新增原始資料、模型、新聞全文與工作站ZIP不公開。

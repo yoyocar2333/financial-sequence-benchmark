@@ -1,0 +1,41 @@
+{
+  "version": "E7a-design-audit-v1",
+  "primary_scope": "H1/H3, H2 deferred",
+  "no_new_model_fits": true,
+  "power_market_prefix_max": "2022-12-31",
+  "CV_evaluation_years": "2017-2022 only",
+  "config": "index0, seed42 only; not chosen by current performance",
+  "mixture_weight": 0.5,
+  "comparisons": [
+    "total_vs_P",
+    "matched_shrink_increment",
+    "F_vs_training_prior"
+  ],
+  "effect_sizes_fixed_before_calculation": [
+    0.0005,
+    0.001,
+    0.0025,
+    0.005
+  ],
+  "future_primary_comparisons": 5,
+  "alpha_FWER": 0.05,
+  "target_power": 0.8,
+  "planning_stocks": [
+    20,
+    50,
+    100,
+    200,
+    400
+  ],
+  "planning_quarters": [
+    4,
+    8,
+    12,
+    20,
+    40
+  ],
+  "variance_status": "two-stock development scenario input, not a representative cross-industry variance estimate",
+  "future_correlation_assumptions_not_fitted_to_two_stocks": true,
+  "no2024_2025_new_search": true,
+  "no2026_execution": true
+}

@@ -1,0 +1,6 @@
+variance_reference,maximum_quarter_sd,future_comparison_measured,note
+matched_shrink,0.0059531805226298,False,pre2023 raw fixedconfig0 proxy only; actual calibrated C1-C5 require new cross-industry pilot variance audit
+F_vs_prior,0.0082947607834007,False,pre2023 raw fixedconfig0 proxy only; actual calibrated C1-C5 require new cross-industry pilot variance audit
+strong_tree_total,0.0063297195684233,False,pre2023 raw fixedconfig0 proxy only; actual calibrated C1-C5 require new cross-industry pilot variance audit
+weak_highdim_Logistic_total_stress,0.0588507701654944,False,pre2023 raw fixedconfig0 proxy only; actual calibrated C1-C5 require new cross-industry pilot variance audit
+Early_PMF_vs_PM_primary_C1,,False,No matched P+metadata CV experiment exists; cannot infer C1 power from F-only or Late results
