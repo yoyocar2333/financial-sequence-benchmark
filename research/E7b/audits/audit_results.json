@@ -1,0 +1,22 @@
+{
+  "prototype_companies": 20,
+  "industries_predeclared": 4,
+  "CIK_verified_from_indexes": 20,
+  "readable_unique_filing_indexes_total": 21,
+  "companies_with_rendered_financial_tables": 10,
+  "readable_rendered_financial_table_pages": 17,
+  "rendered_display_candidate_rows": 90,
+  "original_SEC_bodies": 0,
+  "original_XBRL_instances": 0,
+  "strict_PIT_eligible_quarters": 0,
+  "nominal_calendar_company_quarters": 880,
+  "nominal_core_cells": 6160,
+  "market_symbols_with_arrays": 17,
+  "historical_market_rows_unverified": 45893,
+  "market_symbols_with_full_2012_2022_span": 16,
+  "as_traded_certified_securities": 0,
+  "new_model_fits": 0,
+  "real_six_contrast_inference": "NOT_ESTIMABLE",
+  "external_registration": "NOT_REGISTERED",
+  "E3c2026_validation": "NOT_EXECUTED"
+}

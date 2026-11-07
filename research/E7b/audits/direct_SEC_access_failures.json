@@ -1,0 +1,43 @@
+{
+  "review_date": "2026-11-07",
+  "ordinary_sandbox_probe": {
+    "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+    "result": "DNS_NAME_RESOLUTION_FAILED",
+    "response_body_saved": false
+  },
+  "outside_sandbox_public_probes": [
+    {
+      "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+      "HTTP_status": 403,
+      "observed_response_bytes": 4818,
+      "raw_response_body_saved": false,
+      "response_sha256": null
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019322000108/0000320193-22-000108-index.html",
+      "HTTP_status": 403,
+      "observed_response_bytes": 4818,
+      "raw_response_body_saved": false,
+      "response_sha256": null
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/full-index/2022/QTR4/master.idx",
+      "HTTP_status": 403,
+      "observed_response_bytes": 4818,
+      "raw_response_body_saved": false,
+      "response_sha256": null
+    },
+    {
+      "url": "https://www.sec.gov/files/dera/data/financial-statement-data-sets/2022q4.zip",
+      "HTTP_status": 403,
+      "observed_response_bytes": 1924,
+      "raw_response_body_saved": false,
+      "response_sha256": null
+    }
+  ],
+  "FSDS_failure_title_observed": "SEC.gov | Request Rate Threshold Exceeded",
+  "no_more_direct_SEC_requests_after_explicit_block": true,
+  "not_claimed_complete_original_response_capture": true,
+  "web_renderer_raw_XML_result": "400 unsupported content-type text/xml for Apple2022 extracted instance; rendered text is not raw XML",
+  "source_record": "actual tool stdout from ordinary access probes, not fabricated SEC raw response files"
+}

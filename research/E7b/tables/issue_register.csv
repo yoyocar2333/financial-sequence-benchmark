@@ -1,0 +1,11 @@
+issue_id,area,observed_issue,status
+I01,Original SEC acquisition,403 blocks and unsupported XML/ZIP export,OPEN_CRITICAL
+I02,Time and revision proof,"Index clocks acquired, original timezone/dissemination/amendment chain absent",OPEN_CRITICAL
+I03,Security identity,LegacyDell/newDell and sameCIK CHK cancellation/reissue must not splice,OPEN_CRITICAL
+I04,Adjustment semantics,Vendor Close and cash dividends use adjusted share units,OPEN_CRITICAL
+I05,Sampling,2025 retrospective population and balanced panel condition on survival,CORRECTION_DESIGNED_NOT_IMPLEMENTED_ON_REAL_MASTER
+I06,Manual QA,0/200 independent original documents; not counted by automated tests,NOT_COMPLETED
+I07,Accounting comparability,Gross margin/EPS split basis/CFO YTD mappings need source review,OPEN
+I08,SIC classification,COP candidate13 versus historical filing2911 retained,OPEN_MAPPING_DIFFERENCE
+I09,Unrequested current metadata,Discovery snippets and vendor envelopes quarantined/excluded from financial inputs,DISCLOSED_NOT_USED
+I10,Power/inference,No qualified six-contrast panel; no empirical covariance or size estimate,NOT_ESTIMABLE

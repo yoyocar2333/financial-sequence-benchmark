@@ -1,0 +1,7 @@
+artifact_type,observed_index_listed_files,sample_median_bytes,sample_max_bytes,scenario,nominal_filings,median_bytes_times_filings,scope_limit
+10-K,20,2362249.0,7003703,20company_x44quarter_upper_bound,880,2078779120.0,"index-listed nominal sizes; selected annual source sample, not actual throughput/quarterly population estimate; excludes exhibits/revisions/market license"
+10-K,20,2362249.0,7003703,100company_x40quarter_nominal,4000,9448996000.0,"index-listed nominal sizes; selected annual source sample, not actual throughput/quarterly population estimate; excludes exhibits/revisions/market license"
+EX-101.INS,20,4071280.0,10472589,20company_x44quarter_upper_bound,880,3582726400.0,"index-listed nominal sizes; selected annual source sample, not actual throughput/quarterly population estimate; excludes exhibits/revisions/market license"
+EX-101.INS,20,4071280.0,10472589,100company_x40quarter_nominal,4000,16285120000.0,"index-listed nominal sizes; selected annual source sample, not actual throughput/quarterly population estimate; excludes exhibits/revisions/market license"
+XML,1,1904013.0,1904013,20company_x44quarter_upper_bound,880,1675531440.0,"index-listed nominal sizes; selected annual source sample, not actual throughput/quarterly population estimate; excludes exhibits/revisions/market license"
+XML,1,1904013.0,1904013,100company_x40quarter_nominal,4000,7616052000.0,"index-listed nominal sizes; selected annual source sample, not actual throughput/quarterly population estimate; excludes exhibits/revisions/market license"
