@@ -1,4 +1,4 @@
-# Financial Sequence Benchmark — E0–E7a
+# Financial Sequence Benchmark — E0–E7b
 
 以AAPL、TSLA為主，研究從隔日股價預測、波動幅度、多尺度趨勢／反轉，到新聞條件與投資者技術分析的可辨識資訊。這是可稽核的研究基準，不預設複雜模型、均值回歸或新聞一定有效。
 
@@ -19,6 +19,7 @@
 | [E5](research/E5/README.md) | Investor-Inspired Hybrid | 技術規則＋四架構＋狀態Hybrid；8個主要特徵增益均未顯著 |
 | [E6](research/E6/README.md) | 基本面資訊與融合 | 反轉H1 0/8、H3 0/20；目前來源未達嚴格PIT |
 | [E7a](research/E7a/README.md) | 論文設計與驗證規劃 | 資訊／metadata／校準／收縮六控制；協定候選未註冊，尚缺跨股PIT及獨立驗證 |
+| [E7b](research/E7b/README.md) | 20公司PIT資料原型 | 索引／身分／價格調整稽核；嚴格合格季度0，未進入正式推論 |
 
 E0的MAPE、E1的報酬百分點與E3–E5的Brier不能直接橫向排名。E3a收盤至收盤、E3b後next-open標籤、E4c的2023／2024／2025切分也不能混用。[跨實驗摘要](docs/RESEARCH_SUMMARY_ZH_TW.md)整理具體數字與限制。
 
@@ -60,3 +61,12 @@ E7A_OUTPUT=research/E7a .venv-public/bin/python scripts/test_e7a.py
 ```
 
 E6過去搜尋曾意外看到2026財報標題數字；已補[完整性揭露](docs/RESEARCH_INTEGRITY.md)，不能宣稱零接觸。E3c舊2026協定不變、未執行、不加入E6/E7。新增原始資料、模型、新聞全文與工作站ZIP不公開。
+
+## E7b公開來源原型
+
+[資料原型報告](research/E7b/E7B_SUMMARY.md)區分取得與資格：20公司CIK核對成功，但原始SEC bytes、完整修訂鏈、as-traded／身分鏈與200文件獨立人工QA尚未通過。未把缺少證據設為合格，也未進行六比較模型搜尋。歷史開發母體不可由2025存活名單倒填，已提供獨立修正selector與[近期工作稿路線](research/E7b/SHORT_TERM_WORKING_PAPER_ROUTE.md)。
+
+```bash
+.venv-public/bin/python scripts/e7b_public_replay.py --bundle research/E7b
+.venv-public/bin/python scripts/test_e7b.py
+```

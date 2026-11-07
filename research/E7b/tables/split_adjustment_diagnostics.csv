@@ -1,0 +1,12 @@
+prototype_id,ex_date_vendor,vendor_split_ratio,quote_close_before,quote_close_after,observed_before_after_ratio,ratio_if_as_traded_without_market_move,flag_consistent_with_already_split_adjusted,interpretation
+COP,2012-05-01,1.311791,54.604736328125,56.5099983215332,0.9662845151300916,1.311791,True,"diagnostic, not independent corporate-action certification"
+EOG,2014-04-01,2.0,98.08499908447266,98.9800033569336,0.9909577263880923,2.0,True,"diagnostic, not independent corporate-action certification"
+OXY,2014-12-01,1.042,76.424560546875,79.31493377685547,0.9635582721645808,1.042,True,"diagnostic, not independent corporate-action certification"
+OXY,2016-02-25,1.0017028949213662,69.35189819335938,69.6500015258789,0.9957199809621142,1.0017028949213662,True,"diagnostic, not independent corporate-action certification"
+AAPL,2014-06-09,7.0,23.05607032775879,23.424999237060547,0.9842506330280653,7.0,True,"diagnostic, not independent corporate-action certification"
+AAPL,2020-08-31,4.0,124.80750274658203,129.0399932861328,0.9672001646019489,4.0,True,"diagnostic, not independent corporate-action certification"
+IBM,2021-11-04,1.046,121.53919982910156,120.8499984741211,1.0057029488099503,1.046,True,"diagnostic, not independent corporate-action certification"
+NVDA,2021-07-20,4.0,18.77975082397461,18.61199951171875,1.0090130731064246,4.0,True,"diagnostic, not independent corporate-action certification"
+DELL_legacy,2018-12-28,1.806,22.451488494873047,23.025848388671875,0.9750558639966813,1.806,True,"diagnostic, not independent corporate-action certification"
+DELL_legacy,2021-11-02,1.973,56.51799392700195,54.61000061035156,1.0349385331500751,1.973,True,"diagnostic, not independent corporate-action certification"
+CRM,2013-04-18,4.0,41.837501525878906,41.029998779296875,1.019680788949706,4.0,True,"diagnostic, not independent corporate-action certification"
