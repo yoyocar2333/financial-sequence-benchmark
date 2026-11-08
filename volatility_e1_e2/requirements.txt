@@ -1,0 +1,11 @@
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+scikit-learn>=1.4
+yfinance>=0.2.50
+lightgbm>=4.3
+xgboost>=2.0
+torch>=2.2
+pytest>=8
+# For Mamba on a compatible CUDA environment, separately install:
+# pip install causal-conv1d mamba-ssm

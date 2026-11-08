@@ -1,0 +1,244 @@
+{
+  "AAPL_logistic_T": {
+    "config_index": 0,
+    "config": {
+      "C": 0.001
+    },
+    "cv_means": [
+      0.3160514442644942,
+      0.37427901737216335,
+      0.4219807110876022
+    ],
+    "fitting_model": "logistic"
+  },
+  "AAPL_xgboost_T": {
+    "config_index": 1,
+    "config": {
+      "max_depth": 3,
+      "min_child_weight": 30,
+      "reg_lambda": 20,
+      "learning_rate": 0.03
+    },
+    "cv_means": [
+      0.24580603341261545,
+      0.24497312307357788,
+      0.24536297221978506
+    ],
+    "fitting_model": "xgboost"
+  },
+  "AAPL_lightgbm_T": {
+    "config_index": 1,
+    "config": {
+      "num_leaves": 8,
+      "min_child_samples": 60,
+      "reg_lambda": 20,
+      "learning_rate": 0.03
+    },
+    "cv_means": [
+      0.24643349452251762,
+      0.24529759962464692,
+      0.24641004035295022
+    ],
+    "fitting_model": "lightgbm"
+  },
+  "AAPL_lstm_T": {
+    "config_index": 1,
+    "config": {
+      "width": 32,
+      "lr": 0.0003,
+      "weight_decay": 0.01
+    },
+    "cv_means": [
+      0.2505879094426364,
+      0.24559117102357877,
+      0.24670542842957846
+    ],
+    "fitting_model": "lstm"
+  },
+  "AAPL_mamba_T": {
+    "config_index": 1,
+    "config": {
+      "width": 32,
+      "lr": 0.0003,
+      "weight_decay": 0.01
+    },
+    "cv_means": [
+      0.2542889943732007,
+      0.2490328063106372,
+      0.26080947859499104
+    ],
+    "fitting_model": "mamba"
+  },
+  "AAPL_logistic_C": {
+    "config_index": 0,
+    "config": {
+      "C": 0.001
+    },
+    "cv_means": [
+      0.3110025609329537,
+      0.363155099512466,
+      0.4130833303249865
+    ],
+    "fitting_model": "logistic"
+  },
+  "AAPL_xgboost_C": {
+    "config_index": 2,
+    "config": {
+      "max_depth": 4,
+      "min_child_weight": 50,
+      "reg_lambda": 40,
+      "learning_rate": 0.02
+    },
+    "cv_means": [
+      0.2465089758237203,
+      0.24736535052458444,
+      0.24588470657666525
+    ],
+    "fitting_model": "xgboost"
+  },
+  "AAPL_hybrid_H": {
+    "config_index": 1,
+    "config": {
+      "C": 0.01
+    },
+    "cv_means": [
+      0.2443414441912589,
+      0.24183555726251715,
+      0.24246979173237201
+    ],
+    "fitting_model": "logistic"
+  },
+  "AAPL_ungated_H0": {
+    "config_index": 2,
+    "config": {
+      "C": 0.1
+    },
+    "cv_means": [
+      0.24416503464211106,
+      0.2408724182636628,
+      0.24040702851455328
+    ],
+    "fitting_model": "logistic"
+  },
+  "TSLA_logistic_T": {
+    "config_index": 0,
+    "config": {
+      "C": 0.001
+    },
+    "cv_means": [
+      0.3193325646315,
+      0.3670377419267792,
+      0.4175138971920764
+    ],
+    "fitting_model": "logistic"
+  },
+  "TSLA_xgboost_T": {
+    "config_index": 1,
+    "config": {
+      "max_depth": 3,
+      "min_child_weight": 30,
+      "reg_lambda": 20,
+      "learning_rate": 0.03
+    },
+    "cv_means": [
+      0.24969407419363657,
+      0.24924382070700327,
+      0.2496990313132604
+    ],
+    "fitting_model": "xgboost"
+  },
+  "TSLA_lightgbm_T": {
+    "config_index": 2,
+    "config": {
+      "num_leaves": 16,
+      "min_child_samples": 80,
+      "reg_lambda": 40,
+      "learning_rate": 0.02
+    },
+    "cv_means": [
+      0.2496506504932033,
+      0.24955153886601936,
+      0.24943847753983137
+    ],
+    "fitting_model": "lightgbm"
+  },
+  "TSLA_lstm_T": {
+    "config_index": 0,
+    "config": {
+      "width": 32,
+      "lr": 0.001,
+      "weight_decay": 0.01
+    },
+    "cv_means": [
+      0.2510937607089592,
+      0.2515534543169474,
+      0.25496464501841815
+    ],
+    "fitting_model": "lstm"
+  },
+  "TSLA_mamba_T": {
+    "config_index": 2,
+    "config": {
+      "width": 64,
+      "lr": 0.0003,
+      "weight_decay": 0.01
+    },
+    "cv_means": [
+      0.2538351919137772,
+      0.2548394837415758,
+      0.25377203395719206
+    ],
+    "fitting_model": "mamba"
+  },
+  "TSLA_logistic_C": {
+    "config_index": 0,
+    "config": {
+      "C": 0.001
+    },
+    "cv_means": [
+      0.32229363233813907,
+      0.3569361481963796,
+      0.4213021032227455
+    ],
+    "fitting_model": "logistic"
+  },
+  "TSLA_xgboost_C": {
+    "config_index": 1,
+    "config": {
+      "max_depth": 3,
+      "min_child_weight": 30,
+      "reg_lambda": 20,
+      "learning_rate": 0.03
+    },
+    "cv_means": [
+      0.24953035513559976,
+      0.24939324955145517,
+      0.2501225272814433
+    ],
+    "fitting_model": "xgboost"
+  },
+  "TSLA_hybrid_H": {
+    "config_index": 0,
+    "config": {
+      "C": 0.001
+    },
+    "cv_means": [
+      0.24876326987981692,
+      0.24891638485285297,
+      0.24959250541922126
+    ],
+    "fitting_model": "logistic"
+  },
+  "TSLA_ungated_H0": {
+    "config_index": 0,
+    "config": {
+      "C": 0.001
+    },
+    "cv_means": [
+      0.24890063728097234,
+      0.24912836422500254,
+      0.24950098897616924
+    ],
+    "fitting_model": "logistic"
+  }
+}

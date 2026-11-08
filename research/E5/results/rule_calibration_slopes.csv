@@ -1,0 +1,17 @@
+file,method,C,coefficient,intercept,n_calibration,negative_rule_slope
+AAPL_ma20_60_calibration.json,ridge Platt sigmoid,1.0,-0.11208349484625968,0.07220148545077522,106,True
+AAPL_rsi14_calibration.json,ridge Platt sigmoid,1.0,0.9708847112454341,-0.08480762038628673,106,False
+AAPL_macd_calibration.json,ridge Platt sigmoid,1.0,-0.07516186278569156,-0.0009523987734826136,106,True
+AAPL_bollinger_calibration.json,ridge Platt sigmoid,1.0,0.0717712799927885,0.06338680483548978,106,False
+AAPL_breakout_volume_calibration.json,ridge Platt sigmoid,1.0,-0.23078759595217915,0.06275292986205931,106,True
+AAPL_relative_strength_calibration.json,ridge Platt sigmoid,1.0,0.04138454926515585,0.10998909621939085,106,False
+AAPL_rule_hybrid_calibration.json,ridge Platt sigmoid,1.0,-0.7577740484817266,0.052612153614461137,106,True
+AAPL_state_prior_calibration.json,ridge Platt sigmoid,1.0,-0.1972246730794753,0.04752619625265604,106,True
+TSLA_ma20_60_calibration.json,ridge Platt sigmoid,1.0,-0.23017427068887256,0.019420109463230847,106,True
+TSLA_rsi14_calibration.json,ridge Platt sigmoid,1.0,0.7014882733729845,-0.246929469248615,106,False
+TSLA_macd_calibration.json,ridge Platt sigmoid,1.0,0.07112374253647426,-0.019308790371938323,106,False
+TSLA_bollinger_calibration.json,ridge Platt sigmoid,1.0,0.27670217505278943,-0.11693074533268999,106,False
+TSLA_breakout_volume_calibration.json,ridge Platt sigmoid,1.0,-0.5392470794510091,-0.08501458991913147,106,True
+TSLA_relative_strength_calibration.json,ridge Platt sigmoid,1.0,0.008072883966861653,-0.07055918764200356,106,False
+TSLA_rule_hybrid_calibration.json,ridge Platt sigmoid,1.0,-0.4624216928434356,0.011925554715712095,106,True
+TSLA_state_prior_calibration.json,ridge Platt sigmoid,1.0,-0.4832506299591764,-0.13036108899494953,106,True

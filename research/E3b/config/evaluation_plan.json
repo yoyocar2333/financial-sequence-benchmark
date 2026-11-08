@@ -1,0 +1,265 @@
+{
+  "version": "E3b-1.0",
+  "scope": "Exploratory finite-budget benchmark on previously viewed 2024-2025; 2026 never loaded",
+  "scope_from_proposal": "Main binary reversal benchmark implemented; optional material-reversal sigma threshold, three-class/neutral task, extra same-day arm and trading profitability deferred before fitting; not selected using test results",
+  "primary_horizon": 5,
+  "secondary_horizons": [
+    1,
+    20
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "sequence_length": 60,
+  "target": "1 if sign(past5 close log return) * log(C[t+h]/Open[t+1]) < 0 else 0; future flats non-reversal; known flat reference excluded",
+  "cutoff": "After t stock/VIX/VXN final data available; execution reference next session adjusted Open; no cost/slippage profitability claim",
+  "feature_A": [
+    "Open",
+    "High",
+    "Low",
+    "Close",
+    "Volume",
+    "MA5",
+    "MA20",
+    "Volatility_10",
+    "RV5",
+    "RV20",
+    "VXN",
+    "VXN_Change",
+    "VIX",
+    "VIX_Change",
+    "reference_sign"
+  ],
+  "feature_B_extra": [
+    "past5",
+    "past20",
+    "past60",
+    "past120",
+    "z5",
+    "z20",
+    "z60",
+    "z120",
+    "context60_ex5",
+    "context60_ex5_z",
+    "context60_ex20",
+    "context60_ex20_z",
+    "context120_ex5",
+    "context120_ex5_z",
+    "context120_ex20",
+    "context120_ex20_z",
+    "sigma60",
+    "tail_up",
+    "tail_down",
+    "ztail_up",
+    "ztail_down",
+    "VIX_high",
+    "VXN_high"
+  ],
+  "common_orientation": "reference_sign is common target-conditioning metadata in BOTH A/B; not a B-only hint about target definition",
+  "representation": "All models see identical 60xd causal observations; trees/logistic flatten, neural models use same sequence; no tree-only aggregation shortcut",
+  "preprocessing": "Training-calendar-only thresholds and StandardScaler, refit separately per fold; final subgroup definitions use frozen E3a training thresholds. No global2012-2022 thresholds in earlier CV folds",
+  "split": {
+    "fit_end": "2022-12-31",
+    "stop_start": "2023-01-01",
+    "stop_end": "2023-06-30",
+    "cal_start": "2023-07-01",
+    "cal_end": "2023-12-31",
+    "test_start": "2024-01-01",
+    "test_end": "2025-12-31"
+  },
+  "folds": [
+    {
+      "name": "2016",
+      "fit_end": "2016-06-30",
+      "stop_start": "2016-07-01",
+      "stop_end": "2016-12-31",
+      "eval_start": "2017-01-01",
+      "eval_end": "2018-12-31"
+    },
+    {
+      "name": "2018",
+      "fit_end": "2018-06-30",
+      "stop_start": "2018-07-01",
+      "stop_end": "2018-12-31",
+      "eval_start": "2019-01-01",
+      "eval_end": "2020-12-31"
+    },
+    {
+      "name": "2020",
+      "fit_end": "2020-06-30",
+      "stop_start": "2020-07-01",
+      "stop_end": "2020-12-31",
+      "eval_start": "2021-01-01",
+      "eval_end": "2022-12-31"
+    }
+  ],
+  "purge": "All blocks require t+20 within the same block, even h1/5, for identical dates across horizons; valid entire 60-day history required",
+  "search": {
+    "candidates_per_model": 3,
+    "folds": 3,
+    "selection_seed": 42,
+    "criterion": "unweighted mean of OUTER-fold raw-probability Brier",
+    "inner_stopping": "last half-year before each outer fold, not outer evaluation labels",
+    "tie_break": "lowest config index",
+    "candidate_grid": {
+      "logistic": [
+        {
+          "C": 0.001
+        },
+        {
+          "C": 0.01
+        },
+        {
+          "C": 0.1
+        }
+      ],
+      "xgboost": [
+        {
+          "max_depth": 2,
+          "min_child_weight": 20,
+          "reg_lambda": 10,
+          "learning_rate": 0.03
+        },
+        {
+          "max_depth": 3,
+          "min_child_weight": 30,
+          "reg_lambda": 20,
+          "learning_rate": 0.03
+        },
+        {
+          "max_depth": 4,
+          "min_child_weight": 50,
+          "reg_lambda": 40,
+          "learning_rate": 0.02
+        }
+      ],
+      "lightgbm": [
+        {
+          "num_leaves": 4,
+          "min_child_samples": 40,
+          "reg_lambda": 10,
+          "learning_rate": 0.03
+        },
+        {
+          "num_leaves": 8,
+          "min_child_samples": 60,
+          "reg_lambda": 20,
+          "learning_rate": 0.03
+        },
+        {
+          "num_leaves": 16,
+          "min_child_samples": 80,
+          "reg_lambda": 40,
+          "learning_rate": 0.02
+        }
+      ],
+      "lstm": [
+        {
+          "width": 32,
+          "lr": 0.001,
+          "weight_decay": 0.01
+        },
+        {
+          "width": 32,
+          "lr": 0.0003,
+          "weight_decay": 0.01
+        },
+        {
+          "width": 64,
+          "lr": 0.0003,
+          "weight_decay": 0.01
+        }
+      ],
+      "mamba": [
+        {
+          "width": 32,
+          "lr": 0.001,
+          "weight_decay": 0.01
+        },
+        {
+          "width": 32,
+          "lr": 0.0003,
+          "weight_decay": 0.01
+        },
+        {
+          "width": 64,
+          "lr": 0.0003,
+          "weight_decay": 0.01
+        }
+      ]
+    }
+  },
+  "training": {
+    "neural_batch": 64,
+    "max_epochs": 24,
+    "neural_patience": 4,
+    "minimum_Brier_improvement": 1e-05,
+    "tree_max_rounds": 300,
+    "tree_patience": 25,
+    "CPU_threads": 2,
+    "neural_loss": "unweighted BCEWithLogits",
+    "optimizer": "AdamW",
+    "gradient_clip": 1.0,
+    "dropout": 0.1,
+    "Mamba": "genuine mamba_ssm.Mamba(d_state16,d_conv4,expand2)",
+    "resource": "single GPU process; allocator fraction .10, duty .50; no external-growth/utilization preemption; CUDA/OOM/device errors halt queue",
+    "deviation": "New classification study uses batch64/duty.50 rather than amplitude-study batch8/duty.25; all LSTM/Mamba A/B arms share this choice; memory checked by genuine GPU smoke before training"
+  },
+  "calibration": "Fixed ridge Platt sigmoid(C=1) on2023H2 only, per seed/model/arm/horizon; no selection between raw and calibrated test results; calibrated probabilities primary, raw retained",
+  "classification_threshold": 0.5,
+  "baselines": [
+    "logistic same-window same3-candidate CV",
+    "train prior Beta(1,1)",
+    "calibration prior Beta(1,1), fair primary constant with same calibration data",
+    "momentum20 sigmoid(past20/[current RV20 daily sigma*sqrt20]) direction mapped to reversal, same Platt calibration",
+    "mean_reversion5 sigmoid(-past5/[current RV5 daily sigma*sqrt5]) direction mapped to reversal, same Platt calibration",
+    "hard momentum20 and always-reversal MR5 descriptive only"
+  ],
+  "baseline_caveat": "Hard MR5 always predicts target reversal and hard momentum5 always non-reversal by definition. Beating these hard extremes does not establish value; primary comparisons use calibrated soft baselines and logistic",
+  "metrics": [
+    "Brier primary",
+    "LogLoss",
+    "ROC_AUC",
+    "PR_AUC",
+    "BalancedAccuracy",
+    "MCC",
+    "accuracy",
+    "ECE10 fixed bins",
+    "calibration bias/slope",
+    "reliability diagrams"
+  ],
+  "subgroups": [
+    "all",
+    "extreme5_up",
+    "extreme5_down",
+    "extreme5_any",
+    "conflict_up",
+    "conflict_down",
+    "conflict_any",
+    "aligned_extreme",
+    "VIX_high",
+    "VIX_low",
+    "VXN_high",
+    "VXN_low",
+    "nonoverlap_extreme",
+    "year2024",
+    "year2025"
+  ],
+  "distinction": "Models trained on all eligible dates; subgroup metrics do NOT represent separately trained event-only predictors. No conditioning on future reversal for primary feature groups",
+  "inference": "Paired same-date Brier losses, first average five seed losses; Bartlett HAC lag20 primary, calendar circular block bootstrap length20 B4999 RNG20261026; lag/block60 sensitivity; never treat seeds as extra independent dates",
+  "family": "Per horizon102 comparisons: 24 within-arm model pairs +8 A-B gains +64 main model versus logistic/cal-prior/momentum/MR baselines +6 Mamba-versus-other gain interactions. h5 Holm102 primary; h1+h20 Holm204 secondary; globalHolm306 also reported",
+  "subgroup_inference": "Descriptive metrics and pointwise block CIs, minimum20 dates and two labels for AUC; no posthoc subgroup significance claims",
+  "complexity_limit": "Small fixed search, not exhaustive optimization; rankings apply to these budgets, calibration and two stocks, not universal architecture superiority",
+  "references": [
+    "https://xgboost.readthedocs.io/en/stable/python/python_api.html",
+    "https://lightgbm.readthedocs.io/en/stable/Parameters.html",
+    "https://scikit-learn.org/stable/modules/calibration.html",
+    "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html",
+    "https://github.com/state-spaces/mamba"
+  ],
+  "frozen_utc": "2026-10-26T03:58:25.433675+00:00"
+}

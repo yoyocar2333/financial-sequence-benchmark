@@ -1,8 +1,32 @@
+# Legacy caches and local environments
 .ipynb_checkpoints/
 __pycache__/
 *.py[cod]
-.venv/
+.venv*/
 venv/
-.env
-outputs/
+.env*
+!.env.example
+.cache/
+.pytest_cache/
 data/
+outputs/
+logs/
+vendor/
+# Private/larger scientific artifacts
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+*.joblib
+*.ubj
+*.safetensors
+*.onnx
+*.npz
+*.zip
+*.tar
+*.tar.gz
+*.parquet
+*.jsonl
+credentials*.json
+secrets*.json

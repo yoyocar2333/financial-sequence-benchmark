@@ -1,0 +1,7 @@
+cell,sentiment_vs_event,event_n,reversals,reversal_probability,signed_amplitude_mean_pp
+2,neutral_mixed,1,1,1.0,8.068999988162506
+2,opposed,1,1,1.0,5.542432797589125
+3,neutral_mixed,2,0,0.0,-4.411757996587928
+3,opposed,2,0,0.0,-3.426181716020915
+10,neutral_mixed,1,1,1.0,5.817510379926016
+11,neutral_mixed,3,3,1.0,1.4096328919526613

@@ -1,0 +1,16 @@
+{
+  "base_commit": "e6aceaac73b4c66744f0fe9098da613de63d140f",
+  "base_tree": "9575b8f44b441e4128f5dc52411a7ce0b289f394",
+  "preserved_E0_files": {
+    "RESULTS.md": "1d393c6339864e3eb30158ff207440b458c4644c66a6fe0c6d0ff4a593639bad",
+    "requirements.txt": "0bb7655798cc2e50045941b17cef025af9481dbcffde221622f15b04965e24ae",
+    "notebooks/stock_market_models.ipynb": "25f626da93904d32b6b10681bf070ca4d3004d59492101b120bc5245d0b0494e"
+  },
+  "E3c_2026_protocol_sha256": "8e8b61d921be913826643d6970cdca7b07ffc38134c3dc6699a04d3c7e5385fa",
+  "new_training_during_publication": false,
+  "independent_validation_executed": false,
+  "external_companion_commits_checked": [
+    "fdf6103ff22035a6cd9e6a7e946430f0c2b2e33d",
+    "e5a0767415a9123f0a338a73068aa564fac90585"
+  ]
+}

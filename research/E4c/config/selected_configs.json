@@ -1,0 +1,236 @@
+[
+  {
+    "timing": "next_session",
+    "arm": "P",
+    "C": 0.01,
+    "validation_Brier_raw": 0.24867185784885415,
+    "columns": [
+      "past5",
+      "z5",
+      "context120_ex5_z",
+      "sigma60",
+      "VIX",
+      "VXN",
+      "reference_sign",
+      "conflict"
+    ]
+  },
+  {
+    "timing": "next_session",
+    "arm": "D",
+    "C": 0.01,
+    "validation_Brier_raw": 0.2564544007862889,
+    "columns": [
+      "past5",
+      "z5",
+      "context120_ex5_z",
+      "sigma60",
+      "VIX",
+      "VXN",
+      "reference_sign",
+      "conflict",
+      "news_present",
+      "news_log_count"
+    ]
+  },
+  {
+    "timing": "next_session",
+    "arm": "S",
+    "C": 0.01,
+    "validation_Brier_raw": 0.253569092590665,
+    "columns": [
+      "past5",
+      "z5",
+      "context120_ex5_z",
+      "sigma60",
+      "VIX",
+      "VXN",
+      "reference_sign",
+      "conflict",
+      "news_present",
+      "news_log_count",
+      "news_signed_mean",
+      "news_signed_reference_interaction"
+    ]
+  },
+  {
+    "timing": "next_session",
+    "arm": "T",
+    "C": 0.01,
+    "validation_Brier_raw": 0.25275179040876966,
+    "columns": [
+      "past5",
+      "z5",
+      "context120_ex5_z",
+      "sigma60",
+      "VIX",
+      "VXN",
+      "reference_sign",
+      "conflict",
+      "news_present",
+      "news_log_count",
+      "news_signed_mean",
+      "news_signed_reference_interaction",
+      "news_type_earnings",
+      "news_type_product_launch",
+      "news_type_legal_regulatory",
+      "news_type_merger_acquisition"
+    ]
+  },
+  {
+    "timing": "delay1",
+    "arm": "P",
+    "C": 0.01,
+    "validation_Brier_raw": 0.24867185784885415,
+    "columns": [
+      "past5",
+      "z5",
+      "context120_ex5_z",
+      "sigma60",
+      "VIX",
+      "VXN",
+      "reference_sign",
+      "conflict"
+    ]
+  },
+  {
+    "timing": "delay1",
+    "arm": "D",
+    "C": 0.01,
+    "validation_Brier_raw": 0.25701768269457004,
+    "columns": [
+      "past5",
+      "z5",
+      "context120_ex5_z",
+      "sigma60",
+      "VIX",
+      "VXN",
+      "reference_sign",
+      "conflict",
+      "news_present",
+      "news_log_count"
+    ]
+  },
+  {
+    "timing": "delay1",
+    "arm": "S",
+    "C": 0.01,
+    "validation_Brier_raw": 0.25689999749661263,
+    "columns": [
+      "past5",
+      "z5",
+      "context120_ex5_z",
+      "sigma60",
+      "VIX",
+      "VXN",
+      "reference_sign",
+      "conflict",
+      "news_present",
+      "news_log_count",
+      "news_signed_mean",
+      "news_signed_reference_interaction"
+    ]
+  },
+  {
+    "timing": "delay1",
+    "arm": "T",
+    "C": 0.01,
+    "validation_Brier_raw": 0.2567487538247597,
+    "columns": [
+      "past5",
+      "z5",
+      "context120_ex5_z",
+      "sigma60",
+      "VIX",
+      "VXN",
+      "reference_sign",
+      "conflict",
+      "news_present",
+      "news_log_count",
+      "news_signed_mean",
+      "news_signed_reference_interaction",
+      "news_type_earnings",
+      "news_type_product_launch",
+      "news_type_legal_regulatory",
+      "news_type_merger_acquisition"
+    ]
+  },
+  {
+    "timing": "delay2",
+    "arm": "P",
+    "C": 0.01,
+    "validation_Brier_raw": 0.24867185784885415,
+    "columns": [
+      "past5",
+      "z5",
+      "context120_ex5_z",
+      "sigma60",
+      "VIX",
+      "VXN",
+      "reference_sign",
+      "conflict"
+    ]
+  },
+  {
+    "timing": "delay2",
+    "arm": "D",
+    "C": 0.01,
+    "validation_Brier_raw": 0.2536987240444959,
+    "columns": [
+      "past5",
+      "z5",
+      "context120_ex5_z",
+      "sigma60",
+      "VIX",
+      "VXN",
+      "reference_sign",
+      "conflict",
+      "news_present",
+      "news_log_count"
+    ]
+  },
+  {
+    "timing": "delay2",
+    "arm": "S",
+    "C": 0.01,
+    "validation_Brier_raw": 0.25437260396660333,
+    "columns": [
+      "past5",
+      "z5",
+      "context120_ex5_z",
+      "sigma60",
+      "VIX",
+      "VXN",
+      "reference_sign",
+      "conflict",
+      "news_present",
+      "news_log_count",
+      "news_signed_mean",
+      "news_signed_reference_interaction"
+    ]
+  },
+  {
+    "timing": "delay2",
+    "arm": "T",
+    "C": 0.01,
+    "validation_Brier_raw": 0.2529487957452521,
+    "columns": [
+      "past5",
+      "z5",
+      "context120_ex5_z",
+      "sigma60",
+      "VIX",
+      "VXN",
+      "reference_sign",
+      "conflict",
+      "news_present",
+      "news_log_count",
+      "news_signed_mean",
+      "news_signed_reference_interaction",
+      "news_type_earnings",
+      "news_type_product_launch",
+      "news_type_legal_regulatory",
+      "news_type_merger_acquisition"
+    ]
+  }
+]

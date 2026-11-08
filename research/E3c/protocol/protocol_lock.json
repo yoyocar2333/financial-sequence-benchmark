@@ -1,0 +1,19 @@
+{
+  "frozen_utc": "2026-10-26T06:54:12.664134+00:00",
+  "files": {
+    "E3C_2026_PROTOCOL.json": "9ffe3c31bbfabb6609ee69dde1deab7a13729b43511a9c045d945b5b03453940",
+    "ORIGINAL_PROPOSAL.json": "00c24df51bbfa15dc3b72c7202549e75625e8ddc9f09a356568dbda1bba213fa",
+    "E3C_2026_PROTOCOL.md": "8e8b61d921be913826643d6970cdca7b07ffc38134c3dc6699a04d3c7e5385fa",
+    "code/e3c_2026_features.py": "8b5b3292dfadaa6ffd9b1554509557a1e64ae26478cfeb455f014dde476a8ee6",
+    "code/freeze_e3c_2026.py": "d53dffc9dd9fc4c38b2d57f93d5d0a3552ae8473533441e5e31b5de3bdd3bb9e",
+    "code/e3c_core.py": "46e4f92b69ddfa63120727f6cc3d64d587800c18d78e204a5cf2f10d177f7465",
+    "code/e3b_protocol.py": "fdc0c47a5e15554e76c1b774a2abf59888b8df8a2cb059d99262c07f2ddc70f1",
+    "code/e3a_core.py": "07eecd108722f8c1040971549318aceaa7259d45256edb8294156581625e07be",
+    "code/e3c_calibration_v1_1.py": "4797f8be839e6aba7b9eb6e9c6c62b4b3bfb1dc0a67f3b744120be28f9c6f468",
+    "code/analyze_e3b.py": "91b7b546937ce8911fd5dc640cef40213422b33412511d074729a90515c08563",
+    "code/analyze_e3c.py": "76ab8e2cf120457bf2b0ae8f886ec5e660122ca5c979371d6b527d7d9d6452f2",
+    "code/test_e3c_2026_protocol.py": "6eef547e67e5c25141401dcc291f76ce79f17fcab2b7df14b645fa2a9fc4617d"
+  },
+  "2026_data_loaded": false,
+  "training_started": false
+}

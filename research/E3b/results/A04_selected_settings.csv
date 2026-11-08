@@ -1,0 +1,29 @@
+stage,case,selected_parameters,source_id
+E3b,AAPL_h5_A_logistic,"{""C"": 0.001}",S58
+E3b,AAPL_h5_A_xgboost,"{""max_depth"": 3, ""min_child_weight"": 30, ""reg_lambda"": 20, ""learning_rate"": 0.03}",S58
+E3b,AAPL_h5_A_lightgbm,"{""num_leaves"": 16, ""min_child_samples"": 80, ""reg_lambda"": 40, ""learning_rate"": 0.02}",S58
+E3b,AAPL_h5_A_lstm,"{""width"": 64, ""lr"": 0.0003, ""weight_decay"": 0.01}",S58
+E3b,AAPL_h5_A_mamba,"{""width"": 32, ""lr"": 0.001, ""weight_decay"": 0.01}",S58
+E3b,AAPL_h5_B_logistic,"{""C"": 0.001}",S58
+E3b,AAPL_h5_B_xgboost,"{""max_depth"": 4, ""min_child_weight"": 50, ""reg_lambda"": 40, ""learning_rate"": 0.02}",S58
+E3b,AAPL_h5_B_lightgbm,"{""num_leaves"": 16, ""min_child_samples"": 80, ""reg_lambda"": 40, ""learning_rate"": 0.02}",S58
+E3b,AAPL_h5_B_lstm,"{""width"": 32, ""lr"": 0.001, ""weight_decay"": 0.01}",S58
+E3b,AAPL_h5_B_mamba,"{""width"": 64, ""lr"": 0.0003, ""weight_decay"": 0.01}",S58
+E3b,TSLA_h5_A_logistic,"{""C"": 0.001}",S58
+E3b,TSLA_h5_A_xgboost,"{""max_depth"": 4, ""min_child_weight"": 50, ""reg_lambda"": 40, ""learning_rate"": 0.02}",S58
+E3b,TSLA_h5_A_lightgbm,"{""num_leaves"": 16, ""min_child_samples"": 80, ""reg_lambda"": 40, ""learning_rate"": 0.02}",S58
+E3b,TSLA_h5_A_lstm,"{""width"": 32, ""lr"": 0.0003, ""weight_decay"": 0.01}",S58
+E3b,TSLA_h5_A_mamba,"{""width"": 32, ""lr"": 0.0003, ""weight_decay"": 0.01}",S58
+E3b,TSLA_h5_B_logistic,"{""C"": 0.001}",S58
+E3b,TSLA_h5_B_xgboost,"{""max_depth"": 3, ""min_child_weight"": 30, ""reg_lambda"": 20, ""learning_rate"": 0.03}",S58
+E3b,TSLA_h5_B_lightgbm,"{""num_leaves"": 16, ""min_child_samples"": 80, ""reg_lambda"": 40, ""learning_rate"": 0.02}",S58
+E3b,TSLA_h5_B_lstm,"{""width"": 32, ""lr"": 0.0003, ""weight_decay"": 0.01}",S58
+E3b,TSLA_h5_B_mamba,"{""width"": 32, ""lr"": 0.0003, ""weight_decay"": 0.01}",S58
+E3c,AAPL_lr,"{""C"": 0.01}",S59
+E3c,AAPL_xgb,"{""max_depth"": 2, ""min_child_weight"": 20, ""n_estimators"": 100, ""reg_lambda"": 20.0, ""learning_rate"": 0.03}",S59
+E3c,AAPL_direction_prior,"{""alpha"": 30.0}",S59
+E3c,AAPL_state_prior,"{""alpha"": 100.0}",S59
+E3c,TSLA_lr,"{""C"": 0.01}",S59
+E3c,TSLA_xgb,"{""max_depth"": 1, ""min_child_weight"": 10, ""n_estimators"": 50, ""reg_lambda"": 20.0, ""learning_rate"": 0.03}",S59
+E3c,TSLA_direction_prior,"{""alpha"": 10.0}",S59
+E3c,TSLA_state_prior,"{""alpha"": 100.0}",S59

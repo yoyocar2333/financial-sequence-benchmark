@@ -1,0 +1,292 @@
+{
+  "protocol_id": "E3C-2026-ONE-SHOT-v1.0",
+  "status": "FROZEN_NOT_EXECUTED",
+  "frozen_utc": "2026-10-26T06:54:12.637720+00:00",
+  "origin_proposal_sha256": "00c24df51bbfa15dc3b72c7202549e75625e8ddc9f09a356568dbda1bba213fa",
+  "origin_proposal": {
+    "status": "PROPOSAL_ONLY_NOT_EXECUTED",
+    "created_utc": "2026-10-26T05:23:45.569606+00:00",
+    "reason": "No confirmed timing signal in E3c; optional one-time independent verification must be registered before any2026 inspection",
+    "candidate": "same XGBoost gated-event family for BOTH stocks, not test-ranked AAPL-XGB/TSLA-LR mixture",
+    "nomination_basis": "XGBoost joint pre-test expanding CV Brier lower than LR in both stocks; model-family choice is a proposal, not independent evidence",
+    "configs": {
+      "AAPL": {
+        "max_depth": 2,
+        "min_child_weight": 20,
+        "n_estimators": 100,
+        "reg_lambda": 20.0,
+        "learning_rate": 0.03
+      },
+      "TSLA": {
+        "max_depth": 1,
+        "min_child_weight": 10,
+        "n_estimators": 50,
+        "reg_lambda": 20.0,
+        "learning_rate": 0.03
+      }
+    },
+    "event_cutoffs": {
+      "AAPL": {
+        "past5_q10": -4.327494956355071,
+        "past5_q90": 4.97620172552543,
+        "VIX_median": 15.934999942779541,
+        "VXN_median": 18.40999984741211
+      },
+      "TSLA": {
+        "past5_q10": -8.454812020006298,
+        "past5_q90": 9.482740815258984,
+        "VIX_median": 15.934999942779541,
+        "VXN_median": 18.40999984741211
+      }
+    },
+    "features": "same frozen38 compact E3c columns; no event cutoff refit",
+    "refit": "2012-2024 fit only; scaler fit through2024, event cutoffs fixed2012-2022;2025H2 calibration,2025H1 unused; same20-label purge; no new hyperparameter search",
+    "calibration": "same identity-prior Platt lambda20 and projected Newton numerical solver; fixed before evaluation",
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "comparators": [
+      "event_prior",
+      "state_prior alpha100 for both stocks"
+    ],
+    "holdout": "2026 full sealed period, evaluate once only after complete data availability; t+20 must stay within2026 to keep current cohort rule",
+    "primary": "4 Brier hypotheses =2 stocks x2 priors, mean seed daily losses, Holm4, HAC20/circular block20 bootstrap19999;block60 sensitivity",
+    "secondary": "2 within-state AUC>0.5 hypotheses, two-sided bootstrap9999 and Holm2; require positive Brier gains vs BOTH priors plus corrected ranking evidence for timing claim",
+    "minimum_support": "20 event dates;10 reversals and10 continuations for confirmatory ranking and20 same-state positive-negative pairs; otherwise report insufficient support without changing thresholds",
+    "constraints": [
+      "No interim optional stopping or retuning",
+      "No architecture changes",
+      "If anyone used2026 to choose rules, replace holdout with a later unseen period",
+      "Few annual event clusters may give low power; a null result is not proof of no signal"
+    ],
+    "training_started": false,
+    "2026_data_loaded": false
+  },
+  "scope": "PRICE/VOLATILITY ONLY E3c; E4a news findings cannot alter this protocol",
+  "authority": "User2026-10-26 requested fixed protocol, explicitly NOT execution",
+  "data_access": {
+    "holdout_loaded": false,
+    "training_started": false,
+    "inspection_not_before": "2027-01-15T00:00:00Z",
+    "embargo": "One scheduled full-year2026 evaluation only after all2026 stock/VIX/VXN sessions and corporate actions available; later if feed incomplete. No partial-year access.",
+    "independence": "Before any access, every researcher attests no2026 prices/news/labels/model outputs influenced choices. If breached, retain this as exploratory and pre-register a later unseen period; do not silently substitute dates."
+  },
+  "tickers": [
+    "AAPL",
+    "TSLA"
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "horizon_sessions": 5,
+  "label": "y=1[sign(100log(Ct/Ct-5))*100log(Ct+5/Ot+1)<0]; flat future non-reversal; exclude flat reference; signed amplitude=-reference_sign*future_log_return_pp",
+  "price_policy": "Yahoo raw OHLC/Adj Close/actions snapshot, source and retrieval audit; adjusted OHLC=raw OHLC*AdjClose/Close, volume unchanged; preserve old <=2025 snapshot and separately audit differences from new vendor history. Not a fully PIT market archive.",
+  "snapshot_contract": "After embargo freeze one complete2010-2026 snapshot for AAPL/TSLA/QQQ/VIX/VXN with timezone/session audit, raw+adjusted CSV, actions, SHA256. No manual backfills/interpolation. Use one coherent adjustment vintage, retain and quantify all historical revisions against E3c, never choose vintage by scores.",
+  "session_contract": "Validate complete common actual exchange sessions; equity regular-session adjusted Open entry t+1 and Close exit t+5. VIX/VXN same-date closing values. No2027 outcomes. Decision17:00 America/New_York assumed; audit actual vendor availability; no transaction-cost/profitability assertion.",
+  "fit": {
+    "start": "2012-01-01",
+    "end": "2024-12-31",
+    "label_purge_sessions": 20
+  },
+  "calibration": {
+    "start": "2025-07-01",
+    "end": "2025-12-31",
+    "label_purge_sessions": 20,
+    "population": "ALL eligible dates, including non-events; separate map for gated pipeline and EACH prior",
+    "objective": "sum(logaddexp(0,a*logit(p)+b)-y*(a*logit(p)+b)) + .5*20*((a-1)^2+b^2)",
+    "lambda": 20.0,
+    "a_bounds": [
+      0.0,
+      3.0
+    ],
+    "b_bounds": "unbounded",
+    "initial": [
+      1.0,
+      0.0
+    ],
+    "solver": "e3c_calibration_v1_1.solve projected Newton",
+    "projected_gradient_inf_tolerance": 1e-08,
+    "max_iterations": 150,
+    "logit_probability_clip": [
+      1e-06,
+      0.999999
+    ],
+    "sigmoid_logit_clip": [
+      -35.0,
+      35.0
+    ],
+    "failure": "Stop own validation without changing lambda, model, threshold or trying alternate calibration on holdout. Preserve error; any numerical repair must retain exact objective and be frozen before unsealing outputs."
+  },
+  "unused_supervised": "2025H1, boundary-purged labels,2026; past prices from unused blocks may form causal histories",
+  "evaluation": {
+    "start": "2026-01-01",
+    "end": "2026-12-31",
+    "eligibility": "e3b_protocol.indices: all60-session causal feature history complete; reference_sign!=0; end20<=block_end; same dates for all models; no2027 labels"
+  },
+  "scaler": "StandardScaler on finite38-feature calendar observations2012-2024, including unsupervised label-boundary rows; no2025/2026 fit. Fixed cutoffs below, no quantile/median refit.",
+  "feature_columns": [
+    "past5",
+    "z5",
+    "past20",
+    "z20",
+    "past60",
+    "z60",
+    "past120",
+    "z120",
+    "context60_ex5_z",
+    "context120_ex5_z",
+    "sigma60",
+    "RV5",
+    "RV20",
+    "VIX",
+    "VXN",
+    "VIX_Change",
+    "VXN_Change",
+    "daily_log_pp",
+    "reference_sign",
+    "event_direction",
+    "long_sign",
+    "conflict",
+    "VIX_high",
+    "VXN_high",
+    "intraday_pp",
+    "overnight_pp",
+    "range_pct",
+    "close_MA5_pp",
+    "close_MA20_pp",
+    "volume_relative20",
+    "event_cell_0",
+    "event_cell_1",
+    "event_cell_2",
+    "event_cell_3",
+    "event_cell_8",
+    "event_cell_9",
+    "event_cell_10",
+    "event_cell_11"
+  ],
+  "feature_formulas": "e3c_2026_features.py frozen alongside protocol; equality to original E3c<=2025 verified without any2026 data",
+  "event_cutoffs": {
+    "AAPL": {
+      "past5_q10": -4.327494956355071,
+      "past5_q90": 4.97620172552543,
+      "VIX_median": 15.934999942779541,
+      "VXN_median": 18.40999984741211
+    },
+    "TSLA": {
+      "past5_q10": -8.454812020006298,
+      "past5_q90": 9.482740815258984,
+      "VIX_median": 15.934999942779541,
+      "VXN_median": 18.40999984741211
+    }
+  },
+  "event_direction": "+1 past5>=q90; -1 past5<=q10; otherwise0",
+  "state": "long_up=context120_ex5>=0; high_VIX=VIX>=frozen median; cell=(event_direction+1)*4+2*long_up+high_VIX;8 event cells",
+  "candidate": "Two XGB branches per ticker/seed: fit all eligible2012-2024 and fit event rows only; gate event branch on events, all branch elsewhere; calibrate WHOLE gated pipeline on all2025H2 dates. No early stopping or search.",
+  "xgb_ticker_configs": {
+    "AAPL": {
+      "max_depth": 2,
+      "min_child_weight": 20,
+      "n_estimators": 100,
+      "reg_lambda": 20.0,
+      "learning_rate": 0.03
+    },
+    "TSLA": {
+      "max_depth": 1,
+      "min_child_weight": 10,
+      "n_estimators": 50,
+      "reg_lambda": 20.0,
+      "learning_rate": 0.03
+    }
+  },
+  "xgb_common_params": {
+    "objective": "binary:logistic",
+    "tree_method": "hist",
+    "max_bin": 64,
+    "eval_metric": "logloss",
+    "n_jobs": 2,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "verbosity": 0,
+    "device": "cpu",
+    "booster": "gbtree",
+    "gamma": 0.0,
+    "reg_alpha": 0.0,
+    "max_delta_step": 0.0,
+    "colsample_bylevel": 1.0,
+    "colsample_bynode": 1.0,
+    "grow_policy": "depthwise",
+    "max_leaves": 0,
+    "base_score": null
+  },
+  "xgb_random_state": "seed; unspecified minor parameters fixed by pinned xgboost-cpu3.0.5 defaults; dump full get_params/config in eventual run",
+  "comparators": {
+    "event_prior": "global=(sum y+1)/(n+2), event=(sum event y+1)/(n_event+2); gate by event; independent same global Platt calibration",
+    "state_prior": "alpha100 both stocks; start global Beta1, then shrink direction, long sign, VIX sign successively on nested FIT rows; independent same global Platt calibration"
+  },
+  "primary": {
+    "estimand": "event Brier gain reference minus candidate; first average5 seed LOSSES at each date",
+    "family_size": 4,
+    "comparisons": [
+      "AAPL XGB vs event_prior",
+      "AAPL XGB vs state_prior",
+      "TSLA XGB vs event_prior",
+      "TSLA XGB vs state_prior"
+    ],
+    "tests": "two-sided HAC Bartlett lag20 and null-centered basic circular-block20 bootstrap B19999 seed20261026; event-mask ratio influence on full common calendar; Holm4 applied separately to HAC/bootstrap; report unadjusted95% intervals and corrected p-values",
+    "sensitivity": "lag/block60, separate sensitivity Holm4 family; thin5 chronological event sampling from first event without consulting y; no replacing primary with a favorable sensitivity",
+    "bootstrap_empty_rule": "at least99% draws have nonempty event mask or mark inference insufficient"
+  },
+  "secondary": {
+    "family_size": 2,
+    "estimand": "XGB average seed within-same-cell pair-weighted AUC versus.5 for each stock",
+    "bootstrap": "two-sided null-centered calendar circular-block20 B9999 seed20261026; average concordance kernels across seeds before resampling; basic95% interval; Holm2; block60 sensitivity",
+    "metrics": [
+      "Brier",
+      "LogLoss",
+      "ROC_AUC",
+      "PR_AUC",
+      "BalancedAccuracy",
+      "MCC",
+      "ECE10",
+      "mean probability",
+      "probability SD",
+      "calibration bias"
+    ],
+    "classification_threshold": 0.5,
+    "subgroups": "surge/crash,conflict/aligned,VIX/VXN high-low; descriptive only, no confirmatory subgroup claims"
+  },
+  "minimum_support": {
+    "event_dates": 20,
+    "reversals": 10,
+    "continuations": 10,
+    "same_state_positive_negative_pairs": 20,
+    "failure": "insufficient support; retain all data and outputs, do not change cutoffs/window/period"
+  },
+  "timing_claim": "Per stock: positive Brier gain vs BOTH priors with BOTH primary Holm4 HAC/bootstrap p<.05 AND within-state AUC>.5 with Holm2 p<.05; additionally direction of gains retained in block60 sensitivity. Otherwise distinguish mean/calibration gain from timing skill.",
+  "execution_rules": [
+    "Freeze code/env/data manifests before unsealing predictions; no dashboard/interim outputs",
+    "One run per full2026 cohort; fail stops without selecting a better seed or rerunning completed results",
+    "Store every seed/checkpoint/config/raw and calibrated probability, fit/cal indices, stats, stdout, audit, ZIP",
+    "No news addition; no architecture changes; no tuning from2026; a null result is not proof of no information"
+  ],
+  "environment": {
+    "python": "3.10.12",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "scipy": "1.15.2",
+      "scikit-learn": "1.6.1",
+      "xgboost-cpu": "3.0.5"
+    },
+    "CPU_threads": 2
+  },
+  "execution_status": "PROTOCOL_AND_FEATURE_ENGINE_ONLY; no holdout execution is provided by this preparation command"
+}

@@ -1,0 +1,11 @@
+file,sha256,provenance,period
+AAPL_adjusted_through2025.csv,f7d496be118be82b8cf33ef7884563989e85aae6d87c1c0913a2051e31fd888e,Yahoo/yfinance retrospective adjusted snapshot; redistribution not included,2010–2025; TSLA starts at IPO
+AAPL_raw_through2025.csv,82a490be1af3caaab76bb911dea7d3955ef780f4b46456929607d40b88541faa,Yahoo/yfinance retrospective adjusted snapshot; redistribution not included,2010–2025; TSLA starts at IPO
+QQQ_adjusted_through2025.csv,54f0165763228ad1cabbde4a1f5e3bf3c56dfebbb765f1a808bc868bce31cb61,Yahoo/yfinance retrospective adjusted snapshot; redistribution not included,2010–2025; TSLA starts at IPO
+QQQ_raw_through2025.csv,95cb055595c9295219592ef0c1a6a09f38479d98195a1747fae1f073387fc68d,Yahoo/yfinance retrospective adjusted snapshot; redistribution not included,2010–2025; TSLA starts at IPO
+TSLA_adjusted_through2025.csv,8bc11e61af7db55171e041df83106c438be4b900e90a49cb9cf02249919d0826,Yahoo/yfinance retrospective adjusted snapshot; redistribution not included,2010–2025; TSLA starts at IPO
+TSLA_raw_through2025.csv,d7f6383ae25a58ad6a59a5ac8d98fc54616eec43fbe32e206871532ebd0aa748,Yahoo/yfinance retrospective adjusted snapshot; redistribution not included,2010–2025; TSLA starts at IPO
+VIX_adjusted_through2025.csv,76dae11cfe90dbe65892f438203742d8094e1c54f8a2c968897e26f7dea17381,Yahoo/yfinance retrospective adjusted snapshot; redistribution not included,2010–2025; TSLA starts at IPO
+VIX_raw_through2025.csv,317fdf09a89683696224ea4e56780adc7a7306def2cf603b49fc369eb0ec7804,Yahoo/yfinance retrospective adjusted snapshot; redistribution not included,2010–2025; TSLA starts at IPO
+VXN_adjusted_through2025.csv,5fb7d9dd262f4ec6544fd84f4c776c9cbbb5c093b195b494054d522a5a276516,Yahoo/yfinance retrospective adjusted snapshot; redistribution not included,2010–2025; TSLA starts at IPO
+VXN_raw_through2025.csv,714ea994b01040f50bcb44bc42ddb59924a3eb38ad82e8e7aeaf457feb3dbc6b,Yahoo/yfinance retrospective adjusted snapshot; redistribution not included,2010–2025; TSLA starts at IPO

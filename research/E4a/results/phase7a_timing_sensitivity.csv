@@ -1,0 +1,4 @@
+timing_assumption,known_news_events,annotated_news_events,five_session_thinned_annotated_events,annotated_reversals,annotated_reversal_rate,status
+publisher_proxy,10,10,4,6,0.6,DESCRIPTIVE_PUBLISHED_TIME_PROXY_NOT_STRICT_PIT
+plus60minutes,10,10,4,6,0.6,DESCRIPTIVE_PUBLISHED_TIME_PROXY_NOT_STRICT_PIT
+defer1session,9,9,4,6,0.6666666666666666,DESCRIPTIVE_PUBLISHED_TIME_PROXY_NOT_STRICT_PIT
