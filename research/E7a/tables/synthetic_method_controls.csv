@@ -1,0 +1,16 @@
+case,forecast,n_synthetic,Brier,forecast_contains_new_information,real_market_data
+shrink_only_no_new_information,P,200000,0.25087600000000004,False,False
+shrink_only_no_new_information,F,200000,0.25,False,False
+shrink_only_no_new_information,Late,200000,0.227938,False,False
+shrink_only_no_new_information,matched_constant_shrink,200000,0.227938,False,False
+shrink_only_no_new_information,oracle_probability,200000,0.227938,False,False
+duplicated_price_information,P,200000,0.22797850000000003,False,False
+duplicated_price_information,F,200000,0.22797850000000003,False,False
+duplicated_price_information,Late,200000,0.22797850000000003,False,False
+duplicated_price_information,matched_constant_shrink,200000,0.23336425,False,False
+duplicated_price_information,oracle_probability,200000,0.22797850000000003,False,False
+genuine_extra_information,P,200000,0.22728099999999998,True,False
+genuine_extra_information,F,200000,0.22618700000000005,True,False
+genuine_extra_information,Late,200000,0.216734,True,False
+genuine_extra_information,matched_constant_shrink,200000,0.23301549999999996,True,False
+genuine_extra_information,oracle_probability,200000,0.216734,True,False

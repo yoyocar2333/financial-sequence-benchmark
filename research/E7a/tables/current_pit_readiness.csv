@@ -1,0 +1,3 @@
+ticker,quarterly_versions,first_release,last_release,SEC_acceptance_nonmissing,amendment_timestamp_nonmissing,historical_first_seen_verified,historical_version_proven,strict_E7_primary_eligible_versions,status
+AAPL,60,2011-01-18,2025-10-30,0,0,0,0,0,RECONSTRUCTION_ONLY_NOT_STRICT_PIT_READY
+TSLA,58,2011-08-03,2025-10-22,0,0,0,0,0,RECONSTRUCTION_ONLY_NOT_STRICT_PIT_READY

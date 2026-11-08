@@ -1,0 +1,7 @@
+price_model,comparison,paired_quarters,two_stock_quarter_correlation,not_a_population_ICC_estimate
+logistic,F_vs_training_prior,24,0.20822435216276014,True
+logistic,matched_shrink_increment,24,0.3374391924517228,True
+logistic,total_vs_P,24,0.6256529679954447,True
+xgboost,F_vs_training_prior,24,0.20822435216276014,True
+xgboost,matched_shrink_increment,24,0.22081074012927768,True
+xgboost,total_vs_P,24,0.006338854022721898,True
