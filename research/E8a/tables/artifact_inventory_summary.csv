@@ -1,0 +1,8 @@
+role,physical_files,bytes,active_files
+archive_not_independent_observations,5,109173236,3
+code_metadata_report_or_table,1365,23355327196,472
+features,14,12089132,7
+figure,79,5043256,30
+model_artifact_hash_only_never_loaded,2,1322682,1
+predictions,8,6389806,4
+raw_or_HTTP,1983,220161026,991

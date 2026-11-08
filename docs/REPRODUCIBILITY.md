@@ -61,3 +61,7 @@ E7a development_audit／evidence_audit腳本需舊工作站資產，不是從公
 ## E7b重現範圍
 
 `python scripts/e7b_public_replay.py --bundle research/E7b`核對公開彙整／失敗閘門；`python scripts/test_e7b.py`執行23個合成／契約測試。完整`e7b_replay.py`需要工作站捕獲的web歷史轉出與sanitized行情，本repo不含這些raw來源。重現表格不認證原始PIT，未執行新模型／2026驗證。資料來源可得與正式資格分開。
+
+## E8a重現
+
+`python -B scripts/e8a_public_replay.py --bundle research/E8a`只檢查彙整一致性，`python -B scripts/test_e8a.py`做25個合成契約測試。完整本機包有content-free metadata及11表離線重播，原來源重新認證不在公開彙整重現範圍；原23GB FNSPID的EOF／SHA證據沿用E4c，E8a只重新讀兩股完整匯出。無新訓練或2026驗證。

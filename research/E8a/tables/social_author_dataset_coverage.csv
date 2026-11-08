@@ -1,0 +1,12 @@
+view,ticker,year,retained_rows,distinct_id_hashes,distinct_text_hashes,date_min,date_max,timestamp_precision,strict_PIT_qualified,selected_sample_not_full_stream
+processed_stockemo.csv,AAPL,2019,1,1,1,2019-12-31,2019-12-31,date_only_no_timezone,0,True
+processed_stockemo.csv,AAPL,2020,8903,8903,8903,2020-01-01,2020-12-31,date_only_no_timezone,0,True
+processed_stockemo.csv,TSLA,2019,4,4,4,2019-12-31,2019-12-31,date_only_no_timezone,0,True
+processed_stockemo.csv,TSLA,2020,24341,24341,24339,2020-01-01,2020-12-31,date_only_no_timezone,0,True
+processed_stockemo.csv,TSLA,2021,19,19,19,2021-01-01,2021-01-01,date_only_no_timezone,0,True
+test_stockemo.csv,AAPL,2020,167,167,167,2020-01-03,2020-12-27,date_only_no_timezone,0,True
+test_stockemo.csv,TSLA,2020,426,426,426,2020-01-08,2020-12-31,date_only_no_timezone,0,True
+train_stockemo.csv,AAPL,2020,1395,1395,1395,2020-01-01,2020-12-31,date_only_no_timezone,0,True
+train_stockemo.csv,TSLA,2020,3463,3463,3463,2020-01-01,2020-12-31,date_only_no_timezone,0,True
+val_stockemo.csv,AAPL,2020,159,159,159,2020-01-02,2020-12-22,date_only_no_timezone,0,True
+val_stockemo.csv,TSLA,2020,452,452,452,2020-01-02,2020-12-31,date_only_no_timezone,0,True
