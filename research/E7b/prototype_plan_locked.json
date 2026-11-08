@@ -1,0 +1,35 @@
+{
+  "version": "E7b-1.0",
+  "date": "2026-11-07",
+  "scope": "20issuer/four-industry historical PIT prototype; no model search",
+  "development_filing_dates": [
+    "2012-01-01",
+    "2022-12-31"
+  ],
+  "quarter_grid": "2012Q1-2022Q4, 44 calendar quarters; do not force post-exit observations",
+  "selection": "Purposive technical/identity stress sample locked before new systematic recovery, not a random historical universe. Four known exit/restructuring cases included deliberately; this does not by itself remove selection bias. No stock chosen by forecast gain.",
+  "cohort_sha256": "13a5a7d2d20c86e683363764b82fc7b5480b2081354a1295d41d11f1b4040070",
+  "contract_source": "outputs/e7a_20261106/protocol_candidate.json",
+  "contract_sha256": "d29ed21583f2cc0d789dae366e2d00baf40dea7cd2a15be2db03c6659d5745a4",
+  "primary_data_source": "SEC original accession and original XBRL/inline XBRL; official filing detail or SGML acceptance timezone independently verified",
+  "clocks": [
+    "source public/acceptance",
+    "provider received if certified",
+    "current retrieval separate"
+  ],
+  "fetch_policy": "normal public access only, <=1 request per second, no retries after a repeated explicit403/429; no proxy/header rotation to evade SEC limits; retain response bodies and failures",
+  "companyfacts_policy": "Do not download current companyfacts containing2026 numeric facts; use dated original filings or historical FSDS instead",
+  "manual_document_gate": 200,
+  "manual_sampling": "target10 original/revision documents per company spread across<=2022 filing years; without enough originals mark NOT_EVALUABLE, never count repeated pages/facts as separate documents",
+  "numeric_coverage_gate": 0.8,
+  "common_daily_availability_gate": 0.9,
+  "critical_time_revision_errors_allowed": 0,
+  "numeric_agreement_gate": 0.99,
+  "market_action_reconciliation_gate": 0.999,
+  "no_new_model_search": true,
+  "no2024_2025_new_selection": true,
+  "no2026_model_data_or_validation": true,
+  "old_E3c_protocol_unchanged": true,
+  "variance_gate": "Only if authenticated original fundamentals, vintage history, reliable prices/actions/identity and >=six fixed comparison forecast series are available on development dates; otherwise NOT_ESTIMABLE, never impute missing evidence as zero",
+  "short_term_output": "honest data/identity/as-of engineering and failure audit working paper, separate from prospective confirmation"
+}

@@ -1,0 +1,7 @@
+id,hypothesis,candidate,reference,meaning,development_only,variance,cross_stock_dependence,test_size,status,reason
+C1,H1,Early_PMF,Early_PM_zero_padding,Numeric fundamentals beyond availability metadata,True,,,,NOT_ESTIMABLE,No qualified20-company PIT market/fundamental panel or six aligned fixed forecast series. No model search or fake zero variance.
+C2,H1,Early_PMF,Early_PM_duplicate_P,Numeric fundamentals beyond duplicated representation,True,,,,NOT_ESTIMABLE,No qualified20-company PIT market/fundamental panel or six aligned fixed forecast series. No model search or fake zero variance.
+C3,H1,Early_PMF,strong_P,Improvement beyond a strong price baseline,True,,,,NOT_ESTIMABLE,No qualified20-company PIT market/fundamental panel or six aligned fixed forecast series. No model search or fake zero variance.
+C4,H3,Late_PF,same_weight_constant_blend,Complement beyond identical-weight shrinkage,True,,,,NOT_ESTIMABLE,No qualified20-company PIT market/fundamental panel or six aligned fixed forecast series. No model search or fake zero variance.
+C5,H3,Late_PF,independently_tuned_constant_blend,Complement beyond optimized shrinkage,True,,,,NOT_ESTIMABLE,No qualified20-company PIT market/fundamental panel or six aligned fixed forecast series. No model search or fake zero variance.
+C6,H3,Late_PF,development_selected_best_single,Complement beyond selecting a single expert,True,,,,NOT_ESTIMABLE,No qualified20-company PIT market/fundamental panel or six aligned fixed forecast series. No model search or fake zero variance.

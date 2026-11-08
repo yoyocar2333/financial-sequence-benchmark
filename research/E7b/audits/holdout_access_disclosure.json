@@ -1,0 +1,11 @@
+{
+  "research_date": "2026-11-07",
+  "discovery_nonzero_exposure": true,
+  "details": [
+    "Broad historical source queries returned unsolicited2026 Oracle/CHK filing metadata and compensation-related snippets. These are discovery only, excluded from financial inputs and selection.",
+    "Yahoo historical2012-2022 envelopes may include unsolicited current quote metadata. Original envelopes quarantined locally, no current quote values printed or used; whitelist-filtered historical arrays only enter market audit.",
+    "All financial array timestamps are checked2012<=date<=2022, not2026; no2026 prediction/label score or validation; E3c original protocol unchanged."
+  ],
+  "no_zero_exposure_claim": true,
+  "prior_disclosure": "outputs/e6_20261106/audits/holdout_access_disclosure.json"
+}

@@ -56,3 +56,8 @@ LSTM／Mamba另需相容CUDA環境，並明確加`--allow-gpu`；不支援fallba
 E6報告、主要彙整、設定、圖表與程式已加入；原始文件／私有預測／checkpoint不公開，完整模型重現仍需合法相同輸入。E7a不訓練新模型，使用公開季度彙整可離線重算power_design_grid、power_simulation、required_period_scenarios、synthetic_method_controls四表；`scripts/e7a_public_replay.py --bundle research/E7a --output-dir outputs/e7a_replay`。PIT原型八測試：`E7A_OUTPUT=research/E7a python scripts/test_e7a.py`。
 
 E7a development_audit／evidence_audit腳本需舊工作站資產，不是從公開repo直接下載完整資料的工具。E7a文件、功效及合成反例重現不等於完成外部預註冊／驗證。
+
+
+## E7b重現範圍
+
+`python scripts/e7b_public_replay.py --bundle research/E7b`核對公開彙整／失敗閘門；`python scripts/test_e7b.py`執行23個合成／契約測試。完整`e7b_replay.py`需要工作站捕獲的web歷史轉出與sanitized行情，本repo不含這些raw來源。重現表格不認證原始PIT，未執行新模型／2026驗證。資料來源可得與正式資格分開。

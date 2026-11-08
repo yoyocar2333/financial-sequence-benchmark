@@ -1,0 +1,21 @@
+prototype_id,target_independent_original_documents,original_documents_obtained,independently_human_reviewed_original_documents,assistant_index_metadata_reading_done,numeric_agreement_rate,status
+COP,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+EOG,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+OXY,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+DVN,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+CHK_legacy,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+AAPL,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+INTC,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+IBM,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+NVDA,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+DELL_legacy,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+WMT,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+TGT,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+COST,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+HD,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+SHLD_legacy,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+MSFT,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+ORCL,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+ADBE,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+CRM,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
+YHOO_legacy,10,0,0,True,,NOT_EVALUABLE_ORIGINALS_MISSING; no claim assistant/automated checks equal independent human QA
