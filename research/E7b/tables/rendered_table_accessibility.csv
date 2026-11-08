@@ -1,0 +1,81 @@
+prototype_id,source_url,accession,rendered_financial_table_readable,heading,original_instance_acquired,context_units_authenticated
+AAPL,https://www.sec.gov/Archives/edgar/data/320193/000119312512444068/R2.htm,,True,CONSOLIDATED STATEMENTS OF OPERATIONS (USD $),False,False
+AAPL,https://www.sec.gov/Archives/edgar/data/320193/000119312512444068/R3.htm,,True,CONSOLIDATED BALANCE SHEETS (USD $),False,False
+AAPL,https://www.sec.gov/Archives/edgar/data/320193/000119312512444068/R4.htm,,True,CONSOLIDATED BALANCE SHEETS (Parenthetical) (USD $),False,False
+AAPL,https://www.sec.gov/Archives/edgar/data/320193/000119312512444068/R5.htm,,True,CONSOLIDATED STATEMENTS OF SHAREHOLDERS' EQUITY (USD $),False,False
+CHK_legacy,https://www.sec.gov/Archives/edgar/data/895126/000089512613000076/R2.htm,0000895126-13-000076,False,,False,False
+CHK_legacy,https://www.sec.gov/Archives/edgar/data/895126/000089512613000076/R3.htm,0000895126-13-000076,False,,False,False
+CHK_legacy,https://www.sec.gov/Archives/edgar/data/895126/000089512613000076/R4.htm,0000895126-13-000076,False,,False,False
+CHK_legacy,https://www.sec.gov/Archives/edgar/data/895126/000089512613000076/R5.htm,0000895126-13-000076,False,,False,False
+COP,https://www.sec.gov/Archives/edgar/data/1163165/000119312513065426/R2.htm,0001193125-13-065426,False,,False,False
+COP,https://www.sec.gov/Archives/edgar/data/1163165/000119312513065426/R3.htm,0001193125-13-065426,False,,False,False
+COP,https://www.sec.gov/Archives/edgar/data/1163165/000119312513065426/R4.htm,0001193125-13-065426,False,,False,False
+COP,https://www.sec.gov/Archives/edgar/data/1163165/000119312513065426/R5.htm,0001193125-13-065426,False,,False,False
+DVN,https://www.sec.gov/Archives/edgar/data/1090012/000119312513068817/R2.htm,0001193125-13-068817,False,,False,False
+DVN,https://www.sec.gov/Archives/edgar/data/1090012/000119312513068817/R3.htm,0001193125-13-068817,False,,False,False
+DVN,https://www.sec.gov/Archives/edgar/data/1090012/000119312513068817/R4.htm,0001193125-13-068817,False,,False,False
+DVN,https://www.sec.gov/Archives/edgar/data/1090012/000119312513068817/R5.htm,0001193125-13-068817,False,,False,False
+EOG,https://www.sec.gov/Archives/edgar/data/821189/000082118912000014/R2.htm,0000821189-12-000014,False,,False,False
+EOG,https://www.sec.gov/Archives/edgar/data/821189/000082118912000014/R3.htm,0000821189-12-000014,False,,False,False
+EOG,https://www.sec.gov/Archives/edgar/data/821189/000082118912000014/R4.htm,0000821189-12-000014,False,,False,False
+EOG,https://www.sec.gov/Archives/edgar/data/821189/000082118912000014/R5.htm,0000821189-12-000014,False,,False,False
+OXY,https://www.sec.gov/Archives/edgar/data/797468/000079746813000011/R2.htm,0000797468-13-000011,False,,False,False
+OXY,https://www.sec.gov/Archives/edgar/data/797468/000079746813000011/R3.htm,0000797468-13-000011,False,,False,False
+OXY,https://www.sec.gov/Archives/edgar/data/797468/000079746813000011/R4.htm,0000797468-13-000011,False,,False,False
+OXY,https://www.sec.gov/Archives/edgar/data/797468/000079746813000011/R5.htm,0000797468-13-000011,False,,False,False
+DELL_legacy,https://www.sec.gov/Archives/edgar/data/826083/000082608312000006/R2.htm,0000826083-12-000006,False,,False,False
+DELL_legacy,https://www.sec.gov/Archives/edgar/data/826083/000082608312000006/R3.htm,0000826083-12-000006,True,Consolidated Statements of Financial Position (Parenthetical) (USD $),False,False
+DELL_legacy,https://www.sec.gov/Archives/edgar/data/826083/000082608312000006/R4.htm,0000826083-12-000006,False,,False,False
+DELL_legacy,https://www.sec.gov/Archives/edgar/data/826083/000082608312000006/R5.htm,0000826083-12-000006,False,,False,False
+IBM,https://www.sec.gov/Archives/edgar/data/51143/000104746913001698/R2.htm,0001047469-13-001698,True,Consolidated Statement of Earnings (USD $),False,False
+IBM,https://www.sec.gov/Archives/edgar/data/51143/000104746913001698/R3.htm,0001047469-13-001698,False,,False,False
+IBM,https://www.sec.gov/Archives/edgar/data/51143/000104746913001698/R4.htm,0001047469-13-001698,False,,False,False
+IBM,https://www.sec.gov/Archives/edgar/data/51143/000104746913001698/R5.htm,0001047469-13-001698,False,,False,False
+INTC,https://www.sec.gov/Archives/edgar/data/50863/000119312513065416/R2.htm,0001193125-13-065416,True,Consolidated Statements of Income (USD $),False,False
+INTC,https://www.sec.gov/Archives/edgar/data/50863/000119312513065416/R3.htm,0001193125-13-065416,True,Consolidated Statements of Comprehensive Income (USD $),False,False
+INTC,https://www.sec.gov/Archives/edgar/data/50863/000119312513065416/R4.htm,0001193125-13-065416,False,,False,False
+INTC,https://www.sec.gov/Archives/edgar/data/50863/000119312513065416/R5.htm,0001193125-13-065416,False,,False,False
+NVDA,https://www.sec.gov/Archives/edgar/data/1045810/000104581012000013/R2.htm,0001045810-12-000013,True,CONSOLIDATED STATEMENTS OF OPERATIONS (USD $),False,False
+NVDA,https://www.sec.gov/Archives/edgar/data/1045810/000104581012000013/R3.htm,0001045810-12-000013,False,,False,False
+NVDA,https://www.sec.gov/Archives/edgar/data/1045810/000104581012000013/R4.htm,0001045810-12-000013,False,,False,False
+NVDA,https://www.sec.gov/Archives/edgar/data/1045810/000104581012000013/R5.htm,0001045810-12-000013,False,,False,False
+COST,https://www.sec.gov/Archives/edgar/data/909832/000119312512428890/R2.htm,0001193125-12-428890,False,,False,False
+COST,https://www.sec.gov/Archives/edgar/data/909832/000119312512428890/R3.htm,0001193125-12-428890,False,,False,False
+COST,https://www.sec.gov/Archives/edgar/data/909832/000119312512428890/R4.htm,0001193125-12-428890,True,Consolidated Statements of Income (USD $),False,False
+COST,https://www.sec.gov/Archives/edgar/data/909832/000119312512428890/R5.htm,0001193125-12-428890,True,Consolidated Statements of Equity And Comprehensive Income (USD $),False,False
+HD,https://www.sec.gov/Archives/edgar/data/354950/000035495012000003/R2.htm,0000354950-12-000003,False,,False,False
+HD,https://www.sec.gov/Archives/edgar/data/354950/000035495012000003/R3.htm,0000354950-12-000003,False,,False,False
+HD,https://www.sec.gov/Archives/edgar/data/354950/000035495012000003/R4.htm,0000354950-12-000003,False,,False,False
+HD,https://www.sec.gov/Archives/edgar/data/354950/000035495012000003/R5.htm,0000354950-12-000003,False,,False,False
+SHLD_legacy,https://www.sec.gov/Archives/edgar/data/1310067/000131006713000013/R2.htm,0001310067-13-000013,False,,False,False
+SHLD_legacy,https://www.sec.gov/Archives/edgar/data/1310067/000131006713000013/R3.htm,0001310067-13-000013,False,,False,False
+SHLD_legacy,https://www.sec.gov/Archives/edgar/data/1310067/000131006713000013/R4.htm,0001310067-13-000013,False,,False,False
+SHLD_legacy,https://www.sec.gov/Archives/edgar/data/1310067/000131006713000013/R5.htm,0001310067-13-000013,False,,False,False
+TGT,https://www.sec.gov/Archives/edgar/data/27419/000104746912002714/R2.htm,0001047469-12-002714,False,,False,False
+TGT,https://www.sec.gov/Archives/edgar/data/27419/000104746912002714/R3.htm,0001047469-12-002714,False,,False,False
+TGT,https://www.sec.gov/Archives/edgar/data/27419/000104746912002714/R4.htm,0001047469-12-002714,False,,False,False
+TGT,https://www.sec.gov/Archives/edgar/data/27419/000104746912002714/R5.htm,0001047469-12-002714,False,,False,False
+WMT,https://www.sec.gov/Archives/edgar/data/104169/000119312512134679/R2.htm,0001193125-12-134679,False,,False,False
+WMT,https://www.sec.gov/Archives/edgar/data/104169/000119312512134679/R3.htm,0001193125-12-134679,True,Consolidated Balance Sheets (Audited) (USD $),False,False
+WMT,https://www.sec.gov/Archives/edgar/data/104169/000119312512134679/R4.htm,0001193125-12-134679,False,,False,False
+WMT,https://www.sec.gov/Archives/edgar/data/104169/000119312512134679/R5.htm,0001193125-12-134679,False,,False,False
+ADBE,https://www.sec.gov/Archives/edgar/data/796343/000079634313000008/R2.htm,0000796343-13-000008,True,Consolidated Balance Sheets (USD $),False,False
+ADBE,https://www.sec.gov/Archives/edgar/data/796343/000079634313000008/R3.htm,0000796343-13-000008,False,,False,False
+ADBE,https://www.sec.gov/Archives/edgar/data/796343/000079634313000008/R4.htm,0000796343-13-000008,True,Consolidated Statements of Income (USD $),False,False
+ADBE,https://www.sec.gov/Archives/edgar/data/796343/000079634313000008/R5.htm,0000796343-13-000008,True,Consolidated Statements of Stockholders' Equity and Comprehensive Income (USD $),False,False
+CRM,https://www.sec.gov/Archives/edgar/data/1108524/000119312512107281/R2.htm,0001193125-12-107281,True,Consolidated Balance Sheets (USD $),False,False
+CRM,https://www.sec.gov/Archives/edgar/data/1108524/000119312512107281/R3.htm,0001193125-12-107281,False,,False,False
+CRM,https://www.sec.gov/Archives/edgar/data/1108524/000119312512107281/R4.htm,0001193125-12-107281,False,,False,False
+CRM,https://www.sec.gov/Archives/edgar/data/1108524/000119312512107281/R5.htm,0001193125-12-107281,False,,False,False
+MSFT,https://www.sec.gov/Archives/edgar/data/789019/000119312512316848/R2.htm,0001193125-12-316848,True,Income Statements (USD $),False,False
+MSFT,https://www.sec.gov/Archives/edgar/data/789019/000119312512316848/R3.htm,0001193125-12-316848,False,,False,False
+MSFT,https://www.sec.gov/Archives/edgar/data/789019/000119312512316848/R4.htm,0001193125-12-316848,False,,False,False
+MSFT,https://www.sec.gov/Archives/edgar/data/789019/000119312512316848/R5.htm,0001193125-12-316848,False,,False,False
+ORCL,https://www.sec.gov/Archives/edgar/data/1341439/000119312512284007/R2.htm,0001193125-12-284007,False,,False,False
+ORCL,https://www.sec.gov/Archives/edgar/data/1341439/000119312512284007/R3.htm,0001193125-12-284007,False,,False,False
+ORCL,https://www.sec.gov/Archives/edgar/data/1341439/000119312512284007/R4.htm,0001193125-12-284007,False,,False,False
+ORCL,https://www.sec.gov/Archives/edgar/data/1341439/000119312512284007/R5.htm,0001193125-12-284007,False,,False,False
+YHOO_legacy,https://www.sec.gov/Archives/edgar/data/1011006/000119312514077321/R2.htm,0001193125-14-077321,False,,False,False
+YHOO_legacy,https://www.sec.gov/Archives/edgar/data/1011006/000119312514077321/R3.htm,0001193125-14-077321,False,,False,False
+YHOO_legacy,https://www.sec.gov/Archives/edgar/data/1011006/000119312514077321/R4.htm,0001193125-14-077321,False,,False,False
+YHOO_legacy,https://www.sec.gov/Archives/edgar/data/1011006/000119312514077321/R5.htm,0001193125-14-077321,False,,False,False

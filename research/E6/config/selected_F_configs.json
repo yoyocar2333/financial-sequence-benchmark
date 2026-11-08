@@ -1,0 +1,80 @@
+{
+  "AAPL_logistic": {
+    "config_index": 1,
+    "config": {
+      "C": 0.01
+    },
+    "cv_means": [
+      0.24377291110184807,
+      0.24310583150544027,
+      0.2471283045022968
+    ]
+  },
+  "AAPL_xgboost": {
+    "config_index": 0,
+    "config": {
+      "max_depth": 2,
+      "min_child_weight": 20,
+      "reg_lambda": 10,
+      "learning_rate": 0.03
+    },
+    "cv_means": [
+      0.24284734825293222,
+      0.24388144413630167,
+      0.24551017582416534
+    ]
+  },
+  "AAPL_lightgbm": {
+    "config_index": 0,
+    "config": {
+      "num_leaves": 4,
+      "min_child_samples": 40,
+      "reg_lambda": 10,
+      "learning_rate": 0.03
+    },
+    "cv_means": [
+      0.24234094457442112,
+      0.2431219161338711,
+      0.2431219937468162
+    ]
+  },
+  "TSLA_logistic": {
+    "config_index": 0,
+    "config": {
+      "C": 0.001
+    },
+    "cv_means": [
+      0.24874162310173897,
+      0.2535559778094973,
+      0.25969100784122634
+    ]
+  },
+  "TSLA_xgboost": {
+    "config_index": 1,
+    "config": {
+      "max_depth": 3,
+      "min_child_weight": 30,
+      "reg_lambda": 20,
+      "learning_rate": 0.03
+    },
+    "cv_means": [
+      0.250036562482516,
+      0.24991371234258017,
+      0.2503863126039505
+    ]
+  },
+  "TSLA_lightgbm": {
+    "config_index": 0,
+    "config": {
+      "num_leaves": 4,
+      "min_child_samples": 40,
+      "reg_lambda": 10,
+      "learning_rate": 0.03
+    },
+    "cv_means": [
+      0.24988779071259562,
+      0.2505776481866828,
+      0.2499684724655181
+    ]
+  }
+}

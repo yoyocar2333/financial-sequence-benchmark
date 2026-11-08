@@ -1,0 +1,2 @@
+issuer,issuer_declaration_date,issuer_record_date,issuer_payment_date,issuer_cash_per_historical_share,vendor_ex_date_UTC,vendor_cash_amount,issuer_to_vendor_amount_ratio,later_split_multiplier_2014x2020,source_url,interpretation
+AAPL,2012-07-24,2012-08-13,2012-08-16,2.65,2012-08-09,0.094643,27.999957735912847,28,https://investor.apple.com/dividend-history/default.aspx,different share units and different clock meanings; not a cash-dividend discrepancy or cash return test

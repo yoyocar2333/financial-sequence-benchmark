@@ -1,0 +1,33 @@
+{
+  "version": "E7B-historical-sampling-candidate-v2",
+  "status": "IMPLEMENTED_SELECTOR_NO_HISTORICAL_MASTER_OBTAINED",
+  "supersedes_for_historical_development_only": "E7a retrospective use of2025-12-31 survival-conditioned universe; original file preserved",
+  "historical_inception_candidate": "2011-12-30T22:00:00Z after verified last trading session",
+  "strata_SIC2": [
+    [
+      10,
+      19
+    ],
+    [
+      20,
+      39
+    ],
+    [
+      40,
+      59
+    ],
+    [
+      70,
+      89
+    ]
+  ],
+  "target_initial_per_stratum": 25,
+  "max_per_SIC2": 20,
+  "selection": "One primary common class per issuer by past60 liquidity; SHA256(E7Bv2|20261106|asofUTC|security_id) within fixed strata",
+  "eligibility": "historical verified identity/snapshot only, price>=5USD, median60 dollarvolume>=1e6, prior250 prices and4published reports, no future survival/completeness filter",
+  "future_exits_kept": true,
+  "balanced40quarter_survival_required": false,
+  "population_manifest_obtained": false,
+  "prospective2025_candidate": "not erased; separately defined target population, not backward reconstruction",
+  "old_E3c2026_protocol": "UNCHANGED_NOT_EXECUTED"
+}

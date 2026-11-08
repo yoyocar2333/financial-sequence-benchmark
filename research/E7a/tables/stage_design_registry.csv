@@ -1,0 +1,10 @@
+stage,target,development_split,exploratory_evaluation,information_and_models,inference,key_limit
+E0,next-day price MAPE,archived notebook/table,2025-11 recorded result,legacy model table,not rerun,no current external confirmation
+E1_E2,next-day abs logreturn x100,2012-2022 /2023,2024-2025 501 shared days,E1 eight; E2b fourteen; Mamba five seeds batch8,HAC/block paired tests Holm,exploratory; seeds not market replicates
+E3a,close-to-close event return/reversal h1/5/20,2012-2022 thresholds /2023,2024-2025 common eligibility482 then nonoverlap,5/20/60/120 trend event definitions,98 declared primary family; current bandwidth60 eligible48,endogenous price events not causal
+E3b,next-open to t+h close reversal h5 primary,2012-2022 /2023H1 stop H2cal,2024-2025 482 days,A15 B38; common60 history; 3configs 3folds five seeds,h5 Holm102 HAC/block20,unconstrained C1Platt; ensemble not same as meanseed score
+E3c_v1.1,event-conditioned h5 reversal,2012-2022 /2023,2024-2025 101/122 tail-event days,conditional prior LR XGB; sample-gated neural models,joint event loss plus within-state evidence0/8,use completed repaired numerical protocol v1.1
+E4a_E4b,coverage recovery PIT feasibility,retrospective corpus audit,2023-2025 Apple coverage,52 summaries36Gemini then448 recovered articles,descriptive and sparse coverage only,reconstruction not certified historical PIT
+E4c,h5 AAPL event reversal,2023 train /2024 selection calibration,2025 230 all dates65 events,P/S/T lowdim LR and hierarchical priors,primary paired Brier Holm2 block20,65 events not independent days; no FNSPID model input
+E5,h5 reversal; trading secondary,2012-2022 /2023,2024-2025 482 days,B38 vs T51;12technical plusQQQ; four models and hybrid,primary feature8 joint0/8,technical deterministic; QQQ external source confound
+E6,h5 reversal primary; direct up secondary,2012-2022 /2023,2024-2025 482 days,P51 F16 PF60x66; CPU LR XGB LGBM; reused neural Late,H1 Holm8 H3 Holm20 reversal; secondary separate,118 vintages no SEC acceptance chain; metadata missingness; negative calibration slopes

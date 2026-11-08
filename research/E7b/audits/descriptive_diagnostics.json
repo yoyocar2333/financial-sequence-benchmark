@@ -1,0 +1,12 @@
+{
+  "timing_source_documents": 21,
+  "display_acceptance_later_than17_clock": 10,
+  "date_mismatch_count": 2,
+  "median_period_end_to_display_acceptance_days": 50.0,
+  "correlation_descriptive_symbols": 16,
+  "correlation_shared_development_dates": 2767,
+  "median_pairwise_price_return_correlation": 0.3453622799547186,
+  "financial_loss_covariance_estimated": false,
+  "source_or_market_PIT_gates_passed": false,
+  "prior_E7a_power_not_refitted": true
+}

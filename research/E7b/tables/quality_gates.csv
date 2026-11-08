@@ -1,0 +1,8 @@
+gate,locked_rule,observed_value,decision,failure_reason
+original_traceability,100% of used facts with original bytes/version/clock,0.0,NO_QUALIFIED_INPUTS,No used primary facts; do not call empty dataset100% compliant
+numeric_coverage,>=80% each of seven fixed core fields,0.0,NOT_EVALUABLE,"No raw authenticated quarter facts; 0/6160 prototype target cells eligible, membership denominator unresolved"
+common_trading_date_availability,>=90% eligible dates,,NOT_EVALUABLE,As-traded/security-master/date universe not verified
+independent_manual_documents,200 original documents; zero critical errors,0.0,NOT_COMPLETED,Metadata reading and table rendering do not count as200 original documents reviewed
+numeric_agreement,>=99% against original documents,,NOT_EVALUABLE,No independent raw-XBRL/original-document paired checks
+market_action_reconciliation,>=99.9% returns reconciled,,NOT_EVALUABLE,"17 query symbols acquired, no20-security as-traded/delisting master"
+PIT_time_quality,verified timezone+version history for all used facts,0.0,NOT_PASSED,"20issuer acceptance displays recovered, timezone chain/dissemination/arrival not certified"

@@ -1,0 +1,6 @@
+{
+  "scope": "AAPL reused Yahoo probe only",
+  "reason": "Reuse-copy time is not network retrieval time; preserve original probe timestamp",
+  "historical_prices_or_model_results_changed": false,
+  "old_manifest_preserved": true
+}
