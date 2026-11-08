@@ -1,0 +1,10 @@
+source_a,ticker_a,source_b,ticker_b,shared_URL_keys,shared_text_keys,same_version_inferred_from_URL_only,text_hash_conventions
+Apple_metadata100,AAPL,Apple_recollected,AAPL,100,100,False,E4b_title_plus_body; FNSPID_body; social_original_text; not cross-convention equality proof
+FNSPID_All_external_partial,AAPL,FNSPID_All_external_partial,TSLA,33,38,False,E4b_title_plus_body; FNSPID_body; social_original_text; not cross-convention equality proof
+FNSPID_All_external_partial,AAPL,FNSPID_Nasdaq_fullscan,AAPL,441,0,False,E4b_title_plus_body; FNSPID_body; social_original_text; not cross-convention equality proof
+FNSPID_All_external_partial,AAPL,FNSPID_Nasdaq_fullscan,TSLA,33,0,False,E4b_title_plus_body; FNSPID_body; social_original_text; not cross-convention equality proof
+FNSPID_All_external_partial,TSLA,FNSPID_Nasdaq_fullscan,AAPL,33,0,False,E4b_title_plus_body; FNSPID_body; social_original_text; not cross-convention equality proof
+FNSPID_All_external_partial,TSLA,FNSPID_Nasdaq_fullscan,TSLA,1875,0,False,E4b_title_plus_body; FNSPID_body; social_original_text; not cross-convention equality proof
+FNSPID_Nasdaq_fullscan,AAPL,FNSPID_Nasdaq_fullscan,TSLA,1061,1012,False,E4b_title_plus_body; FNSPID_body; social_original_text; not cross-convention equality proof
+StockEmotions_annotated,AAPL,StockEmotions_processed,AAPL,0,1720,False,E4b_title_plus_body; FNSPID_body; social_original_text; not cross-convention equality proof
+StockEmotions_annotated,TSLA,StockEmotions_processed,TSLA,0,4335,False,E4b_title_plus_body; FNSPID_body; social_original_text; not cross-convention equality proof

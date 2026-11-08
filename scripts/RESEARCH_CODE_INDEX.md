@@ -20,3 +20,7 @@ Legacy orchestration scripts may refer to private `outputs/` trees and copy loca
 `mamba_resource_guard.py` is an archived predecessor; current benchmark runners select `mamba_resource_guard_own_safety.py`. Neither may terminate other users' processes. CUDA/OOM/device errors stop only our work; the old external-growth stop behavior is not the active policy.
 
 The only public adaptation to copied scientific code is the E1 download default's exclusive end date, changed from2026-01-15 to2026-01-01 to avoid accidentally requesting holdout sessions. Frozen-input model calculations are unchanged. The new public adapter and checks are separate code, not replacements for historical measurements.
+
+## E8a
+
+`e8a_core.py`為時間／版本契約；`e8a_prepare.py`盤點既有E4並重建metadata；`e8a_fetch_social_metadata.py`只讀固定作者CSV保留日期／ticker／hash；`e8a_analyze.py`及`e8a_plot.py`做覆蓋診斷；`e8a_replay.py`需本機metadata包，公開只用`e8a_public_replay.py`及`test_e8a.py`。不執行模型、付費API或2026。

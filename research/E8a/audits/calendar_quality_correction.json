@@ -1,0 +1,8 @@
+{
+  "reason": "Purged evaluation dates are not a full information-time trading calendar",
+  "correction": "Use frozen original per-stock trading sessions for mapping,5session windows,delays and thinning; then apply evaluation dates",
+  "chosen_without_model_performance": true,
+  "old_E4_results_modified": false,
+  "regression_test": "Full-calendar mapping unchanged by purged evaluation omissions",
+  "development_and_2025_news_features_or_models_retrained": false
+}

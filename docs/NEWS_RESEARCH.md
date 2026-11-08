@@ -17,3 +17,7 @@
 不能將E4a的摘要、E4b的不同文章版本、FNSPID局部標題與E4c全庫列數相加為獨立全文。新聞缺失與無新聞不同；「觀測窗口內沒有保留Apple文章」不能等同「市場沒有AAPL消息」。
 
 本次PR不修改外部新聞Repository、不傳送訊息、不上傳任何逐篇內容。完整重現需要由研究者在合法權限下提供原凍結語料及特徵；公開統計重建不需新聞API或金鑰。
+
+## E8a新聞與社群可行性
+
+[E8a](../research/E8a/E8A_SUMMARY.md)接續E4，分開所有新聞／社群來源、版本、時間與觀測分母；新作者資料不混入E4c模型。官方社群來源僅做取得條件調查，未宣稱已授權或完整歷史。StockEmotions是selected2020語料，不是時序訓練切分；StockNetAAPL有額外2016Q1檔案，TSLA未列。研究抽取仍交叉連結[stockllm-pit-news](https://github.com/yoyocar2333/stockllm-pit-news)，公開repo不轉載本文／逐篇輸出。
