@@ -69,3 +69,7 @@ E7a development_audit／evidence_audit腳本需舊工作站資產，不是從公
 ## E8a.1
 
 `python -B scripts/test_e8a1.py`跑44個自製fixture測試；`python -B scripts/e8a1_validate.py --bundle research/E8a1`核對空真實樣本、原E8a契約及8份重播檔案。`e8a1_build.py --demo --output-dir outputs/e8a1_demo_NEW`只做離線synthetic demo；沒有live transport。來源卡hash不認證原貼文／歷史HTTP。
+
+## E9a論文來源與彙整重播
+
+[E9a說明](../research/E9a/REPRODUCIBILITY.md)提供103項主張、91筆確切原表列、21個來源SHA及32筆文獻核對。`python -B scripts/e9a_reproduce.py --bundle research/E9a --out outputs/e9a_replay_NEW`只重建來源與表格；加`--figures`才以已有matplotlib重畫三圖／從模板重建正文。無金融訓練／新分數／p-value，非原始資料PIT認證。Word需既有python-docx，PDF需已有LibreOffice與中文字型；無自動安裝或外部收集。

@@ -28,3 +28,7 @@ The only public adaptation to copied scientific code is the E1 download default'
 ## E8a.1
 
 `e8a1_collector.py`為無網路離線收集／證據綁定核心；`test_e8a1.py`只用自製fixture；`e8a1_build.py`重建來源／readiness表與schema或synthetic demo；`e8a1_validate.py`驗證空實樣本和重播。setup/write_docs需原工作站資產，新輸出避免覆蓋。
+
+## E9a publication synthesis
+
+`e9a_build.py` extracts uniquely selected existing aggregate rows; `e9a_citations.py` retains DOI checks and documented resolutions; `e9a_paper.py` formats the paper and plots; `e9a_validate.py`, `test_e9a.py`, and `e9a_reproduce.py` verify/replay evidence without training. `e9a_docx.py` and `e9a_render_pdf.py` produce editable Word/PDF using existing local tools. No collector, API submission or E8b execution.

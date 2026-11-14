@@ -1,0 +1,23 @@
+{
+  "E1_E2/README.md": "4176c07a644ff747e1ebf60835253e28dba609ae167445823ad290be49d25387",
+  "E3c/README.md": "badfb8bece7f2ea8b5fb264f9ab6cb918c4273a5c57d399585199a3697c3b9df",
+  "E4b/README.md": "3acc543ab518e0909a8a732ece8bc5252ce45c377303c3737499f49866804332",
+  "E4c/README.md": "63fcc164cf610b739af577a2ece49cb34b42d180c2664464595cba33cd257ee7",
+  "E4c/results/metrics_comparison.csv": "d2769bd53c7c5190e9501407e42199947d8a01fd4cb432bcd0eddfacdda7ef31",
+  "E4c/results/paired_tests.csv": "bbd25a5f4fc3398e19c9bac3b786613e5d6c82de7b5a466ce6b3bea965b86a9b",
+  "E4c/results/within_state_ranking.csv": "6c00c72157803a43cf6a4e744ef6899837481e2e26cca4f53d818b8981c98759",
+  "E5/README.md": "74ca989cc43256a42397e2d90adcb1269f0678d923159b0ddf6bd2af88779417",
+  "E5/results/feature_gains.csv": "51aa48d0066c48aac007d2742778c1c7d4c1ba10d844880f8dd071c48915ba6f",
+  "E5/results/metrics_comparison.csv": "d50828663a0953abfc81506251b9ddd470ebec435c4f1b9625bd8a70acf2bedf",
+  "E5/results/paired_tests.csv": "605a7e6cf3a1a2ba83036ac05a1eb8b4e01c9dfeab10b3fb875293ae20b390e6",
+  "E6/E6_SUMMARY.md": "fd3172e7d247bb27f2221ec7e44331f31e642506794f7e908ccd78f9a02aaf89",
+  "E6/results/fusion_comparison.csv": "fa1f3b49d0f9927fad6d9b9c737afb5989d22daa1934501ab3156eb3cd15638c",
+  "E6/results/information_and_fusion_gains.csv": "8c601dfaa57c5f75e153681cb8b6cf1970e828b82014aae67a8087d1b0da901b",
+  "E6/results/metrics_comparison.csv": "b55e49fe5164b449a1dee774b8d790a090d30d527ab02fea97980d0458e02888",
+  "E6/results/paired_tests.csv": "40ba0d35f84358c5ba708239c8f0ba1180f0a60c8d28c844e5185163952e79d6",
+  "E7a/STATISTICAL_POWER_ANALYSIS.md": "e505c0641a64b73065832e123e1df4c1f2147e2ea8d75987173793cdc4c81bff",
+  "E7b/E7B_SUMMARY.md": "5111e37bf2a23df14714af5c153a048a0ab491ffcba39b76059e90bf9ab55f74",
+  "E8a/E8A_SUMMARY.md": "abf2faab92c0c5f440ed586243ff610e5c1941efb7db298f92012db67532ceba",
+  "E8a1/E8B_READINESS_DECISION.md": "fe42882e491a218438b3abd6821ef21eea090ceb224e1898a276c2b9b345fe1e",
+  "E8a1/HISTORICAL_PIT_PROVENANCE_AUDIT.md": "2048be4962b331065f31404ffbc9ae116e7aaef68c2fcc3b4878b1c2e2652e70"
+}

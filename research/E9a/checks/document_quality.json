@@ -1,0 +1,14 @@
+{
+  "status": "PASSED",
+  "pages": 19,
+  "embedded_fonts": true,
+  "Chinese_extractable": true,
+  "replacement_characters": 0,
+  "unintended_blank_pages": 0,
+  "outside_page_text_blocks": 0,
+  "unique_image_resources": 3,
+  "DOCX_images": 3,
+  "external_file_paths": false,
+  "embedded_attachments_or_active_scripts": false,
+  "visual_review": "Representative rendered pages checked by author agent; not independent scientific QA"
+}

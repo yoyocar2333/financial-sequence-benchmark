@@ -1,0 +1,9 @@
+{
+ "date":"2026-11-14",
+ "old_E3c2026_protocol":"UNCHANGED_NOT_EXECUTED",
+ "new_financial_label_dataset_requested":false,
+ "financial_model_training_or_selection":false,
+ "prior_exposure":"Earlier 2026 news aggregates and discovery snippets remain disclosed in prior E6-E8 reports; no globally zero-exposure claim.",
+ "current_stage_incidental_exposure":"Official Stocktwits subscription policy page included incidental current market-quote chrome (indexes/crypto) while checking Enterprise availability. No AAPL/TSLA financial target-label dataset was requested; page-chrome values were not retained as research input or used for selection, fitting, scoring or conclusions.",
+ "policy_metadata_is_not_holdout_test":true
+}

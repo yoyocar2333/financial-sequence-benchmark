@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-14",
+  "main_commit": "e2bc7a3f686a213e25635172a19018934df944cb",
+  "branch": "research/e9a-publication-draft-20261114",
+  "merge_authorized_this_round": false,
+  "paper_language": "English working paper with Traditional Chinese executive summary and decision documents",
+  "scope": "Synthesis of existing E0-E8a.1 evidence; no new financial estimates, scores orpvalues",
+  "sources": "Frozen main reports, source CSV cells and earlier original reports; citation metadata verified separately",
+  "no_training": true,
+  "no_new_collector": true,
+  "no_E8b": true,
+  "E3c2026": "UNCHANGED_NOT_EXECUTED",
+  "draft_email": "NOT_SENT; no payment or application",
+  "inference": "Retain source-stage cohorts/families and sign convention; no pooled stage leaderboard",
+  "novelty": "Exploratory attribution audit; no first-method or confirmed information/complementarity claim"
+}

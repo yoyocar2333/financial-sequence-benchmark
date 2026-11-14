@@ -1,0 +1,21 @@
+[
+  {
+    "scope": "protected_previous_workstation.json",
+    "files_checked": 1942,
+    "unchanged": 1942,
+    "authorized_non_science_changes": []
+  },
+  {
+    "scope": "protected_previous_public.json",
+    "files_checked": 432,
+    "unchanged": 431,
+    "authorized_non_science_changes": [
+      {
+        "path": "scripts/validate_publication.py",
+        "old_sha256": "b73379e6f78e57bb0a2771fa19b4d4da1dd5a5395a58343b7a6d0d04f0dd20bd",
+        "new_sha256": "5f8ff58d482bd7df2493a11b089a52e87f2cf37398bd0297d1149cdd0c1eb6e5",
+        "reason": "Narrow own-DOCX/PDF publication check; no scientific-result change"
+      }
+    ]
+  }
+]

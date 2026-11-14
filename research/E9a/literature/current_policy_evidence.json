@@ -1,0 +1,14 @@
+{
+  "checked_date": "2026-11-14",
+  "method": "Official pages read with web tool; curated observations below, not original HTTP bytes or historical financial samples",
+  "financial_content_collected": false,
+  "cards": [
+    {"id":"POL01","url":"https://stocktwits.com/about/legal/terms/","revision":"2026-07-10","locator":"sections 4,5,8","finding":"Approved product or written authorization required for automated extraction; general visibility is not research redistribution permission."},
+    {"id":"POL02","url":"https://firestream.stocktwits.com/documentation/stream","locator":"Data Format and stream recovery","finding":"created_at, create/destroy event time and opaque seq_id documented; recovery up to 24 hours; seq_id absent in backups. No historical arrival chain obtained."},
+    {"id":"POL03","url":"https://firestream.stocktwits.com/documentation/backups","locator":"endpoint and HTTP status","finding":"Authenticated daily backup route exists; earliest date, two-ticker completeness, exact version and arrival evidence not established."},
+    {"id":"POL04","url":"https://stocktwits.com/subscriptions","locator":"Enterprise","finding":"Personalized API contact route; no public project-specific historical research quote. Consumer Edge subscription is not a substitute."},
+    {"id":"POL05","url":"https://support.reddithelp.com/hc/en-us/articles/49381918834964-Reddit-for-Researchers-Program","revision":"2026-10-05","locator":"Eligibility; Program Rules; Dataset Content; costs","finding":"Institutional sponsor and ethics approval/exemption required. Approved noncommercial access free. Five-year rolling, six-month delayed monthly latest-version dataset excludes deleted content; not an automatic historical-version certificate."},
+    {"id":"BIB01","url":"https://www.jstor.org/stable/i412579","locator":"Holm article, pages 65–70","finding":"Stable article 4615733 verified in original journal issue; unresolved candidate DOI is not used."},
+    {"id":"BIB02","url":"https://arxiv.org/abs/1603.02754","locator":"title, authors and related DOI","finding":"Full XGBoost title and ACM DOI match; resolves abbreviated Crossref title, not a different study."}
+  ]
+}
