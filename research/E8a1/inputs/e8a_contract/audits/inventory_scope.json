@@ -1,0 +1,14 @@
+{
+  "physical_files": 3456,
+  "fresh_hash_files": 3452,
+  "repeated_hash_groups": 1365,
+  "active_roots": [
+    "outputs/e4a_20261026_phase7a",
+    "outputs/e4b_20261026",
+    "outputs/e4c_20261026"
+  ],
+  "older_and_replay_versions_included_in_physical_inventory": true,
+  "large_FNSPID_master_rehashed_in_E8a": false,
+  "FNSPID_full_scan_evidence": "Prior E4c EOF/full SHA evidence reused, target exports freshly hashed and row-recomputed",
+  "no_pickle_or_checkpoint_deserialized": true
+}

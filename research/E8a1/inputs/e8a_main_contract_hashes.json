@@ -1,0 +1,26 @@
+[
+  {
+    "path": "research/E8a/E8A_SUMMARY.md",
+    "sha256": "abf2faab92c0c5f440ed586243ff610e5c1941efb7db298f92012db67532ceba"
+  },
+  {
+    "path": "research/E8a/DATA_CONTRACT_AND_PIT.md",
+    "sha256": "dce8bc0c16b46db4945f83f8b814aa1c7c5e96626ed37dce74bda277df0086bc"
+  },
+  {
+    "path": "research/E8a/E8B_FEASIBILITY_DECISION.md",
+    "sha256": "e5101ba9e06a0dbbe939f5316734c234e1ed781c1ef573d01be5a5fc94a2f6d3"
+  },
+  {
+    "path": "research/E8a/NEXT_STEPS.md",
+    "sha256": "be0dd848998bd7695629765239e2e290754f04be1ee35e12ec695eca8188ac8e"
+  },
+  {
+    "path": "research/E8a/AUDIT_PLAN_LOCKED.json",
+    "sha256": "7288b23f1cf52596cf233475582ad328356e00a81c6bd3d99e6988829aaf36c6"
+  },
+  {
+    "path": "research/E8a/tables/E8b_readiness_gates.csv",
+    "sha256": "f9f93fe1c3479a2f7d1ad78874d1f14159cff193fe1243e6f53871869c84ee93"
+  }
+]

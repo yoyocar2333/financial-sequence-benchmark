@@ -1,0 +1,8 @@
+measure,actual,target_or_scope
+new_real_records,0,conditional30-50pilot
+real_L3_qualified,0,source-version
+real_L4_qualified,0,source-plus-arrival
+pilot_real_QA_candidates,0,30-50materials
+independent_human_QA_completed,0,formal100distinctdocuments
+financial_models_fitted,0,prohibited
+new_Brier_AUC_comparisons,0,prohibited

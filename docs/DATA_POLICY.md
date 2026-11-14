@@ -16,3 +16,7 @@ Apple Newsroom重建資料是現在重新取得的歷史網頁；發布日期不
 外部方法專案：[stockllm-pit-news](https://github.com/yoyocar2333/stockllm-pit-news)。不vendor其程式／語料；外部依賴各依原授權使用。此PR不擅自為既有研究與第三方內容新增全面授權；原E0檔案維持原有狀態。
 
 `.gitignore`排除data、outputs、logs、vendor、環境、模型與archive。它只是第一道防線；發布檢查另外檢查追蹤檔案、大小、秘密格式、私有路徑及逐篇新聞欄位。新的資料或報告仍須重新人工審查。
+
+## E8a.1空schema例外
+
+只有兩個具名、0資料列的CSV模板可公開：`research/E8a1/PILOT_SAMPLE_MANIFEST.csv`與`research/E8a1/MANUAL_QA_PENDING.csv`。發布guard對任何非空列仍拒絕私人欄位；真實內容／候選清單只留授權私有儲存。此例外不開放逐篇資料發布。

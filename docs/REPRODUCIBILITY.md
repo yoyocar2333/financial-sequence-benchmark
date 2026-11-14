@@ -65,3 +65,7 @@ E7a development_audit／evidence_audit腳本需舊工作站資產，不是從公
 ## E8a重現
 
 `python -B scripts/e8a_public_replay.py --bundle research/E8a`只檢查彙整一致性，`python -B scripts/test_e8a.py`做25個合成契約測試。完整本機包有content-free metadata及11表離線重播，原來源重新認證不在公開彙整重現範圍；原23GB FNSPID的EOF／SHA證據沿用E4c，E8a只重新讀兩股完整匯出。無新訓練或2026驗證。
+
+## E8a.1
+
+`python -B scripts/test_e8a1.py`跑44個自製fixture測試；`python -B scripts/e8a1_validate.py --bundle research/E8a1`核對空真實樣本、原E8a契約及8份重播檔案。`e8a1_build.py --demo --output-dir outputs/e8a1_demo_NEW`只做離線synthetic demo；沒有live transport。來源卡hash不認證原貼文／歷史HTTP。

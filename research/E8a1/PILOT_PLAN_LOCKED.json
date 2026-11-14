@@ -1,0 +1,27 @@
+{
+  "research_date": "2026-11-14",
+  "created_utc": "2026-11-14T12:55:02.082293+00:00",
+  "main_commit": "3c01d70b4794154bcf1aa776ff45fdce7f78ef55",
+  "branch": "research/e8a1-provenance-pilot-20261114",
+  "scope": "Public documentation/license audit; conditional real pilot; offline collector and evidence verification only",
+  "real_sample_target": [
+    30,
+    50
+  ],
+  "target_companies": [
+    "AAPL",
+    "TSLA"
+  ],
+  "sample_gate": "No content acquisition without documented permitted research access; no current platform scrape or paid API",
+  "sampling_if_permitted": "Aim40, both tickers,>=4historical years, clock/cutoff and edit/delete strata only if truly available; fixed hash sampling independent of price outcomes",
+  "real_source_before2026": true,
+  "no_new_financial_prediction": true,
+  "no_Brier_AUC_comparison": true,
+  "no_live_collector_or_scheduler": true,
+  "no_payments_or_applications_or_outbound_messages": true,
+  "E8a_gate_contract_unchanged": true,
+  "E3c2026": "UNCHANGED_NOT_EXECUTED",
+  "independent_manual_QA": "Only named external researcher reviews with time and evidence count; generated forms count0",
+  "synthetic_policy": "Engineering fixtures marked synthetic; never count toward real samples, L3/L4 totals or100manual reviews",
+  "external_registration": "NOT_REGISTERED"
+}

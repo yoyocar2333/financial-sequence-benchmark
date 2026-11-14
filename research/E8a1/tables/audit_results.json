@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETE_PILOT_AUDIT_EXTERNAL_DATA_BLOCKED",
+  "real_samples": 0,
+  "L3": 0,
+  "L4": 0,
+  "manual_QA_candidates": 0,
+  "manual_QA_completed": 0,
+  "formal_QA_target": 100,
+  "pilot_material_target": [
+    30,
+    50
+  ],
+  "source_evidence_cards": 15,
+  "E8b": "NOT_READY",
+  "frozen_thresholds_changed": false,
+  "financial_models": 0,
+  "new_financial_scores": 0,
+  "live_collector_started": false,
+  "applications_sent": 0,
+  "payments": 0,
+  "E3c2026": "UNCHANGED_NOT_EXECUTED"
+}

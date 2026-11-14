@@ -1,0 +1,6 @@
+source,public_cost_evidence,project_spend,approval_or_action_required,evidence
+Stocktwits Enterprise,Custom quote; amount/academic discount not published,0,"Professor/institution requests sample contract,4year coverage,version/arrival/delete logs,retention and derived-output permissions","ST01,ST03-ST06"
+Stocktwits Edge,Displayed US$229.50/year promotional consumer subscription; NOT historical raw API budget,0,Do not buy to solve4yearrawdata gate; general1yearhistory cannot establish entitlement,"ST03,ST07"
+Reddit RFR,Approved noncommercial academic dataset access free; compute/export costs unconfirmed,0,"Institutional email,faculty sponsor,IRB/exemption,research proposal,individual accounts; clarify version snapshots",RD01-RD02
+Benzinga/Massive,Contract/plan price and research redistribution rights not established here,0,Obtain permitted sample and explicit immutable history/receipt scope; no automatic trial/signup,BZ01-BZ02
+Common Crawl,ArchiveHTTPaccess free; ownstorage/compute separate and unpriced,0,Review underlying publisher rights first; historical capture metadata alone not blanket text use,CC01-CC02

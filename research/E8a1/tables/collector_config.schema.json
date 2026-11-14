@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Offline-onlyCollectorPlan",
+  "type": "object",
+  "required": [
+    "mode",
+    "live_enabled",
+    "synthetic_fixture_permission",
+    "windows"
+  ],
+  "properties": {
+    "mode": {
+      "const": "offline_synthetic"
+    },
+    "live_enabled": {
+      "const": false
+    },
+    "synthetic_fixture_permission": {
+      "const": "SELF_AUTHORED_TEST_DATA_ONLY"
+    },
+    "windows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source",
+          "ticker",
+          "session",
+          "query",
+          "window_start",
+          "window_end"
+        ]
+      }
+    }
+  }
+}

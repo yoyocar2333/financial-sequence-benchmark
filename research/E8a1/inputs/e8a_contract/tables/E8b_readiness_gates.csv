@@ -1,0 +1,9 @@
+gate,status,reason
+permitted_research_and_reproduction,NOT_VERIFIED_FOR_COMBINED_DATASET,Author access and existing local files do not certify platform/publisher redistribution rights
+strict_historical_content_and_availability,FAIL,Zero L3/L4 source-version records
+same_source_2train_1validation_1test_years,FAIL,"Apple3years, StockEmotions~1year, FNSPID gaps; StockNet file metadata only"
+documented_session_monitoring_at_least90percent,NOT_EVALUABLE,No historical query/collector uptime and pagination completeness ledger
+nonoverlap_event_and_class_support,NOT_EVALUABLE,No eligible source panel; raw/proxy counts cannot replace eligible independent support
+100_independent_manual_version_and_relevance_QA,NOT_DONE,Zero independent manual historical-version reviews in E8a
+development_only_paired_loss_power_and_size,NOT_ESTIMABLE,No model fits/loss contrasts; no independent financial-event count invented
+unseen_preregistered_E8_validation,NOT_ESTABLISHED,2024-2025 explored; original E3c2026 contract excluded from E8
