@@ -10,6 +10,7 @@ def prop(k,v):p=PropertyValue();p.Name=k;p.Value=v;return p
 
 def main(out,program,registry):
  out=out.resolve();program=program.resolve();pipe='e9a_'+uuid.uuid4().hex
+ (out/'logs').mkdir(exist_ok=True);(out/'checks').mkdir(exist_ok=True)
  profile=out/'render_profile';profile.mkdir(exist_ok=True)
  args=[str(program/'soffice.bin'),'-env:UserInstallation='+profile.as_uri()]
  if registry:
