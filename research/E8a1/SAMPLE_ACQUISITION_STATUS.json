@@ -1,0 +1,10 @@
+{
+  "status": "BLOCKED_PERMISSION_OR_VERSION_EVIDENCE_NOT_AVAILABLE",
+  "real_content_rows_acquired": 0,
+  "L3": 0,
+  "L4": 0,
+  "pilot_QA_candidates": 0,
+  "independent_manual_QA_completed": 0,
+  "formal_manual_QA_target": 100,
+  "empty_manifest_is_not_no_historical_posts": true
+}

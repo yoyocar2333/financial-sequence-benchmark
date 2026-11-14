@@ -24,3 +24,7 @@ The only public adaptation to copied scientific code is the E1 download default'
 ## E8a
 
 `e8a_core.py`為時間／版本契約；`e8a_prepare.py`盤點既有E4並重建metadata；`e8a_fetch_social_metadata.py`只讀固定作者CSV保留日期／ticker／hash；`e8a_analyze.py`及`e8a_plot.py`做覆蓋診斷；`e8a_replay.py`需本機metadata包，公開只用`e8a_public_replay.py`及`test_e8a.py`。不執行模型、付費API或2026。
+
+## E8a.1
+
+`e8a1_collector.py`為無網路離線收集／證據綁定核心；`test_e8a1.py`只用自製fixture；`e8a1_build.py`重建來源／readiness表與schema或synthetic demo；`e8a1_validate.py`驗證空實樣本和重播。setup/write_docs需原工作站資產，新輸出避免覆蓋。

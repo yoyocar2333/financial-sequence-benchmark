@@ -1,0 +1,1 @@
+candidate_id,source,record_id,version_id,ticker,evidence_uri,entity_relevance,clock_timezone_consistent,exact_historical_version,available_before_cutoff,duplicates_reposts_checked,edits_deletes_checked,semantic_flags,decision,reviewer_id,reviewed_at,evidence_sha256,notes

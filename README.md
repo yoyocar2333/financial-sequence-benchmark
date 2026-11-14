@@ -1,4 +1,4 @@
-# Financial Sequence Benchmark — E0–E8a
+# Financial Sequence Benchmark — E0–E8a.1
 
 以AAPL、TSLA為主，研究從隔日股價預測、波動幅度、多尺度趨勢／反轉，到新聞條件與投資者技術分析的可辨識資訊。這是可稽核的研究基準，不預設複雜模型、均值回歸或新聞一定有效。
 
@@ -21,6 +21,7 @@
 | [E7a](research/E7a/README.md) | 論文設計與驗證規劃 | 資訊／metadata／校準／收縮六控制；協定候選未註冊，尚缺跨股PIT及獨立驗證 |
 | [E7b](research/E7b/README.md) | 20公司PIT資料原型 | 索引／身分／價格調整稽核；嚴格合格季度0，未進入正式推論 |
 | [E8a](research/E8a/README.md) | 新聞／社群PIT可行性 | E4資產與社群樣本稽核；嚴格歷史版本合格0，E8b正式比較未就緒 |
+| [E8a.1](research/E8a1/README.md) | 歷史新聞／社群來源證據先導 | 權限與版本證據未取得，真實L3/L4均0；完成離線收集器與QA協定，E8b未就緒 |
 
 E0的MAPE、E1的報酬百分點與E3–E5的Brier不能直接橫向排名。E3a收盤至收盤、E3b後next-open標籤、E4c的2023／2024／2025切分也不能混用。[跨實驗摘要](docs/RESEARCH_SUMMARY_ZH_TW.md)整理具體數字與限制。
 
@@ -82,3 +83,14 @@ python -B scripts/test_e8a.py
 ```
 
 公開版只有彙整、程式及3圖；完整本機metadata重播另有11表核對。無新模型／推論／GPU，E3c2026未改未執行，E8新獨立驗證須另註冊。[E8b資料閘門](research/E8a/E8B_FEASIBILITY_DECISION.md)與[下一步](research/E8a/NEXT_STEPS.md)先處理來源證據及觀測完整度。
+
+## E8a.1歷史來源證據先導
+
+[E8a.1報告](research/E8a1/E8A1_SUMMARY.md)進一步查核Stocktwits的授權與stream／backup語意、Reddit最新版本限制及新聞／archive後備路線。合法申請途徑不代表本專案已獲授權；真實樣本／L3／L4／人工QA均0，E8b維持NOT_READY。完成離線核心、固定query/window、分頁／故障／版本／刪除／manifest及外部證據綁定；所有fixtures自製synthetic，無網路adapter或排程。
+
+```bash
+python -B scripts/test_e8a1.py
+python -B scripts/e8a1_validate.py --bundle research/E8a1
+```
+
+公開manifest只有表頭，沒有逐篇原文／個資／私有索引。原E3c2026不改未執行，沒有新金融模型或新Brier/AUC比較。[來源權限](research/E8a1/SOURCE_ACCESS_AND_LICENSE_AUDIT.md)與[下一步](research/E8a1/NEXT_STEPS.md)先補實際外部證據。

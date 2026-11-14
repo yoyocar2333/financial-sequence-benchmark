@@ -1,0 +1,9 @@
+gate,frozen_E8a_status,E8a1_status,evidence,reason,threshold_changed
+permitted_research_and_reproduction,NOT_VERIFIED_FOR_COMBINED_DATASET,BLOCKED,"ST01-ST07,RD01-RD02,BZ01-BZ02",No project-approved raw-content access or research retention/export agreement; no application/payment sent,False
+strict_historical_content_and_availability,FAIL,FAIL,"PILOT_SAMPLE_MANIFEST.csv,SAMPLE_ACQUISITION_STATUS.json","0real records,0L3,0L4; no independently bound historical content witness",False
+same_source_2train_1validation_1test_years,FAIL,NOT_EVALUABLE,"ST03-ST06,RD01,BZ01-BZ02",No same-source ticker panel; service-wide history claims do not establish2train+1validation+1test years,False
+documented_session_monitoring_at_least90percent,NOT_EVALUABLE,NOT_EVALUABLE,"ST05,RD01",No source query/pagination/uptime ledger; backup seq_id absent and RFR monthly recent versions are not original monitor logs,False
+nonoverlap_event_and_class_support,NOT_EVALUABLE,NOT_EVALUABLE,PILOT_SAMPLE_MANIFEST.csv,No qualified panel; no nonoverlap event/class supports inferred from post counts,False
+100_independent_manual_version_and_relevance_QA,NOT_DONE,BLOCKED,"MANUAL_QA_PENDING.csv,MANUAL_QA_PROTOCOL.md",0real candidates and0completed human reviews; pilot30-50material target differs from formal100QA,False
+development_only_paired_loss_power_and_size,NOT_ESTIMABLE,NOT_EVALUABLE,PILOT_PLAN_LOCKED.json,"No new models/losses; no paired Brier variance, dependency, test-size or power estimates fabricated",False
+unseen_preregistered_E8_validation,NOT_ESTABLISHED,BLOCKED,inputs/e8a_contract/AUDIT_PLAN_LOCKED.json,Separate E8 unseen period/preregistration not established; E3c2026 excluded and unchanged,False

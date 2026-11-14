@@ -1,0 +1,7 @@
+{
+  "chunk_max_absolute_difference": 0.0,
+  "inference_rerun": false,
+  "historical_feature_available_claim": false,
+  "manual_semantic_gold_reviewed_in_E8a": 0,
+  "no_original_Gemini_service_revision_certification": true
+}

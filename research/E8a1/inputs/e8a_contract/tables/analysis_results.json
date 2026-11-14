@@ -1,0 +1,15 @@
+{
+  "metadata_records_including_overlapping_views": 62171,
+  "news_record_rows": 22841,
+  "strict_source_PIT_records": 0,
+  "strict_arrival_PIT_records": 0,
+  "historical_monitoring_fraction": null,
+  "independent_manual_version_reviews": 0,
+  "StockNet_AAPL_dated_files": 784,
+  "StockNet_TSLA_in_listed_directories": false,
+  "E8b_formal": "NOT_READY",
+  "new_models": 0,
+  "GPU_used": false,
+  "E3c2026": "UNCHANGED_NOT_EXECUTED",
+  "statistical_news_or_social_gain": "NOT_TESTED"
+}

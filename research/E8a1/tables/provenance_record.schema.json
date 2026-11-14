@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "E8a1ProvenanceRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source",
+    "dataset_revision",
+    "record_id",
+    "parent_id",
+    "version_id",
+    "ticker",
+    "cashtag",
+    "company_id",
+    "entity_binding_status",
+    "published_at",
+    "edited_at",
+    "deleted_at",
+    "retrieved_at",
+    "verified_public_version_at",
+    "verified_capture_at",
+    "verified_arrival_at",
+    "raw_sha256",
+    "source_evidence_uri",
+    "evidence_index",
+    "text_sha256",
+    "representation",
+    "timestamp_precision",
+    "timezone",
+    "access_agreement_id",
+    "retention_status",
+    "deletion_compliance_status",
+    "PIT_level",
+    "asof_eligible",
+    "rejection_reasons",
+    "synthetic"
+  ],
+  "properties": {
+    "source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dataset_revision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "record_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parent_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "version_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ticker": {
+      "enum": [
+        "AAPL",
+        "TSLA"
+      ]
+    },
+    "cashtag": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "company_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "entity_binding_status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "published_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "edited_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "deleted_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retrieved_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "verified_public_version_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "verified_capture_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "verified_arrival_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "raw_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_evidence_uri": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_index": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "text_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "representation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "timestamp_precision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "timezone": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "access_agreement_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retention_status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "deletion_compliance_status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "PIT_level": {
+      "enum": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "NOT_VERIFIED"
+      ]
+    },
+    "asof_eligible": {
+      "type": "boolean"
+    },
+    "rejection_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "synthetic": {
+      "type": "boolean"
+    }
+  }
+}

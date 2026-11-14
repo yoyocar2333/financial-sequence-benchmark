@@ -1,0 +1,8 @@
+check,observations,failures
+E4b_article_text_hash,2816,0
+feature_exact_record_and_version_join,3316,0
+unique_record_feature_view,3316,0
+one_primary_view_per_article_record,2816,0
+FinBERT_probability_sum,3316,0
+FinBERT_chunk_weight_reconstruction,4219,0
+Gemini_same_summary_version_join,36,0

@@ -6,8 +6,15 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='e6aceaac73b4c66744f0fe9098da613de63d140f'
 BLOCKED_SUFFIXES={'.pt','.pth','.ckpt','.pkl','.pickle','.joblib','.ubj','.safetensors','.onnx','.npz','.zip','.parquet','.jsonl'}
 FORBIDDEN_CSV={'article_text','body','text','headline','title','summary','content','article_id','record_id','prompt','response','api_key','access_token'}
+EMPTY_SCHEMA_TEMPLATES={'research/E8a1/PILOT_SAMPLE_MANIFEST.csv','research/E8a1/MANUAL_QA_PENDING.csv'}
 
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+
+def allowed_empty_template(path,name):
+    if name not in EMPTY_SCHEMA_TEMPLATES:return False
+    with path.open(newline='') as f:
+        reader=csv.reader(f)
+        return next(reader,None) is not None and next(reader,None) is None
 
 def public_files():
     result=subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard'],cwd=ROOT,text=True)
@@ -37,9 +44,11 @@ def check():
         home_pattern='/'+r'Users/[^/\s]+|/'+r'home/[^/\s]+'
         if private_prefix in text or re.search(home_pattern,text):errors.append('private workstation path: '+name)
         if p.suffix=='.csv':
-            with p.open(newline='') as f:header=next(csv.reader(f),[])
+            with p.open(newline='') as f:
+                reader=csv.reader(f);header=next(reader,[])
+            empty_template=allowed_empty_template(p,name)
             bad=set(header)&FORBIDDEN_CSV
-            if bad:errors.append('per-article/private CSV columns '+str(sorted(bad))+': '+name)
+            if bad and not empty_template:errors.append('per-article/private CSV columns '+str(sorted(bad))+': '+name)
         if p.suffix=='.py':
             python_count+=1
             try:ast.parse(text)

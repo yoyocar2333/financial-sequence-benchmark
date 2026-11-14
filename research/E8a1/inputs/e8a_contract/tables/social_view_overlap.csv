@@ -1,0 +1,3 @@
+ticker,processed_distinct_ids,annotated_distinct_ids,shared_ids,annotated_ids_absent_from_processed,ID_namespace_equivalence_verified,annotated_distinct_texts,shared_exact_original_texts,annotated_texts_absent_from_processed,counts_additive
+AAPL,8904,1721,0,1721,False,1721,1720,1,False
+TSLA,24364,4341,0,4341,False,4341,4335,6,False
