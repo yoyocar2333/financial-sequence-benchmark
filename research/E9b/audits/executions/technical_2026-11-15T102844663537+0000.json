@@ -1,0 +1,19 @@
+{
+  "component": "technical",
+  "at": "2026-11-15T10:28:44.663537+00:00",
+  "plan_sha256": "8af359d6a9c1b09bea3b9d454957ad3dfeb0e9028fc06ccc3dd85ea38035ea0b",
+  "inputs": {
+    "outputs/e5_20261102/inputs/AAPL_adjusted_through2025.csv": "f7d496be118be82b8cf33ef7884563989e85aae6d87c1c0913a2051e31fd888e",
+    "outputs/e5_20261102/inputs/TSLA_adjusted_through2025.csv": "8bc11e61af7db55171e041df83106c438be4b900e90a49cb9cf02249919d0826",
+    "outputs/e5_20261102/inputs/QQQ_adjusted_through2025.csv": "54f0165763228ad1cabbde4a1f5e3bf3c56dfebbb765f1a808bc868bce31cb61",
+    "outputs/e5_20261102/inputs/VIX_adjusted_through2025.csv": "76dae11cfe90dbe65892f438203742d8094e1c54f8a2c968897e26f7dea17381",
+    "outputs/e5_20261102/inputs/VXN_adjusted_through2025.csv": "5fb7d9dd262f4ec6544fd84f4c776c9cbbb5c093b195b494054d522a5a276516"
+  },
+  "code": {
+    "e9b_setup.py": "bc1f889febc0d8961cbe919823c7a72a92beb5e19d066ce041f8fb7d30f18417",
+    "e9b_core.py": "57b7e2fae66ca262d8fe36daa0bfbba840e7a68f3db11833ae67fdccd097a233",
+    "e9b_technical.py": "86c50332ce6f9e8c127111784188014a5e8ea49dd134bff93b7f21c72e667257",
+    "e9b_development.py": "76e19d04853ab0867cc5c1b4234c8abc14faf58e5feb7a58c3eb69532a476b74"
+  },
+  "exploratory": true
+}

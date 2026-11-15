@@ -1,0 +1,3 @@
+ticker,n,first,last,B_dimensions,T_dimensions,flattened_B,flattened_T
+AAPL,2768,2012-01-03,2022-12-30,38,51,2280,3060
+TSLA,2768,2012-01-03,2022-12-30,38,51,2280,3060

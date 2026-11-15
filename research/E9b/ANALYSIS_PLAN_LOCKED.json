@@ -1,0 +1,45 @@
+{
+  "stage": "E9b-1.0",
+  "locked_utc": "2026-11-15T10:22:57.161743+00:00",
+  "date": "2026-11-15",
+  "prior_paper_commit": "378c92397cf18e4d924741c8b9b4a244197fe0a5",
+  "base_main": "46ae426af3d4ce30573776d419fd2e9405f99897",
+  "branch": "research/e9a-publication-draft-20261114",
+  "PR7_observed": "already merged; same branch and manuscript paths, successor review PR required; no merge authorized",
+  "scope": "Exploratory supplementary analyses of fixed archived inputs and forecasts; original numerical results remain immutable. No2026 financial data, collector, external data acquisition or E8b.",
+  "A_narrative": "Reconstruct question-method-finding-interpretation around representation, shrinkage, attention and provenance. Move engineering, hashes, tests and access administration to supplement. Keep negative results, locally significant exceptions, original families and cohort differences.",
+  "B1_technical": {
+    "period": "2012-2022 only; warmup prices before2012 allowed, all source rows cut at2022-12-31 before feature construction",
+    "features": "Frozen E5 B38, T adds original12technical plus QQQ-relative13. Training calendar complete finite rows; no feature selection.",
+    "diagnostics": "Full Spearman51x51, technical13xB38 correlations; average linkage distance1-abs(rho), no inferential p-value. Constant columns explicitly marked.",
+    "auxiliary_prediction": "Fixed Ridge(alpha10), multivariate B38->13technical/QQQ targets; StandardScaler from each training fold, source expanding folds2017-18/2019-20/2021-22. Exactly6 multivariate auxiliary fits; raw held-forward R2 and train-SD normalized RMSE. Negative R2 retained. No reversal labels for auxiliary fitting.",
+    "complexity": "Existing B/T selected configs, input dimensions, parameter counts if available, five-seed SD and QQQ C controls; do not change threshold or model choices."
+  },
+  "B2_archived_fusion": {
+    "cohort": "Both stocks, existing482 dates2024-2025, primary reversal only; retain all5P architectures, commonF logistic, metadata, priors, Early where actually available, Late and same-weight PriorBlend. All seeds42-46, both raw/calibrated.",
+    "distributions": "Per-seed mean,SD,quantiles1/5/50/95/99percent, extremeness outside[.1,.9] primary and[.25,.75] secondary, meanabs(p-.5), bias,Brier,LogLoss,AUC; seed-SD distinct from market uncertainty.",
+    "decomposition": "Fixed10bins primary and5bins sensitivity. REL=sum w(pbar_b-ybar_b)^2;RES=sum w(ybar_b-ybar)^2;UNC=ybar(1-ybar); group remainder G=mean[(p-pbar_b)^2-2(p-pbar_b)(y-ybar_b)]. Exact BS=REL-RES+UNC+G. Empirical bin diagnostics, not population/casual information identification. Average per-seed terms for primary loss estimand; probability-ensemble separately labeled.",
+    "raw_identities": "Validate archived q=(1-w)p+w f and q0=(1-w)p+w c from source constant. Compute exact raw gain=2w(f-c)(y-q0)-w^2(f-c)^2 and convex-combination diversity identity. Do not apply identities to independently calibrated forecasts as if still linear mixtures.",
+    "uncertainty": "New raw and calibrated pointwise benefit intervals for Late vsP andPriorBlend, all10stock-architecture settings; calendar circular60 B4999 seed20261115+60+200; no new hypothesis p-values or winner selection. Existing calibrated primary tests/p families copied unchanged.",
+    "plots": "Forecast concentration, reliability/score components, weights and dispersion for allsettings; detailed neural examples chosen by original professor question, not new significance."
+  },
+  "B3_news": {
+    "cohort": "Existing daily_features and allprobabilities; 2023train,2024validation/calibration,2025test; exact original dates/events, all three fixed timing assumptions.",
+    "fixed_strata": "Retained-source article counts0,1-2,>=3 in original5session window; never call count0 verified no-news. All-date and extreme-event results, modelP/D/S/T,hierP/S/T andglobal.",
+    "descriptive": "Per partition/timing: logdensity vs signed/absolute mean sentiment Spearman; training2023 is main representation diagnostic. Per stratum: n,positive/negative counts, probability means/SD, Brier/LogLoss/AUC and amplitude; AUC suppressed unless>=10 positives AND10 negatives. Same-state AUC only if>=20events,10positive/negative and20matchedpairs, descriptive.",
+    "attention_controls": "Report P->D,D->S,S->T point differences and mean absolute probability changes on same dates; no new sentiment/regime thresholds, model fit or p-value. Existing timing sensitivities, primaryp=.1512 and secondaryhierp=.028 retained with exact family.",
+    "coverage": "Source-window observed, historical completeness and PIT flags tabulated separately; no re-scraping or upgraded provenance."
+  },
+  "B4_development_controls": {
+    "data": "Strictly<=2022 derived market/issuer-vintage daily snapshots; original sourceSHA plus derived cutoffSHA. Source5-session label/end20purge,60rowhistory. Bothstocks; source fixedexpanding folds2017-18,2019-20,2021-22.",
+    "model": "Logistic C=.001, lbfgs,max_iter500,tol1e-4,seed42; if ConvergenceWarning only same objective/C with max_iter2000 once; retain both attempts, no score-based retry. TwoBLASthreads,CPU only.",
+    "arms": "Reuse archived config0P(T51) and config0F logistic eval predictions, checking exact dates/labels. New matched60x66 arms: P+M+7zero;P+M+7accounting;P+M+7duplicate standardized pricecolumns(past5,past20,past60,past120,RV5,RV20,Close). M=releaseage+7missingflags; reference_sign already inP. Newcompactmetadataexpert=current M+reference_sign,9dimensions. 18matched+6metadata classificationfits, no newP/neural fitting.",
+    "late_controls": "All fiveP architectures=config0 archived forecasts, commonF config0. Fixed weightgrid[0,.25,.5,.75,1]; first outerfoldw=.5, then select each weight ONLY from strictly preceding outerfolds; equal-fold raw Brier, ties smallerweight. Independent constant-shrink weight same grid/history. BestsingleP/F selected only precedingfolds, initialP. Allraw; no invented CV calibration.",
+    "six_contrasts": "Primarysupplementary diagnostic family onlyLogistic pooled equalstock: C1PMF-PMzero,C2PMF-PMduplicate,C3PMF-P,C4Late-matchedshrink,C5Late-independentshrink,C6Late-prequentialbestsingle. Positive=referenceBS-candidateBS. This is a new exploratory diagnostic, not original E6H1/H3 redefinition or E7externalregistration.",
+    "inference": "Full development market calendar2017-2022 including purged gaps, paired influence-ratio HAC60 and synchronized circular60 blocksB4999,seed20261115+60+400, Holm6 two-sided;20/120 sensitivity separateHolm6. Pointwise intervals. Two observedstocks conditional estimand; no cross-sector population claim.",
+    "additional": "All5expert combinations descriptive; quartermean paired-loss SD,autocorr1 and crossstockcorr for6contrasts; calendarquarters not independent filing events. No MDE/power certification fromtwo stocks.",
+    "failures": "Missing archived input, label/calendar mismatch or unresolved nonconvergence => retain failure with affectedcontrast notestimable; no favorable stock/model substitution."
+  },
+  "narrative_audit": "Deterministic sentence-level defensive-language patterns plus per-passage editorial decisions; exclude references/appendices from body-count comparison, retain legitimate negative findings. Report exact counts and heuristic boundaries.",
+  "publication": "One current paper at research/E9a/PAPER_DRAFT.*, refreshedtemplate/code/matrix; detailed newanalysis at research/E9b. Preserve private E9a original and Git history. No raw data, daily private predictions, weights, thirdpartytext or workstationarchives onGitHub."
+}

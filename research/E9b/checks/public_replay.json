@@ -1,0 +1,10 @@
+{
+  "status": "PASSED",
+  "scope": "Public aggregate manuscript/table replay; private source-prediction replay is separate",
+  "claims": 319,
+  "manuscript_byte_identical": true,
+  "new_fits": 0,
+  "network": false,
+  "figure_regeneration": true,
+  "PIT_certification": false
+}

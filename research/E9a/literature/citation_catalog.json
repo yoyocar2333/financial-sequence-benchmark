@@ -1461,5 +1461,555 @@
     "response_sha256": "c90703cece87d1cbaddc20204479ff916d8046c1b0f3fa9ff0bcb51d9dd3b9e2",
     "raw_HTTP_body_retained": false,
     "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R33",
+    "expected_title": "Combining probability forecasts",
+    "doi": "10.1111/j.1467-9868.2009.00726.x",
+    "title": "Combining Probability Forecasts",
+    "authors": [
+      {
+        "given": "Roopesh",
+        "family": "Ranjan",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Washington , Seattle , USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tilmann",
+        "family": "Gneiting",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Universität Heidelberg , Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "venue": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+    "volume": "72",
+    "issue": "1",
+    "pages": "71-91",
+    "dates": {
+      "published": [
+        [
+          2010,
+          1,
+          1
+        ]
+      ],
+      "published-print": [
+        [
+          2010,
+          1,
+          1
+        ]
+      ],
+      "published-online": [
+        [
+          2010,
+          1,
+          6
+        ]
+      ],
+      "issued": [
+        [
+          2010,
+          1,
+          1
+        ]
+      ]
+    },
+    "status": "DOI_AND_PRIMARY_RECORD_VERIFIED",
+    "checked_date": "2026-11-15",
+    "metadata_url": "https://api.crossref.org/works/10.1111%2Fj.1467-9868.2009.00726.x",
+    "response_sha256": "9ae51de631ca65c6e695a7c6d9d48e960ddc5def10f525dfb384771baa0ec2b9",
+    "original_HTTP_body_retained": false,
+    "year_cited": 2010,
+    "url": "https://doi.org/10.1111/j.1467-9868.2009.00726.x",
+    "primary_verification_url": "https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9868.2009.00726.x",
+    "reading_scope": "Primary author/publisher abstract or selected method sections; not exhaustive systematic review"
+  },
+  {
+    "id": "R34",
+    "expected_title": "The forecast combination puzzle: A simple theoretical explanation",
+    "doi": "10.1016/j.ijforecast.2015.12.005",
+    "title": "The forecast combination puzzle: A simple theoretical explanation",
+    "authors": [
+      {
+        "given": "Gerda",
+        "family": "Claeskens",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jan R.",
+        "family": "Magnus",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Andrey L.",
+        "family": "Vasnev",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wendun",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "venue": "International Journal of Forecasting",
+    "volume": "32",
+    "issue": "3",
+    "pages": "754-762",
+    "dates": {
+      "published": [
+        [
+          2016,
+          7
+        ]
+      ],
+      "published-print": [
+        [
+          2016,
+          7
+        ]
+      ],
+      "issued": [
+        [
+          2016,
+          7
+        ]
+      ]
+    },
+    "status": "DOI_AND_PRIMARY_RECORD_VERIFIED",
+    "checked_date": "2026-11-15",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.ijforecast.2015.12.005",
+    "response_sha256": "a36f1831fef94c19d5a9184e6b127b3e3be0f2b1690f347d38c67a33d408269e",
+    "original_HTTP_body_retained": false,
+    "year_cited": 2016,
+    "url": "https://doi.org/10.1016/j.ijforecast.2015.12.005",
+    "primary_verification_url": "https://www.sciencedirect.com/science/article/pii/S0169207016000327",
+    "reading_scope": "Primary author/publisher abstract or selected method sections; not exhaustive systematic review"
+  },
+  {
+    "id": "R35",
+    "expected_title": "Some Remarks on the Reliability of Categorical Probability Forecasts",
+    "doi": "10.1175/2008MWR2329.1",
+    "title": "Some Remarks on the Reliability of Categorical Probability Forecasts",
+    "authors": [
+      {
+        "given": "Jochen",
+        "family": "Bröcker",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Max-Planck-Institut für Physik Komplexer Systeme, Dresden, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "venue": "Monthly Weather Review",
+    "volume": "136",
+    "issue": "11",
+    "pages": "4488-4502",
+    "dates": {
+      "published": [
+        [
+          2008,
+          11,
+          1
+        ]
+      ],
+      "published-print": [
+        [
+          2008,
+          11,
+          1
+        ]
+      ],
+      "published-online": [
+        [
+          2008,
+          11,
+          1
+        ]
+      ],
+      "issued": [
+        [
+          2008,
+          11,
+          1
+        ]
+      ]
+    },
+    "status": "DOI_AND_PRIMARY_RECORD_VERIFIED",
+    "checked_date": "2026-11-15",
+    "metadata_url": "https://api.crossref.org/works/10.1175%2F2008MWR2329.1",
+    "response_sha256": "c6b7d8d4d90d1678aee678a1bb6c191e06a886f4b830c47a08009f4f30907125",
+    "original_HTTP_body_retained": false,
+    "year_cited": 2008,
+    "url": "https://doi.org/10.1175/2008MWR2329.1",
+    "primary_verification_url": "https://journals.ametsoc.org/abstract/journals/mwre/136/11/2008mwr2329.1.xml",
+    "reading_scope": "Primary author/publisher abstract or selected method sections; not exhaustive systematic review"
+  },
+  {
+    "id": "R36",
+    "expected_title": "Stable reliability diagrams for probabilistic classifiers",
+    "doi": "10.1073/pnas.2016191118",
+    "title": "Stable reliability diagrams for probabilistic classifiers",
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-8322-360X",
+        "authenticated-orcid": false,
+        "given": "Timo",
+        "family": "Dimitriadis",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Alfred Weber Institute of Economics, Heidelberg University, 69115 Heidelberg, Germany;"
+          },
+          {
+            "name": "Computational Statistics Group, Heidelberg Institute for Theoretical Studies, 69118 Heidelberg, Germany;"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9397-3271",
+        "authenticated-orcid": false,
+        "given": "Tilmann",
+        "family": "Gneiting",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Computational Statistics Group, Heidelberg Institute for Theoretical Studies, 69118 Heidelberg, Germany;"
+          },
+          {
+            "name": "Institute for Stochastics, Karlsruhe Institute of Technology, 76131 Karlsruhe, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-7423-1352",
+        "authenticated-orcid": false,
+        "given": "Alexander I.",
+        "family": "Jordan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Computational Statistics Group, Heidelberg Institute for Theoretical Studies, 69118 Heidelberg, Germany;"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "venue": "Proceedings of the National Academy of Sciences",
+    "volume": "118",
+    "issue": "8",
+    "pages": "",
+    "dates": {
+      "published": [
+        [
+          2021,
+          2,
+          17
+        ]
+      ],
+      "published-print": [
+        [
+          2021,
+          2,
+          23
+        ]
+      ],
+      "published-online": [
+        [
+          2021,
+          2,
+          17
+        ]
+      ],
+      "issued": [
+        [
+          2021,
+          2,
+          17
+        ]
+      ]
+    },
+    "status": "DOI_AND_PRIMARY_RECORD_VERIFIED",
+    "checked_date": "2026-11-15",
+    "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.2016191118",
+    "response_sha256": "9ef764eb4fcb1503fc1206f10d1b3289e57c2875f356b6948f79c11d7e28b8f0",
+    "original_HTTP_body_retained": false,
+    "year_cited": 2021,
+    "url": "https://doi.org/10.1073/pnas.2016191118",
+    "primary_verification_url": "https://arxiv.org/abs/2008.03033",
+    "reading_scope": "Primary author/publisher abstract or selected method sections; not exhaustive systematic review"
+  },
+  {
+    "id": "R37",
+    "expected_title": "Time Machine GPT",
+    "doi": "10.18653/v1/2024.findings-naacl.208",
+    "title": "Time Machine GPT",
+    "authors": [
+      {
+        "given": "Felix",
+        "family": "Drinkall",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Eghbal",
+        "family": "Rahimikia",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Janet",
+        "family": "Pierrehumbert",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Stefan",
+        "family": "Zohren",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "venue": "Findings of the Association for Computational Linguistics: NAACL 2024",
+    "volume": "",
+    "issue": "",
+    "pages": "3281-3292",
+    "dates": {
+      "published": [
+        [
+          2024
+        ]
+      ],
+      "published-print": [
+        [
+          2024
+        ]
+      ],
+      "issued": [
+        [
+          2024
+        ]
+      ]
+    },
+    "status": "DOI_AND_PRIMARY_RECORD_VERIFIED",
+    "checked_date": "2026-11-15",
+    "metadata_url": "https://api.crossref.org/works/10.18653%2Fv1%2F2024.findings-naacl.208",
+    "response_sha256": "f0513cc237076cf8f4ef93648d2a5506abd229ed4f89ca9f2d39a465f7269358",
+    "original_HTTP_body_retained": false,
+    "year_cited": 2024,
+    "url": "https://doi.org/10.18653/v1/2024.findings-naacl.208",
+    "primary_verification_url": "https://aclanthology.org/2024.findings-naacl.208/",
+    "reading_scope": "Primary author/publisher abstract or selected method sections; not exhaustive systematic review"
+  },
+  {
+    "id": "R38",
+    "title": "Assessing Look-Ahead Bias in Stock Return Predictions Generated By GPT Sentiment Analysis",
+    "year_cited": 2023,
+    "authors": [
+      {
+        "given": "Paul",
+        "family": "Glasserman"
+      },
+      {
+        "given": "Caden",
+        "family": "Lin"
+      }
+    ],
+    "venue": "arXiv preprint arXiv:2309.17322",
+    "doi": "10.48550/arXiv.2309.17322",
+    "url": "https://arxiv.org/abs/2309.17322",
+    "primary_verification_url": "https://business.columbia.edu/pglasserman",
+    "status": "AUTHOR_PREPRINT_VERIFIED",
+    "notes": "Cite the inspected2023 author preprint. Columbia author list additionally confirms2024 Journal of Financial Data Science6(1),25-42; no unverified journal DOI supplied.",
+    "checked_date": "2026-11-15"
+  },
+  {
+    "id": "R39",
+    "expected_title": "Stock Movement Prediction from Tweets and Historical Prices",
+    "doi": "10.18653/v1/P18-1183",
+    "title": "Stock Movement Prediction from Tweets and Historical Prices",
+    "authors": [
+      {
+        "given": "Yumo",
+        "family": "Xu",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Shay B.",
+        "family": "Cohen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "venue": "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    "volume": "",
+    "issue": "",
+    "pages": "1970-1979",
+    "dates": {
+      "published": [
+        [
+          2018
+        ]
+      ],
+      "published-print": [
+        [
+          2018
+        ]
+      ],
+      "issued": [
+        [
+          2018
+        ]
+      ]
+    },
+    "status": "DOI_AND_PRIMARY_RECORD_VERIFIED",
+    "checked_date": "2026-11-15",
+    "metadata_url": "https://api.crossref.org/works/10.18653%2Fv1%2FP18-1183",
+    "response_sha256": "1f8f00996c61c0ebb3d0bfbd7c87d8e87f15b7fdbde0d16e749f78da2ead959d",
+    "original_HTTP_body_retained": false,
+    "year_cited": 2018,
+    "url": "https://doi.org/10.18653/v1/P18-1183",
+    "primary_verification_url": "https://aclanthology.org/P18-1183/",
+    "reading_scope": "Primary author/publisher abstract or selected method sections; not exhaustive systematic review"
+  },
+  {
+    "id": "R40",
+    "title": "Deep Learning for Event-Driven Stock Prediction",
+    "year_cited": 2015,
+    "authors": [
+      {
+        "given": "Xiao",
+        "family": "Ding"
+      },
+      {
+        "given": "Yue",
+        "family": "Zhang"
+      },
+      {
+        "given": "Ting",
+        "family": "Liu"
+      },
+      {
+        "given": "Junwen",
+        "family": "Duan"
+      }
+    ],
+    "venue": "Proceedings of IJCAI2015",
+    "pages": "2327–2333",
+    "doi": "",
+    "url": "https://ijcai.org/proceedings/2015/329",
+    "primary_verification_url": "https://www.ijcai.org/Proceedings/15/Papers/329.pdf",
+    "status": "PRIMARY_PROCEEDINGS_VERIFIED_NO_DOI_CLAIM",
+    "checked_date": "2026-11-15"
   }
 ]

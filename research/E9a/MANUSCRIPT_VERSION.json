@@ -1,0 +1,23 @@
+{
+  "stage": "E9b",
+  "manuscript_title": "Understanding the Sources of Apparent Predictive Gains in Financial Machine Learning",
+  "subtitle": "Representation, Probability Shrinkage, News Density, and Temporal Data Integrity",
+  "date": "15 November 2026",
+  "version": "2.0",
+  "figures": [
+    "F1_representation.png",
+    "F2_fusion_calibration.png",
+    "F3_attention_sentiment.png"
+  ],
+  "old_claims": 103,
+  "new_claims": 216,
+  "total_claims": 319,
+  "references": 40,
+  "new_classification_fits": 60,
+  "new_LR_fits": 24,
+  "new_tree_fits": 36,
+  "new_auxiliary_fits": 6,
+  "financial_fit_latest": "2020-06-30",
+  "development_eval_latest": "2022-12-31",
+  "GPU": false
+}

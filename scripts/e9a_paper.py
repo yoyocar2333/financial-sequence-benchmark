@@ -5,6 +5,8 @@ from e9a_build import mdtable
 
 def read(p):return list(csv.DictReader(io.StringIO(p.read_text())))
 def main(out):
+ if (out/'MANUSCRIPT_VERSION.json').exists() and __import__('json').loads((out/'MANUSCRIPT_VERSION.json').read_text()).get('stage')=='E9b':
+  from e9b_paper import main as current; return current(out,Path(__file__).resolve().parents[1])
  t5=read(out/'tables/E5_technical_increments.csv');t6=read(out/'tables/E6_fusion_controls.csv');t4=read(out/'tables/E4c_event_models.csv');d4=read(out/'tables/E4c_event_contrasts.csv')
  fmt=lambda x:format(float(x),'.6f') if x else '—'
  stages=[['E0–E2','AAPL/TSLA; old magnitude cohorts','2012–22 / 2023 / 2024–25','Price/magnitude; not direction classification'],['E3','AAPL/TSLA; 482 common classifier dates each','2012–22 / 2023 / 2024–25','Events; next-open reversal in E3b/c'],['E4c','AAPL; 230 test dates, 65 extreme dates','2023 / 2024 / 2025','Price/news, date-proxy timing; 22 nonoverlap events'],['E5','AAPL/TSLA; 482 test dates each','2012–22 / 2023 / 2024–25','B38 versus T51; five seeds'],['E6','Same 482 dates each; 9 test vintages each','Same as E5','P=E5 T; F16; neural P reused'],['E7–E8a.1','Data/protocol audits; no new prediction task','Development/audit scope only','Qualification, access and future inference design']]

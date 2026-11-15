@@ -5,6 +5,8 @@ import argparse,json,re,subprocess,zipfile
 from pathlib import Path
 
 def main(bundle):
+ if (bundle/'MANUSCRIPT_VERSION.json').exists() and __import__('json').loads((bundle/'MANUSCRIPT_VERSION.json').read_text()).get('stage')=='E9b':
+  from e9b_document_check import main as current; return current(bundle)
  import fitz
  d=fitz.open(bundle/'PAPER_DRAFT.pdf');texts=[p.get_text() for p in d];joined='\n'.join(texts)
  fonts=subprocess.check_output(['pdffonts',str(bundle/'PAPER_DRAFT.pdf')],text=True)

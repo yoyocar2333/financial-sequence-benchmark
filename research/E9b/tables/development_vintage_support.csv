@@ -1,0 +1,7 @@
+ticker,fold,n_train_vintages,n_eval_vintages,n_train_days,n_eval_days
+AAPL,2016,19,9,1109,482
+AAPL,2018,27,9,1612,485
+AAPL,2020,35,9,2115,483
+TSLA,2016,19,9,1110,482
+TSLA,2018,27,9,1611,485
+TSLA,2020,35,9,2114,483

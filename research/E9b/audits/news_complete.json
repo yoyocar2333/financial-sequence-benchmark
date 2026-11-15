@@ -1,0 +1,13 @@
+{
+  "new_models": 0,
+  "maximum_LR_seed_probability_SD": 5.551115123125783e-17,
+  "strata_fixed": [
+    "0",
+    "1-2",
+    "3+"
+  ],
+  "no_recollection": true,
+  "source_absence_not_verified_market_absence": true,
+  "new_pvalues": 0,
+  "original_families_preserved": true
+}

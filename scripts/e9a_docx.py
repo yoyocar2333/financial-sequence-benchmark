@@ -22,6 +22,8 @@ def clean(t):
  t=re.sub(r'\[([^\]]+)\]\(([^)]+)\)',r'\1 (\2)',t)
  return t.replace('**','').replace('`','')
 def main(out):
+ if (out/'MANUSCRIPT_VERSION.json').exists() and __import__('json').loads((out/'MANUSCRIPT_VERSION.json').read_text()).get('stage')=='E9b':
+  from e9b_docx import main as current; return current(out)
  doc=Document();sec=doc.sections[0];sec.page_width=Cm(21);sec.page_height=Cm(29.7)
  sec.top_margin=sec.bottom_margin=Cm(2.1);sec.left_margin=sec.right_margin=Cm(2.2)
  normal=doc.styles['Normal'];setfont(normal);normal.paragraph_format.line_spacing=1.12;normal.paragraph_format.space_after=Pt(7)

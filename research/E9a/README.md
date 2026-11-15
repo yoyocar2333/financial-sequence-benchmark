@@ -1,13 +1,14 @@
-# E9a — Publication Draft & Data Access Decision Package
+# Current working paper — E9b revision
 
-日期2026-11-14。**完整工作論文初稿已整理；現有證據仍屬探索性，尚非確認性投稿結論。** 無新金融模型、分數、p-value、collector或E8b；E3c2026協定不改未執行。
+**Understanding the Sources of Apparent Predictive Gains in Financial Machine Learning**
 
-- [工作論文 Markdown](PAPER_DRAFT.md) · [Word](PAPER_DRAFT.docx) · [PDF](PAPER_DRAFT.pdf)
-- [103項主張與證據](CLAIM_EVIDENCE_MATRIX.csv) · [來源索引](SOURCE_MANIFEST.csv)
-- [文獻及DOI稽核](LITERATURE_AND_CITATION_AUDIT.md)
-- [教授用授權決策簡報](DATA_ACCESS_DECISION_BRIEF.md) · [未寄出的英文詢樣郵件](DATA_REQUEST_EMAIL_DRAFT.md)
-- [論文可投稿程度審查](PAPER_READINESS_REVIEW.md) · [重現說明](REPRODUCIBILITY.md)
+此目錄保留單一current稿件：[Markdown](PAPER_DRAFT.md)、[editable Word](PAPER_DRAFT.docx)、[15頁PDF](PAPER_DRAFT.pdf)，含繁中摘要、五表、三圖及40項文獻。E9b補強分析與完整新表在 [E9b研究索引](../E9b/README.md)。原E9a版本在Git歷史commit `378c92397cf18e4d924741c8b9b4a244197fe0a5`，不是第二份current稿。
 
-核心發現：E5技術主比較0/8、E6反轉H1 0/8及H3 0/20通過原兩種聯合校正標準；這不是等效性或零資訊證明。E4c次要階層新聞差異p=.028保留，其對齊敏感且不支持穩健同狀態時機；E6次要直接方向顯著結果的F權重=1，不是互補融合。E7b/E8嚴格來源資格未完成。不同cohort的Brier不作跨研究排行。
+論文以四個連貫問題解釋表觀增益：技術表示、基本面融合與收縮、新聞密度與情緒，以及歷史資訊集的時間證據。2024–2025反覆探索；原主要未顯著、次要顯著、兩股差異與PIT限制均保留。各cohort分數不合併排行。
 
-三張原數據重排圖位於figures，五張主表的來源見matrix。沒有將原文、逐篇／逐貼資料、checkpoint或大型工作站ZIP公開。所有文獻與目前平台政策只作具體範圍之核對；未寄信、購買或申請。新聞方法交叉連結：[stockllm-pit-news](https://github.com/yoyocar2333/stockllm-pit-news)。
+- [319項主張證據矩陣](CLAIM_EVIDENCE_MATRIX.csv)：原103項欄位不變＋216項新證據。
+- [修訂總結](../E9b/E9B_REVISION_SUMMARY.md)、[補強報告](../E9b/EXPERIMENTAL_STRENGTHENING_REPORT.md)、[未解缺口](../E9b/EXPERIMENTAL_GAP_REGISTER.md)。
+- [重現層級與命令](REPRODUCIBILITY.md)、[稿件成熟度](PAPER_READINESS_REVIEW.md)、[文獻核對](LITERATURE_AND_CITATION_AUDIT.md)。
+- [教授資料決策](DATA_ACCESS_DECISION_BRIEF.md)及[未寄送英文郵件](DATA_REQUEST_EMAIL_DRAFT.md)沿用E9a；沒有授權申請、付款或收集器。
+
+`E9A_PLAN_LOCKED.json`、原四張aggregate表、原三張圖及原來源核對是歷史E9a紀錄。新60個開發期分類fit與6個輔助fit另受E9b dated plan及addendum約束，不以舊計畫冒充預註冊。原E0–E8a.1結果及E3c2026協定保留。本輪研究PR只供審閱，不自動合併。
