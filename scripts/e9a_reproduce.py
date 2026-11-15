@@ -3,6 +3,8 @@ import argparse,hashlib,json,shutil,subprocess,sys
 from pathlib import Path
 
 def main(repo,bundle,out,figures):
+ if (bundle/'MANUSCRIPT_VERSION.json').exists() and __import__('json').loads((bundle/'MANUSCRIPT_VERSION.json').read_text()).get('stage')=='E9b':
+  from e9b_reproduce import main as current; return current(repo,bundle,out,figures)
  if out.exists():raise FileExistsError('Use a fresh output directory; never overwrite the frozen paper bundle.')
  hashes=json.loads((bundle/'audits/table_source_hashes.json').read_text())
  for rel,digest in hashes.items():assert hashlib.sha256((repo/'research'/rel).read_bytes()).hexdigest()==digest,rel

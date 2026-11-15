@@ -1,0 +1,24 @@
+{
+  "stage": "E9b-1.1 supplementary control completion",
+  "locked_utc": "2026-11-15T11:05:12.478139+00:00",
+  "original_plan_sha256": "8af359d6a9c1b09bea3b9d454957ad3dfeb0e9028fc06ccc3dd85ea38035ea0b",
+  "timing": "After completion of the locked LR diagnostics; before any new tree matched-control fit or result",
+  "reason": "Complete the user-requested available matched-information controls under all remaining original CPU tree architectures, rather than leave them as future work. The first LR results and previously inspected archive remain exploratory. This is an explicitly disclosed addendum, not an original preregistration.",
+  "models": [
+    "xgboost",
+    "lightgbm"
+  ],
+  "model_choice": "All two original CPU tree architectures, source configuration0 only; no architecture or hyperparameter search, no result-based omission",
+  "features": [
+    "P+M+7zero",
+    "P+M+7numerical_accounting",
+    "P+M+7duplicate_price"
+  ],
+  "parameters": "Exactly e3b_protocol.CONFIGS[model][0], source300round cap,25early stopping,2CPUthreads,seed42; use the original within-development stopping half-year, never outer evaluation labels",
+  "cohort": "Same two stocks, exact three source expanding folds,60sessionhistory,end20purge; all data cut at2022-12-31. Original archived config0P is reference. No2023-2025 fitting/calibration/selection.",
+  "new_fits": 36,
+  "GPU": false,
+  "contrasts": "For each tree: C1 PMF vsPMzero,C2 PMF vsPMduplicate,C3 PMF vsP. Six new contrasts pooled equalstock; signed gain reference minus candidate.",
+  "inference": "Same synchronized full-calendar HAC/circular blocks60 principal,20/120 sensitivity,B4999. Holm6 across tree controls. Preserve original LR Holm6; additionally disclose Holm12 over six LR+six tree contrasts for each block. Pointwise CIs. No best-architecture conclusion.",
+  "preservation": "Original E6 H1/H3 families and all previous effects/pvalues remain unchanged. Original E9b six LR results and intervals remain unchanged. All new models/results published in full regardless of outcome."
+}

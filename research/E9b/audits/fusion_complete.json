@@ -1,0 +1,13 @@
+{
+  "reused_prediction_rows": 98328,
+  "new_financial_fits": 0,
+  "all_original_mean_Briers_reconciled": true,
+  "grouping_remainder_explicit": true,
+  "per_seed_primary": true,
+  "raw_mixture_identities_passed": true,
+  "bins": [
+    10,
+    5
+  ],
+  "future_data_after2025_used": false
+}

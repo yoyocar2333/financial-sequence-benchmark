@@ -1,191 +1,186 @@
-# Auditing Incremental Predictive Value in Financial Machine Learning
+# Understanding the Sources of Apparent Predictive Gains in Financial Machine Learning
 
-## Information Redundancy, Probability Shrinkage, and Point-in-Time Data Integrity
+## Representation, Probability Shrinkage, News Density, and Temporal Data Integrity
 
-Working paper, E9a · 14 November 2026 · Version 1.0
+Working paper · Revised 15 November 2026
 
-Authors and institutional affiliation: to be confirmed by the research team. This draft does not assign authorship or institutional endorsement. Repository: https://github.com/yoyocar2333/financial-sequence-benchmark
+Authors and institutional affiliation: to be confirmed
 
 # 繁體中文重點摘要
 
-本研究整合 E0–E8a.1 的既有成果，問的不是哪個模型分數最低，而是新增技術指標、基本面及新聞後，改善能否與資訊重複、校準、機率收縮及研究選擇偏誤區分。主題為未來五交易日反轉機率；隔日波動幅度僅作不同任務的研究背景。
+本研究探討金融機器學習加入技術指標、基本面及新聞後，預測分數的變化究竟來自新增資訊、特徵表示、機率收縮或校準。研究以 AAPL、TSLA 的五日反轉機率為主，整合既有實驗，並以固定計畫完成開發期控制及凍結預測診斷。
 
-E5 在 AAPL、TSLA 各 482 個已檢視測試日期比較多尺度價格 B 與技術增強 T。四架構共八項主比較均未同時通過原 HAC 與區塊 bootstrap 的 Holm 校正。E6 的八項資訊增量及二十項融合比較亦無聯合通過結果；AAPL LSTM／Mamba 的 Late Fusion 點估計改善大多可由相同權重常數收縮控制重現，這是描述性比較，不能當因果比例。
+技術指標與價格特徵有高度樣本內相關，但固定前向線性重建在兩股之間並不穩定。基本面融合的十組未校準預測都劣於同權重常數收縮；分別校準後，部分 AAPL 神經模型才出現額外點改善。24 次固定 Logistic 與 36 次固定樹模型擬合進一步比較 metadata、真實會計數值與等維重複價格；一項補充分支選擇比較的改善集中於冷啟動期，且對較長統計區塊敏感。
 
-E4c 是不同的 AAPL-only 研究：2023 訓練、2024 選模及校準、2025 探索性測試。65 個重疊極端事件中，Logistic P→S 的 Brier 改善為 0.022569，但 bootstrap Holm2 p=0.1512。階層機率的次要 P→S 比較 p=0.028，延後一／二個資訊交易日不再顯著，也未證明同狀態內的反轉時機辨識。E6 次要直接上漲任務也有顯著改善，但融合權重等於一，實際僅使用基本面分支，不能稱互補融合成功。
-
-資料稽核同樣重要：E7b 尚無通過嚴格資格的公司季度；E8a／E8a.1 的 L3 歷史來源版本及 L4 到達證據均為零。這表示研究尚缺可驗證證據，並不表示原內容當年不存在，亦不能推論新聞必然無效。現階段最適合的貢獻是透明的探索性增量價值與資料品質稽核；正式資訊增益主張須補齊合格資料、等資訊控制、依賴下功效及真正未見驗證。
-
-2024–2025 已反覆探索。既有 E3c2026 固定協定保持不變且未執行；先前部分 2026 新聞彙總與搜尋片段的意外接觸如實保留，不能聲稱整個研究歷程完全零暴露。本輪未訓練模型、產生新金融分數或 p-value，也未啟動新聞／社群收集。
+新聞研究中，密度控制重現大部分原本的 Brier 點改善，情緒增量則隨保留新聞密度而異。原次要顯著結果及時間敏感性均保留。研究據此建立一套更具解釋力的增量比較流程：同時檢查資訊內容、機率表示、校準與時間證據。2024–2025 已反覆探索，資料歷史版本與跨股票獨立驗證仍是後續推論的必要基礎。
 
 # Abstract
 
-Adding information sources and model complexity to financial prediction can improve a reported probability score without establishing incremental predictive information. We audit an existing sequence of exploratory studies of AAPL and TSLA, distinguishing next-day return magnitude from five-session reversal prediction and separating three noninterchangeable cohorts. In the technical-indicator study, none of eight primary feature contrasts satisfies both source-stage multiplicity-adjusted inference procedures. In the fundamentals study, none of eight information contrasts or twenty fusion contrasts satisfies that joint standard. Apparent improvements in two AAPL neural-price late-fusion pipelines are substantially reproduced by matched-weight constant-probability controls, without reliable remaining complementarity. In a separate, retrospectively reconstructed Apple Newsroom cohort, sentiment augmentation improves event Brier score by 0.022569, but its primary adjusted bootstrap p-value is 0.1512. A significant secondary hierarchical-probability contrast is sensitive to timing assumptions and does not establish within-state event ranking. We retain a significant secondary direct-up result whose fusion weight discards the price expert, rather than treating it as complementary fusion. Finally, financial-document and news/social provenance audits distinguish downloadable artifacts from qualified historical versions and delivery evidence; the latter remain unavailable under the project's strict gates. The contribution is an evidence-linked audit and validation design, not a new forecasting architecture, a causal decomposition, or an independently confirmed rejection of non-price information. Licensed version evidence, matched information controls, dependence-aware power assessment, and genuinely unseen validation remain necessary.
+Financial prediction gains can arise from additional information, a different representation of existing prices, or changes in forecast concentration and calibration. We study these channels using AAPL and TSLA reversal probabilities, combining archived technical, fundamental and news experiments with fixed supplementary analyses. Large training-period correlations between technical and price features coexist with unstable forward linear reconstruction, separating representation overlap from reliable transfer. Across ten stock–price-expert settings, uncalibrated fundamental fusion underperforms its matched-weight constant mixture; the small additional gains of two calibrated AAPL neural pipelines therefore depend on the complete calibration procedure. Development-only Logistic, XGBoost and LightGBM fits add matched metadata, numerical-accounting and duplicate-price controls. A prequential expert-allocation contrast improves during initialization, while subsequent forecasts select the same single component. In an issuer-news cohort, publication density reproduces most of the sentiment-augmented point improvement, whereas the remaining sentiment contribution varies across density strata. We retain both the original nonsignificant primary contrasts and significant secondary exceptions. Historical content-version and availability audits connect these comparisons to the information set a retrospective forecast can represent. The contribution is a linked empirical account of apparent gains across representation, shrinkage, initialization and text composition, together with controls that make these explanations distinguishable. Broader temporal validation requires verified historical versions and a separately registered unseen sample.
 
-Keywords: financial machine learning; incremental prediction; probability calibration; forecast combination; point-in-time data; reproducibility
+Keywords: incremental prediction; financial machine learning; calibration; forecast combination; news sentiment; point-in-time data
 
 # 1. Introduction
 
-Financial forecasting often begins with a plausible expansion of the information set: prices become technical indicators; accounting statements supply firm characteristics; news supplies sentiment and event context; several models are then fused. Each step can alter predictive performance. The harder question is whether an apparent gain comes from new, decision-time information, an easier representation of existing information, lower effective model complexity, better probability calibration, or choices made after observing evaluation results.
+A common response to weak financial forecasts is to add technical indicators, accounting variables or text, and then combine increasingly flexible models. A lower prediction loss is useful, but its interpretation depends on what changed. An indicator may expose a price pattern more conveniently. A low-dimensional accounting expert may stabilize a high-dimensional price model. A news variable may alter a forecast through publication density rather than sentiment. Recalibrating the resulting probabilities introduces a further channel.
 
-These alternatives matter particularly for short-horizon probabilities. A nearly constant forecast can have a competitive Brier score if outcome prevalence is stable or an unconstrained predictor is overconfident. Conversely, a predictor can rank cases well and remain poorly calibrated. A comparison against a weak price model alone therefore cannot identify an information contribution. Nor can a low score in a selected event subset establish that a method identifies the timing of reversals within the same historical state.
+We investigate these explanations for five-session stock reversals. The question differs from predicting a price level or next-day absolute return: it concerns the probability that the next executable return opposes the preceding trend. Existing financial machine-learning work demonstrates the potential of nonlinear information processing [R01, R21, R22], while forecast-benchmark research emphasizes the difficulty of stable out-of-sample improvement [R02]. Our focus is the source of a measured gain within a specified forecasting pipeline.
 
-The existing project evolved from conventional stock-price prediction (E0), through next-day volatility-magnitude forecasting (E1–E2), multiscale event studies and reversal classifiers (E3), reconstructed financial news (E4), technical indicators and hybrid rules (E5), fundamentals and fusion (E6), and publication-oriented data and validation audits (E7–E8a.1). This progression is useful evidence about practical research design. It is also a source of selection risk: the same two stocks and repeatedly inspected evaluation years cannot become fresh independent tests with each new experiment.
+The study makes three contributions. First, it connects technical-feature comparisons to training redundancy and forward representation diagnostics, showing why strong contemporaneous correlations alone are an incomplete explanation of forecasting performance. Second, it evaluates fundamental fusion against constant shrinkage, separately examining raw forecasts, recalibrated forecasts, matched input formats and sequential expert allocation. Third, it separates publication density from sentiment and event features, and relates the resulting estimates to historical content-version evidence. These comparisons bring forecast-evaluation controls into a common financial research setting.
 
-We synthesize the existing artifacts without fitting or selecting a new model. Our empirical focus is E5, E6 and E4c, with E3 defining the task and E7–E8 identifying the evidential ceiling. We preserve the distinct cohorts and correction families. The draft asks what the present evidence permits, rather than arranging incompatible Brier scores into a universal leaderboard.
+We use archived predictions and fixed data snapshots, supplementing them with development-only controls specified before computation. The empirical studies retain their own cohorts and correction families. The 2024–2025 period has been repeatedly explored, so the contribution is an explanatory empirical study rather than a fresh confirmation test. Detailed provenance records and the experiment chronology are supplied separately from the article.
 
-Three contributions are currently supportable. First, the paper provides an auditable cross-experiment account of apparent incremental gains and negative results, including locally significant exceptions. Second, it organizes controls that distinguish price representation, metadata, calibration and constant shrinkage from complementary information. Third, it connects those comparisons to explicit historical-version and data-access requirements. These are empirical and methodological audit contributions. We do not claim to invent technical indicators, probability shrinkage, forecast combination, PIT analysis, or multiple-testing correction, and we do not claim a demonstrated general impossibility of stock prediction.
+# 2. Conceptual Framework and Related Work
 
-# 2. Related Work
+## 2.1 Information versus representation and estimation
 
-## 2.1 Financial prediction and technical representations
+Let I denote the available information, η(I)=E[Y|I] the optimal probability for binary outcome Y, and q(I) an estimated forecast. Squared probability loss obeys
 
-Machine-learning asset-pricing research shows that flexible nonlinear methods can exploit large cross-sectional information sets [R01], while the equity-premium literature documents the difficulty of achieving stable out-of-sample improvements over historical benchmarks [R02]. These populations and targets differ from two-stock, five-day reversal classification. Complexity can be useful under appropriate data and regularization [R21]; image-based trend representations offer another way to learn price structure [R22]. Neither result implies that additional complexity will dominate in this project's small, repeatedly examined samples.
+`E[(Y-q)²] = E[Var(Y|I)] + E[(q-η(I))²].`  (1)
 
-Technical analysis has been studied through explicitly defined trading rules and statistical procedures [R03, R32]. Its evaluation is inseparable from the search over indicators, thresholds and rules [R04]. We use these studies as motivation for transparent baselines, not as proof that an RSI, MACD or regime gate must predict short-horizon reversals. Because a deterministic transformation cannot enlarge a complete underlying information set, an observed gain from technical indicators may be a representation or optimization gain. In practice, finite histories and an added market series mean that information equivalence must be checked rather than assumed.
+A lower Brier score can therefore reflect a richer information set or a smaller estimation error within an existing set. Technical indicators constructed from a complete price history change its representation; an additional market series or longer warm-up history can also enlarge a finite model's observed inputs. This distinction motivates explicit relative-market and duplicate-feature controls.
 
-## 2.2 Financial text and accounting information
+Technical-analysis research has long examined rule definitions and statistical evaluation [R03, R32], including selection across large rule families [R04]. Modern price representations pursue a similar compression problem with flexible learners [R22]. Our addition is an empirical comparison between training overlap and fixed forward reconstruction alongside the original forecast contrasts. Reconstruction assesses a particular linear mapping, while reversal prediction assesses a different target.
 
-Media content and financial language have empirical associations with market behavior [R05, R06]. FinBERT adapts pretrained language modeling to financial sentiment [R07], but text-classification accuracy is not equivalent to incremental financial forecasting performance. A sentiment model can be accurate while a selected issuer-news sample contains little usable cross-event variation. A later text revision or model revision can also compromise a claimed historical information set.
+## 2.2 Probability combination and calibration
 
-Financial-statement analysis and post-earnings-announcement drift motivate the use of fundamentals [R08, R09]. Their findings do not supply a historical analyst-consensus series, nor do realized accounting changes define an earnings surprise without expectations observed before release. Missing financial data may have structure [R23]; treating release-age or missingness patterns as if they were the value of accounting numbers risks conflating metadata and financial content. A recent multimodal dataset proposal illustrates interest in integrated sources [R30], but advertised scale is not certification of our sample's rights, version history or arrival times. We treat that reference as a preprint, not peer-reviewed predictive validation.
+Forecast combination integrates errors and information across components [R10]. Estimated weights also introduce uncertainty [R11, R34], and probability pooling can change calibration [R33]. Proper scores [R12] and probability-score decompositions [R13] provide complementary ways to examine these effects; calibration research supplies practical diagnostics [R14, R35, R36].
 
-## 2.3 Combination, calibration and credible evaluation
+For price forecast p, fundamental forecast f, training constant c and fixed weight w, define q=(1-w)p+wf and q₀=(1-w)p+wc. Their realized loss difference is
 
-Forecast combination has a long history [R10]. Estimated combination weights can incur costs that help explain why simple averages are difficult to beat [R11]. Proper scoring rules support honest probability evaluation [R12], and the classical probability-score decomposition distinguishes reliability from resolution [R13]. Modern neural-network calibration research further motivates evaluating the complete calibration pipeline [R14]. None of these results makes a lower Brier score a causal measure of new information.
+`L(q₀,y)-L(q,y) = 2w(f-c)(y-q₀) - w²(f-c)².`  (2)
 
-Model selection itself can overfit [R15], and a testing procedure applied after extensive specification search does not erase the preceding research history [R16]. We retain source-stage HAC [R17], Holm correction [R18], block-resampling motivation [R19], and paired forecast comparison [R20], while being explicit that the implemented circular blocks are not the stationary-bootstrap algorithm in [R19]. Panel dependence also matters [R31]. Sample-size justification and preregistration should be grounded in the intended estimand and dependence structure [R24, R25]. This is a targeted evidence review rather than a registered systematic review or exhaustive novelty search.
+The first term records alignment of the added forecast deviation with the comparator's residual; the second penalizes that deviation. This exact arithmetic clarifies what a same-weight constant control measures. Separate nonlinear recalibration of q and q₀ creates distinct pipelines, so raw and calibrated comparisons are reported together.
 
-## 2.4 Architectures in scope
+We also examine fixed-bin reliability and resolution. With within-bin mean forecast p̄_b, event rate ȳ_b and weight v_b, REL=Σv_b(p̄_b-ȳ_b)², RES=Σv_b(ȳ_b-ȳ)² and UNC=ȳ(1-ȳ). For continuous archived probabilities,
 
-The project includes logistic regression, XGBoost [R27], LightGBM [R28], LSTM [R29], and the genuine selective-state-space Mamba implementation motivated by [R26]. Using the named implementation establishes architecture identity, not superior financial performance. In E6, LSTM and Mamba contribute their previously frozen price predictions to late fusion; no fundamental neural encoder was trained. This distinction is necessary when discussing fusion versus architecture claims.
+`BS = REL - RES + UNC + G,`  (3)
 
-# 3. Research Questions and Evidential Criteria
+where G=mean[(p-p̄_b)²-2(p-p̄_b)(y-ȳ_b)] is a signed grouping remainder. This preserves the original score rather than silently replacing each forecast by its bin mean. Finite-sample bin estimates remain descriptive [R35]; stable reliability methods such as CORP address related estimation issues [R36].
 
-H1 asks whether information beyond the available price set improves prediction after controlling for metadata and representation. H3 asks whether a nondegenerate combination provides complementarity beyond its best standalone branch and comparable probability shrinkage. Historical market-state analyses serve as diagnostics; a new regime-learning hypothesis is not the principal claim.
+## 2.3 Financial text, fundamentals and temporal validity
 
-A credible H1 comparison requires a strong price benchmark, the same dates and label, matched source metadata, and controls for redundant price representations. A credible H3 comparison requires a price expert P, an additional expert F, late fusion, matched-weight P-plus-constant shrinkage, independently tuned constant shrinkage, and the best single expert. A weight of one on F is selection of F, not complementarity. E7a specifies these controls, but the complete design has not yet been executed with qualified data.
+Financial language and media content motivate sentiment and event predictors [R05, R06, R07]. Event-driven models [R40], StockNet's joint price/text model [R39] and newer multimodal datasets [R30] establish a substantial literature on source integration. Our question is narrower: does sentiment outperform a density control, and does a fused probability outperform an equally contracted price forecast?
 
-Three questions accompany the hypotheses. Does improvement survive calibration controls and within-state ranking diagnostics? Is the feature version demonstrably available at the decision cutoff? Does the observed sample and its dependence permit the intended inference? Failure to reject a null is not evidence of equivalence; a wide interval may leave economically or scientifically relevant effects unresolved. A result significant only in a secondary family remains a secondary result.
+Accounting research motivates numerical fundamentals [R08, R09], while missing-data research makes metadata a substantive control [R23]. These considerations connect information ablation to temporal validity. A financial value can have a fiscal period, an initial release, later revisions and vendor delivery times. Text has analogous content-version and observation histories. Language-model parameters introduce a further temporal boundary, as discussed by Glasserman and Lin [R38] and addressed through time-specific models by Drinkall et al. [R37]. We incorporate these distinctions into the interpretation of the observed information set.
 
-# 4. Data and Methods
+# 3. Data and Experimental Design
 
-## 4.1 Distinct cohorts and targets
+## 3.1 Outcome, information sets and cohorts
 
-| Stage | Population and unit | Fit / validate / evaluate years | Interpretation |
+The principal label compares the past-five-session direction s_t with the next executable five-session return:
+
+`Y_rev(t) = 1{ sign(log(C_t/C_[t-5])) × log(C_[t+5]/O_[t+1]) < 0 }.`  (4)
+
+Information is frozen after session t, entry is the next session's open and exit is the fifth future session's close. Source rules exclude a flat reference direction and purge boundaries using the original twenty-session rule. Earlier close-to-close event studies and next-day magnitude regressions supply context in Supplement S1; their scores are distinct outcomes.
+
+| Study | Fit / validation / evaluation | Sample and input | Task |
 | --- | --- | --- | --- |
-| E0–E2 | AAPL/TSLA; old magnitude cohorts | 2012–22 / 2023 / 2024–25 | Price/magnitude; not direction classification |
-| E3 | AAPL/TSLA; 482 common classifier dates each | 2012–22 / 2023 / 2024–25 | Events; next-open reversal in E3b/c |
-| E4c | AAPL; 230 test dates, 65 extreme dates | 2023 / 2024 / 2025 | Price/news, date-proxy timing; 22 nonoverlap events |
-| E5 | AAPL/TSLA; 482 test dates each | 2012–22 / 2023 / 2024–25 | B38 versus T51; five seeds |
-| E6 | Same 482 dates each; 9 test vintages each | Same as E5 | P=E5 T; F16; neural P reused |
-| E7–E8a.1 | Data/protocol audits; no new prediction task | Development/audit scope only | Qualification, access and future inference design |
+| Technical | 2012–22 / 2023 / 2024–25 | AAPL, TSLA; 482 dates each; B38→T51 | 5-session reversal |
+| Fundamentals | Same split | Same dates; P=T51, F16, Early66 | Reversal; direct-up secondary |
+| Issuer news | 2023 / 2024 / 2025 | AAPL; 230 dates, 65 extreme dates; P8/D10/S12/T16 | Event-conditioned reversal |
+| New development controls | Expanding fit; evaluate 2017–22 | Two stocks; 1,450 dates each; fixed Logistic / XGB / LGBM | Raw-probability diagnostics |
 
-Table 1. Cohort and information-set registry. Each row is its own experiment; scores must not be pooled across rows. Source: existing stage reports, linked in CLAIM_EVIDENCE_MATRIX.csv.
+Table 1. Cohort registry. The numerical scores belong to their own rows. P in the fundamental study is the technical-enhanced price model; the news study uses a smaller price summary.
 
-E1–E2 predict 100 times the absolute next-day close-to-close log return, a nonnegative magnitude. A magnitude model has no direct up/down output. E3a examines close-to-close event returns, while E3b onward principally uses an executable next-open convention. The E3a descriptive reversal rates are therefore not interchangeable with classifier labels or test denominators.
+The technical study compares B38 multiscale inputs with T51, adding twelve price/volume indicators and QQQ-relative strength. All models receive sixty sessions of observations; logistic and tree models flatten them, while LSTM and genuine Mamba retain sequence structure [R26, R27, R28, R29]. A QQQ-only C39 arm isolates the extra market series. The original bounded expanding-window searches, stopping and calibration procedures are preserved.
 
-For the main classifier task, let s_t be the sign of the preceding five-session close-to-close log return. The label is
+The accounting study fixes T51 as P. Its compact F expert contains seven accounting measures, release age, seven missingness flags and the shared past-direction indicator. Early fusion has sixty-by-sixty-six inputs; late fusion uses the frozen price predictions and a common F logistic expert. Source weights are chosen from {0,.25,.5,.75,1} on development folds. Two strictly later trading sessions align date-only releases, with a five-session sensitivity. Each stock has forty-five training vintages and nine carried/updated test vintages, including eight new test-period updates. Analyst-consensus vintages were unavailable, so the accounting task uses realized financial measures.
 
-`y_rev(t) = 1{ s_t × log(C[t+5] / O[t+1]) < 0 }`.
+The news study uses 448 retrospectively reconstructed Apple Newsroom articles. Its eligible train/validation/test samples contain 224/232/230 dates and 28/36/65 acute-event dates. The 2025 event sample has forty-two reversals, and twenty-two events under the fixed five-session nonoverlap diagnostic. P contains eight market summaries; D adds retained-news existence and density, S adds FinBERT tone and its direction interaction, and T adds four event-type proportions. Regularized logistic and hierarchical shrinkage probabilities share dates and labels. The 2024 data serve both selection and calibration, and the next-session timing proxy has fixed additional one- and two-session delays.
 
-The decision uses information through day t, entry is the next session's open, and exit is the fifth future session's close. Past-flat cases are excluded according to the frozen pipeline. E6 also fits a secondary direct-up task, `y_up(t)=1{log(C[t+5]/O[t+1])>0}`. Mapping a reversal probability to an up probability using the known past sign is not direct-up model training.
+## 3.2 Fixed supplementary analyses
 
-E3a fixed acute-move thresholds from training-period past-five-day quantiles, and later studies reuse the event definitions rather than reselecting thresholds on test outcomes. Trend-conflict and VIX-based strata are historical diagnostics. Overlapping five-day labels create dependence even when each date is listed once. Event subsets and horizon-spaced descriptive samples have different effective support.
+A dated analysis plan precedes all supplementary computation. For representation diagnostics, we calculate development-period rank correlations and average-linkage feature clusters, then fit six multivariate Ridge mappings from B38 to all thirteen added inputs. Three expanding folds evaluate 2017–2018, 2019–2020 and 2021–2022, with fold-specific preprocessing and fixed penalty ten. Reconstruction maps contemporaneously available summaries to the indicator on the same evaluation date; forward denotes the time split.
 
-## 4.2 Prices, technical representations and experimental fairness
+For archived accounting forecasts, we examine concentration, bias, AUC and the score decomposition in Equation (3), using ten bins and a five-bin sensitivity. The principal summaries average losses and decomposition terms across seeds 42–46. Probability-ensemble graphics are labeled separately. Raw mixture identities use float64 reconstructions with archived floating-point rounding recorded separately; all original reported scores remain unchanged.
 
-Existing frozen market snapshots contain retrospective adjusted OHLCV and the project's VIX/VXN series. They are not newly downloaded in E9a and are not certified as contemporaneous as-traded corporate-action histories. E5 additionally introduces relative strength against QQQ. The training period is 2012–2022, with 2023 divided between stopping and calibration, and 2024–2025 used for the already-inspected evaluation. Common test dates run from 2024-01-02 to 2025-12-02, with future returns remaining within 2025 under the original boundary rules.
+We additionally fit twenty-four fixed Logistic models on development data only: eighteen sixty-by-sixty-six matched models and six compact metadata experts. The matched arms append the same eight metadata fields to P, followed by seven accounting values, seven zeros or seven duplicate price columns. C=.001 and the existing forward splits are fixed. Archived configuration-zero P and F forecasts support sequential fusion controls: the initial weight is .5, and subsequent weights and single-component choices use strictly preceding folds. Constant shrinkage receives either the same weight or its own selection on the same grid and prior folds. A subsequent locked addendum extends the same input controls to both original tree architectures, using configuration zero and their original stopping scheme. All settings are reported; the addendum chronology is given in Supplement S4.
 
-E5 B contains the existing 38 multiscale features. T adds 12 technical price/volume representations and one QQQ-relative feature, producing 51 dimensions. The additions cover SMA20/60 and crosses, Wilder RSI14, MACD12/26/9, Bollinger20, prior-high/low breakout and volume confirmation, ADX/DI representations and relative strength. The C control adds QQQ relative strength alone. The model input is the same 60-row information history within each arm; logistic and tree models flatten it, whereas sequence models retain its ordering. Equal observed information does not mean equal inductive bias or effective capacity. Recursive indicators also incorporate warm-up history, so T is not proven to be a transformation solely of the finite B input.
+For news, retained-window counts define fixed strata of zero, one–two and at least three articles. We report all three timing assumptions, both probability versions and all original model arms. Zero denotes no matching article in this retained source. Source completeness and actual market-wide absence are separate quantities. Publication density is an operational attention proxy, rather than a direct measurement of investor attention.
 
-E5 reuses frozen B fits and follows the existing bounded expanding-window selection, seeds 42–46, stopping and calibration procedure for T. Its neural batch size is 64, unlike the earlier magnitude Mamba batch-size-eight experiment. This is not a new resource or training choice made in E9a. The original Platt procedures differ across stages; they must not be silently substituted by E7a's later candidate protocol. Supplementary trading rules include costs and execution conventions, but trading returns do not establish probability improvement or risk-adjusted alpha.
+## 3.3 Evaluation and statistical presentation
 
-## 4.3 Fundamentals and fusion
+Brier score is principal; log loss, AUC and within-state ranking provide complementary diagnostics. Same-state AUC compares positive/negative cases within frozen past-direction, long-trend and volatility cells. Seeds measure algorithmic variability conditional on the observed market path.
 
-E6 P is E5 T, not E5 B. Its 118 issuer-quarter document vintages comprise 60 AAPL and 58 TSLA records. The F input includes seven numerical accounting measures, release age, seven missingness indicators and the shared past-five-day direction. It is therefore not an entirely price-free expert. Numerical measures include revenue and symmetric EPS growth, gross/net/operating margins, period-consistent operating cash flow to revenue, and cash to assets. Historical analyst expectations were not reliably obtained; no earnings surprise was manufactured.
+Original paired tests retain their HAC, circular-bootstrap and Holm families: eight primary technical contrasts; eight accounting-information and twenty fusion contrasts; separately specified news families. Their intervals are pointwise. The six new logistic development contrasts use equal-stock date-paired losses on the full development calendar, retaining purge gaps. Synchronized sixty-session blocks and HAC60 form the principal supplementary analysis, with twenty-/120-session sensitivities and Holm6. The tree addendum has its own six-contrast family; Holm12 across the initial and added contrasts is also reported. This conditional-on-two-stocks procedure addresses time and shared-calendar dependence [R17, R19, R20, R31]. Multiple-comparison and selection concerns motivate preserving the full comparison set [R15, R16, R18].
 
-Dates are aligned after two strictly subsequent trading sessions, with a five-session sensitivity. This is conservative treatment of uncertain release dates, not historical-version certification. Features are joined as of each historical sequence position, without backfilling a later report into earlier rows. Unknown SEC acceptance, amendment and historical first-seen fields remain unknown. Current issuer-hosted copies cannot alone certify that exact historical bytes were present at the reported date.
+# 4. Results
 
-Early fusion appends the accounting-related columns to the existing price sequence. Late fusion combines frozen P predictions with the F logistic expert. F weights in {0, .25, .5, .75, 1} are selected with existing forward development predictions, followed by stage-specific calibration. Matched-weight P-plus-training-constant mixtures provide a shrinkage control. The metadata-only expert is low-dimensional; it is not the complete capacity-matched P-plus-metadata control required for attribution. No new neural early-fusion model is claimed: each stock had only 45 distinct training vintages, below the study's fixed gate.
+## 4.1 Technical overlap and forward representation stability
 
-Although E6 evaluates 482 dates per stock, its test features use nine distinct vintages per stock, including one carried into the period and only eight new updates. Repeating quarterly numbers daily does not create independent financial-report events. The frozen market snapshots and incomplete vintage provenance limit all conclusions.
+The original technical-feature comparison shows small or adverse changes across architectures (Table 2). AAPL deteriorates in all four primary architectures; only TSLA XGBoost has a positive point benefit. Its QQQ-only control almost reproduces the result: the T-versus-C benefit is approximately −0.000000510, with adjusted bootstrap p=1.
 
-## 4.4 News reconstruction and prediction
-
-E4a recovered 52 article summaries and 36 reproducibly joined Gemini outputs. E4b reconstructed 448 Apple Newsroom full-text articles dated 2023–2025; this is not proof of complete recovery of the earlier approximately 450-article corpus. FinBERT extraction uses the recorded model revision; event structures are deterministic extraction features without a comprehensive independent semantic gold standard. Gemini observations come from a smaller summary-version subset and are not an interchangeable full-corpus predictor.
-
-E4c uses only the reconstructed Apple corpus, with 2023 training, 2024 selection plus calibration, and 2025 exploratory testing. After its own window and boundary filters there are 224/232/230 dates and 28/36/65 acute-event dates. Only 22 test events remain under the fixed five-session nonoverlap diagnostic. Test event prevalence is 42/65; this is not an annual population probability estimate.
-
-The eight-dimensional price set P differs from E5/E6. D adds news existence and density; S adds FinBERT sentiment and a direction interaction; T adds four event-type proportions. Regularized logistic regression and hierarchical shrinkage probabilities are compared on the same dates. Logistic C is selected from a small fixed grid using 2024 raw Brier, and 2024 is reused for calibration; it is not a separate untouched calibration study. Deterministic logistic solutions are identical across seeds and do not create five replications of market evidence.
-
-The primary timing proxy makes date-only articles usable at the next trading session. Fixed additional one- and two-session delays examine timing sensitivity. These are proxies, not proof of a publication-time historical content version. Missing source observations cannot be interpreted as a genuine absence of market news.
-
-## 4.5 Scores, pairing and inference
-
-Brier score, the mean of `(p-y)^2`, is the principal probability score. Log loss, AUC, balanced accuracy, MCC and calibration summaries are secondary. We retain each source's existing values; E9a computes no new financial scores or statistical tests. Mean seed losses in E5/E6 differ from scoring the mean probability. The latter defines E7a's candidate future estimand and cannot be substituted retrospectively.
-
-Paired date-level differences use a positive-benefit convention: reference Brier minus candidate Brier. Existing E5/E6 primary analyses use HAC and circular block resampling at 20 sessions, with fixed longer-block sensitivity analyses and their own Holm families. E5 has eight main feature contrasts; E6 reversal has eight H1 and twenty H3 contrasts, with a global twenty-eight comparison report. E4c uses its separately fixed two-comparison families. A source-stage adjusted p-value is not a correction for every decision across E0–E8. Reported bootstrap intervals are pointwise intervals, not simultaneous confidence sets matching the corrected p-values.
-
-Within-state AUC compares positive and negative event cases sharing the predefined past-direction, long-trend and volatility cell. It helps distinguish historical state prevalence from within-cell timing discrimination. Sparse same-cell pairs and serial dependence remain limitations. This diagnostic is not conditional mutual information, a causal information measure, or a universal requirement that every useful forecast be a ranker.
-
-# 5. Empirical Findings
-
-## 5.1 Technical indicators do not establish incremental value
-
-| Stock / model | B | T | Benefit B−T | 95% interval | HAC / bootstrap Holm8 |
+| Stock / model | B | T | Benefit | 95% interval | Holm8 p |
 | --- | --- | --- | --- | --- | --- |
-| AAPL / xgboost | 0.249847 | 0.250267 | -0.000420 | [-0.000942, 0.000143] | 0.9992 / 0.9952 |
-| AAPL / lightgbm | 0.249707 | 0.249727 | -0.000020 | [-0.000190, 0.000148] | 1.0000 / 1.0000 |
-| AAPL / lstm | 0.249484 | 0.251127 | -0.001643 | [-0.010325, 0.007534] | 1.0000 / 1.0000 |
-| AAPL / mamba | 0.248494 | 0.252111 | -0.003616 | [-0.009143, 0.002335] | 1.0000 / 1.0000 |
-| TSLA / xgboost | 0.250207 | 0.249972 | 0.000235 | [-0.000378, 0.000837] | 1.0000 / 1.0000 |
-| TSLA / lightgbm | 0.249855 | 0.249888 | -0.000033 | [-0.001017, 0.000911] | 1.0000 / 1.0000 |
-| TSLA / lstm | 0.250556 | 0.250565 | -0.000009 | [-0.001664, 0.001517] | 1.0000 / 1.0000 |
-| TSLA / mamba | 0.250284 | 0.250790 | -0.000506 | [-0.002202, 0.001278] | 1.0000 / 1.0000 |
+| AAPL xgboost | 0.249847 | 0.250267 | -0.000420 | [-0.000942, 0.000143] | 0.9952 |
+| AAPL lightgbm | 0.249707 | 0.249727 | -0.000020 | [-0.000190, 0.000148] | 1.0000 |
+| AAPL lstm | 0.249484 | 0.251127 | -0.001643 | [-0.010325, 0.007534] | 1.0000 |
+| AAPL mamba | 0.248494 | 0.252111 | -0.003616 | [-0.009143, 0.002335] | 1.0000 |
+| TSLA xgboost | 0.250207 | 0.249972 | 0.000235 | [-0.000378, 0.000837] | 1.0000 |
+| TSLA lightgbm | 0.249855 | 0.249888 | -0.000033 | [-0.001017, 0.000911] | 1.0000 |
+| TSLA lstm | 0.250556 | 0.250565 | -0.000009 | [-0.001664, 0.001517] | 1.0000 |
+| TSLA mamba | 0.250284 | 0.250790 | -0.000506 | [-0.002202, 0.001278] | 1.0000 |
 
-Table 2. E5 calibrated five-seed mean Brier and original paired tests. Lower Brier is better; positive gain favors T. The intervals are source pointwise block-bootstrap intervals. HAC and bootstrap p-values are Holm-adjusted across the eight main feature comparisons. Evidence: E5_AAPL_xgboost through E5_TSLA_mamba, including B/T metric cells.
+Table 2. Original calibrated five-seed mean Brier and paired T-versus-B benefit. Positive favors T. Intervals are original block20 pointwise intervals; p-values are source Holm8 bootstrap values. The eight contrasts also retain their original HAC results in the supplement.
 
-AAPL deteriorates in all four primary architectures. TSLA XGBoost improves by only 0.000235, with an interval spanning zero; the other TSLA architectures do not improve. None of the eight primary comparisons passes both adjusted procedures. The result is lack of reliable incremental evidence in this design, not an equivalence result or a general rejection of technical analysis.
+Development correlations confirm overlap: RSI and z20 have Spearman correlations .889536 for AAPL and .880338 for TSLA. Forward reconstruction gives a different view. RSI's mean R² is .754527 for AAPL but −.948142 for TSLA; the corresponding mean R² for the moving-average gap is .211020 and −.456444. Every indicator and fold is retained in Figure 1 and Supplement S2, including large negative reconstruction values.
 
-The TSLA XGBoost comparison against C is approximately −0.000000510 Brier benefit, with adjusted bootstrap p=1. The small gain over B is thus almost reproduced by adding QQQ alone. This does not causally quantify the contribution of technical indicators, because representations and selected configurations can interact. Training-only RSI/z20 rank correlations are high, consistent with redundancy, but high correlation does not prove conditional redundancy. Likewise, a calibrated trading rule whose learned calibration slope reverses its literal interpretation is not proof that the original investor rule worked.
+![Representation overlap and forward reconstruction](figures/F1_representation.png)
 
-T increases the AAPL Mamba seed SD from approximately 0.000700 to 0.004474. This is algorithmic variability conditional on one sample, not the standard error of a market effect. The project also reports no corrected within-state ranking advantage in E5. Taken together, these controls do not identify a winning architecture or a stable technical-information channel.
+Figure 1. Strongest training rank correlation versus fixed forward Ridge reconstruction. Numbers identify the fixed features in the key; the signed logarithmic vertical scale preserves negative outliers. Correlation uses the complete development sample; each forward model uses only its preceding training fold. Full correlation matrices and feature dendrograms accompany the supplementary tables.
 
-![E5 paired feature gains](figures/e5_feature_gains.png)
+The contrast separates overlap from transferable representation. High contemporaneous correlation can coexist with poor forward linear approximation as levels, volumes and ratios change. This diagnostic describes a fixed mapping, while the forecast comparison evaluates the reversal label. Together they provide a more specific account than treating technical indicators as uniformly redundant or uniformly informative.
 
-Figure 1. E5 source-stage Brier benefit of T versus B, with the original pointwise bootstrap intervals. The zero line separates improvement from deterioration. This figure does not pool stocks or produce a new test.
+Complexity changes also matter. Flattening increases the input from 2,280 to 3,060 columns. The AAPL Mamba calibrated seed SD rises from .000700 to .004474. Archived configuration, parameter-count and stopping metadata show the representation and optimization changes alongside these stability measures, supporting an interpretation in terms of finite-model estimation as well as information content.
 
-## 5.2 Fundamentals: point gains versus identifiable information
+## 4.2 Fundamental fusion: the role of the complete probability pipeline
 
-| Stock / expert | P | F logistic | Early | Late | Constant mix | F weight |
-| --- | --- | --- | --- | --- | --- | --- |
-| AAPL / logistic | 0.254449 | 0.249761 | 0.249389 | 0.249761 | 0.249260 | 1.0 |
-| AAPL / xgboost | 0.250267 | 0.249761 | 0.249610 | 0.250073 | 0.249598 | 0.5 |
-| AAPL / lightgbm | 0.249727 | 0.249761 | 0.249405 | 0.249739 | 0.249429 | 0.5 |
-| AAPL / lstm | 0.251127 | 0.249761 | — | 0.246922 | 0.247902 | 0.75 |
-| AAPL / mamba | 0.252111 | 0.249761 | — | 0.247623 | 0.248822 | 0.75 |
-| TSLA / logistic | 0.255476 | 0.250651 | 0.256504 | 0.250651 | 0.250121 | 1.0 |
-| TSLA / xgboost | 0.249972 | 0.250651 | 0.250301 | 0.250562 | 0.250092 | 0.75 |
-| TSLA / lightgbm | 0.249888 | 0.250651 | 0.250183 | 0.250651 | 0.250121 | 1.0 |
-| TSLA / lstm | 0.250565 | 0.250651 | — | 0.250665 | 0.250159 | 0.75 |
-| TSLA / mamba | 0.250790 | 0.250651 | — | 0.250651 | 0.250121 | 1.0 |
+The original accounting-information and fusion families contain zero positive comparisons jointly passing their respective corrected HAC and bootstrap criteria. AAPL early Logistic improves from .254449 to .249389, while XGBoost improves from .250267 to .249610; TSLA's corresponding early comparisons deteriorate. Table 3 concentrates on the neural examples that motivated the shrinkage analysis; all architectures and controls remain in Supplement S3.
 
-Table 3. E6 reversal Brier, including matched-weight constant shrinkage. P is E5 T. Blank Early cells indicate that no corresponding neural fundamental model was fit. The reported F is the common logistic expert used in late fusion. Source: E6_FUSION_*; do not compare these columns with E4c P as if it were the same model.
+| Stock / price expert | P | Constant mixture | Late fusion | F weight |
+| --- | --- | --- | --- | --- |
+| AAPL lstm | 0.251127 | 0.247902 | 0.246922 | 0.75 |
+| AAPL mamba | 0.252111 | 0.248822 | 0.247623 | 0.75 |
+| TSLA lstm | 0.250565 | 0.250159 | 0.250665 | 0.75 |
+| TSLA mamba | 0.250790 | 0.250121 | 0.250651 | 1.00 |
 
-The primary H1 comparisons do not jointly pass their original HAC and bootstrap corrections. AAPL early logistic improves from 0.254449 to 0.249389, and early XGBoost from 0.250267 to 0.249610. TSLA does not reproduce those improvements. These are potentially useful development observations, but neither the sample nor the metadata controls support a confirmed incremental financial-content claim.
+Table 3. Original calibrated reversal Brier with constant-shrinkage controls. P is T51, and weights refer to the common compact F logistic expert. A weight of one identifies the F-only endpoint. Original H3 family tests and total-gain intervals are retained separately.
 
-For AAPL LSTM, late fusion reaches 0.246922 versus P at 0.251127; the matched-weight constant mixture reaches 0.247902. For Mamba, late fusion reaches 0.247623 versus P at 0.252111, while the constant control reaches 0.248822. The remaining advantages over the constant mixtures are about 0.000980 and 0.001198, and neither is statistically reliable under the source H3 family. The original total-gain intervals also cross zero. Describing how much of the point gain is reproduced by a constant control is arithmetic, not a causal decomposition into shrinkage and genuine information. All twenty primary H3 comparisons fail the source joint criterion; TSLA supplies no consistent replication.
+The two AAPL neural examples show how score gains depend on probability processing. Relative to their matched constants, raw LSTM and Mamba fusion have benefits of −.002834 and −.002919. After the original pipeline-specific calibration, those benefits become +.000980 and +.001198. Their new block60 pointwise intervals are [−.001351,.003419] and [−.000735,.003321]. Across all ten stock–price-expert settings, the raw added-F deviation has a negative net contribution in Equation (2).
 
-A significant exception must be retained. In the secondary AAPL direct-up task, logistic Late decreases Brier from 0.315318 to 0.251362, with source bootstrap Holm12 p=0.0024 and all-twenty adjustment p=0.004. However, F weight is one: Late equals F alone. The calibrated constant has Brier 0.251469, and a fixed probability of 0.5 has Brier exactly 0.25 for a binary outcome. This is evidence against that weak direct-up P pipeline, not evidence of complementary fusion or superiority to simple probability baselines. Its task, hyperparameter procedure and correction family are separate from primary reversal inference.
+Probability diagnostics make this pattern interpretable. AAPL LSTM's calibrated probability SD falls from .086365 for P to .019636 for fusion and .021961 for constant shrinkage. Mamba's corresponding SDs are .064149, .021147 and .021203. These examples have zero forecasts outside [.1,.9]; the measured changes concern dispersion and calibration bias within that range.
 
-![E6 fusion and constant controls](figures/e6_fusion_controls.png)
+![Fusion calibration and score components](figures/F2_fusion_calibration.png)
 
-Figure 2. Existing AAPL neural-price reversal pipelines and their same-weight constant controls. All values are from the original fusion table; no new neural fundamentals model is represented.
+Figure 2. AAPL raw/calibrated scores and ten-bin diagnostics, averaged over seeds. Lower reliability penalty is preferable; larger resolution is favorable within the decomposition. Equation (3) and the supplementary table retain the signed grouping remainder.
 
-## 5.3 News: a local result with substantial qualifications
+For LSTM, calibrated reliability penalties are .006699 for P, .001103 for fusion and .000653 for constant shrinkage. Fusion's resolution is .002153 versus .001095 for the constant mixture. The corresponding Mamba reliability penalties are .006131/.001419/.000688, with fusion/constant resolution .002521/.000576. Thus both mixtures greatly reduce the price pipeline's reliability penalty, while the small additional fusion benefit is associated with different empirical resolution and grouping terms. This is a diagnostic of the realized probability pipeline, rather than a causal share of information value.
 
-| Method | Brier | Log loss | AUC |
+Ranking supplies complementary evidence. LSTM fusion's overall AUC is .583474, compared with .520047 within the frozen market cells; Mamba's corresponding values are .549749 and .523325. A secondary direct-up example illustrates component replacement: AAPL Logistic drops from .315318 to .251362, with source bootstrap Holm12 p=.0024 and all-twenty p=.004, but F weight is one. The calibration-period constant scores .251469. This contrast measures the replacement of a weak directional price pipeline by the compact expert.
+
+## 4.3 Development controls localize initialization effects
+
+The matched-input experiment evaluates the numerical accounting values against the same metadata and dimension. Its point differences favor the controls over the accounting arm (C1–C3, Table 4). The compact metadata expert has Brier .244533/.248998 for AAPL/TSLA, close to F's .243766/.248738. The fixed high-dimensional raw Logistic setting therefore displays substantial estimation sensitivity alongside small compact-expert differences. The added tree controls test this pattern under stronger raw price forecasts. XGBoost's pooled P+M+F-versus-P benefit is .000157 (interval [−.001504,.002003]); LightGBM's is −.000308 ([−.001705,.001039]). All six tree contrasts have family-adjusted bootstrap p≥.4032. Their complete metadata and duplicate-price comparisons are reported in Supplement S4.
+
+| Contrast / candidate | Reference | Benefit | 95% interval | Holm6 p |
+| --- | --- | --- | --- | --- |
+| C1 P+M+F | P+M+zero | -0.007655 | [-0.021292, 0.007731] | 0.5972 |
+| C2 P+M+F | P+M+duplicate | -0.006319 | [-0.020165, 0.009262] | 0.5972 |
+| C3 P+M+F | P | -0.023083 | [-0.042023, -0.003594] | 0.1050 |
+| C4 Sequential fusion | Same-weight constant | 0.001931 | [0.000110, 0.003728] | 0.1520 |
+| C5 Sequential fusion | Prior-tuned constant | 0.001931 | [0.000110, 0.003728] | 0.1520 |
+| C6 Sequential fusion | Prior-selected component | 0.005726 | [0.001548, 0.009306] | 0.0240 |
+
+Table 4. New exploratory development contrasts, conditional on AAPL and TSLA, 1,450 evaluation dates per stock. Positive favors the candidate. Intervals are pointwise synchronized block60 bootstrap intervals; p-values are initial-family Holm6 bootstrap values. C1–C3 assess accounting inputs; C4–C6 assess sequential allocation. Exact definitions and HAC/sensitivity results accompany the table.
+
+C6 improves on the prior-fold-selected single expert by .005726, with HAC Holm6 p=.023606 and bootstrap Holm6 p=.0240; the combined twelve-contrast bootstrap p-value is .0480. The contrast is entirely generated during the 2017–2018 initialization fold: its fixed .5 blend is compared with the predeclared initial P component. In later folds both policies select F, producing identical forecasts. The bootstrap adjusted p-value is .0060 at block20 and .0744 at block120, documenting its dependence sensitivity.
+
+The fixed F expert's full-period scores are lower than Late's .245077/.250898. C4 and C5 each have benefit .001931 versus their shrinkage controls, with bootstrap Holm6 p=.152. These results locate the significant allocation comparison in initialization rather than persistent diversification. Quarterly loss-difference variance and cross-stock diagnostics are supplied to support future sample planning without treating daily repetitions of accounting values as independent releases.
+
+## 4.4 Publication density and sentiment operate differently
+
+| Model | Brier | Log loss | AUC |
 | --- | --- | --- | --- |
 | lr_P | 0.318276 | 0.841749 | 0.394410 |
 | lr_D | 0.296450 | 0.790007 | 0.476190 |
@@ -196,119 +191,49 @@ Figure 2. Existing AAPL neural-price reversal pipelines and their same-weight co
 | hier_T | 0.257149 | 0.707756 | 0.575569 |
 | global | 0.256489 | 0.706133 | 0.500000 |
 
-Table 4. E4c AAPL 2025 extreme-event metrics under next-session proxy timing. There are 65 overlapping event dates. D is an additional density control; S and T include density. These are not the 482-date, two-stock E5/E6 evaluations. Evidence: E4C_* metric claims.
+Table 5. Original AAPL 2025 extreme-event results under next-session proxy timing, n=65. This cohort and P8 differ from the technical/accounting studies. All models share dates and labels.
 
-| Contrast / family | Benefit | 95% interval | HAC / bootstrap Holm2 |
-| --- | --- | --- | --- |
-| S_P / primary_LR_news2 | 0.022569 | [-0.002035, 0.047736] | 0.175113 / 0.1512 |
-| T_S / primary_LR_news2 | -0.001248 | [-0.003561, 0.001717] | 0.327617 / 0.3445 |
-| D_P / secondary_density_sentiment2 | 0.021825 | [-0.001903, 0.048796] | 0.207627 / 0.1928 |
-| S_D / secondary_density_sentiment2 | 0.000744 | [-0.006932, 0.008301] | 0.843969 / 0.8564 |
-| HIER_S_P / secondary_hier_news2 | 0.006702 | [0.002417, 0.012570] | 0.013587 / 0.0280 |
+The primary Logistic P-to-S benefit is .022569, with source bootstrap Holm2 p=.1512 and interval [−.002035,.047736]. Density alone contributes a .021825 point change, while sentiment beyond density contributes .000744, with secondary-family adjusted p=.8564. Adding event structure to S changes Brier adversely by .001248.
 
-Table 5. E4c original paired Brier contrasts. Corrections apply within each named two-comparison family, not across all rows of this table or the whole project. Confidence intervals are pointwise source bootstrap intervals. HIER_S_P is a secondary comparison. Evidence: E4C_DIFF_*.
+The new density-conditioned analysis shows where these changes arise. The zero/one–two/three-plus retained-article strata contain 6/30/29 event dates. Density benefits are .087475/.023079/.006946; additional sentiment benefits are −.001646/−.000753/+.002787. These are descriptive strata with limited class support, especially the six zero-retained windows. Mean probability changes and the complete date-support table distinguish forecast movement from predictive improvement.
 
-The primary logistic P-to-S benefit is 0.022569, with bootstrap Holm2 p=0.1512 and a pointwise interval including zero. T does not improve over S. The density-only D control already accounts arithmetically for almost all of the P-to-S point change, whereas S versus D improves only 0.000744 and has adjusted p=0.8564. The experiment consequently does not isolate a reliable sentiment-content contribution.
+![Retained-source density and sentiment](figures/F3_attention_sentiment.png)
 
-The secondary hierarchical S-versus-P benefit of 0.006702 is significant within its own family: HAC Holm2 p=0.013587 and bootstrap Holm2 p=0.028. It must not be suppressed because the primary contrast is nonsignificant. It also must not rescue the primary hypothesis. With one- and two-session additional information delays, its bootstrap Holm2 p-values become 0.1894 and 0.3714. The hierarchical S event Brier remains above the global historical-probability baseline in the main alignment.
+Figure 3. Density support, paired conditional changes, original hierarchical timing intervals and density/tone correlations. Counts refer to the retained issuer corpus; the source's broader observation completeness is unknown. Sparse strata are displayed descriptively.
 
-Hierarchical S has within-state AUC 0.5532 with unadjusted bootstrap p=0.5721. Logistic S/T have within-state AUC 0.5887/0.6383 and Holm5 p=0.8726/0.8544. Thus the project has not demonstrated a stable ability to identify which otherwise comparable acute moves will reverse. Small same-state support, shifting prevalence, issuer-selected content and the time proxy remain plausible explanations. Probability calibration may matter even without strong ranking, but the present evidence does not establish robust superiority to historical probabilities.
+On retained-news days, density/mean-tone rank correlation is .368525 in 2023, .032985 in 2024 and .212493 in 2025. The representation relationship consequently varies over time. Publication density captures a different aspect of the source than tone, while the mean-tone construction and corporate selection also shape their association.
 
-![E4c stage-specific news benefits](figures/e4c_news_gains.png)
+The secondary hierarchical S-versus-P benefit remains .006702, with HAC Holm2 p=.013587 and bootstrap Holm2 p=.028. Additional one-/two-session delays raise the latter to .1894/.3714. Hierarchical S has within-state AUC .5532 with unadjusted p=.5721; Logistic S/T have .5887/.6383, with Holm5 p=.8726/.8544. These results place the local probability improvement alongside its timing and within-state discrimination evidence.
 
-Figure 3. E4c existing event Brier benefits, separated from E5/E6. Intervals are original pointwise bootstrap intervals; inferential scope is given in Table 5 rather than inferred from overlapping bars.
+# 5. Temporal Data Integrity
 
-## 5.4 Background event and magnitude results
+The provenance studies identify two distinct requirements: the exact historical source version and the time at which the intended observer could receive it. A source timestamp, a current retrieval time and a vendor-arrival record represent different clocks. An independent early capture can provide a conservative source-availability bound; arrival evidence adds a separate operational constraint.
 
-E1–E2's small five-seed magnitude improvements were not significant after their original correction, and they do not answer direction questions. E3a found stock-specific descriptive reversal/continuation patterns rather than a universal rebound rule. Its small nonoverlapping event groups, horizon differences and main multiple-testing correction limit generalization. E3b–E3c made the distinction between all-date reversal probability and event-conditional ranking operational, without providing independent confirmation of a cross-stock timing signal.
+The financial prototype covers twenty companies in four research groups, with twenty-one readable filing indexes and seventeen rendered pages. Original XBRL instance bytes and strictly qualified company quarters remain absent from the acquired evidence. Identity, split/dividend units and historical exits also require explicit handling before expanding the panel. The news/social audits reproduce existing feature joins but contain zero qualified historical source-version or arrival records under their strict contract. These are measured evidence gaps that bound the retrospective information set.
 
-These earlier stages motivate the audit rather than add independent replications to E4–E6. All-stage selection correction is unavailable: local frozen plans and complete tables improve transparency but cannot turn repeatedly viewed 2024–2025 observations into preregistered holdouts. No cross-stage aggregate p-value or combined effect is reported.
+Current reconstructed corpora support the descriptive analyses above. Their original-version, modification, deletion and monitoring histories are the next data requirements for a stricter source-conditioned forecast experiment. Supplement S5 records the actual source and qualification evidence separately from administrative access decisions.
 
-# 6. Data Integrity Audit
+# 6. Discussion
 
-## 6.1 Financial reports, identity and survivorship
+The findings connect four forecasting choices. Price representation can change estimation even when features share a source; strong training correlation and unstable forward reconstruction can occur together. A compact external expert can alter forecast concentration; the raw and calibrated comparisons show that the full probability pipeline determines the observed benefit. Sequential component allocation can generate a significant comparison during initialization while converging to a single expert later. Publication density and tone can change predictions on different subsets of dates.
 
-E7b is a purposive 20-company, four-group prototype, including difficult identity and exit cases, rather than a probability sample representing an historical investment universe. It obtained 21 readable SEC filing indexes and 17 rendered financial pages across ten firms, containing 90 displayed candidate rows. Original SEC filing-body bytes and XBRL instance bytes were not obtained; strictly eligible company quarters and independent original-document QA were both zero. A readable rendering cannot replace an original context-linked financial value and amendment history.
+These explanations accord with the forecast-combination literature's treatment of estimation error [R11, R34] and probability pooling [R33]. They also sharpen the interpretation of financial multimodal comparisons [R30, R39, R40]: source ablation, representation controls and matched shrinkage answer related but different questions. Our empirical contribution is to evaluate them together, using traceable forecast contrasts rather than infer their contribution from a single score ranking.
 
-Retrospective issuer copies used in E6 do not automatically become qualified under E7's stricter contract. The absence of qualified evidence does not imply that companies failed to publish statements. Direct SEC acquisition failures were environment-specific; they were not evidence that EDGAR data do not exist. Source-public availability and vendor arrival are separate modes, and source-mode financial analysis does not inherently require purchasing a historical vendor first-seen record.
+For future work, the most informative comparison is a modest, fixed price/metadata/accounting design combined with separately tuned constant shrinkage and a prior-selected component benchmark. New sources should enter through a versioned information contract. Sample planning must reflect repeated quarterly updates and shared market shocks; the development variance diagnostics provide an initial scale, while broader dependence and power require a larger historical universe [R24, R31]. Preregistration then turns these exploratory mechanism checks into a focused unseen-sample assessment [R25].
 
-The prototype also identifies security-history problems. Back-projecting a year-end-2025 survivor list into earlier development years conditions the universe on future survival. A modern ticker history cannot safely stand in for an old issuer or a canceled security. Split-adjusted cash amounts and historical per-share statements may use different share bases; CIK continuity alone does not establish security continuity. E7b preserves these failures and proposes historical-universe correction without rewriting previous experiments. It has not yet produced a representative, corporate-action-certified panel for H1/H3.
+# 7. Limitations and Research Integrity
 
-## 6.2 News scale is not PIT qualification
+The market population consists of two prominent stocks, and 2024–2025 has been repeatedly inspected. Local correction families address their stated contrasts rather than the full research history. The supplementary controls use fixed candidate settings, including high-dimensional Logistic and the two original tree architectures; results are conditional on those model classes and budgets. Five seeds quantify computational stability, while quarterly updates and overlapping returns limit independent information. The displayed intervals leave relevant effects unresolved. Larger historical populations, matched stronger price baselines and true unseen validation are needed for broader predictive claims.
 
-The full existing FNSPID external-file audit scanned 15,549,299 rows in a 23,232,979,597-byte file. AAPL has 9,338 retained target rows, 8,865 with body content; TSLA has 10,587 rows, 8,712 with bodies. Coverage is discontinuous, with no target records in 2012–2018, 2021, 2024 or 2025 in that file. Approximately 99.67%/99.76% of target timestamps are midnight claims, not demonstrated intraday arrival precision. These findings concern that frozen file, not every possible FNSPID release or the absence of real-world news. The file was not mixed into the Apple-only E4c prediction experiment.
+Prices are retrospective adjusted snapshots; fundamental releases use date-lag proxies; issuer text is reconstructed and selected. Historical versions, company-action chains and independent document QA are incomplete. Finite-bin components describe the observed forecast–outcome pairs, with signed grouping remainder and five-bin sensitivity. These constraints limit information and causal attribution while preserving the empirical pipeline comparisons.
 
-E8a reproduces 2,816 news-stock-version records, 3,316 feature-view rows and 36 Gemini joins. These are different counting units and must not be added into a number of unique articles. StockEmotions contributes date-only, selected 2020 samples; many rows in one selected year do not satisfy the fixed multi-year monitoring requirement. Public downloadability does not establish transferable research, preservation or redistribution rights.
+Research integrity statement. The existing 2026 evaluation protocol is unchanged and unexecuted. Earlier incidental exposure to 2026 aggregates and discovery material is documented in Supplement S6. The supplementary fitting and allocation decisions use development data ending in 2022; the already-viewed test forecasts are used for explicitly exploratory diagnostics. Source administration and engineering records accompany the article as supplementary documentation.
 
-The L0–L4 contract distinguishes no usable time, date proxies, publisher timestamp claims, independently supported exact historical source versions (L3), and additional verified arrival evidence (L4). An early independent capture can establish a conservative availability bound; it need not prove the first person ever to see an item. L3 nevertheless does not imply L4, and today's retrieval cannot stand in for historical arrival. A content hash proves equality relative to a file, not that the file existed before a past cutoff.
+# 8. Conclusion
 
-E8a and E8a.1 report zero qualified L3 and L4 records; the latter acquired zero real pilot samples and completed zero independent human QA. The offline provenance and collector tests check engineering behavior with clearly separated synthetic responses. They are not data certification, actual historical observations, or human review. E8b remains NOT_READY under the unchanged gates.
+The experiments show why the source of a financial prediction gain matters. Technical-feature overlap is substantial but its forward reconstruction is unstable. Fundamental fusion changes concentration and calibration, and its raw advantage over constant shrinkage is negative in all ten archived settings. The new matched-input and sequential-allocation controls distinguish numerical content from representation and initialization. In the news study, publication density reproduces most of the total point change, while the smaller sentiment contribution varies with source density and timing.
 
-## 6.3 External access decision
-
-Official Stocktwits documentation provides a basis for an Enterprise inquiry, not evidence that this project holds access or that historical coverage is complete. A limited 30–50-record request should establish exact content versions, usable timestamps, deletion handling, arrival provenance and research rights before a purchase or expanded extraction. The documentation's stream envelope and daily-backup route do not by themselves reconstruct historical delivery completeness. See policy sources POL01–POL04 and the separate decision brief.
-
-Reddit for Researchers requires an institutional sponsor and ethics approval or exemption. Its published monthly dataset is delayed and uses current content versions, excluding deleted content. Approved access therefore does not by itself solve historical-version PIT. The appropriate route is an institution-led clarification of fit, preservation and review access, not an unauthorized archive substitution. Costs remain vendor- and agreement-dependent. No request, application, payment or collector was initiated in E9a.
-
-# 7. Discussion
-
-The studies support an attribution problem more strongly than a predictive-discovery claim. Technical indicators may make a useful representation of prices without contributing outside information. Fundamentals add an external source in principle, yet a low-dimensional F expert can also regularize a weak high-dimensional P pipeline. A mixture closer to the base rate may improve a proper score even when its additional branch has little within-state resolution. Issuer-news density can change a forecast without establishing sentiment-content value. In each case, a plausible mechanism remains a hypothesis until matched controls and qualified data identify the relevant contrast.
-
-This does not imply that calibration improvements are worthless. Well-calibrated probabilities can be useful even when ranking gains are small. The scientific claim must match the evidence: better reliability against a specified baseline is different from new information, event timing, cross-stock generalization or investable alpha. Similarly, a significant difference from an inadequate benchmark is still a genuine observed difference; it simply answers a narrower question than model superiority over strong alternatives.
-
-Data provenance is part of the estimand. A retrospective text classifier applied to a version that appeared after the decision cutoff cannot represent the same historical information set. Adding a fixed delay does not undo unknown edits or deleted-record selection. Conversely, offline computation is not inherently invalid: an adequately evidenced historical version and a time-appropriate frozen feature model can support a retrospective analysis, although not a claim of historical deployment. Source rights, content time, arrival time and feature-model availability must therefore remain separate fields.
-
-The most defensible near-term paper is an exploratory, reproducible audit of incremental-value claims and data qualification, supported by the source-linked cases above. A more ambitious article establishing H1/H3 requires the complete controls and a broader qualified population. The E7a power scenarios show why adding daily rows or seeds is not enough: shared calendar shocks and quarterly updates can dominate precision. Those scenarios are planning assumptions, not a measured guarantee that a proposed sample size will work.
-
-# 8. Limitations and Research Integrity
-
-The empirical population is two selected, prominent survivors. It does not identify average effects across sectors, smaller firms or failed securities. The exploratory sequence repeatedly inspects 2024–2025. Local Holm families do not account for the full sequence of modeling and reporting decisions, and the current synthesis is not a newly preregistered test. Event subsamples, overlapping horizons and quarterly persistence further reduce effective independent support.
-
-Input histories, dimensions, labels, calibration procedures and sample filters differ across experiments. Flattening high-dimensional sequences may handicap some estimators even when information is formally equal. E5 B/T configuration changes prevent a causal decomposition into representation and optimization. E6 metadata controls do not fully match capacity or P-plus-metadata information. E4c's selected issuer corpus and small effective event sample cannot establish the value of general financial media or investor discourse. No historical analyst-expectation effect has been tested.
-
-PIT qualifications remain incomplete. The existing markets are adjusted retrospective snapshots; the fundamental and news versions do not meet the strict confirmation gates. Historical access and redistribution rights are not implied by a public URL. Independent manual QA and original-document verification cannot be replaced by automated or model-assisted checks. Reproducibility from aggregates is not equivalent to legally reconstructing every input and refitting every model.
-
-The E3c2026 fixed protocol remains unchanged and was not executed here. Earlier stages incidentally encountered some 2026 news aggregates and discovery snippets; the project must not claim globally zero exposure. These exposures were disclosed separately from fitting or label-based selection. E9a requests existing reports and current policy/bibliographic pages, not a new financial-label dataset. The subscription-policy page incidentally displays current market-quote chrome; those values are not retained as research inputs or used in any selection, fitting or evaluation. E6/E7/E8/E9 are not added to the old frozen protocol. Future claims need a separately registered, genuinely unseen validation design with controlled access.
-
-This draft has been checked computationally for source consistency and visually for document rendering. It has not undergone independent human scientific replication, institutional legal review or peer review. Citation metadata verification does not certify every inference in a cited paper. Faculty review, author confirmation and venue-specific formatting remain necessary.
-
-# 9. Next Evidence and Validation Plan
-
-The E7a document is a frozen candidate protocol, not an externally registered or executed confirmation study. Its six H1/H3 controls include strong P, matched metadata and redundant-price inputs, and late fusion against same-weight shrinkage, independently tuned shrinkage and the best single branch. Nondegenerate weights are required for a complementarity claim. These controls should be retained and audited before a future test, rather than selected for their already-viewed performance.
-
-Three evidence packages are the minimum next priorities. First, acquire a legally usable, version-traceable dataset with security identities, corporate actions, document times and independent QA; for text, separate exact source-version evidence from vendor arrival. Second, run the fixed matched controls on a wider development-only panel and estimate each paired contrast's dependence, variance, uncertainty coverage and power, using filing events and shared calendar blocks rather than daily repetition as independent information. Third, externally register a small primary comparison family and evaluate once on genuinely unseen data, under independent label custody or prospective prediction sealing. None is replaced by more models on the current holdout.
-
-A limited Stocktwits Enterprise sample is worthwhile only if it can resolve provenance and rights. Reddit may support a different retrospective content question if its version policy cannot support historical decision-time prediction. If neither can supply the required evidence at a feasible cost, a data-quality methods working paper remains a coherent outcome. The research question should change transparently rather than relabel proxy data as strict PIT.
-
-The proposed long-term validation timetable is not a promise of data or power. A near-term undergraduate report can be completed using the current exploratory evidence and explicit limits; a peer-reviewed predictive-value claim requires the missing packages. Suitable submission framing is reproducibility, empirical methodology and data integrity, with no guarantee of acceptance and no claim that methods already established in the literature are novel.
-
-# 10. Conclusion
-
-The existing experiments do not establish reliable incremental five-day reversal information from the tested technical, fundamental or reconstructed-news additions after their stated controls. They also do not demonstrate equivalence to zero information. Locally significant secondary results are present, but neither the alignment-sensitive news contrast nor a fusion weight that discards P establishes the broad H1/H3 claim.
-
-The supportable contribution is a transparent audit of why a lower probability score can fail to identify new information, and what source, control and validation evidence is needed to improve that inference. It links quantitative negative and mixed findings to documented data-access failures without converting missing proof into proof of absence. The next advance should be better-qualified data and sharper controls, followed by an independent test, rather than another search for the lowest score in the same two stocks.
-
-# Appendix A. Evidence and Reproducibility
-
-The draft is based on main commit `e2bc7a3f686a213e25635172a19018934df944cb`. CLAIM_EVIDENCE_MATRIX.csv links quantitative claims to exact source selectors, record numbers and SHA256 values; `audits/cell_provenance.json` retains the selected original aggregate rows. E9a tables are deterministic selections and formatting of existing results. They contain no re-estimated financial score or p-value. The sources remain in their original research-stage directories and are not overwritten.
-
-The E9a reproduction script checks the frozen source hashes, regenerates aggregate tables and figures, rebuilds the draft from its template, and verifies the document-level claims. Original raw market, financial, news and social inputs, article-level private manifests, API responses, checkpoints and credentials are excluded from public distribution. Full model reproduction would separately require legitimate access to the original frozen inputs and environment; E9a aggregate replay does not claim to provide it. News-method context is cross-linked at https://github.com/yoyocar2333/stockllm-pit-news.
-
-The frozen E3c2026 protocol hash reported in the existing audit is `9ffe3c31bbfabb6609ee69dde1deab7a13729b43511a9c045d945b5b03453940`. Protection checks verify prior artifacts without running that protocol. Current-policy evidence cards are research notes, not original HTTP archives, licenses or historical content samples. Email drafts remain unsent.
-
-# Appendix B. Policy Sources
-
-POL01. Stocktwits terms, revision 2026-07-10: https://stocktwits.com/about/legal/terms/
-
-POL02. Firestream stream data and recovery: https://firestream.stocktwits.com/documentation/stream
-
-POL03. Firestream authenticated daily backup documentation: https://firestream.stocktwits.com/documentation/backups
-
-POL04. Stocktwits Enterprise API contact route: https://stocktwits.com/subscriptions
-
-POL05. Reddit for Researchers, update 2026-10-05: https://support.reddithelp.com/hc/en-us/articles/49381918834964-Reddit-for-Researchers-Program
-
-These official pages were checked on 2026-11-14. They establish published policy or product descriptions, not project authorization, guaranteed coverage or a project-specific quotation. See DATA_ACCESS_DECISION_BRIEF.md for the decision boundaries.
+A useful evaluation should therefore compare complete probability pipelines, retain simple shrinkage and component-selection controls, and make the historical information set explicit. This approach yields concrete explanations and testable next comparisons from mixed or negative results, while directing independent validation toward the effects that remain scientifically unresolved.
 
 # References
 
@@ -374,4 +299,20 @@ These official pages were checked on 2026-11-14. They establish published policy
 
 [R31] Petersen, Mitchell A. (2009). Estimating Standard Errors in Finance Panel Data Sets: Comparing Approaches. Review of Financial Studies 22(1), 435-480. https://doi.org/10.1093/rfs/hhn053
 
-[R32] BROCK, WILLIAM; LAKONISHOK, JOSEF; LeBARON, BLAKE (1992). Simple Technical Trading Rules and the Stochastic Properties of Stock Returns. The Journal of Finance 47(5), 1731-1764. https://doi.org/10.1111/j.1540-6261.1992.tb04681.x
+[R32] Brock, William; Lakonishok, Josef; LeBaron, Blake (1992). Simple Technical Trading Rules and the Stochastic Properties of Stock Returns. The Journal of Finance 47(5), 1731-1764. https://doi.org/10.1111/j.1540-6261.1992.tb04681.x
+
+[R33] Ranjan, Roopesh; Gneiting, Tilmann (2010). Combining Probability Forecasts. Journal of the Royal Statistical Society Series B: Statistical Methodology 72(1), 71-91. https://doi.org/10.1111/j.1467-9868.2009.00726.x
+
+[R34] Claeskens, Gerda; Magnus, Jan R.; Vasnev, Andrey L.; Wang, Wendun (2016). The forecast combination puzzle: A simple theoretical explanation. International Journal of Forecasting 32(3), 754-762. https://doi.org/10.1016/j.ijforecast.2015.12.005
+
+[R35] Bröcker, Jochen (2008). Some Remarks on the Reliability of Categorical Probability Forecasts. Monthly Weather Review 136(11), 4488-4502. https://doi.org/10.1175/2008MWR2329.1
+
+[R36] Dimitriadis, Timo; Gneiting, Tilmann; Jordan, Alexander I. (2021). Stable reliability diagrams for probabilistic classifiers. Proceedings of the National Academy of Sciences 118(8). https://doi.org/10.1073/pnas.2016191118
+
+[R37] Drinkall, Felix; Rahimikia, Eghbal; Pierrehumbert, Janet; Zohren, Stefan (2024). Time Machine GPT. Findings of the Association for Computational Linguistics: NAACL 2024, 3281-3292. https://doi.org/10.18653/v1/2024.findings-naacl.208
+
+[R38] Glasserman, Paul; Lin, Caden (2023). Assessing Look-Ahead Bias in Stock Return Predictions Generated By GPT Sentiment Analysis. arXiv preprint arXiv:2309.17322. https://doi.org/10.48550/arXiv.2309.17322
+
+[R39] Xu, Yumo; Cohen, Shay B. (2018). Stock Movement Prediction from Tweets and Historical Prices. Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), 1970-1979. https://doi.org/10.18653/v1/P18-1183
+
+[R40] Ding, Xiao; Zhang, Yue; Liu, Ting; Duan, Junwen (2015). Deep Learning for Event-Driven Stock Prediction. Proceedings of IJCAI2015, 2327–2333. https://ijcai.org/proceedings/2015/329

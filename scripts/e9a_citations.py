@@ -3,6 +3,8 @@ import json,csv
 from pathlib import Path
 
 def main(out):
+ if (out/'MANUSCRIPT_VERSION.json').exists() and __import__('json').loads((out/'MANUSCRIPT_VERSION.json').read_text()).get('stage')=='E9b':
+  from e9b_citations import main as current; return current(out)
  records=json.loads((out/'literature/verified_doi_records.json').read_text())
  for r in records:
   if r['id']=='R18':

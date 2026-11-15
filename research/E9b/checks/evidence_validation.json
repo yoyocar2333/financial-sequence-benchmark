@@ -1,0 +1,15 @@
+{
+  "status": "PASSED",
+  "claims": 319,
+  "original_claim_fields_preserved": 103,
+  "new_claims": 216,
+  "references_checked": 40,
+  "archived_Brier_reconciled": 88,
+  "new_development_classification_fits": 60,
+  "new_auxiliary_fits": 6,
+  "financial_fits_in_this_validation": 0,
+  "historical_PIT_certification": false,
+  "independent_manual_QA_performed": false,
+  "E3c2026_executed": false,
+  "merged": false
+}

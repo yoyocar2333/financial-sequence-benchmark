@@ -1,0 +1,26 @@
+{
+  "component": "tree_controls",
+  "at": "2026-11-15T11:05:14.324977+00:00",
+  "plan_sha256": "8af359d6a9c1b09bea3b9d454957ad3dfeb0e9028fc06ccc3dd85ea38035ea0b",
+  "inputs": {
+    "outputs/e9b_20261115/ANALYSIS_PLAN_ADDENDUM_01.json": "42a0abcd7eab0af3040e96fabc40711037291fc439ac2bc6c8f31caf1cb5cb09"
+  },
+  "code": {
+    "e9b_setup.py": "bc1f889febc0d8961cbe919823c7a72a92beb5e19d066ce041f8fb7d30f18417",
+    "e9b_core.py": "9f46878806ebb41b50df6e6b2457d17d004e79748bdfe7ff10322aee8966ea1d",
+    "e9b_technical.py": "86c50332ce6f9e8c127111784188014a5e8ea49dd134bff93b7f21c72e667257",
+    "e9b_development.py": "76e19d04853ab0867cc5c1b4234c8abc14faf58e5feb7a58c3eb69532a476b74",
+    "e9b_fusion.py": "e355465e7d8f448966d191e061168760217f1c819f8c986cfb9a9f7d166a7d88",
+    "e9b_news.py": "96d07e7471748a35914bcaf879eea46c59233e1bdbcf4c90dd0707e435926690",
+    "e9b_plot.py": "f7d2c050e14d843001c36842536b1a01b6b2a978aa9176e6be34aa92321ff73e",
+    "e9b_literature.py": "c4c698fc1737abd23a2677a2fab522b04f1fd090108a6a2f39df2a53e116ece8",
+    "e9b_complexity.py": "64c485953b64ef58e97266fea304e9c83f2b306ae3a50ef31ce2205f4e4b5d45",
+    "e9b_citations.py": "9cec05a53c89bd74853299194161468d91340deeff00ce62be6c0c8a26cbb239",
+    "e9b_paper.py": "ac6a74e9e5bda7b85d022edaeddb381684383367683017b8ee30648fd25661ac",
+    "e9b_docx.py": "979587fee134016d604cf8c30fa0018e497501a1bbacae427fe6fd04a2cdf964",
+    "e9b_run_renderer.py": "d8fd0d4c4b93d1e5a852a9292682d20047f22f2980c0423156f9bde060f5d369",
+    "e9b_narrative.py": "aec922e389224a8e9d56a49bd393b7e5fca8eec23938376dfec0fda4b2e05a48",
+    "e9b_tree_controls.py": "a2109a77f17ef1ebf96a1c66a636ad44155bf17c05a724a3a4e89a89c458e169"
+  },
+  "exploratory": true
+}

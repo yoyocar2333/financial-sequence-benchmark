@@ -1,0 +1,22 @@
+{
+  "component": "complexity",
+  "at": "2026-11-15T10:43:41.356783+00:00",
+  "plan_sha256": "8af359d6a9c1b09bea3b9d454957ad3dfeb0e9028fc06ccc3dd85ea38035ea0b",
+  "inputs": {
+    "outputs/e5_20261102/selected_configs.json": "fe6bfb0501e12b2be3c121edb30203aa8535810c492cfeccfedc5df1ee8df32e",
+    "outputs/e5_20261102/inputs/selected_configs.json": "aab779435399c7ec2d87e40f3fc5fedbde632d5e04012a278a96fb28891c65f9",
+    "outputs/e5_20261102/tables/metrics_comparison.csv": "d50828663a0953abfc81506251b9ddd470ebec435c4f1b9625bd8a70acf2bedf"
+  },
+  "code": {
+    "e9b_setup.py": "bc1f889febc0d8961cbe919823c7a72a92beb5e19d066ce041f8fb7d30f18417",
+    "e9b_core.py": "57b7e2fae66ca262d8fe36daa0bfbba840e7a68f3db11833ae67fdccd097a233",
+    "e9b_technical.py": "86c50332ce6f9e8c127111784188014a5e8ea49dd134bff93b7f21c72e667257",
+    "e9b_development.py": "76e19d04853ab0867cc5c1b4234c8abc14faf58e5feb7a58c3eb69532a476b74",
+    "e9b_fusion.py": "e355465e7d8f448966d191e061168760217f1c819f8c986cfb9a9f7d166a7d88",
+    "e9b_news.py": "96d07e7471748a35914bcaf879eea46c59233e1bdbcf4c90dd0707e435926690",
+    "e9b_plot.py": "449e3134521306190545fc1d0d51d83bf3133b4b4783e8e9e193b34cc8d1772d",
+    "e9b_literature.py": "c4c698fc1737abd23a2677a2fab522b04f1fd090108a6a2f39df2a53e116ece8",
+    "e9b_complexity.py": "64c485953b64ef58e97266fea304e9c83f2b306ae3a50ef31ce2205f4e4b5d45"
+  },
+  "exploratory": true
+}

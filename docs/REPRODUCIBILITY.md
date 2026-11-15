@@ -73,3 +73,7 @@ E7a development_audit／evidence_audit腳本需舊工作站資產，不是從公
 ## E9a論文來源與彙整重播
 
 [E9a說明](../research/E9a/REPRODUCIBILITY.md)提供103項主張、91筆確切原表列、21個來源SHA及32筆文獻核對。`python -B scripts/e9a_reproduce.py --bundle research/E9a --out outputs/e9a_replay_NEW`只重建來源與表格；加`--figures`才以已有matplotlib重畫三圖／從模板重建正文。無金融訓練／新分數／p-value，非原始資料PIT認證。Word需既有python-docx，PDF需已有LibreOffice與中文字型；無自動安裝或外部收集。
+
+## E9b current-paper replay
+
+[E9b重現說明](../research/E9a/REPRODUCIBILITY.md)區分public aggregate重建、已完成的private frozen-source no-refit replay及新fit重建條件。原E9a入口辨識版本後轉到E9b，避免舊生成器恢復舊稿。補強分析為新探索性分析，非原實驗預註冊。
