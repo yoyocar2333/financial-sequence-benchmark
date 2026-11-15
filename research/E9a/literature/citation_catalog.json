@@ -1,0 +1,1465 @@
+[
+  {
+    "id": "R01",
+    "expected_title": "Empirical Asset Pricing via Machine Learning",
+    "title": "Empirical Asset Pricing via Machine Learning",
+    "year_cited": 2020,
+    "doi": "10.1093/rfs/hhaa009",
+    "url": "https://doi.org/10.1093/rfs/hhaa009",
+    "authors": [
+      {
+        "given": "Shihao",
+        "family": "Gu"
+      },
+      {
+        "given": "Bryan",
+        "family": "Kelly"
+      },
+      {
+        "given": "Dacheng",
+        "family": "Xiu"
+      }
+    ],
+    "venue": "The Review of Financial Studies",
+    "volume": "33",
+    "issue": "5",
+    "pages": "2223-2273",
+    "date_fields": {
+      "published": [
+        2020,
+        2,
+        26
+      ],
+      "published-print": [
+        2020,
+        5,
+        1
+      ],
+      "published-online": [
+        2020,
+        2,
+        26
+      ],
+      "issued": [
+        2020,
+        2,
+        26
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Oxford University Press (OUP)",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1093%2Frfs%2Fhhaa009",
+    "retrieved_utc": "2026-11-14T14:25:55.381044+00:00",
+    "response_sha256": "7fa8290bc808c371f513e3d79f69a1bb64d963da6837ec6e2924389b126c4179",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R02",
+    "expected_title": "A Comprehensive Look at the Empirical Performance of Equity Premium Prediction",
+    "title": "A Comprehensive Look at The Empirical Performance of Equity Premium Prediction",
+    "year_cited": 2008,
+    "doi": "10.1093/rfs/hhm014",
+    "url": "https://doi.org/10.1093/rfs/hhm014",
+    "authors": [
+      {
+        "given": "Ivo",
+        "family": "Welch"
+      },
+      {
+        "given": "Amit",
+        "family": "Goyal"
+      }
+    ],
+    "venue": "Review of Financial Studies",
+    "volume": "21",
+    "issue": "4",
+    "pages": "1455-1508",
+    "date_fields": {
+      "published": [
+        2007,
+        3,
+        17
+      ],
+      "published-print": [
+        2008,
+        7
+      ],
+      "published-online": [
+        2007,
+        3,
+        17
+      ],
+      "issued": [
+        2007,
+        3,
+        17
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Oxford University Press (OUP)",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1093%2Frfs%2Fhhm014",
+    "retrieved_utc": "2026-11-14T14:25:56.322553+00:00",
+    "response_sha256": "9cb2795c221d8cd82d1c29a1ea1d9fb96ca46c19253cc55f94ab9c4178266da1",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R03",
+    "expected_title": "Foundations of Technical Analysis",
+    "title": "Foundations of Technical Analysis: Computational Algorithms, Statistical Inference, and Empirical Implementation",
+    "year_cited": 2000,
+    "doi": "10.1111/0022-1082.00265",
+    "url": "https://doi.org/10.1111/0022-1082.00265",
+    "authors": [
+      {
+        "given": "Andrew W.",
+        "family": "Lo"
+      },
+      {
+        "given": "Harry",
+        "family": "Mamaysky"
+      },
+      {
+        "given": "Jiang",
+        "family": "Wang"
+      }
+    ],
+    "venue": "The Journal of Finance",
+    "volume": "55",
+    "issue": "4",
+    "pages": "1705-1765",
+    "date_fields": {
+      "published": [
+        2000,
+        8
+      ],
+      "published-print": [
+        2000,
+        8
+      ],
+      "published-online": [
+        2002,
+        12,
+        17
+      ],
+      "issued": [
+        2000,
+        8
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Wiley",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 0.46511627906976744,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1111%2F0022-1082.00265",
+    "retrieved_utc": "2026-11-14T14:25:57.249700+00:00",
+    "response_sha256": "b1c7ce05b1f7c135cf8c5a690a207a0bdfd8c65c622c4392caa3c96ec2f86f00",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R04",
+    "expected_title": "Data-Snooping, Technical Trading Rule Performance, and the Bootstrap",
+    "title": "Data‐Snooping, Technical Trading Rule Performance, and the Bootstrap",
+    "year_cited": 1999,
+    "doi": "10.1111/0022-1082.00163",
+    "url": "https://doi.org/10.1111/0022-1082.00163",
+    "authors": [
+      {
+        "given": "Ryan",
+        "family": "Sullivan"
+      },
+      {
+        "given": "Allan",
+        "family": "Timmermann"
+      },
+      {
+        "given": "Halbert",
+        "family": "White"
+      }
+    ],
+    "venue": "The Journal of Finance",
+    "volume": "54",
+    "issue": "5",
+    "pages": "1647-1691",
+    "date_fields": {
+      "published": [
+        1999,
+        10
+      ],
+      "published-print": [
+        1999,
+        10
+      ],
+      "published-online": [
+        2002,
+        12,
+        17
+      ],
+      "issued": [
+        1999,
+        10
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Wiley",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1111%2F0022-1082.00163",
+    "retrieved_utc": "2026-11-14T14:25:58.169129+00:00",
+    "response_sha256": "7e462fac068d91c315d5e6f886b7de070dffceef05769369b02d827b392aa7e3",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R05",
+    "expected_title": "Giving Content to Investor Sentiment",
+    "title": "Giving Content to Investor Sentiment: The Role of Media in the Stock Market",
+    "year_cited": 2007,
+    "doi": "10.1111/j.1540-6261.2007.01232.x",
+    "url": "https://doi.org/10.1111/j.1540-6261.2007.01232.x",
+    "authors": [
+      {
+        "given": "PAUL C.",
+        "family": "TETLOCK"
+      }
+    ],
+    "venue": "The Journal of Finance",
+    "volume": "62",
+    "issue": "3",
+    "pages": "1139-1168",
+    "date_fields": {
+      "published": [
+        2007,
+        5,
+        8
+      ],
+      "published-print": [
+        2007,
+        6
+      ],
+      "published-online": [
+        2007,
+        5,
+        8
+      ],
+      "issued": [
+        2007,
+        5,
+        8
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Wiley",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 0.6808510638297872,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1111%2Fj.1540-6261.2007.01232.x",
+    "retrieved_utc": "2026-11-14T14:25:59.092294+00:00",
+    "response_sha256": "284ae0c9c82302330e07f1489e9566047b6c0cbdc9cabf89551d44c23db78074",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R06",
+    "expected_title": "When Is a Liability Not a Liability",
+    "title": "When Is a Liability Not a Liability? Textual Analysis, Dictionaries, and 10‐Ks",
+    "year_cited": 2011,
+    "doi": "10.1111/j.1540-6261.2010.01625.x",
+    "url": "https://doi.org/10.1111/j.1540-6261.2010.01625.x",
+    "authors": [
+      {
+        "given": "TIM",
+        "family": "LOUGHRAN"
+      },
+      {
+        "given": "BILL",
+        "family": "MCDONALD"
+      }
+    ],
+    "venue": "The Journal of Finance",
+    "volume": "66",
+    "issue": "1",
+    "pages": "35-65",
+    "date_fields": {
+      "published": [
+        2011,
+        1,
+        6
+      ],
+      "published-print": [
+        2011,
+        2
+      ],
+      "published-online": [
+        2011,
+        1,
+        6
+      ],
+      "issued": [
+        2011,
+        1,
+        6
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Wiley",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 0.6304347826086957,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1111%2Fj.1540-6261.2010.01625.x",
+    "retrieved_utc": "2026-11-14T14:26:00.020281+00:00",
+    "response_sha256": "08ea4365bd27b44453967150b4d9652a22268892990dc2499d9bdb592af0211d",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R07",
+    "title": "FinBERT: Financial Sentiment Analysis with Pre-trained Language Models",
+    "year_cited": 2019,
+    "authors": [
+      {
+        "literal": "Dogu Araci"
+      }
+    ],
+    "venue": "arXiv preprint arXiv:1908.10063",
+    "doi": "10.48550/arXiv.1908.10063",
+    "url": "https://arxiv.org/abs/1908.10063",
+    "status": "PRIMARY_RECORD_VERIFIED",
+    "checked_date": "2026-11-14",
+    "primary_verification_url": "https://arxiv.org/abs/1908.10063",
+    "reading_scope": "Primary author/publisher record and abstract; no claim of full-text systematic review",
+    "raw_HTTP_body_retained": false
+  },
+  {
+    "id": "R08",
+    "expected_title": "Value Investing: The Use of Historical Financial Statement Information to Separate Winners from Losers",
+    "title": "Value Investing: The Use of Historical Financial Statement Information to Separate Winners from Losers",
+    "year_cited": 2000,
+    "doi": "10.2307/2672906",
+    "url": "https://doi.org/10.2307/2672906",
+    "authors": [
+      {
+        "given": "Joseph D.",
+        "family": "Piotroski"
+      }
+    ],
+    "venue": "Journal of Accounting Research",
+    "volume": "38",
+    "issue": "",
+    "pages": "1",
+    "date_fields": {
+      "published": [
+        2000
+      ],
+      "published-print": [
+        2000
+      ],
+      "issued": [
+        2000
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "JSTOR",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.2307%2F2672906",
+    "retrieved_utc": "2026-11-14T14:26:00.918378+00:00",
+    "response_sha256": "f1eedd4393b2e841ae394cc4b0437e0987d56d31b3f8f644253df705ec16db17",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R09",
+    "expected_title": "Post-Earnings-Announcement Drift",
+    "title": "Post-Earnings-Announcement Drift: Delayed Price Response or Risk Premium?",
+    "year_cited": 1989,
+    "doi": "10.2307/2491062",
+    "url": "https://doi.org/10.2307/2491062",
+    "authors": [
+      {
+        "given": "Victor L.",
+        "family": "Bernard"
+      },
+      {
+        "given": "Jacob K.",
+        "family": "Thomas"
+      }
+    ],
+    "venue": "Journal of Accounting Research",
+    "volume": "27",
+    "issue": "",
+    "pages": "1",
+    "date_fields": {
+      "published": [
+        1989
+      ],
+      "published-print": [
+        1989
+      ],
+      "issued": [
+        1989
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "JSTOR",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 0.6373626373626373,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.2307%2F2491062",
+    "retrieved_utc": "2026-11-14T14:26:01.824852+00:00",
+    "response_sha256": "47861eb21a047be160f2858e1dc427396b52c83f9db14ac8d9177ac807f6ac41",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R10",
+    "expected_title": "The Combination of Forecasts",
+    "title": "The Combination of Forecasts",
+    "year_cited": 1969,
+    "doi": "10.1057/jors.1969.103",
+    "url": "https://doi.org/10.1057/jors.1969.103",
+    "authors": [
+      {
+        "given": "J. M.",
+        "family": "Bates"
+      },
+      {
+        "given": "C. W. J.",
+        "family": "Granger"
+      }
+    ],
+    "venue": "Journal of the Operational Research Society",
+    "volume": "20",
+    "issue": "4",
+    "pages": "451-468",
+    "date_fields": {
+      "published": [
+        1969,
+        12
+      ],
+      "published-print": [
+        1969,
+        12
+      ],
+      "published-online": [
+        2017,
+        12,
+        19
+      ],
+      "issued": [
+        1969,
+        12
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Informa UK Limited",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1057%2Fjors.1969.103",
+    "retrieved_utc": "2026-11-14T14:26:02.753497+00:00",
+    "response_sha256": "12e633e0e3094194271eb8f37d78f65658eecdaa3bce17a3360f75f4f1fa3671",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R11",
+    "expected_title": "A Simple Explanation of the Forecast Combination Puzzle",
+    "title": "A Simple Explanation of the Forecast Combination Puzzle*",
+    "year_cited": 2009,
+    "doi": "10.1111/j.1468-0084.2008.00541.x",
+    "url": "https://doi.org/10.1111/j.1468-0084.2008.00541.x",
+    "authors": [
+      {
+        "given": "Jeremy",
+        "family": "Smith"
+      },
+      {
+        "given": "Kenneth F.",
+        "family": "Wallis"
+      }
+    ],
+    "venue": "Oxford Bulletin of Economics and Statistics",
+    "volume": "71",
+    "issue": "3",
+    "pages": "331-355",
+    "date_fields": {
+      "published": [
+        2009,
+        4
+      ],
+      "published-print": [
+        2009,
+        6
+      ],
+      "published-online": [
+        2009,
+        4
+      ],
+      "issued": [
+        2009,
+        4
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Wiley",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1111%2Fj.1468-0084.2008.00541.x",
+    "retrieved_utc": "2026-11-14T14:26:03.643010+00:00",
+    "response_sha256": "53709efb4d377e6504bd6382d7c73f4978faedff0fda8fc786b6168a706782cc",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R12",
+    "expected_title": "Strictly Proper Scoring Rules, Prediction, and Estimation",
+    "title": "Strictly Proper Scoring Rules, Prediction, and Estimation",
+    "year_cited": 2007,
+    "doi": "10.1198/016214506000001437",
+    "url": "https://doi.org/10.1198/016214506000001437",
+    "authors": [
+      {
+        "given": "Tilmann",
+        "family": "Gneiting"
+      },
+      {
+        "given": "Adrian E",
+        "family": "Raftery"
+      }
+    ],
+    "venue": "Journal of the American Statistical Association",
+    "volume": "102",
+    "issue": "477",
+    "pages": "359-378",
+    "date_fields": {
+      "published": [
+        2007,
+        3
+      ],
+      "published-print": [
+        2007,
+        3
+      ],
+      "issued": [
+        2007,
+        3
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Informa UK Limited",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1198%2F016214506000001437",
+    "retrieved_utc": "2026-11-14T14:26:04.538331+00:00",
+    "response_sha256": "8fcc986734b11b923ff71dfebb8179b0dfb0350e79cb095f90203977f68fb029",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R13",
+    "expected_title": "A New Vector Partition of the Probability Score",
+    "title": "A New Vector Partition of the Probability Score",
+    "year_cited": 1973,
+    "doi": "10.1175/1520-0450(1973)012<0595:anvpot>2.0.co;2",
+    "url": "https://doi.org/10.1175/1520-0450(1973)012<0595:anvpot>2.0.co;2",
+    "authors": [
+      {
+        "given": "Allan H.",
+        "family": "Murphy"
+      }
+    ],
+    "venue": "Journal of Applied Meteorology",
+    "volume": "12",
+    "issue": "4",
+    "pages": "595-600",
+    "date_fields": {
+      "published": [
+        1973,
+        6
+      ],
+      "published-print": [
+        1973,
+        6
+      ],
+      "issued": [
+        1973,
+        6
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "American Meteorological Society",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1175%2F1520-0450%281973%29012%3C0595%3AANVPOT%3E2.0.CO%3B2",
+    "retrieved_utc": "2026-11-14T14:26:05.476664+00:00",
+    "response_sha256": "86c48547c844433108c06242e09d0ff10a584f8dd04536abb4d4c80559e30fba",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R14",
+    "title": "On Calibration of Modern Neural Networks",
+    "year_cited": 2017,
+    "authors": [
+      {
+        "literal": "Chuan Guo"
+      },
+      {
+        "literal": "Geoff Pleiss"
+      },
+      {
+        "literal": "Yu Sun"
+      },
+      {
+        "literal": "Kilian Q. Weinberger"
+      }
+    ],
+    "venue": "Proceedings of Machine Learning Research 70, 1321–1330",
+    "doi": "",
+    "url": "https://proceedings.mlr.press/v70/guo17a.html",
+    "status": "PRIMARY_RECORD_VERIFIED",
+    "checked_date": "2026-11-14",
+    "primary_verification_url": "https://proceedings.mlr.press/v70/guo17a.html",
+    "reading_scope": "Primary author/publisher record and abstract; no claim of full-text systematic review",
+    "raw_HTTP_body_retained": false
+  },
+  {
+    "id": "R15",
+    "title": "On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+    "year_cited": 2010,
+    "authors": [
+      {
+        "literal": "Gavin C. Cawley"
+      },
+      {
+        "literal": "Nicola L. C. Talbot"
+      }
+    ],
+    "venue": "Journal of Machine Learning Research 11(70), 2079–2107",
+    "doi": "",
+    "url": "https://www.jmlr.org/papers/v11/cawley10a.html",
+    "status": "PRIMARY_RECORD_VERIFIED",
+    "checked_date": "2026-11-14",
+    "primary_verification_url": "https://www.jmlr.org/papers/v11/cawley10a.html",
+    "reading_scope": "Primary author/publisher record and abstract; no claim of full-text systematic review",
+    "raw_HTTP_body_retained": false
+  },
+  {
+    "id": "R16",
+    "expected_title": "A Reality Check for Data Snooping",
+    "title": "A Reality Check for Data Snooping",
+    "year_cited": 2000,
+    "doi": "10.1111/1468-0262.00152",
+    "url": "https://doi.org/10.1111/1468-0262.00152",
+    "authors": [
+      {
+        "given": "Halbert",
+        "family": "White"
+      }
+    ],
+    "venue": "Econometrica",
+    "volume": "68",
+    "issue": "5",
+    "pages": "1097-1126",
+    "date_fields": {
+      "published": [
+        2000,
+        9
+      ],
+      "published-print": [
+        2000,
+        9
+      ],
+      "issued": [
+        2000,
+        9
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "The Econometric Society",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1111%2F1468-0262.00152",
+    "retrieved_utc": "2026-11-14T14:26:06.381327+00:00",
+    "response_sha256": "19e8f96103e7b589cfbbd1635fc823e80565fda8d3032d3bd55c1028167211ed",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R17",
+    "expected_title": "A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix",
+    "title": "A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix",
+    "year_cited": 1987,
+    "doi": "10.2307/1913610",
+    "url": "https://doi.org/10.2307/1913610",
+    "authors": [
+      {
+        "given": "Whitney K.",
+        "family": "Newey"
+      },
+      {
+        "given": "Kenneth D.",
+        "family": "West"
+      }
+    ],
+    "venue": "Econometrica",
+    "volume": "55",
+    "issue": "3",
+    "pages": "703",
+    "date_fields": {
+      "published": [
+        1987,
+        5
+      ],
+      "published-print": [
+        1987,
+        5
+      ],
+      "issued": [
+        1987,
+        5
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "JSTOR",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.2307%2F1913610",
+    "retrieved_utc": "2026-11-14T14:26:07.324315+00:00",
+    "response_sha256": "9eecc4fcff4e218d296470305781e483d613f3b2a16c6b97817d295e4554ad44",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R18",
+    "doi": "",
+    "expected_title": "A Simple Sequentially Rejective Multiple Test Procedure",
+    "year_cited": 1979,
+    "status": "PRIMARY_ISSUE_VERIFIED_DOI_NOT_CLAIMED",
+    "error": "HTTP Error 404: Not Found",
+    "checked_date": "2026-11-14",
+    "title": "A Simple Sequentially Rejective Multiple Test Procedure",
+    "authors": [
+      {
+        "given": "Sture",
+        "family": "Holm"
+      }
+    ],
+    "venue": "Scandinavian Journal of Statistics",
+    "volume": "6",
+    "issue": "2",
+    "pages": "65–70",
+    "url": "https://www.jstor.org/stable/4615733",
+    "resolution": "JSTOR issue i412579 verifies author, title and pages. Candidate DOI 10.2307/4615733 did not resolve; stable identifier is not asserted to be a DOI.",
+    "primary_verification_url": "https://www.jstor.org/stable/i412579"
+  },
+  {
+    "id": "R19",
+    "expected_title": "The Stationary Bootstrap",
+    "title": "The Stationary Bootstrap",
+    "year_cited": 1994,
+    "doi": "10.1080/01621459.1994.10476870",
+    "url": "https://doi.org/10.1080/01621459.1994.10476870",
+    "authors": [
+      {
+        "given": "Dimitris N.",
+        "family": "Politis"
+      },
+      {
+        "given": "Joseph P.",
+        "family": "Romano"
+      }
+    ],
+    "venue": "Journal of the American Statistical Association",
+    "volume": "89",
+    "issue": "428",
+    "pages": "1303-1313",
+    "date_fields": {
+      "published": [
+        1994,
+        12
+      ],
+      "published-print": [
+        1994,
+        12
+      ],
+      "published-online": [
+        2012,
+        2,
+        27
+      ],
+      "issued": [
+        1994,
+        12
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Informa UK Limited",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1080%2F01621459.1994.10476870",
+    "retrieved_utc": "2026-11-14T14:26:09.160490+00:00",
+    "response_sha256": "9208512c496fb8133f4e4856e09236c48dfb771fdbad6db1cd027c2c4c24a17b",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R20",
+    "expected_title": "Comparing Predictive Accuracy",
+    "title": "Comparing Predictive Accuracy",
+    "year_cited": 1995,
+    "doi": "10.1080/07350015.1995.10524599",
+    "url": "https://doi.org/10.1080/07350015.1995.10524599",
+    "authors": [
+      {
+        "given": "Francis X.",
+        "family": "Diebold"
+      },
+      {
+        "given": "Roberto S.",
+        "family": "Mariano"
+      }
+    ],
+    "venue": "Journal of Business &amp; Economic Statistics",
+    "volume": "13",
+    "issue": "3",
+    "pages": "253-263",
+    "date_fields": {
+      "published": [
+        1995,
+        7
+      ],
+      "published-print": [
+        1995,
+        7
+      ],
+      "issued": [
+        1995,
+        7
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Informa UK Limited",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1080%2F07350015.1995.10524599",
+    "retrieved_utc": "2026-11-14T14:26:10.105370+00:00",
+    "response_sha256": "674dbd5e4d3eefa0e99200e2559d73c831c7bd99bda03113cd5136cf3a7b9bd6",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R21",
+    "expected_title": "The Virtue of Complexity in Return Prediction",
+    "title": "The Virtue of Complexity in Return Prediction",
+    "year_cited": 2024,
+    "doi": "10.1111/jofi.13298",
+    "url": "https://doi.org/10.1111/jofi.13298",
+    "authors": [
+      {
+        "given": "BRYAN",
+        "family": "KELLY"
+      },
+      {
+        "given": "SEMYON",
+        "family": "MALAMUD"
+      },
+      {
+        "given": "KANGYING",
+        "family": "ZHOU"
+      }
+    ],
+    "venue": "The Journal of Finance",
+    "volume": "79",
+    "issue": "1",
+    "pages": "459-503",
+    "date_fields": {
+      "published": [
+        2023,
+        12,
+        21
+      ],
+      "published-print": [
+        2024,
+        2
+      ],
+      "published-online": [
+        2023,
+        12,
+        21
+      ],
+      "issued": [
+        2023,
+        12,
+        21
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Wiley",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1111%2Fjofi.13298",
+    "retrieved_utc": "2026-11-14T14:26:11.003605+00:00",
+    "response_sha256": "dfdeb2c33b32bbe3dee7f58995de9db534057154f450f9105f581f3654c19273",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R22",
+    "expected_title": "(Re-)Imag(in)ing Price Trends",
+    "title": "(Re‐)Imag(in)ing Price Trends",
+    "year_cited": 2023,
+    "doi": "10.1111/jofi.13268",
+    "url": "https://doi.org/10.1111/jofi.13268",
+    "authors": [
+      {
+        "given": "JINGWEN",
+        "family": "JIANG"
+      },
+      {
+        "given": "BRYAN",
+        "family": "KELLY"
+      },
+      {
+        "given": "DACHENG",
+        "family": "XIU"
+      }
+    ],
+    "venue": "The Journal of Finance",
+    "volume": "78",
+    "issue": "6",
+    "pages": "3193-3249",
+    "date_fields": {
+      "published": [
+        2023,
+        8,
+        13
+      ],
+      "published-print": [
+        2023,
+        12
+      ],
+      "published-online": [
+        2023,
+        8,
+        13
+      ],
+      "issued": [
+        2023,
+        8,
+        13
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Wiley",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1111%2Fjofi.13268",
+    "retrieved_utc": "2026-11-14T14:26:12.106890+00:00",
+    "response_sha256": "0ddb9f8f0766897a88dbc33c46fdc9be84f8d7ea327a8e3d7ca44d1c06026bda",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R23",
+    "expected_title": "Missing Financial Data",
+    "title": "Missing Financial Data",
+    "year_cited": 2025,
+    "doi": "10.1093/rfs/hhae036",
+    "url": "https://doi.org/10.1093/rfs/hhae036",
+    "authors": [
+      {
+        "given": "Svetlana",
+        "family": "Bryzgalova"
+      },
+      {
+        "given": "Sven",
+        "family": "Lerner"
+      },
+      {
+        "given": "Martin",
+        "family": "Lettau"
+      },
+      {
+        "given": "Markus",
+        "family": "Pelger"
+      }
+    ],
+    "venue": "The Review of Financial Studies",
+    "volume": "38",
+    "issue": "3",
+    "pages": "803-882",
+    "date_fields": {
+      "published": [
+        2024,
+        7,
+        2
+      ],
+      "published-print": [
+        2025,
+        3,
+        1
+      ],
+      "published-online": [
+        2024,
+        7,
+        2
+      ],
+      "issued": [
+        2024,
+        7,
+        2
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Oxford University Press (OUP)",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1093%2Frfs%2Fhhae036",
+    "retrieved_utc": "2026-11-14T14:26:13.221666+00:00",
+    "response_sha256": "01daa23eb6d3145894c31f33fac4313a39087f3838caafd82d8fb9df9344ded4",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R24",
+    "expected_title": "Sample Size Justification",
+    "title": "Sample Size Justification",
+    "year_cited": 2022,
+    "doi": "10.1525/collabra.33267",
+    "url": "https://doi.org/10.1525/collabra.33267",
+    "authors": [
+      {
+        "given": "Daniël",
+        "family": "Lakens"
+      }
+    ],
+    "venue": "Collabra: Psychology",
+    "volume": "8",
+    "issue": "1",
+    "pages": "",
+    "date_fields": {
+      "published": [
+        2022
+      ],
+      "published-print": [
+        2022,
+        3,
+        22
+      ],
+      "published-online": [
+        2022,
+        3,
+        22
+      ],
+      "issued": [
+        2022
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "University of California Press",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1525%2Fcollabra.33267",
+    "retrieved_utc": "2026-11-14T14:26:14.143255+00:00",
+    "response_sha256": "bf1d11d8fa00fdb15e2f26bdd4c1e51598293ae09f248e4119f61efc4cf8429f",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R25",
+    "expected_title": "The Preregistration Revolution",
+    "title": "The preregistration revolution",
+    "year_cited": 2018,
+    "doi": "10.1073/pnas.1708274114",
+    "url": "https://doi.org/10.1073/pnas.1708274114",
+    "authors": [
+      {
+        "given": "Brian A.",
+        "family": "Nosek"
+      },
+      {
+        "given": "Charles R.",
+        "family": "Ebersole"
+      },
+      {
+        "given": "Alexander C.",
+        "family": "DeHaven"
+      },
+      {
+        "given": "David T.",
+        "family": "Mellor"
+      }
+    ],
+    "venue": "Proceedings of the National Academy of Sciences",
+    "volume": "115",
+    "issue": "11",
+    "pages": "2600-2606",
+    "date_fields": {
+      "published": [
+        2018,
+        3,
+        12
+      ],
+      "published-print": [
+        2018,
+        3,
+        13
+      ],
+      "published-online": [
+        2018,
+        3,
+        12
+      ],
+      "issued": [
+        2018,
+        3,
+        12
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "National Academy of Sciences",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1073%2Fpnas.1708274114",
+    "retrieved_utc": "2026-11-14T14:26:15.057864+00:00",
+    "response_sha256": "9bfd2ee813419fb85d90bc1e04aa9d3a75e2cfa49bae27f9c1ad751745637201",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R26",
+    "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+    "year_cited": 2023,
+    "authors": [
+      {
+        "literal": "Albert Gu"
+      },
+      {
+        "literal": "Tri Dao"
+      }
+    ],
+    "venue": "arXiv:2312.00752; author preprint, version 2 dated 2024-05-31",
+    "doi": "10.48550/arXiv.2312.00752",
+    "url": "https://arxiv.org/abs/2312.00752",
+    "status": "PRIMARY_RECORD_VERIFIED",
+    "checked_date": "2026-11-14",
+    "primary_verification_url": "https://arxiv.org/abs/2312.00752",
+    "reading_scope": "Primary author/publisher record and abstract; no claim of full-text systematic review",
+    "raw_HTTP_body_retained": false
+  },
+  {
+    "id": "R27",
+    "expected_title": "XGBoost: A Scalable Tree Boosting System",
+    "title": "XGBoost: A Scalable Tree Boosting System",
+    "year_cited": 2016,
+    "doi": "10.1145/2939672.2939785",
+    "url": "https://doi.org/10.1145/2939672.2939785",
+    "authors": [
+      {
+        "given": "Tianqi",
+        "family": "Chen"
+      },
+      {
+        "given": "Carlos",
+        "family": "Guestrin"
+      }
+    ],
+    "venue": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+    "volume": "",
+    "issue": "",
+    "pages": "785-794",
+    "date_fields": {
+      "published": [
+        2016,
+        8,
+        13
+      ],
+      "published-print": [
+        2016,
+        8,
+        13
+      ],
+      "published-online": [
+        2016,
+        8,
+        13
+      ],
+      "issued": [
+        2016,
+        8,
+        13
+      ]
+    },
+    "type": "proceedings-article",
+    "publisher": "ACM",
+    "status": "DOI_AND_AUTHOR_PRIMARY_PAGE_VERIFIED",
+    "title_similarity": 0.34146341463414637,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1145%2F2939672.2939785",
+    "retrieved_utc": "2026-11-14T14:26:15.956990+00:00",
+    "response_sha256": "a7133561dc335b198afcc7ed0267bbe9ee457136788a3340d37ec558db77f1e3",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review",
+    "resolution": "Crossref short title XGBoost; arXiv author record verifies full title/authors and explicitly links the same ACM DOI.",
+    "primary_verification_url": "https://arxiv.org/abs/1603.02754"
+  },
+  {
+    "id": "R28",
+    "title": "LightGBM: A Highly Efficient Gradient Boosting Decision Tree",
+    "year_cited": 2017,
+    "authors": [
+      {
+        "literal": "Guolin Ke"
+      },
+      {
+        "literal": "Qi Meng"
+      },
+      {
+        "literal": "Thomas Finley"
+      },
+      {
+        "literal": "Taifeng Wang"
+      },
+      {
+        "literal": "Wei Chen"
+      },
+      {
+        "literal": "Weidong Ma"
+      },
+      {
+        "literal": "Qiwei Ye"
+      },
+      {
+        "literal": "Tie-Yan Liu"
+      }
+    ],
+    "venue": "Advances in Neural Information Processing Systems 30",
+    "doi": "",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2017/hash/6449f44a102fde848669bdd9eb6b76fa-Abstract.html",
+    "status": "PRIMARY_RECORD_VERIFIED",
+    "checked_date": "2026-11-14",
+    "primary_verification_url": "https://proceedings.neurips.cc/paper_files/paper/2017/hash/6449f44a102fde848669bdd9eb6b76fa-Abstract.html",
+    "reading_scope": "Primary author/publisher record and abstract; no claim of full-text systematic review",
+    "raw_HTTP_body_retained": false
+  },
+  {
+    "id": "R29",
+    "expected_title": "Long Short-Term Memory",
+    "title": "Long Short-Term Memory",
+    "year_cited": 1997,
+    "doi": "10.1162/neco.1997.9.8.1735",
+    "url": "https://doi.org/10.1162/neco.1997.9.8.1735",
+    "authors": [
+      {
+        "given": "Sepp",
+        "family": "Hochreiter"
+      },
+      {
+        "given": "Jürgen",
+        "family": "Schmidhuber"
+      }
+    ],
+    "venue": "Neural Computation",
+    "volume": "9",
+    "issue": "8",
+    "pages": "1735-1780",
+    "date_fields": {
+      "published": [
+        1997,
+        11,
+        1
+      ],
+      "published-print": [
+        1997,
+        11,
+        1
+      ],
+      "issued": [
+        1997,
+        11,
+        1
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "MIT Press",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1162%2Fneco.1997.9.8.1735",
+    "retrieved_utc": "2026-11-14T14:26:17.090162+00:00",
+    "response_sha256": "0bb29c6cd7a01ff2b486e80ce2b0ab9fd80eac75352c8489c1f223bca776fb7d",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R30",
+    "title": "FinMultiTime: A Four-Modal Bilingual Dataset for Financial Time-Series Analysis",
+    "year_cited": 2025,
+    "authors": [
+      {
+        "literal": "Wenyan Xu"
+      },
+      {
+        "literal": "Dawei Xiang"
+      },
+      {
+        "literal": "Yue Liu"
+      },
+      {
+        "literal": "Xiyu Wang"
+      },
+      {
+        "literal": "Yanxiang Ma"
+      },
+      {
+        "literal": "Liang Zhang"
+      },
+      {
+        "literal": "Shu Hu"
+      },
+      {
+        "literal": "Chang Xu"
+      },
+      {
+        "literal": "Jiaheng Zhang"
+      }
+    ],
+    "venue": "arXiv:2506.05019; version 2 dated 2025-09-11; under review, not treated as peer-reviewed evidence",
+    "doi": "10.48550/arXiv.2506.05019",
+    "url": "https://arxiv.org/abs/2506.05019",
+    "status": "PRIMARY_RECORD_VERIFIED",
+    "checked_date": "2026-11-14",
+    "primary_verification_url": "https://arxiv.org/abs/2506.05019",
+    "reading_scope": "Primary author/publisher record and abstract; no claim of full-text systematic review",
+    "raw_HTTP_body_retained": false
+  },
+  {
+    "id": "R31",
+    "expected_title": "Estimating Standard Errors in Finance Panel Data Sets",
+    "title": "Estimating Standard Errors in Finance Panel Data Sets: Comparing Approaches",
+    "year_cited": 2009,
+    "doi": "10.1093/rfs/hhn053",
+    "url": "https://doi.org/10.1093/rfs/hhn053",
+    "authors": [
+      {
+        "given": "Mitchell A.",
+        "family": "Petersen"
+      }
+    ],
+    "venue": "Review of Financial Studies",
+    "volume": "22",
+    "issue": "1",
+    "pages": "435-480",
+    "date_fields": {
+      "published": [
+        2008,
+        6,
+        3
+      ],
+      "published-print": [
+        2009,
+        1
+      ],
+      "published-online": [
+        2008,
+        6,
+        3
+      ],
+      "issued": [
+        2008,
+        6,
+        3
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Oxford University Press (OUP)",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 0.8288288288288288,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1093%2Frfs%2Fhhn053",
+    "retrieved_utc": "2026-11-14T14:26:18.697989+00:00",
+    "response_sha256": "119b61fab5e42fed462cdc3df28ae2912ba9bb575231856f09f54a859a26a50b",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  },
+  {
+    "id": "R32",
+    "expected_title": "Simple Technical Trading Rules and the Stochastic Properties of Stock Returns",
+    "title": "Simple Technical Trading Rules and the Stochastic Properties of Stock Returns",
+    "year_cited": 1992,
+    "doi": "10.1111/j.1540-6261.1992.tb04681.x",
+    "url": "https://doi.org/10.1111/j.1540-6261.1992.tb04681.x",
+    "authors": [
+      {
+        "given": "WILLIAM",
+        "family": "BROCK"
+      },
+      {
+        "given": "JOSEF",
+        "family": "LAKONISHOK"
+      },
+      {
+        "given": "BLAKE",
+        "family": "LeBARON"
+      }
+    ],
+    "venue": "The Journal of Finance",
+    "volume": "47",
+    "issue": "5",
+    "pages": "1731-1764",
+    "date_fields": {
+      "published": [
+        1992,
+        12
+      ],
+      "published-print": [
+        1992,
+        12
+      ],
+      "published-online": [
+        2012,
+        4,
+        30
+      ],
+      "issued": [
+        1992,
+        12
+      ]
+    },
+    "type": "journal-article",
+    "publisher": "Wiley",
+    "status": "DOI_METADATA_VERIFIED",
+    "title_similarity": 1.0,
+    "checked_date": "2026-11-14",
+    "metadata_api": "https://api.crossref.org/works/10.1111%2Fj.1540-6261.1992.tb04681.x",
+    "retrieved_utc": "2026-11-14T14:26:19.616280+00:00",
+    "response_sha256": "c90703cece87d1cbaddc20204479ff916d8046c1b0f3fa9ff0bcb51d9dd3b9e2",
+    "raw_HTTP_body_retained": false,
+    "reading_scope": "DOI registry metadata plus prior E7a primary/author-source review; not full systematic review"
+  }
+]

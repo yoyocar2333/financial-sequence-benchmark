@@ -1,0 +1,12 @@
+{
+  "status": "PASSED",
+  "claims": 103,
+  "exact_source_csv_rows": 91,
+  "source_files_hash_checked": 21,
+  "references_checked": 32,
+  "new_financial_estimates": 0,
+  "historical_PIT_certification": false,
+  "independent_manual_QA_performed": false,
+  "E3c2026_executed": false,
+  "merged": false
+}

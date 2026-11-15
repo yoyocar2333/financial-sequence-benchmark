@@ -94,3 +94,15 @@ python -B scripts/e8a1_validate.py --bundle research/E8a1
 ```
 
 公開manifest只有表頭，沒有逐篇原文／個資／私有索引。原E3c2026不改未執行，沒有新金融模型或新Brier/AUC比較。[來源權限](research/E8a1/SOURCE_ACCESS_AND_LICENSE_AUDIT.md)與[下一步](research/E8a1/NEXT_STEPS.md)先補實際外部證據。
+
+## E9a工作論文與資料授權決策
+
+[E9a完整索引](research/E9a/README.md)整合E0–E8a.1的探索性證據及PIT限制；[英文工作論文含繁中摘要](research/E9a/PAPER_DRAFT.md)、[Word](research/E9a/PAPER_DRAFT.docx)、[PDF](research/E9a/PAPER_DRAFT.pdf)附103項可追溯主張、五張主表與三圖。不同標籤／cohort的Brier不作跨研究排行，原次要顯著結果與限制完整保留。
+
+[教授用外部資料決策](research/E9a/DATA_ACCESS_DECISION_BRIEF.md)及[未寄出的詢樣郵件](research/E9a/DATA_REQUEST_EMAIL_DRAFT.md)只準備Stocktwits／Reddit決策，不代表已授權。無新模型或金融分數，E8b仍NOT_READY，E3c2026不改未執行。本輪新PR供審閱，**不自動合併main**。
+
+```bash
+python -B scripts/e9a_validate.py --bundle research/E9a
+python -B scripts/test_e9a.py
+python -B scripts/e9a_reproduce.py --bundle research/E9a --out outputs/e9a_replay_NEW
+```

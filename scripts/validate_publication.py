@@ -1,5 +1,5 @@
 """Read-only publication checks. No training, downloads or GPU initialization."""
-import argparse,ast,csv,hashlib,json,re,subprocess
+import argparse,ast,csv,hashlib,json,re,subprocess,zipfile
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -7,6 +7,34 @@ BASE='e6aceaac73b4c66744f0fe9098da613de63d140f'
 BLOCKED_SUFFIXES={'.pt','.pth','.ckpt','.pkl','.pickle','.joblib','.ubj','.safetensors','.onnx','.npz','.zip','.parquet','.jsonl'}
 FORBIDDEN_CSV={'article_text','body','text','headline','title','summary','content','article_id','record_id','prompt','response','api_key','access_token'}
 EMPTY_SCHEMA_TEMPLATES={'research/E8a1/PILOT_SAMPLE_MANIFEST.csv','research/E8a1/MANUAL_QA_PENDING.csv'}
+OWN_REPORTS={'research/E9a/PAPER_DRAFT.docx','research/E9a/PAPER_DRAFT.pdf'}
+
+def check_own_report(path,name,secret,private_prefix):
+    """Narrow exception for two authored, hash-pinned reports; not arbitrary binaries."""
+    if name not in OWN_REPORTS:raise ValueError('not an approved report path')
+    with (ROOT/'research/E9a/DOCUMENT_ARTIFACT_MANIFEST.csv').open() as f:
+        rows=list(csv.DictReader(f))
+    entry=[r for r in rows if r['path']==name]
+    if len(entry)!=1 or entry[0]['sha256']!=sha(path):
+        raise ValueError('report not pinned to reviewed artifact')
+    quality=json.loads((ROOT/'research/E9a/checks/document_quality.json').read_text())
+    if quality['status']!='PASSED' or not quality['embedded_fonts'] or quality['external_file_paths']:
+        raise ValueError('document quality evidence incomplete')
+    raw=path.read_bytes()
+    if private_prefix.encode() in raw or secret.search(raw.decode('latin1')):
+        raise ValueError('private report metadata')
+    if path.suffix=='.pdf':
+        if not raw.startswith(b'%PDF-') or b'%%EOF' not in raw[-100:]:
+            raise ValueError('invalid PDF container')
+        return
+    with zipfile.ZipFile(path) as z:
+        for member in z.namelist():
+            if member.startswith('/') or '..' in Path(member).parts or 'vbaProject' in member:
+                raise ValueError('unsafe or macro-enabled DOCX')
+            if member.endswith(('.xml','.rels')):
+                text=z.read(member).decode('utf-8')
+                if private_prefix in text or 'file:///' in text or secret.search(text):
+                    raise ValueError('private DOCX content or relationship')
 
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -37,6 +65,10 @@ def check():
         if p.suffix=='.png':
             # PNG text chunks can carry workstation paths; scan the container bytes.
             if private_prefix.encode() in p.read_bytes():errors.append('private PNG metadata: '+name)
+            continue
+        if name in OWN_REPORTS:
+            try:check_own_report(p,name,secret,private_prefix)
+            except Exception as exc:errors.append('report check '+name+': '+str(exc))
             continue
         try:text=p.read_text()
         except UnicodeDecodeError:errors.append('unexpected binary: '+name);continue

@@ -1,0 +1,158 @@
+[
+  [
+    "R01",
+    "10.1093/rfs/hhaa009",
+    "Empirical Asset Pricing via Machine Learning",
+    2020
+  ],
+  [
+    "R02",
+    "10.1093/rfs/hhm014",
+    "A Comprehensive Look at the Empirical Performance of Equity Premium Prediction",
+    2008
+  ],
+  [
+    "R03",
+    "10.1111/0022-1082.00265",
+    "Foundations of Technical Analysis",
+    2000
+  ],
+  [
+    "R04",
+    "10.1111/0022-1082.00163",
+    "Data-Snooping, Technical Trading Rule Performance, and the Bootstrap",
+    1999
+  ],
+  [
+    "R05",
+    "10.1111/j.1540-6261.2007.01232.x",
+    "Giving Content to Investor Sentiment",
+    2007
+  ],
+  [
+    "R06",
+    "10.1111/j.1540-6261.2010.01625.x",
+    "When Is a Liability Not a Liability",
+    2011
+  ],
+  [
+    "R08",
+    "10.2307/2672906",
+    "Value Investing: The Use of Historical Financial Statement Information to Separate Winners from Losers",
+    2000
+  ],
+  [
+    "R09",
+    "10.2307/2491062",
+    "Post-Earnings-Announcement Drift",
+    1989
+  ],
+  [
+    "R10",
+    "10.1057/jors.1969.103",
+    "The Combination of Forecasts",
+    1969
+  ],
+  [
+    "R11",
+    "10.1111/j.1468-0084.2008.00541.x",
+    "A Simple Explanation of the Forecast Combination Puzzle",
+    2009
+  ],
+  [
+    "R12",
+    "10.1198/016214506000001437",
+    "Strictly Proper Scoring Rules, Prediction, and Estimation",
+    2007
+  ],
+  [
+    "R13",
+    "10.1175/1520-0450(1973)012<0595:ANVPOT>2.0.CO;2",
+    "A New Vector Partition of the Probability Score",
+    1973
+  ],
+  [
+    "R16",
+    "10.1111/1468-0262.00152",
+    "A Reality Check for Data Snooping",
+    2000
+  ],
+  [
+    "R17",
+    "10.2307/1913610",
+    "A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix",
+    1987
+  ],
+  [
+    "R18",
+    "10.2307/4615733",
+    "A Simple Sequentially Rejective Multiple Test Procedure",
+    1979
+  ],
+  [
+    "R19",
+    "10.1080/01621459.1994.10476870",
+    "The Stationary Bootstrap",
+    1994
+  ],
+  [
+    "R20",
+    "10.1080/07350015.1995.10524599",
+    "Comparing Predictive Accuracy",
+    1995
+  ],
+  [
+    "R21",
+    "10.1111/jofi.13298",
+    "The Virtue of Complexity in Return Prediction",
+    2024
+  ],
+  [
+    "R22",
+    "10.1111/jofi.13268",
+    "(Re-)Imag(in)ing Price Trends",
+    2023
+  ],
+  [
+    "R23",
+    "10.1093/rfs/hhae036",
+    "Missing Financial Data",
+    2025
+  ],
+  [
+    "R24",
+    "10.1525/collabra.33267",
+    "Sample Size Justification",
+    2022
+  ],
+  [
+    "R25",
+    "10.1073/pnas.1708274114",
+    "The Preregistration Revolution",
+    2018
+  ],
+  [
+    "R27",
+    "10.1145/2939672.2939785",
+    "XGBoost: A Scalable Tree Boosting System",
+    2016
+  ],
+  [
+    "R29",
+    "10.1162/neco.1997.9.8.1735",
+    "Long Short-Term Memory",
+    1997
+  ],
+  [
+    "R31",
+    "10.1093/rfs/hhn053",
+    "Estimating Standard Errors in Finance Panel Data Sets",
+    2009
+  ],
+  [
+    "R32",
+    "10.1111/j.1540-6261.1992.tb04681.x",
+    "Simple Technical Trading Rules and the Stochastic Properties of Stock Returns",
+    1992
+  ]
+]

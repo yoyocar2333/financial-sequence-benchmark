@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "unit_tests": 7,
+  "aggregate_replay": "PASS; byte-identical claims, five tables and manuscript; three source-based plots regenerated",
+  "exact_source_rows": 91,
+  "claims": 103,
+  "source_files": 21,
+  "references": 32,
+  "paper_pages": 19,
+  "prior_workstation_artifacts_unchanged": 1942,
+  "prior_public_scientific_artifacts_unchanged": true,
+  "publication_tool_change": "only two hash-pinned E9a authored document paths; documented separately",
+  "financial_models_fitted": 0,
+  "new_financial_scores_or_pvalues": 0,
+  "independent_manual_QA_completed": 0,
+  "E8b": "NOT_READY",
+  "E3c2026": "UNCHANGED_NOT_EXECUTED",
+  "email": "NOT_SENT",
+  "merge_this_round": false
+}
