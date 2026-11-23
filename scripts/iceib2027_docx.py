@@ -17,6 +17,16 @@ def add_field(p,instruction,rpr=None):
   if kind=='fldChar':e.set(qn('w:fldCharType'),tag)
   else:e.set(qn('xml:space'),'preserve');e.text=' '+instruction+' '
   r._r.append(e)
+def suppress_auxiliary_line_numbers(doc):
+ """Headers/footers are excluded; keep the section's body line-number setting."""
+ for sec in doc.sections:
+  for name in ['header','even_page_header','first_page_header','footer','even_page_footer','first_page_footer']:
+   for p in getattr(sec,name)._element.iter(qn('w:p')):
+    pr=p.get_or_add_pPr();flag=pr.find(qn('w:suppressLineNumbers'))
+    if flag is None:
+     flag=OxmlElement('w:suppressLineNumbers');pr.insert_element_before(flag,'w:pBdr','w:shd','w:tabs','w:spacing','w:ind','w:jc','w:rPr')
+    flag.set(qn('w:val'),'1')
+
 def main(template,bundle,out):
  repo=Path(__file__).resolve().parents[1]
  if (repo/'.git').exists() and (repo==out.resolve() or repo in out.resolve().parents):raise ValueError('Template documents require private output outside this public Git checkout')
@@ -100,6 +110,7 @@ def main(template,bundle,out):
    line=re.sub(r'^\d+\.\s*','',line);p=doc.add_paragraph(line,'MDPI_8.1_references');counts['references']+=1;continue
   style='MDPI_1.7_abstract' if mode=='abstract' else 'MDPI_6.2_back_matter' if mode=='back' else 'MDPI_3.1_text'
   doc.add_paragraph(line,style)
+ suppress_auxiliary_line_numbers(doc)
  assert doc.styles.element.xml==styles,'Do not modify template font or paragraph style definitions'
  # Header/footer references may be renumbered by python-docx, but page/column geometry stays unchanged.
  setting=OxmlElement('w:updateFields');setting.set(qn('w:val'),'true');doc.settings.element.append(setting)
