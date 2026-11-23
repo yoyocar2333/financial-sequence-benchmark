@@ -1,0 +1,14 @@
+{
+  "issue": "Repeated bottom-left3 from automatic line numbers on auxiliary paragraphs during LibreOffice conversion",
+  "before_pages_with_stray_footer": 7,
+  "after_pages_with_stray_footer": 0,
+  "header_footer_paragraphs_suppressed": 11,
+  "body_line_number_configuration_unchanged": true,
+  "pages_before": 7,
+  "pages_after": 7,
+  "manuscript_content_unchanged": true,
+  "template_fonts_styles_geometry_unchanged": true,
+  "original_template_unchanged": true,
+  "regression_check": "All header/footer paragraph properties plus rendered top/bottom gutter regions on each page",
+  "independent_human_QA": false
+}

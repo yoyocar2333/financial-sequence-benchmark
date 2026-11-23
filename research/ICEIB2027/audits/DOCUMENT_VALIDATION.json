@@ -1,4 +1,7 @@
 {
+  "auxiliary_paragraphs_excluded_from_line_numbering": 11,
+  "body_line_number_settings_preserved": true,
+  "stray_header_footer_line_numbers": 0,
   "status": "PASSED_FOR_PROFESSOR_REVIEW",
   "formal_submission_status": "PENDING_ROUTE_AUTHORS_SYSTEM_FIELDS_AND_NATIVE_FONT_RECHECK",
   "pages": 7,
