@@ -1,0 +1,13 @@
+{
+  "status": "PASSED",
+  "source_cells": 272,
+  "abstract_words": 100,
+  "references": 12,
+  "main_tables": 3,
+  "main_figures": 2,
+  "editable_equations": 3,
+  "financial_model_fits": 0,
+  "PIT_certification": false,
+  "independent_manual_QA": false,
+  "E3c2026_executed": false
+}

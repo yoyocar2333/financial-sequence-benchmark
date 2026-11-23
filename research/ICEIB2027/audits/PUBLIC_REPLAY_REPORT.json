@@ -1,0 +1,8 @@
+{
+  "status": "PASSED",
+  "manuscript_claims_references_byte_identical": true,
+  "figure_bytes_identical": true,
+  "new_models": 0,
+  "network": false,
+  "template_documents_distributed": false
+}

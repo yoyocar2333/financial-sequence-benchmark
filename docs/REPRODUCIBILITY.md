@@ -77,3 +77,7 @@ E7a development_audit／evidence_audit腳本需舊工作站資產，不是從公
 ## E9b current-paper replay
 
 [E9b重現說明](../research/E9a/REPRODUCIBILITY.md)區分public aggregate重建、已完成的private frozen-source no-refit replay及新fit重建條件。原E9a入口辨識版本後轉到E9b，避免舊生成器恢復舊稿。補強分析為新探索性分析，非原實驗預註冊。
+
+## ICEIB2027 conference synthesis
+
+[會議稿重現說明](../research/ICEIB2027/REPRODUCIBILITY.md)提供offline aggregate重建及私有模板排版兩層。`iceib2027_reproduce.py`重建正文、272來源選取與兩圖；不訓練或下載資料。模板與模板版Word/PDF依出版者條款排除，私有排版需合法模板及最終字型確認。
