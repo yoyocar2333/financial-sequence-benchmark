@@ -1,5 +1,5 @@
 {
-  "commit": "bfe6ea950b785880dfb48ed0a32e663940a6f11d",
-  "role": "Verified source evidence anchor; updated to third-round audit commit before final document export",
+  "commit": "6f29a9f8375b21ac2894878aa424f12b8d6fa138",
+  "role": "Immutable third-round evidence, code and aggregate audit snapshot; final paper changes only version citation and formatting records",
   "repository": "https://github.com/yoyocar2333/financial-sequence-benchmark"
 }

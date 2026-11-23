@@ -160,7 +160,7 @@ Matched controls make apparent gains interpretable: price representation, probab
 
 ## Back Matter
 
-Data Availability: Evidence/code at https://github.com/yoyocar2333/financial-sequence-benchmark, commit bfe6ea950b785880dfb48ed0a32e663940a6f11d; manuscript/supplement hashes accompany the source index. Restricted inputs/weights are private. Affiliation, correspondence, funding and declarations: [Confirmation pending]. Generative AI assisted language/formatting; authors verify the work.
+Data Availability: Evidence/code at https://github.com/yoyocar2333/financial-sequence-benchmark, commit 6f29a9f8375b21ac2894878aa424f12b8d6fa138; manuscript/supplement hashes accompany the source index. Restricted inputs/weights are private. Affiliation, correspondence, funding and declarations: [Confirmation pending]. Generative AI assisted language/formatting; authors verify the work.
 
 ## References
 

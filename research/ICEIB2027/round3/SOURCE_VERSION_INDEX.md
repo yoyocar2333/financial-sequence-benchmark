@@ -2,6 +2,8 @@
 
 ## Evidence version
 
+Fixed third-round evidence commit: `6f29a9f8375b21ac2894878aa424f12b8d6fa138` (actual Git object, reachable from the ICEIB branch).
+
 `EVIDENCE_VERSION.json` gives the **actual immutable Git commit** cited by the short paper. Before final export it is updated to the third-round evidence commit containing the calibration tables, source code and scientific audit. This commit is a reproducibility anchor; it is not a DOI or independent-validation registration. A subsequent formatting/citation commit may contain the final submission files' authored source without changing scientific evidence.
 
 The preserved second-round manuscript/evidence origin is commit `bfe6ea950b785880dfb48ed0a32e663940a6f11d`. It contains the full original E4c/E5/E6/E9b public tables and the protected Results synthesis; R3 does not overwrite these. The actual8-page baseline PDF has SHA256 `e93c5ad133ddb7dde44c76e80baca55829d82d4313e0c1b9195af2c2812071a3`; matching Word `297d7b3379a71b7d878f3ff4cc7cad91796e3f16ff8ef1c30a6e52a4691aff37`. User clarified there was no separate6-page revised copy.
