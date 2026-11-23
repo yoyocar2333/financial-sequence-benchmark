@@ -1,0 +1,257 @@
+{
+  "scope": "English Abstract through Conclusion/Integrity; tables, headings, images, bibliography, appendices and Chinese abstract excluded",
+  "method": "Fixed phrase-family detector, not a claim to classify every negation or to judge scientific validity",
+  "patterns": {
+    "claim_denial": "\\bwe do not claim\\b",
+    "failed_establishment": "\\b(?:does|do) not (?:establish|demonstrate|identify|imply|certify|claim|provide|prove)\\b",
+    "nonconfirmation_or_equivalence": "\\bnot (?:independently (?:confirmed|validated)|a causal|an independently|a newly preregistered|a representative|certified|equivalent to|proof of|a new financial|a claim of|a registered|a confirmed|a guarantee|an equivalence)\\b",
+    "inability_disclaimer": "\\b(?:cannot|can not) (?:identify|establish|claim|support|certify|supply|replace|turn|be substituted|be safely)\\b",
+    "nonexecution": "\\b(?:not|never) (?:executed|trained|obtained|registered|fitted|run)\\b",
+    "administrative_status": "\\bE8b remains NOT_READY\\b",
+    "no_new_or_confirmation": "\\bno (?:new financial|new neural|independent confirmation|historical analyst)\\b"
+  },
+  "before": {
+    "English_body_whitespace_words": 5347,
+    "matched_defensive_sentences": 38,
+    "negation_tokens": 124,
+    "matches": [
+      {
+        "sentence": "A significant secondary hierarchical-probability contrast is sensitive to timing assumptions and does not establish within-state event ranking.",
+        "families": [
+          "failed_establishment"
+        ]
+      },
+      {
+        "sentence": "A comparison against a weak price model alone therefore cannot identify an information contribution.",
+        "families": [
+          "inability_disclaimer"
+        ]
+      },
+      {
+        "sentence": "We do not claim to invent technical indicators, probability shrinkage, forecast combination, PIT analysis, or multiple-testing correction, and we do not claim a demonstrated general impossibility of stock prediction.",
+        "families": [
+          "claim_denial",
+          "failed_establishment"
+        ]
+      },
+      {
+        "sentence": "FinBERT adapts pretrained language modeling to financial sentiment [R07], but text-classification accuracy is not equivalent to incremental financial forecasting performance.",
+        "families": [
+          "nonconfirmation_or_equivalence"
+        ]
+      },
+      {
+        "sentence": "They are not newly downloaded in E9a and are not certified as contemporaneous as-traded corporate-action histories.",
+        "families": [
+          "nonconfirmation_or_equivalence"
+        ]
+      },
+      {
+        "sentence": "Supplementary trading rules include costs and execution conventions, but trading returns do not establish probability improvement or risk-adjusted alpha.",
+        "families": [
+          "failed_establishment"
+        ]
+      },
+      {
+        "sentence": "No new neural early-fusion model is claimed: each stock had only 45 distinct training vintages, below the study's fixed gate.",
+        "families": [
+          "no_new_or_confirmation"
+        ]
+      },
+      {
+        "sentence": "E4b reconstructed 448 Apple Newsroom full-text articles dated 2023–2025; this is not proof of complete recovery of the earlier approximately 450-article corpus.",
+        "families": [
+          "nonconfirmation_or_equivalence"
+        ]
+      },
+      {
+        "sentence": "These are proxies, not proof of a publication-time historical content version.",
+        "families": [
+          "nonconfirmation_or_equivalence"
+        ]
+      },
+      {
+        "sentence": "We retain each source's existing values; E9a computes no new financial scores or statistical tests.",
+        "families": [
+          "no_new_or_confirmation"
+        ]
+      },
+      {
+        "sentence": "The latter defines E7a's candidate future estimand and cannot be substituted retrospectively.",
+        "families": [
+          "inability_disclaimer"
+        ]
+      },
+      {
+        "sentence": "The result is lack of reliable incremental evidence in this design, not an equivalence result or a general rejection of technical analysis.",
+        "families": [
+          "nonconfirmation_or_equivalence"
+        ]
+      },
+      {
+        "sentence": "Training-only RSI/z20 rank correlations are high, consistent with redundancy, but high correlation does not prove conditional redundancy.",
+        "families": [
+          "failed_establishment"
+        ]
+      },
+      {
+        "sentence": "Taken together, these controls do not identify a winning architecture or a stable technical-information channel.",
+        "families": [
+          "failed_establishment"
+        ]
+      },
+      {
+        "sentence": "Describing how much of the point gain is reproduced by a constant control is arithmetic, not a causal decomposition into shrinkage and genuine information.",
+        "families": [
+          "nonconfirmation_or_equivalence"
+        ]
+      },
+      {
+        "sentence": "All values are from the original fusion table; no new neural fundamentals model is represented.",
+        "families": [
+          "no_new_or_confirmation"
+        ]
+      },
+      {
+        "sentence": "Probability calibration may matter even without strong ranking, but the present evidence does not establish robust superiority to historical probabilities.",
+        "families": [
+          "failed_establishment"
+        ]
+      },
+      {
+        "sentence": "All-stage selection correction is unavailable: local frozen plans and complete tables improve transparency but cannot turn repeatedly viewed 2024–2025 observations into preregistered holdouts.",
+        "families": [
+          "inability_disclaimer"
+        ]
+      },
+      {
+        "sentence": "Original SEC filing-body bytes and XBRL instance bytes were not obtained; strictly eligible company quarters and independent original-document QA were both zero.",
+        "families": [
+          "nonexecution"
+        ]
+      },
+      {
+        "sentence": "A readable rendering cannot replace an original context-linked financial value and amendment history.",
+        "families": [
+          "inability_disclaimer"
+        ]
+      },
+      {
+        "sentence": "The absence of qualified evidence does not imply that companies failed to publish statements.",
+        "families": [
+          "failed_establishment"
+        ]
+      },
+      {
+        "sentence": "Split-adjusted cash amounts and historical per-share statements may use different share bases; CIK continuity alone does not establish security continuity.",
+        "families": [
+          "failed_establishment"
+        ]
+      },
+      {
+        "sentence": "Public downloadability does not establish transferable research, preservation or redistribution rights.",
+        "families": [
+          "failed_establishment"
+        ]
+      },
+      {
+        "sentence": "L3 nevertheless does not imply L4, and today's retrieval cannot stand in for historical arrival.",
+        "families": [
+          "failed_establishment"
+        ]
+      },
+      {
+        "sentence": "E8b remains NOT_READY under the unchanged gates.",
+        "families": [
+          "administrative_status"
+        ]
+      },
+      {
+        "sentence": "This does not imply that calibration improvements are worthless.",
+        "families": [
+          "failed_establishment"
+        ]
+      },
+      {
+        "sentence": "Conversely, offline computation is not inherently invalid: an adequately evidenced historical version and a time-appropriate frozen feature model can support a retrospective analysis, although not a claim of historical deployment.",
+        "families": [
+          "nonconfirmation_or_equivalence"
+        ]
+      },
+      {
+        "sentence": "It does not identify average effects across sectors, smaller firms or failed securities.",
+        "families": [
+          "failed_establishment"
+        ]
+      },
+      {
+        "sentence": "Local Holm families do not account for the full sequence of modeling and reporting decisions, and the current synthesis is not a newly preregistered test.",
+        "families": [
+          "nonconfirmation_or_equivalence"
+        ]
+      },
+      {
+        "sentence": "E4c's selected issuer corpus and small effective event sample cannot establish the value of general financial media or investor discourse.",
+        "families": [
+          "inability_disclaimer"
+        ]
+      },
+      {
+        "sentence": "No historical analyst-expectation effect has been tested.",
+        "families": [
+          "no_new_or_confirmation"
+        ]
+      },
+      {
+        "sentence": "Reproducibility from aggregates is not equivalent to legally reconstructing every input and refitting every model.",
+        "families": [
+          "nonconfirmation_or_equivalence"
+        ]
+      },
+      {
+        "sentence": "The E3c2026 fixed protocol remains unchanged and was not executed here.",
+        "families": [
+          "nonexecution"
+        ]
+      },
+      {
+        "sentence": "E9a requests existing reports and current policy/bibliographic pages, not a new financial-label dataset.",
+        "families": [
+          "nonconfirmation_or_equivalence"
+        ]
+      },
+      {
+        "sentence": "Citation metadata verification does not certify every inference in a cited paper.",
+        "families": [
+          "failed_establishment"
+        ]
+      },
+      {
+        "sentence": "Reddit may support a different retrospective content question if its version policy cannot support historical decision-time prediction.",
+        "families": [
+          "inability_disclaimer"
+        ]
+      },
+      {
+        "sentence": "The existing experiments do not establish reliable incremental five-day reversal information from the tested technical, fundamental or reconstructed-news additions after their stated controls.",
+        "families": [
+          "failed_establishment"
+        ]
+      },
+      {
+        "sentence": "They also do not demonstrate equivalence to zero information.",
+        "families": [
+          "failed_establishment"
+        ]
+      }
+    ]
+  },
+  "after": {
+    "English_body_whitespace_words": 3755,
+    "matched_defensive_sentences": 0,
+    "negation_tokens": 0,
+    "matches": []
+  },
+  "defensive_sentence_reduction": 38,
+  "negation_token_reduction": 124
+}

@@ -4,6 +4,8 @@ from pathlib import Path
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def validate(bundle,repo):
+ if (bundle/'MANUSCRIPT_VERSION.json').exists() and __import__('json').loads((bundle/'MANUSCRIPT_VERSION.json').read_text()).get('stage')=='E9b':
+  from e9b_validate import validate as current; return current(bundle,repo)
  hashes=json.loads((bundle/'audits/table_source_hashes.json').read_text());root=repo/'research'
  for rel,digest in hashes.items():
   assert sha(root/rel)==digest, 'Source changed: '+rel

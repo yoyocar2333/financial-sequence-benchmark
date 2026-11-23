@@ -32,3 +32,11 @@ The only public adaptation to copied scientific code is the E1 download default'
 ## E9a publication synthesis
 
 `e9a_build.py` extracts uniquely selected existing aggregate rows; `e9a_citations.py` retains DOI checks and documented resolutions; `e9a_paper.py` formats the paper and plots; `e9a_validate.py`, `test_e9a.py`, and `e9a_reproduce.py` verify/replay evidence without training. `e9a_docx.py` and `e9a_render_pdf.py` produce editable Word/PDF using existing local tools. No collector, API submission or E8b execution.
+
+## E9b revision and supplementary analyses
+
+`e9b_technical.py` / `e9b_complexity.py`: representation and archived fit metadata. `e9b_development.py` / `e9b_tree_controls.py`: separately locked development controls. `e9b_fusion.py` / `e9b_news.py`: frozen forecast diagnostics. `e9b_paper.py`, `e9b_citations.py`, `e9b_plot.py`, `e9b_docx.py`: single current manuscript. `e9b_validate.py`, `test_e9b.py`, `e9b_document_check.py`, `e9b_reproduce.py`, `e9b_full_replay.py`: distinct evidence/engineering/document/public/private replay boundaries. Private source data are required for source-prediction replay and are excluded from GitHub. No new GPU, collector or2026 evaluation.
+
+## ICEIB2027 publication preparation
+
+`iceib2027_build.py` and `iceib2027_figures.py` synthesize frozen aggregates; `iceib2027_validate.py`, `test_iceib2027.py` and `iceib2027_reproduce.py` check/replay the author-written paper without financial fits. `iceib2027_docx.py`, `iceib2027_render_pdf.py` and `iceib2027_document_check.py` require a privately supplied template and local renderer. `iceib2027_source_check.py` reads only public format metadata, keeps template/HTML private, and omits embedded binaries from output evidence. No paper submission or paid API action.

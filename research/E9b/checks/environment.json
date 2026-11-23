@@ -1,0 +1,12 @@
+{
+  "Python": "3.10.12",
+  "numpy": "1.26.4",
+  "pandas": "2.2.3",
+  "scipy": "1.15.2",
+  "sklearn": "1.6.1",
+  "xgboost": "3.0.5",
+  "lightgbm": "4.6.0",
+  "CPU_threads": 2,
+  "GPU": false,
+  "installed_by_E9b": false
+}

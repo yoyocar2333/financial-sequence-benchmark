@@ -1,0 +1,10 @@
+{
+  "classification_fits": 24,
+  "archived_P_F_reused": true,
+  "evaluation_end": "2022-12-31",
+  "latest_training_end": "2020-06-30",
+  "new_GPU_fits": 0,
+  "current_outer_labels_used_for_selection": false,
+  "conditional_on_two_stocks": true,
+  "source_version_PIT": "retrospective_proxy_unchanged"
+}

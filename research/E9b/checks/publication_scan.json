@@ -1,0 +1,11 @@
+{
+  "status": "PASSED",
+  "public_files": 599,
+  "total_bytes": 17535253,
+  "copied_source_digests_verified": 559,
+  "Python_files_parsed": 137,
+  "relative_links_checked": 373,
+  "E0_original_scientific_artifacts_unchanged": true,
+  "raw_data_or_models_allowed": false,
+  "errors": []
+}

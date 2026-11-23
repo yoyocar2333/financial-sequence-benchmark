@@ -1,0 +1,7 @@
+{
+ "scope":"Implementation repairs; locked analysis plan unchanged",
+ "repairs":[
+  {"component":"development loader","failure":"Legacy bp.load_frame expects bundle/inputs, while frozen development-cut CSVs were directly in market_development","resolution":"Byte-identical adapter copies into a bundle/inputs layout, hash-checked; no data, labels or thresholds changed"},
+  {"component":"raw fusion identity","failure":"Archived float32 mixtures reconstructed in float64 yielded source-rounding discrepancy; original strict identity assertion reported max 2.83767157e-08","resolution":"Report archive rounding separately and bound by four float32 epsilons; verify exact algebra on float64 reconstructed mixtures at 1e-12. Original archived forecasts, Briers and intervals unchanged. This is numeric representation handling, not model or significance selection"}
+ ]
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "url": "https://www.iceib.asia/",
+    "checked_date": "2026-11-23",
+    "status": "FETCHED_PUBLIC_METADATA",
+    "sha256": "939fdc13acbd5d8d6d7364c1c23b63ef2fc6d9fcf34a21aaa6ab46639a4e3291",
+    "links": [
+      {
+        "text": "Submit paper",
+        "href": "#/submission"
+      },
+      {
+        "text": "Submission",
+        "href": "#/submission"
+      },
+      {
+        "text": "Online Submission →",
+        "href": "#/submission"
+      },
+      {
+        "text": "Online Submission →",
+        "href": "#/submission"
+      },
+      {
+        "text": "Engineering Proceedings Template (.docx)",
+        "href": "EMBEDDED_DOCUMENT_URI_OMITTED",
+        "decoded_template_sha256": "184bc15210ba3cc7a9db2540c9eb5661fe982a9b678c786692cd818819db4eda",
+        "matches_user_template": true
+      },
+      {
+        "text": "Submission",
+        "href": "#/submission"
+      }
+    ]
+  },
+  {
+    "url": "https://www.mdpi.com/journal/engproc/instructions",
+    "checked_date": "2026-11-23",
+    "status": "NETWORK_CHECK_FAILED",
+    "error": "HTTP Error 403: Forbidden",
+    "primary_browser_verification": {
+      "status": "OFFICIAL_AUTHOR_INSTRUCTIONS_READ",
+      "checked_date": "2026-11-23",
+      "template_posting_restriction_verified": true,
+      "independent_direct_HTTP_status": "403 preserved above"
+    }
+  }
+]

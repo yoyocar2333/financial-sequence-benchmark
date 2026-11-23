@@ -1,0 +1,19 @@
+{
+  "component": "news",
+  "at": "2026-11-15T10:31:52.378551+00:00",
+  "plan_sha256": "8af359d6a9c1b09bea3b9d454957ad3dfeb0e9028fc06ccc3dd85ea38035ea0b",
+  "inputs": {
+    "outputs/e4c_20261026/data/daily_features.csv.gz": "56f082f60faf1494df278654322180ffe1a3782fcd63ec4c50d894f6feb304b0",
+    "outputs/e4c_20261026/predictions/all_probabilities.csv.gz": "6370485f5246496dfa25fb0bb8baee213ba9ba7bcb3bf464e06c2d5f1f6600a1",
+    "outputs/e4c_20261026/tables/paired_tests.csv": "bbd25a5f4fc3398e19c9bac3b786613e5d6c82de7b5a466ce6b3bea965b86a9b"
+  },
+  "code": {
+    "e9b_setup.py": "bc1f889febc0d8961cbe919823c7a72a92beb5e19d066ce041f8fb7d30f18417",
+    "e9b_core.py": "57b7e2fae66ca262d8fe36daa0bfbba840e7a68f3db11833ae67fdccd097a233",
+    "e9b_technical.py": "86c50332ce6f9e8c127111784188014a5e8ea49dd134bff93b7f21c72e667257",
+    "e9b_development.py": "76e19d04853ab0867cc5c1b4234c8abc14faf58e5feb7a58c3eb69532a476b74",
+    "e9b_fusion.py": "bd5cce7cb1dc65885e6de23da551d939daa0cf63fd94e0e99604e8af71be09ea",
+    "e9b_news.py": "96d07e7471748a35914bcaf879eea46c59233e1bdbcf4c90dd0707e435926690"
+  },
+  "exploratory": true
+}

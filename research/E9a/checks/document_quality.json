@@ -1,6 +1,9 @@
 {
+  "source_paragraphs_verified": 130,
+  "source_tables": 5,
+  "references": 40,
   "status": "PASSED",
-  "pages": 19,
+  "pages": 15,
   "embedded_fonts": true,
   "Chinese_extractable": true,
   "replacement_characters": 0,

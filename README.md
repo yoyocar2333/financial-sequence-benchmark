@@ -95,14 +95,20 @@ python -B scripts/e8a1_validate.py --bundle research/E8a1
 
 公開manifest只有表頭，沒有逐篇原文／個資／私有索引。原E3c2026不改未執行，沒有新金融模型或新Brier/AUC比較。[來源權限](research/E8a1/SOURCE_ACCESS_AND_LICENSE_AUDIT.md)與[下一步](research/E8a1/NEXT_STEPS.md)先補實際外部證據。
 
-## E9a工作論文與資料授權決策
+## E9b：表觀預測增益的來源
 
-[E9a完整索引](research/E9a/README.md)整合E0–E8a.1的探索性證據及PIT限制；[英文工作論文含繁中摘要](research/E9a/PAPER_DRAFT.md)、[Word](research/E9a/PAPER_DRAFT.docx)、[PDF](research/E9a/PAPER_DRAFT.pdf)附103項可追溯主張、五張主表與三圖。不同標籤／cohort的Brier不作跨研究排行，原次要顯著結果與限制完整保留。
+[目前英文論文與繁中摘要](research/E9a/PAPER_DRAFT.md)｜[Word](research/E9a/PAPER_DRAFT.docx)｜[PDF](research/E9a/PAPER_DRAFT.pdf)｜[E9b完整研究索引](research/E9b/README.md)
 
-[教授用外部資料決策](research/E9a/DATA_ACCESS_DECISION_BRIEF.md)及[未寄出的詢樣郵件](research/E9a/DATA_REQUEST_EMAIL_DRAFT.md)只準備Stocktwits／Reddit決策，不代表已授權。無新模型或金融分數，E8b仍NOT_READY，E3c2026不改未執行。本輪新PR供審閱，**不自動合併main**。
+**Understanding the Sources of Apparent Predictive Gains in Financial Machine Learning**：以技術表示、基本面融合與機率收縮、新聞密度／情緒及時間證據串接既有研究。修訂含60個固定開發期分類fit、6個輔助fit、319項主張與40文獻，原始科學結果保留。不同cohort不合併分數，局部正向及未顯著結果均呈現；2024–2025已反覆探索。
+
+[修改摘要](research/E9b/E9B_REVISION_SUMMARY.md)、[補強結果](research/E9b/EXPERIMENTAL_STRENGTHENING_REPORT.md)、[研究缺口](research/E9b/EXPERIMENTAL_GAP_REGISTER.md)及[重現命令](research/E9a/REPRODUCIBILITY.md)。E9a資料授權決策保留，E3c2026不改未執行，E8b不啟動。本輪PR供審閱，**不自動合併main**。
 
 ```bash
 python -B scripts/e9a_validate.py --bundle research/E9a
-python -B scripts/test_e9a.py
-python -B scripts/e9a_reproduce.py --bundle research/E9a --out outputs/e9a_replay_NEW
+python -B scripts/test_e9b.py
+python -B scripts/e9a_reproduce.py --bundle research/E9a --out /tmp/e9b_replay_NEW --figures
 ```
+
+## ICEIB2027 conference preparation
+
+[100字英文摘要](research/ICEIB2027/ICEIB2027_ABSTRACT_DRAFT.md)、[三個標題](research/ICEIB2027/ICEIB2027_TITLE_OPTIONS.md)、[完整英文正文](research/ICEIB2027/ICEIB2027_FULL_PAPER.md)與[準備索引](research/ICEIB2027/README.md)承接最新E9b。官方模板審閱版實測7頁，三表兩圖；因MDPI模板使用條款，模板及模板版Word/PDF只保留本機，不在GitHub張貼。作者、出版管道、表單欄位與原生字型仍待確認。本輪未投稿／付款／新增金融訓練，PR供審閱不自動合併。

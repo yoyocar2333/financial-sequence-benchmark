@@ -27,6 +27,7 @@ class Evidence:
  provenance=None
 
 def build(repo,out):
+ if (out/'MANUSCRIPT_VERSION.json').exists() and json.loads((out/'MANUSCRIPT_VERSION.json').read_text()).get('stage')=='E9b':raise RuntimeError('Current E9b manuscript: use e9b_reproduce.py; legacy extractor cannot overwrite its claim matrix.')
  out.mkdir(parents=True,exist_ok=True)
  for f in ['tables','figures','audits','literature','code','checks']:(out/f).mkdir(exist_ok=True)
  src=out/'sources' if (out/'sources').exists() else repo/'research'

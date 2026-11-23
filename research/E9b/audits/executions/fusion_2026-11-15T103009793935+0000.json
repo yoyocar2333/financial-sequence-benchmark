@@ -1,0 +1,18 @@
+{
+  "component": "fusion",
+  "at": "2026-11-15T10:30:09.793935+00:00",
+  "plan_sha256": "8af359d6a9c1b09bea3b9d454957ad3dfeb0e9028fc06ccc3dd85ea38035ea0b",
+  "inputs": {
+    "outputs/e6_20261106/predictions/all_probabilities.csv.gz": "391fbad406c1a97686e513fb6c95f6a8530595cdb8e919d22795fbd7791e4239",
+    "outputs/e6_20261106/fusion_weights.json": "c9ae5c77d7cce56d47611c3e5907a13abecaf25e154472fa74561545bebd7402",
+    "outputs/e6_20261106/tables/metrics_comparison.csv": "b55e49fe5164b449a1dee774b8d790a090d30d527ab02fea97980d0458e02888"
+  },
+  "code": {
+    "e9b_setup.py": "bc1f889febc0d8961cbe919823c7a72a92beb5e19d066ce041f8fb7d30f18417",
+    "e9b_core.py": "57b7e2fae66ca262d8fe36daa0bfbba840e7a68f3db11833ae67fdccd097a233",
+    "e9b_technical.py": "86c50332ce6f9e8c127111784188014a5e8ea49dd134bff93b7f21c72e667257",
+    "e9b_development.py": "76e19d04853ab0867cc5c1b4234c8abc14faf58e5feb7a58c3eb69532a476b74",
+    "e9b_fusion.py": "bd5cce7cb1dc65885e6de23da551d939daa0cf63fd94e0e99604e8af71be09ea"
+  },
+  "exploratory": true
+}

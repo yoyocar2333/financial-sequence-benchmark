@@ -1,0 +1,9 @@
+{
+  "inputs/AAPL_fundamentals_development.csv": "09656e4a74d9009bb7f9969c4308977ade73e38df8a775fa9650edd48f785166",
+  "inputs/TSLA_fundamentals_development.csv": "1bb444cc8f1635fa393a7c9ef5a42a80fadb1219c35adff8225b989ae418d5f2",
+  "inputs/market_development/AAPL_adjusted_through2025.csv": "0fafe58fae51d4606e7f4aaada9488094127474d4d1db07ee7e4bfafa3647458",
+  "inputs/market_development/TSLA_adjusted_through2025.csv": "377ef1c2a499059f8a357c5abb564ad03fbf438e03c6b86cc7cdc6639fd8b264",
+  "inputs/market_development/QQQ_adjusted_through2025.csv": "04ed609ecc55d812697e05a80ad460f27b8f4eb7e01b0d4614cd6c22c024ae95",
+  "inputs/market_development/VIX_adjusted_through2025.csv": "595bf843d77bde2941b893dd9130f6e641d812cce66ffb6ac536843e61d77f52",
+  "inputs/market_development/VXN_adjusted_through2025.csv": "bf276c7706220b0a337d4dc1952181e0c3512089b9dd8b13b2155306e2c15d12"
+}

@@ -1,0 +1,19 @@
+timing,partition,n_with_retained_news,feature_y,spearman,n_dates,retained_coverage,historical_source_completeness_verified,strict_PIT_verified,sample
+delay1,test,203,signed_mean,0.22482311897044124,230,0.8826086956521739,False,False,retained-news days only; representation diagnostic
+delay1,test,203,absolute_mean,0.22496596892498408,230,0.8826086956521739,False,False,retained-news days only; representation diagnostic
+delay1,train,202,signed_mean,0.37546105155834425,224,0.9017857142857143,False,False,retained-news days only; representation diagnostic
+delay1,train,202,absolute_mean,0.3751884694955509,224,0.9017857142857143,False,False,retained-news days only; representation diagnostic
+delay1,validation,216,signed_mean,0.0409792892955305,232,0.9310344827586207,False,False,retained-news days only; representation diagnostic
+delay1,validation,216,absolute_mean,0.0409792892955305,232,0.9310344827586207,False,False,retained-news days only; representation diagnostic
+delay2,test,203,signed_mean,0.22482311897044124,230,0.8826086956521739,False,False,retained-news days only; representation diagnostic
+delay2,test,203,absolute_mean,0.22496596892498408,230,0.8826086956521739,False,False,retained-news days only; representation diagnostic
+delay2,train,202,signed_mean,0.37974125431451217,224,0.9017857142857143,False,False,retained-news days only; representation diagnostic
+delay2,train,202,absolute_mean,0.37974125431451217,224,0.9017857142857143,False,False,retained-news days only; representation diagnostic
+delay2,validation,215,signed_mean,0.04419762617963842,232,0.9267241379310345,False,False,retained-news days only; representation diagnostic
+delay2,validation,215,absolute_mean,0.04419762617963842,232,0.9267241379310345,False,False,retained-news days only; representation diagnostic
+next_session,test,204,signed_mean,0.2124934228721323,230,0.8869565217391304,False,False,retained-news days only; representation diagnostic
+next_session,test,204,absolute_mean,0.21263490661503817,230,0.8869565217391304,False,False,retained-news days only; representation diagnostic
+next_session,train,202,signed_mean,0.36852486793951816,224,0.9017857142857143,False,False,retained-news days only; representation diagnostic
+next_session,train,202,absolute_mean,0.3682553246859234,224,0.9017857142857143,False,False,retained-news days only; representation diagnostic
+next_session,validation,217,signed_mean,0.032985159518080356,232,0.9353448275862069,False,False,retained-news days only; representation diagnostic
+next_session,validation,217,absolute_mean,0.032985159518080356,232,0.9353448275862069,False,False,retained-news days only; representation diagnostic

@@ -1,45 +1,38 @@
-# E9a 重現與來源邊界
+# Current E9b manuscript reproduction
 
-## 已完成的工作
+## 1. Public aggregate replay
 
-這是既有研究的整合、來源核對、圖表重排與文件製作。103項主張中91項對應CSV確切列，另12項為文件段落；32筆文獻的metadata及主要紀錄已核對。沒有重新訓練、重新估計Brier/AUC/p-value、下載市場或社群資料、執行2026金融驗證、寄信或付款。
-
-論文是英文工作初稿，含繁中重點摘要；授權決策及品質審查為繁中。作者、機構及學校格式仍待教授確認。
-
-## 公開版離線重現
-
-於 repository 根目錄，以 Python 3.10+ 執行：
+只讀公開aggregate，重建目前論文、319主張及40文獻。無下載、金融訓練或2026資料。需要已有Python3.10、numpy/pandas/scipy/scikit-learn；`--figures`另需既有matplotlib。版本見E9b checks/environment.json。不要在frozen bundle內執行舊擷取器。
 
 ```bash
 python -B scripts/e9a_validate.py --bundle research/E9a
 python -B scripts/test_e9a.py
-python -B scripts/e9a_reproduce.py --bundle research/E9a --out outputs/e9a_replay_NEW
-# 若已有 matplotlib / numpy，可重畫三圖與依模板重建正文：
-python -B scripts/e9a_reproduce.py --bundle research/E9a --out outputs/e9a_figures_NEW --figures
+python -B scripts/test_e9b.py
+python -B scripts/e9a_reproduce.py --bundle research/E9a --out /tmp/e9b_replay_NEW --figures
 ```
 
-輸出目錄必須全新。第一項核對固定21個來源檔案的SHA、原表唯一selector、91筆來源列、103項主張及引用；不能只把輸出CSV欄位改成verified=true。這只保證現有aggregate與本稿一致，不認證原金融資料或檢定假設。
+舊入口依 `MANUSCRIPT_VERSION.json` 轉到E9b。`e9a_build.py`拒絕覆寫目前E9b；下次建稿會繼續用目前模板與新分析，不會恢復E9a。
 
-不加 `--figures` 時正文為原稿複製，重播的是來源與表格，不宣稱重建排版；加上時才從模板與原表重建正文。Word另需已有python-docx：
+Word從同一Markdown重建（既有python-docx）；PDF需要已有LibreOffice UNO及中文字型。工具不自動安裝。例：
 
 ```bash
-python -B scripts/e9a_docx.py --out research/E9a
+python -B scripts/e9b_docx.py --out /tmp/e9b_replay_NEW
+python -B scripts/e9a_render_pdf.py --out /tmp/e9b_replay_NEW --program /PATH/TO/EXISTING/libreoffice/program
+python -B scripts/e9b_document_check.py --bundle /tmp/e9b_replay_NEW
 ```
 
-上述Word指令會在指定目錄產生新Word，若保護發布原檔請先複製至新目錄。正式重播不自動重寫凍結Word／PDF。PDF需已有LibreOffice及Noto Serif TC；通用環境可從新DOCX由LibreOffice匯出並更新目錄，或使用 `e9a_render_pdf.py --out <new_bundle> --program <existing_LO_program> --registry <existing_LO_registry>`，其Python須能import uno。本工作站重用既有私人renderer、字型及獨立E9a profile，未安裝系統套件；私人工具與個人路徑不公開。不同LibreOffice或字型版本可有頁面差異，不承諾二進位一致。
+## 2. Private frozen-source no-refit replay
 
-## 來源索引與可檢查範圍
+公開表格可核對逐格來源，但不能獨立由公開資料重算所有私人逐日結果。工作站合法保存的frozen snapshots、原預測及新fit係數／native模型供 `e9b_full_replay.py` 重算35張表、24LR／36tree／6Ridge預測並重建稿件；此replay不新增fit。已執行紀錄在E9b checks/full_replay_report.json。需要原私有資料，不會自行下載或造資料。
 
-- `SOURCE_MANIFEST.csv`：本輪凍結main的公開研究來源、SHA及階段；不是原市場／新聞逐篇manifest。
-- `CLAIM_EVIDENCE_MATRIX.csv`、`audits/cell_provenance.json`：每項主張的selector、原表列及限制；source_file相對repo根。
-- `audits/table_source_hashes.json`：正文使用的來源檔案，重播前必須吻合。
-- `literature/verified_doi_records.json`：保留原DOI核對警示及失敗；`citation_catalog.json`含後續人工紀錄式resolution，不擦除失敗。
-- `literature/current_policy_evidence.json`：當前官方政策的摘要筆記，不是原始HTTP、歷史內容證據或取得授權。
-- `checks/`：來源、文件與公開安全檢查。技術PASS≠科學獨立確認。
-- 舊研究原資料／全文／API回應／checkpoint不打包；原E0及歷史成果不覆寫。E3c2026協定不改未執行。
+```bash
+python -B scripts/e9b_full_replay.py --source-root /PATH/TO/PRIVATE/PROJECT --private-frozen-run /PATH/TO/e9b_20261115 --out /tmp/e9b_private_replay_NEW --repo .
+```
 
-完整原始模型重現須另外合法取得相同凍結資料、原版本、環境及先前實驗的資產；本輪不替使用者重新授權，亦不讓公開repo自動啟動訓練或收集。新聞原方法參考 [stockllm-pit-news](https://github.com/yoyocar2333/stockllm-pit-news)。
+## 3. Supplementary fit reproduction
 
-## 版本與發布
+新模型僅使用截至2022的cutoff inputs；分析計畫先鎖定，樹模型addendum在LR診斷後、樹模型fit前鎖定，完整保留時序。`e9b_technical.py`、`e9b_development.py`與`e9b_tree_controls.py`需私有來源與計畫hash；不允許無來源時虛構重現。設定環境 `E9B_SOURCE_ROOT`、`E9B_OUTPUT`，依計畫重建至新輸出；本輪對既有輸出重播一律用 `E9B_NO_REFIT=1`。沒有新神經訓練／GPU／2026驗證。
 
-基準main：`e2bc7a3f686a213e25635172a19018934df944cb`。E9a以新branch/PR提供；本輪明確不merge。僅新增論文、彙整索引、自製圖與工程程式；若為公開Word/PDF擴充publication validator，變更限定這兩個自製文件，另列非科學工具變更，不改舊科學成果。
+## 公開邊界
+
+程式、作者撰寫論文、aggregate表及原創PNG可公開。原始行情／新聞／社群、逐文章manifest、逐日私有預測、checkpoint、係數／native weights及完整工作站archive不公開。檔案完整性與工程測試不等於歷史PIT或獨立人工QA認證。
