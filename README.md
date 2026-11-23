@@ -108,3 +108,7 @@ python -B scripts/e9a_validate.py --bundle research/E9a
 python -B scripts/test_e9b.py
 python -B scripts/e9a_reproduce.py --bundle research/E9a --out /tmp/e9b_replay_NEW --figures
 ```
+
+## ICEIB2027 conference preparation
+
+[100字英文摘要](research/ICEIB2027/ICEIB2027_ABSTRACT_DRAFT.md)、[三個標題](research/ICEIB2027/ICEIB2027_TITLE_OPTIONS.md)、[完整英文正文](research/ICEIB2027/ICEIB2027_FULL_PAPER.md)與[準備索引](research/ICEIB2027/README.md)承接最新E9b。官方模板審閱版實測7頁，三表兩圖；因MDPI模板使用條款，模板及模板版Word/PDF只保留本機，不在GitHub張貼。作者、出版管道、表單欄位與原生字型仍待確認。本輪未投稿／付款／新增金融訓練，PR供審閱不自動合併。

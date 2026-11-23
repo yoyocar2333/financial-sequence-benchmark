@@ -1,0 +1,18 @@
+{
+  "stage": "ICEIB2027",
+  "prepared_date": "2026-11-23",
+  "source_commit": "3a1ab2e1695aa28168123223d1d3fc181ae1d913",
+  "main_at_start": "46ae426af3d4ce30573776d419fd2e9405f99897",
+  "E9b_PR8": "OPEN_UNMERGED",
+  "branch": "research/iceib2027-paper-20261123",
+  "PR_base": "research/e9a-publication-draft-20261114",
+  "template_sha256": "184bc15210ba3cc7a9db2540c9eb5661fe982a9b678c786692cd818819db4eda",
+  "template_source": "User template byte-identical to official ICEIB embedded downloadable template, verified2026-11-23",
+  "template_public_distribution": false,
+  "financial_model_fits": 0,
+  "E3c2026_executed": false,
+  "abstract_words": 100,
+  "template_route": "Engineering Proceedings; final route pending professor/organizer",
+  "template_pdf_public_distribution": false,
+  "main_paper_pages_as_rendered": 7
+}

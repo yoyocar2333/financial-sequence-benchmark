@@ -30,3 +30,8 @@ vendor/
 *.jsonl
 credentials*.json
 secrets*.json
+
+# Restricted publisher-template artifacts remain private
+research/ICEIB2027/*.docx
+research/ICEIB2027/*.pdf
+research/ICEIB2027/private_template/
