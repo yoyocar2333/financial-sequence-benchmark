@@ -23,6 +23,10 @@ if __name__=='__main__':
  from iceib2027_active import resolve
  current=resolve(a.bundle)
  if current is not None:
-  from iceib2027_r2_reproduce import main as active
-  active(a.repo,current,a.out,a.figures)
+  if (current/'PAPER_TEMPLATE.md').exists():
+   from iceib2027_r3_reproduce import main as active
+  else:
+   from iceib2027_r2_reproduce import main as active
+  if (current/'PAPER_TEMPLATE.md').exists():active(a.repo,current,a.out)
+  else:active(a.repo,current,a.out,a.figures)
  else:main(a.repo,a.bundle,a.out,a.figures)

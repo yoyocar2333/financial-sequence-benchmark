@@ -60,6 +60,9 @@ if __name__=='__main__':
  from iceib2027_active import resolve
  current=resolve(a.bundle)
  if current is not None:
-  from iceib2027_r2_document_check import main as active
+  if (current/'PAPER_TEMPLATE.md').exists():
+   from iceib2027_r3_document_check import main as active
+  else:
+   from iceib2027_r2_document_check import main as active
   active(a.template,current,a.layout)
  else:main(a.template,a.bundle,a.layout)

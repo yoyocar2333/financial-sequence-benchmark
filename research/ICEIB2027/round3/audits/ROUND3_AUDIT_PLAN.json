@@ -1,0 +1,23 @@
+{
+  "locked_utc": "2026-11-23T14:00:26.092714+00:00",
+  "scope": "Scientific/editorial restoration with archived coefficient/probability verification only",
+  "sources": [
+    "Frozen E6 calibration parameters and probabilities",
+    "Frozen E9b raw/calibrated per-seed scores and decompositions",
+    "E9b Ridge source,fold tables,archived coefficients",
+    "E5 eight primary contrasts"
+  ],
+  "allowed": [
+    "Apply saved a,b, never refit calibration",
+    "Recompute descriptive AUC/Brier/SD on unchanged <=2025 probabilities",
+    "Check identities and existing fixed-bin decomposition",
+    "Audit exact flat-direction mask and existing source snapshot"
+  ],
+  "prohibited": [
+    "No new model or calibration fit",
+    "No new hypothesis p-values/intervals",
+    "No2026 financial inputs or protocol changes",
+    "No selection using explored scores"
+  ],
+  "estimators": "Per-seed metrics then equal arithmetic mean; probability ensemble is different; within-state concordance averaged across seeds"
+}

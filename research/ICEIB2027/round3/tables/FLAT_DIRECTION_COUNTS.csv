@@ -1,0 +1,9 @@
+ticker,partition,calendar_rows,exact_zero_past5_calendar,eligible_before_direction,excluded_exact_zero_after_other_filters,retained,flat_rule
+AAPL,train,2768,2,2748,2,2746,"np.sign(100*(log(Close)-log(Close.shift(5)))) == 0; exact floating equality, no epsilon"
+AAPL,stop,124,0,104,0,104,"np.sign(100*(log(Close)-log(Close.shift(5)))) == 0; exact floating equality, no epsilon"
+AAPL,cal,126,0,106,0,106,"np.sign(100*(log(Close)-log(Close.shift(5)))) == 0; exact floating equality, no epsilon"
+AAPL,test,502,0,482,0,482,"np.sign(100*(log(Close)-log(Close.shift(5)))) == 0; exact floating equality, no epsilon"
+TSLA,train,2768,3,2748,3,2745,"np.sign(100*(log(Close)-log(Close.shift(5)))) == 0; exact floating equality, no epsilon"
+TSLA,stop,124,0,104,0,104,"np.sign(100*(log(Close)-log(Close.shift(5)))) == 0; exact floating equality, no epsilon"
+TSLA,cal,126,0,106,0,106,"np.sign(100*(log(Close)-log(Close.shift(5)))) == 0; exact floating equality, no epsilon"
+TSLA,test,502,0,482,0,482,"np.sign(100*(log(Close)-log(Close.shift(5)))) == 0; exact floating equality, no epsilon"

@@ -1,5 +1,7 @@
 # ICEIB2027 Conference Paper Preparation
 
+**目前版本：[第三輪科學完整性修訂](round3/ICEIB2027_FULL_PAPER.md)、[30組校準器稽核](round3/CALIBRATION_AUDIT.md)、[版本索引](round3/SOURCE_VERSION_INDEX.md)。保留第二輪為修訂基準；以下第二輪／初輪連結為歷史紀錄。**
+
 **目前版本：[第二輪修訂全文](round2/ICEIB2027_REVISED_FULL_PAPER.md)、[第二輪摘要](round2/ICEIB2027_REVISED_ABSTRACT.md)、[修訂索引](round2/README.md)。實測8頁，正文以第4章整合結果；下列初輪文件保留為歷史紀錄。**
 
 重建入口由 `ACTIVE_MANUSCRIPT.json` 指向第二輪，不以原初輪文字覆寫目前稿件。

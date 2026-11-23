@@ -1,0 +1,9 @@
+{
+  "status": "PASSED",
+  "manuscript_byte_identical": true,
+  "plots": "Unchanged protected round2 figures",
+  "financial_fits": 0,
+  "calibrator_fits": 0,
+  "new_pvalues": 0,
+  "network": false
+}

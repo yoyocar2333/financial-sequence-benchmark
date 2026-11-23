@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "protected_files_unchanged": 264,
+  "saved_coefficients_checked": 30,
+  "decomposition_rows_reconciled": 120,
+  "per_seed_scores_match_archived": true,
+  "all8_technical_and10_fusion_settings_retained": true,
+  "raw_identity_matches10_archived_settings": true,
+  "full_manuscript_byte_reproduced": true,
+  "abstract_words": 100,
+  "main_tables": 4,
+  "main_figures": 1,
+  "editable_equations": 5,
+  "references": 12,
+  "financial_fits": 0,
+  "calibrator_fits": 0,
+  "new_pvalues": 0,
+  "E3c2026_executed": false,
+  "independent_human_QA": false
+}

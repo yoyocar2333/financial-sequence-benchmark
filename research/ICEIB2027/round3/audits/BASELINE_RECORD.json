@@ -1,0 +1,13 @@
+{
+  "stage": "ICEIB2027_R3",
+  "date": "2026-11-23",
+  "baseline_filename": "ICEIB2027_REVISED_FULL_PAPER.pdf",
+  "actual_pages": 8,
+  "requested_description_pages": 6,
+  "baseline_discrepancy": "User clarified no extra version: use current named revised PDF; actual8 pages retained as baseline",
+  "baseline_PDF_sha256": "e93c5ad133ddb7dde44c76e80baca55829d82d4313e0c1b9195af2c2812071a3",
+  "baseline_Word_sha256": "297d7b3379a71b7d878f3ff4cc7cad91796e3f16ff8ef1c30a6e52a4691aff37",
+  "source_commit": "bfe6ea950b785880dfb48ed0a32e663940a6f11d",
+  "source_branch": "research/iceib2027-readability-r2-20261123",
+  "baseline_document_family": "Current round2 manuscript, not E9b long paper"
+}

@@ -31,7 +31,9 @@ if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--bundle',type=Path,required=True);a=p.parse_args()
  from iceib2027_active import resolve
  current=resolve(a.bundle)
- if current is not None:
+ if current is not None and (current/'PAPER_TEMPLATE.md').exists():
+  print('Round3 uses protected round2 figures unchanged; no regeneration required')
+ elif current is not None:
   from iceib2027_r2_figures import main as active
   active(current)
  else:main(a.bundle)

@@ -111,4 +111,4 @@ python -B scripts/e9a_reproduce.py --bundle research/E9a --out /tmp/e9b_replay_N
 
 ## ICEIB2027 conference preparation
 
-[第二輪英文摘要](research/ICEIB2027/round2/ICEIB2027_REVISED_ABSTRACT.md)、[第二輪全文](research/ICEIB2027/round2/ICEIB2027_REVISED_FULL_PAPER.md)與[修訂索引](research/ICEIB2027/round2/README.md)。以使用者目前六頁Word/PDF為基準，Results先整合「資訊、表示、校準／收縮、來源密度」的共同問題；8頁實測、三表兩圖，完整不利比較保留補充表。596來源列與73列描述性效果計算可離線重現，237既有研究檔案雜湊不變，未新增金融模型或檢定。原稿與歷史來源保留；因MDPI模板使用條款，模板及格式化Word/PDF僅本機交付，不在GitHub張貼。原生字型、作者／出版管道及表單仍待確認；本輪PR供審閱，不自動合併或投稿。
+[第三輪英文論文](research/ICEIB2027/round3/ICEIB2027_FULL_PAPER.md)、[摘要](research/ICEIB2027/round3/ABSTRACT.md)、[科學完整性報告](research/ICEIB2027/round3/SCIENTIFIC_COMPLETENESS_REVIEW.md)與[固定版本索引](research/ICEIB2027/round3/SOURCE_VERSION_INDEX.md)。保留Results4.1–4.6與控制架構，補回raw融合恆等式、連續Brier分解、Ridge方法、八項技術主比較及實際校準斜率。30組保存係數直接重現凍結機率，沒有重新擬合或新增p-value。原研究與第二輪264份檔案受保護。模板Word/PDF僅本機交付；原生字型、作者／出版管道仍待確認。ICEIB PR供審閱，不自動合併或投稿。

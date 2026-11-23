@@ -1,0 +1,14 @@
+{
+  "stage": "ICEIB2027_R3",
+  "abstract_words": 100,
+  "main_tables": 4,
+  "main_figures": 1,
+  "editable_equations": 5,
+  "references": 12,
+  "calibration_rows": 30,
+  "pipelines": 6,
+  "financial_fits": 0,
+  "calibrator_fits": 0,
+  "new_pvalues": 0,
+  "evidence_commit": "bfe6ea950b785880dfb48ed0a32e663940a6f11d"
+}

@@ -1,10 +1,13 @@
 {
-  "stage": "ICEIB2027_R2",
-  "source_directory": "round2",
-  "manuscript": "round2/ICEIB2027_REVISED_FULL_PAPER.md",
-  "source_template": "round2/REVISED_PAPER_TEMPLATE.md",
-  "builder": "scripts/iceib2027_r2_build.py",
-  "private_output_names": ["ICEIB2027_REVISED_FULL_PAPER.docx", "ICEIB2027_REVISED_FULL_PAPER.pdf"],
-  "preserved_baseline": "Original six-page user PDF/Word remain private and unchanged; previous conference source paths remain historical",
-  "native_Word_baseline_SHA256": "0435ab6f50a61dc311bcda094133bc92f770ef382e37b84147ef9ce51299a31a"
+  "stage": "ICEIB2027_R3",
+  "source_directory": "round3",
+  "manuscript": "round3/ICEIB2027_FULL_PAPER.md",
+  "source_template": "round3/PAPER_TEMPLATE.md",
+  "builder": "scripts/iceib2027_r3_build.py",
+  "private_output_names": [
+    "ICEIB2027_FULL_PAPER.docx",
+    "ICEIB2027_FULL_PAPER.pdf"
+  ],
+  "baseline": "User-confirmed current revised PDF; actual8 pages; round2 protected",
+  "native_Word_baseline_SHA256": "297d7b3379a71b7d878f3ff4cc7cad91796e3f16ff8ef1c30a6e52a4691aff37"
 }

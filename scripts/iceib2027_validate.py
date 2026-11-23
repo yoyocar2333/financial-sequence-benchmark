@@ -33,7 +33,10 @@ if __name__=='__main__':
  from iceib2027_active import resolve
  current=resolve(a.bundle)
  if current is not None:
-  from iceib2027_r2_validate import validate as active
+  if (current/'PAPER_TEMPLATE.md').exists():
+   from iceib2027_r3_validate import validate as active
+  else:
+   from iceib2027_r2_validate import validate as active
   r=active(a.repo,current)
  else:r=validate(a.repo,a.bundle)
  if a.report:a.report.parent.mkdir(parents=True,exist_ok=True);a.report.write_text(json.dumps(r,indent=2)+'\n')
