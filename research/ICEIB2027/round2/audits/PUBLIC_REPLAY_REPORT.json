@@ -1,0 +1,9 @@
+{
+  "status": "PASSED",
+  "source_tables_and_manuscript_byte_identical": true,
+  "figures_byte_identical": true,
+  "network": false,
+  "financial_fits": 0,
+  "new_inferential_tests": 0,
+  "template_documents_excluded": true
+}

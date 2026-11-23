@@ -1,0 +1,20 @@
+{
+  "stage": "ICEIB2027_R2",
+  "title": "Diagnosing Apparent Predictive Gains in Financial Machine Learning",
+  "baseline": "User six-page PDF and matching Word; original conference body retained as editorial baseline",
+  "abstract_words": 100,
+  "relative_arithmetic_rows": 73,
+  "source_evidence_rows": 596,
+  "scientific_fits": 0,
+  "new_inferential_tests": 0,
+  "delta_units": "Absolute Brier; table columns \u00d710\u00b3 explicitly scaled",
+  "references": 12,
+  "sections_results": [
+    "4.1 Overview of Experimental Findings",
+    "4.2 Technical Indicators: Representation versus New Information",
+    "4.3 Fundamental Fusion: Calibration versus Information Gain",
+    "4.4 Matched Controls: Does Additional Accounting Information Help?",
+    "4.5 News Density versus Sentiment",
+    "4.6 Cross-Experiment Synthesis"
+  ]
+}

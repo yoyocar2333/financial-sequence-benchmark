@@ -89,4 +89,7 @@ def main(repo,out):
  metadata=dict(title='Explaining Apparent Predictive Gains in Financial Machine Learning',abstract_words=len(abstract.split()),references=len(order),source_claim_rows=len(claims),source_commit='3a1ab2e1695aa28168123223d1d3fc181ae1d913',new_financial_models=0,internal_stage_ids_in_abstract=False)
  (out/'audits/MANUSCRIPT_METADATA.json').write_text(json.dumps(metadata,indent=2)+'\n');print(json.dumps(metadata,indent=2));print('Whitespace words including tables/references',len(text.split()))
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[1]);p.add_argument('--out',type=Path,required=True);a=p.parse_args();main(a.repo,a.out)
+ p=argparse.ArgumentParser();p.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[1]);p.add_argument('--out',type=Path,required=True);a=p.parse_args()
+ from iceib2027_active import resolve,build
+ if resolve(a.repo/'research/ICEIB2027') is not None:build(a.repo,a.out)
+ else:main(a.repo,a.out)

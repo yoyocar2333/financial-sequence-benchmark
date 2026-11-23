@@ -1,3 +1,7 @@
+# Current revision
+
+Current manuscript and CLI generation use round2; see [round2 reproduction](round2/REPRODUCIBILITY.md). The historical instructions below describe the preserved first-round source. Current Word generation requires the actual user six-page Word specified in the round2 baseline record; do not substitute the unedited publisher sample.
+
 # Reproduction scopes
 
 ## Public, offline synthesis

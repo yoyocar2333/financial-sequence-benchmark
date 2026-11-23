@@ -35,3 +35,7 @@ secrets*.json
 research/ICEIB2027/*.docx
 research/ICEIB2027/*.pdf
 research/ICEIB2027/private_template/
+
+# ICEIB round2 publisher-template binaries stay private.
+research/ICEIB2027/round2/*.docx
+research/ICEIB2027/round2/*.pdf

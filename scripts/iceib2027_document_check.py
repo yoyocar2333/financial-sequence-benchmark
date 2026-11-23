@@ -56,4 +56,10 @@ def main(template,bundle,layout):
  result=dict(auxiliary_paragraphs_excluded_from_line_numbering=auxiliary_count,body_line_number_settings_preserved=True,stray_header_footer_line_numbers=0,status='PASSED_FOR_PROFESSOR_REVIEW',formal_submission_status='PENDING_ROUTE_AUTHORS_SYSTEM_FIELDS_AND_NATIVE_FONT_RECHECK',pages=len(pdf),all_pages_include_figures_references_and_backmatter=True,template_styles_byte_equivalent=True,template_geometry_unchanged=True,source_paragraphs_verified=verified,all_scientific_decimal_tokens_in_PDF=True,editable_equations=3,main_data_tables=3,figures=2,references=12,all_fonts_embedded=True,official_font_exact=False,PDF_font_substitution='P052 for unavailable Palatino Linotype; review rendering only',PDF_font_recheck_required=True,Word_preserves_original_inherited_font_sizes=True,public_template_or_formatted_document_distribution=False,replacement_characters=0,page_fields_correct=True,outside_page_text_blocks=0,independent_scientific_or_human_QA=False)
  (layout/'checks/DOCUMENT_VALIDATION.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--template',type=Path,required=True);p.add_argument('--bundle',type=Path,required=True);p.add_argument('--layout',type=Path,required=True);a=p.parse_args();main(a.template,a.bundle,a.layout)
+ p=argparse.ArgumentParser();p.add_argument('--template',type=Path,required=True);p.add_argument('--bundle',type=Path,required=True);p.add_argument('--layout',type=Path,required=True);a=p.parse_args()
+ from iceib2027_active import resolve
+ current=resolve(a.bundle)
+ if current is not None:
+  from iceib2027_r2_document_check import main as active
+  active(a.template,current,a.layout)
+ else:main(a.template,a.bundle,a.layout)

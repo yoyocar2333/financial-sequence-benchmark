@@ -1,0 +1,7 @@
+{
+  "status": "PASSED",
+  "legacy_CLI_resolves_round2": true,
+  "legacy_Word_and_active_Word_XML_identical": true,
+  "baseline_six_page_PDF_and_matching_Word_unchanged": true,
+  "protected_scientific_files_unchanged": 237
+}

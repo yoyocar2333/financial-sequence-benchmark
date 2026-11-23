@@ -28,4 +28,10 @@ def main(bundle):
  fig.tight_layout(pad=.7,w_pad=1);fig.savefig(bundle/'figures/figure2_news_density.png',bbox_inches='tight');plt.close(fig)
  print('Two original figures; all10 fusion settings and fixed news strata retained')
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--bundle',type=Path,required=True);main(p.parse_args().bundle)
+ p=argparse.ArgumentParser();p.add_argument('--bundle',type=Path,required=True);a=p.parse_args()
+ from iceib2027_active import resolve
+ current=resolve(a.bundle)
+ if current is not None:
+  from iceib2027_r2_figures import main as active
+  active(current)
+ else:main(a.bundle)

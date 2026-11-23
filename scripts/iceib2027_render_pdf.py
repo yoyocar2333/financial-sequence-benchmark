@@ -65,4 +65,8 @@ def main(out,program,registry):
   if server.poll() is None:server.terminate()
   log.close()
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--out',type=Path,required=True);p.add_argument('--program',type=Path,required=True);p.add_argument('--registry',type=Path);a=p.parse_args();main(a.out,a.program,a.registry)
+ p=argparse.ArgumentParser();p.add_argument('--out',type=Path,required=True);p.add_argument('--program',type=Path,required=True);p.add_argument('--registry',type=Path);a=p.parse_args()
+ if (a.out/'ICEIB2027_REVISED_FULL_PAPER.docx').exists():
+  from iceib2027_r2_render_pdf import main as active
+  active(a.out,a.program,a.registry)
+ else:main(a.out,a.program,a.registry)

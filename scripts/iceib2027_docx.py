@@ -118,4 +118,10 @@ def main(template,bundle,out):
  record=dict(status='GENERATED_FROM_USER_TEMPLATE',template_sha256=sha(template),template_styles_unchanged=True,template_geometry_unchanged=True,body_font='Palatino Linotype; original inherited Latin size unchanged (LibreOffice effective10pt); native Word validation pending',headings='12pt H1; inherited H2 unchanged',references_font='9pt original style',figures=counts['figures'],tables=counts['tables'],equations=counts['equations'],references=counts['references'],public_distribution_allowed=False)
  (out/'checks/template_generation.json').write_text(json.dumps(record,indent=2)+'\n');print(json.dumps(record,indent=2))
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--template',type=Path,required=True);p.add_argument('--bundle',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args();main(a.template,a.bundle,a.out)
+ p=argparse.ArgumentParser();p.add_argument('--template',type=Path,required=True);p.add_argument('--bundle',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args()
+ from iceib2027_active import resolve
+ current=resolve(a.bundle)
+ if current is not None:
+  from iceib2027_r2_docx import main as active
+  active(a.template,current,a.out)
+ else:main(a.template,a.bundle,a.out)
