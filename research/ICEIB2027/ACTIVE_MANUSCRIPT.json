@@ -1,13 +1,13 @@
 {
-  "stage": "ICEIB2027_R3",
-  "source_directory": "round3",
-  "manuscript": "round3/ICEIB2027_FULL_PAPER.md",
-  "source_template": "round3/PAPER_TEMPLATE.md",
-  "builder": "scripts/iceib2027_r3_build.py",
+  "stage": "ICEIB2027_R4",
+  "source_directory": "round4",
+  "manuscript": "round4/ICEIB2027_FULL_PAPER.md",
+  "source_template": "round4/PAPER_TEMPLATE.md",
+  "builder": "scripts/iceib2027_r4_build.py",
   "private_output_names": [
     "ICEIB2027_FULL_PAPER.docx",
     "ICEIB2027_FULL_PAPER.pdf"
   ],
-  "baseline": "User-confirmed current revised PDF; actual8 pages; round2 protected",
-  "native_Word_baseline_SHA256": "297d7b3379a71b7d878f3ff4cc7cad91796e3f16ff8ef1c30a6e52a4691aff37"
+  "baseline": "Preserved third-round Word/PDF, professor requests1\u201311 and user-confirmed declarations",
+  "native_Word_baseline_SHA256": "b16001a15b21f5bc564497ca3f73c4f45b6ff37afff9ed15843f3c994acd2fc1"
 }

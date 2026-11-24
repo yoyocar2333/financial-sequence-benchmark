@@ -20,13 +20,11 @@ def main(repo,bundle,out,figures=False):
  (out/'audits/PUBLIC_REPLAY_REPORT.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[1]);p.add_argument('--bundle',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--figures',action='store_true');a=p.parse_args()
- from iceib2027_active import resolve
+ from iceib2027_active import resolve,revision
  current=resolve(a.bundle)
  if current is not None:
-  if (current/'PAPER_TEMPLATE.md').exists():
-   from iceib2027_r3_reproduce import main as active
-  else:
-   from iceib2027_r2_reproduce import main as active
+  import importlib
+  active=getattr(importlib.import_module('iceib2027_'+revision(current)+'_reproduce'),'main')
   if (current/'PAPER_TEMPLATE.md').exists():active(a.repo,current,a.out)
   else:active(a.repo,current,a.out,a.figures)
  else:main(a.repo,a.bundle,a.out,a.figures)

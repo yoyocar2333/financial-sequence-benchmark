@@ -57,12 +57,10 @@ def main(template,bundle,layout):
  (layout/'checks/DOCUMENT_VALIDATION.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--template',type=Path,required=True);p.add_argument('--bundle',type=Path,required=True);p.add_argument('--layout',type=Path,required=True);a=p.parse_args()
- from iceib2027_active import resolve
+ from iceib2027_active import resolve,revision
  current=resolve(a.bundle)
  if current is not None:
-  if (current/'PAPER_TEMPLATE.md').exists():
-   from iceib2027_r3_document_check import main as active
-  else:
-   from iceib2027_r2_document_check import main as active
+  import importlib
+  active=getattr(importlib.import_module('iceib2027_'+revision(current)+'_document_check'),'main')
   active(a.template,current,a.layout)
  else:main(a.template,a.bundle,a.layout)

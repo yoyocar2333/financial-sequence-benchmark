@@ -1,5 +1,7 @@
 # ICEIB2027 Conference Paper Preparation
 
+**目前版本：[丁老師建議修訂稿](round4/ICEIB2027_FULL_PAPER.md)、[134字摘要](round4/ABSTRACT.md)、[11點修改對照](round4/PROFESSOR_REVISION_RESPONSE.md)。作者、通訊及聲明已按確認填寫，以下舊稿連結保留為歷史。**
+
 **目前版本：[第三輪科學完整性修訂](round3/ICEIB2027_FULL_PAPER.md)、[30組校準器稽核](round3/CALIBRATION_AUDIT.md)、[版本索引](round3/SOURCE_VERSION_INDEX.md)。保留第二輪為修訂基準；以下第二輪／初輪連結為歷史紀錄。**
 
 **目前版本：[第二輪修訂全文](round2/ICEIB2027_REVISED_FULL_PAPER.md)、[第二輪摘要](round2/ICEIB2027_REVISED_ABSTRACT.md)、[修訂索引](round2/README.md)。實測8頁，正文以第4章整合結果；下列初輪文件保留為歷史紀錄。**

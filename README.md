@@ -111,4 +111,4 @@ python -B scripts/e9a_reproduce.py --bundle research/E9a --out /tmp/e9b_replay_N
 
 ## ICEIB2027 conference preparation
 
-[第三輪英文論文](research/ICEIB2027/round3/ICEIB2027_FULL_PAPER.md)、[摘要](research/ICEIB2027/round3/ABSTRACT.md)、[科學完整性報告](research/ICEIB2027/round3/SCIENTIFIC_COMPLETENESS_REVIEW.md)與[固定版本索引](research/ICEIB2027/round3/SOURCE_VERSION_INDEX.md)。保留Results4.1–4.6與控制架構，補回raw融合恆等式、連續Brier分解、Ridge方法、八項技術主比較及實際校準斜率。30組保存係數直接重現凍結機率，沒有重新擬合或新增p-value。原研究與第二輪264份檔案受保護。模板Word/PDF僅本機交付；原生字型、作者／出版管道仍待確認。ICEIB PR供審閱，不自動合併或投稿。
+[教授建議修訂版](research/ICEIB2027/round4/ICEIB2027_FULL_PAPER.md)、[摘要](research/ICEIB2027/round4/ABSTRACT.md)、[11點修改回覆](research/ICEIB2027/round4/PROFESSOR_REVISION_RESPONSE.md)與[來源重現](research/ICEIB2027/round4/SOURCE_AND_REPRODUCIBILITY.md)。標題採sentence case，摘要134字、前言158字，方法開頭明列貢獻，公式8條，原開發控制章併入2.4；新增兩位作者、NTU單位、通訊及會議資訊與六項聲明。預覽PDF8頁，原字級／邊界保留；291既有研究檔案不變。模板Word/PDF及第三方學長範例僅本機保存，原生字型與最終作者批准仍需投稿前核對。未新增金融訓練、校準選擇或2026驗證；既有PR更新，不自動合併或投稿。

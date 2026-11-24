@@ -30,13 +30,11 @@ def validate(repo,bundle):
 if __name__=='__main__':
  import argparse
  p=argparse.ArgumentParser();p.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[1]);p.add_argument('--bundle',type=Path,required=True);p.add_argument('--report',type=Path);a=p.parse_args()
- from iceib2027_active import resolve
+ from iceib2027_active import resolve,revision
  current=resolve(a.bundle)
  if current is not None:
-  if (current/'PAPER_TEMPLATE.md').exists():
-   from iceib2027_r3_validate import validate as active
-  else:
-   from iceib2027_r2_validate import validate as active
+  import importlib
+  active=getattr(importlib.import_module('iceib2027_'+revision(current)+'_validate'),'validate')
   r=active(a.repo,current)
  else:r=validate(a.repo,a.bundle)
  if a.report:a.report.parent.mkdir(parents=True,exist_ok=True);a.report.write_text(json.dumps(r,indent=2)+'\n')

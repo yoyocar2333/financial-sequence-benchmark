@@ -1,0 +1,16 @@
+{
+  "review_type": "Assistant layout inspection; not independent human scientific QA",
+  "final_pages_inspected": [1,2,3,4,5,6,7,8],
+  "page_count_includes_declarations_and_references": 8,
+  "template_styles_fonts_and_geometry_preserved": true,
+  "sentence_case_title_and_two_authors_checked": true,
+  "provided_affiliation_correspondence_and_conference_text_checked": true,
+  "eight_complete_equations": true,
+  "four_unsplit_data_tables": true,
+  "single_design_figure_readable": true,
+  "all_six_declarations_present": true,
+  "data_availability_paragraph_left_aligned_for_URL_readability": true,
+  "grouping_equation_subscripts_visually_correct": true,
+  "extra_footer_3": false,
+  "native_Palatino_export_still_requires_final_check": true
+}

@@ -1,0 +1,6 @@
+{
+  "status": "PASSED",
+  "legacy_build_resolves_latest": true,
+  "legacy_docx_resolves_latest": true,
+  "manuscript_and_Word_XML_identical": true
+}
