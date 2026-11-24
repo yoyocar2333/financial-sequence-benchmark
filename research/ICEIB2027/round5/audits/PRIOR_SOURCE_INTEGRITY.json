@@ -1,0 +1,10 @@
+{
+  "status": "PASSED",
+  "baseline_commit": "d1f2d8b6c33e87582fe76ed3e26e2dfe5d1fcbe1",
+  "files_checked": 541,
+  "comparison": "Exact bytes vs Git objects of all prior research/E* and conference round2/3/4 files, plus R4 code",
+  "new_financial_training": 0,
+  "new_calibrator_fits": 0,
+  "new_pvalues": 0,
+  "financial2026_evaluations": 0
+}

@@ -14,7 +14,7 @@ def revision(bundle):
   p=Path(bundle)/name
   if p.exists():
    stage=json.loads(p.read_text()).get('stage','')
-   if stage in ['ICEIB2027_R2','ICEIB2027_R3','ICEIB2027_R4']:return stage.rsplit('_',1)[-1].lower()
+   if stage in ['ICEIB2027_R2','ICEIB2027_R3','ICEIB2027_R4','ICEIB2027_R5']:return stage.rsplit('_',1)[-1].lower()
  return 'r2'
 
 def build(repo,out):

@@ -111,4 +111,4 @@ python -B scripts/e9a_reproduce.py --bundle research/E9a --out /tmp/e9b_replay_N
 
 ## ICEIB2027 conference preparation
 
-[教授建議修訂版](research/ICEIB2027/round4/ICEIB2027_FULL_PAPER.md)、[摘要](research/ICEIB2027/round4/ABSTRACT.md)、[11點修改回覆](research/ICEIB2027/round4/PROFESSOR_REVISION_RESPONSE.md)與[來源重現](research/ICEIB2027/round4/SOURCE_AND_REPRODUCIBILITY.md)。標題採sentence case，摘要134字、前言158字，方法開頭明列貢獻，公式8條，原開發控制章併入2.4；新增兩位作者、NTU單位、通訊及會議資訊與六項聲明。預覽PDF8頁，原字級／邊界保留；291既有研究檔案不變。模板Word/PDF及第三方學長範例僅本機保存，原生字型與最終作者批准仍需投稿前核對。未新增金融訓練、校準選擇或2026驗證；既有PR更新，不自動合併或投稿。
+[教授補充修訂版](research/ICEIB2027/round5/ICEIB2027_FULL_PAPER.md)、[194字獨立摘要](research/ICEIB2027/round5/ABSTRACT.md)、[三項建議核對](research/ICEIB2027/round5/PROFESSOR_FOLLOWUP_RESPONSE.md)與[來源重現](research/ICEIB2027/round5/README.md)。Introduction/Related Work擴充為244字，2.4開發控制與統計評估保留，融合主表補齊Logistic、XGBoost、LightGBM、LSTM、Mamba十組設定。全文8頁、獨立摘要1頁；原字級／樣式／邊界保留，架構圖移補充材料。原始數值、校準器、檢定與前版不變，未新增金融訓練或2026評估。模板Word/PDF與學長範例私有保存；原生字型、投稿管道及作者最終批准仍需核對。更新PR #11，不合併或投稿。

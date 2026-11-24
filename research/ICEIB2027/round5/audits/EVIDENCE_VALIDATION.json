@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "abstract_words": 194,
+  "introduction_words": 244,
+  "previous_abstract_words": 134,
+  "previous_introduction_words": 158,
+  "Section_2_4_present": true,
+  "technical_primary_contrasts": 8,
+  "raw_fusion_contrasts": 10,
+  "calibrated_fusion_contrasts": 10,
+  "matched_tree_contrasts": 6,
+  "all_five_expert_families_in_main_fusion_table": true,
+  "source_byte_reproduced": true,
+  "prior_R4_validation": "PASSED",
+  "original_equations_references_and_declarations_unchanged": true,
+  "new_model_fits": 0,
+  "new_calibrator_fits": 0,
+  "new_pvalues": 0,
+  "financial2026_evaluations": 0
+}
