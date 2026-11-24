@@ -1,0 +1,9 @@
+{
+  "stage": "ICEIB2027_R5",
+  "date": "2026-11-25",
+  "baseline_pages": 8,
+  "baseline_Word_sha256": "f3b04e5bcce8214f32d285afe259a761afb64fbe99c6696a212775b78efb4ae8",
+  "baseline_PDF_sha256": "3e6f2a85add86ce47f36c06e076f81ef83431be1e411bcb98ed2374312d25aa5",
+  "source_commit": "d1f2d8b6c33e87582fe76ed3e26e2dfe5d1fcbe1",
+  "scientific_evidence_commit": "6f29a9f8375b21ac2894878aa424f12b8d6fa138"
+}

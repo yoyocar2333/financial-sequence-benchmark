@@ -1,0 +1,18 @@
+{
+  "stage": "ICEIB2027_R5",
+  "abstract_words": 194,
+  "main_tables": 4,
+  "main_figures": 0,
+  "editable_equations": 8,
+  "references": 12,
+  "calibration_rows": 30,
+  "pipelines": 6,
+  "financial_fits": 0,
+  "calibrator_fits": 0,
+  "new_pvalues": 0,
+  "evidence_commit": "6f29a9f8375b21ac2894878aa424f12b8d6fa138",
+  "introduction_words": 244,
+  "fusion_settings": 10,
+  "standalone_abstract": true,
+  "supplementary_design_figures": 1
+}

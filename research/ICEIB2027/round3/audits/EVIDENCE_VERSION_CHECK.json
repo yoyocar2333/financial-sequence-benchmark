@@ -1,0 +1,8 @@
+{
+  "status": "PASSED",
+  "evidence_commit": "6f29a9f8375b21ac2894878aa424f12b8d6fa138",
+  "real_reachable_Git_commit": true,
+  "final_scientific_tables_and_code_match_pinned_commit": 12,
+  "final_manuscript_difference": "Version citation and rendering records only; scientific tables and code unchanged",
+  "invented_DOI": false
+}

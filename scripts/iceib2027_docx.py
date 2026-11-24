@@ -17,6 +17,16 @@ def add_field(p,instruction,rpr=None):
   if kind=='fldChar':e.set(qn('w:fldCharType'),tag)
   else:e.set(qn('xml:space'),'preserve');e.text=' '+instruction+' '
   r._r.append(e)
+def suppress_auxiliary_line_numbers(doc):
+ """Headers/footers are excluded; keep the section's body line-number setting."""
+ for sec in doc.sections:
+  for name in ['header','even_page_header','first_page_header','footer','even_page_footer','first_page_footer']:
+   for p in getattr(sec,name)._element.iter(qn('w:p')):
+    pr=p.get_or_add_pPr();flag=pr.find(qn('w:suppressLineNumbers'))
+    if flag is None:
+     flag=OxmlElement('w:suppressLineNumbers');pr.insert_element_before(flag,'w:pBdr','w:shd','w:tabs','w:spacing','w:ind','w:jc','w:rPr')
+    flag.set(qn('w:val'),'1')
+
 def main(template,bundle,out):
  repo=Path(__file__).resolve().parents[1]
  if (repo/'.git').exists() and (repo==out.resolve() or repo in out.resolve().parents):raise ValueError('Template documents require private output outside this public Git checkout')
@@ -100,6 +110,7 @@ def main(template,bundle,out):
    line=re.sub(r'^\d+\.\s*','',line);p=doc.add_paragraph(line,'MDPI_8.1_references');counts['references']+=1;continue
   style='MDPI_1.7_abstract' if mode=='abstract' else 'MDPI_6.2_back_matter' if mode=='back' else 'MDPI_3.1_text'
   doc.add_paragraph(line,style)
+ suppress_auxiliary_line_numbers(doc)
  assert doc.styles.element.xml==styles,'Do not modify template font or paragraph style definitions'
  # Header/footer references may be renumbered by python-docx, but page/column geometry stays unchanged.
  setting=OxmlElement('w:updateFields');setting.set(qn('w:val'),'true');doc.settings.element.append(setting)
@@ -107,4 +118,11 @@ def main(template,bundle,out):
  record=dict(status='GENERATED_FROM_USER_TEMPLATE',template_sha256=sha(template),template_styles_unchanged=True,template_geometry_unchanged=True,body_font='Palatino Linotype; original inherited Latin size unchanged (LibreOffice effective10pt); native Word validation pending',headings='12pt H1; inherited H2 unchanged',references_font='9pt original style',figures=counts['figures'],tables=counts['tables'],equations=counts['equations'],references=counts['references'],public_distribution_allowed=False)
  (out/'checks/template_generation.json').write_text(json.dumps(record,indent=2)+'\n');print(json.dumps(record,indent=2))
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--template',type=Path,required=True);p.add_argument('--bundle',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args();main(a.template,a.bundle,a.out)
+ p=argparse.ArgumentParser();p.add_argument('--template',type=Path,required=True);p.add_argument('--bundle',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args()
+ from iceib2027_active import resolve,revision
+ current=resolve(a.bundle)
+ if current is not None:
+  import importlib
+  active=getattr(importlib.import_module('iceib2027_'+revision(current)+'_docx'),'main')
+  active(a.template,current,a.out)
+ else:main(a.template,a.bundle,a.out)

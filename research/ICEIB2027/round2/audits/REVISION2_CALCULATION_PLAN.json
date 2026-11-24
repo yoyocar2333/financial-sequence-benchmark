@@ -1,0 +1,21 @@
+{
+  "locked_utc": "2026-11-23T11:32:14.444976+00:00",
+  "scope": "Editorial revision and deterministic arithmetic from frozen aggregates; no financial fit or new inferential test",
+  "difference": "delta = Brier_reference - Brier_candidate; positive improves",
+  "relative_percent": "100 * delta / Brier_reference, using unrounded same-cohort scores",
+  "confidence_intervals": "Retain source absolute pointwise intervals and source correction family. Do not turn relative arithmetic into a new interval/test.",
+  "sets": [
+    "All8technical primary comparisons",
+    "All10stock/expert raw and calibrated fusion-vs-same-weight-constant settings, original20family tests and existingblock60 intervals",
+    "All12development controls, complete6LR+6tree, all20/60/120sensitivities; same-stock/calendar pooled baseline exactly as source",
+    "News all8models and nested density/sentiment comparisons; historical-prior contrast descriptive only"
+  ],
+  "prohibitions": [
+    "No newp-values",
+    "No new training",
+    "No2026financial labels or protocol execution",
+    "No cross-cohort score ranking",
+    "No causal attribution share or profit conversion"
+  ],
+  "baseline_record_sha256": "70f404e21fecae858f5d7c7d208e50ea5d6c64f2afd409db37a7495fe1c19bfd"
+}

@@ -29,6 +29,13 @@ def validate(repo,bundle):
  return dict(status='PASSED',source_cells=272,abstract_words=100,references=12,main_tables=3,main_figures=2,editable_equations=3,financial_model_fits=0,PIT_certification=False,independent_manual_QA=False,E3c2026_executed=False)
 if __name__=='__main__':
  import argparse
- p=argparse.ArgumentParser();p.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[1]);p.add_argument('--bundle',type=Path,required=True);p.add_argument('--report',type=Path);a=p.parse_args();r=validate(a.repo,a.bundle)
+ p=argparse.ArgumentParser();p.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[1]);p.add_argument('--bundle',type=Path,required=True);p.add_argument('--report',type=Path);a=p.parse_args()
+ from iceib2027_active import resolve,revision
+ current=resolve(a.bundle)
+ if current is not None:
+  import importlib
+  active=getattr(importlib.import_module('iceib2027_'+revision(current)+'_validate'),'validate')
+  r=active(a.repo,current)
+ else:r=validate(a.repo,a.bundle)
  if a.report:a.report.parent.mkdir(parents=True,exist_ok=True);a.report.write_text(json.dumps(r,indent=2)+'\n')
  print(json.dumps(r,indent=2))

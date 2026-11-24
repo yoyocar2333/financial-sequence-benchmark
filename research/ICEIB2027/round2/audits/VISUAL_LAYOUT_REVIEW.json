@@ -1,0 +1,13 @@
+{
+  "reviewer_type": "Assistant visual layout inspection, not independent human scientific QA",
+  "pages_visually_inspected": [1,2,3,4,5,6,7,8],
+  "pages_including_references": 8,
+  "findings_corrected": ["Overlong equation2 clipped inside its cell; abbreviated ref/candidate symbols preserve the formula", "Orphan method headings at first-page bottom; paragraph keep-with-next applied"],
+  "final_math_equations_complete": true,
+  "data_tables_split": false,
+  "figures_include_zero_and_existing_uncertainty": true,
+  "body_template_styles_and_geometry_preserved": true,
+  "auxiliary_rogue_line_number": false,
+  "remaining_submission_dependencies": ["Native Palatino font export and page-count recheck", "Author/affiliation/correspondence/declarations", "Publication route and submission system fields"],
+  "independent_manual_research_QA": false
+}

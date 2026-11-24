@@ -1,0 +1,10 @@
+{
+  "stage": "ICEIB2027_R4",
+  "date": "2026-11-24",
+  "reason": "Professor revision requests1\u201311",
+  "baseline_pages": 8,
+  "baseline_PDF_sha256": "c28215fe3c129ec785ddb788334d0a2638c0152ea1f9726dc79d8fda2344cb42",
+  "baseline_Word_sha256": "b16001a15b21f5bc564497ca3f73c4f45b6ff37afff9ed15843f3c994acd2fc1",
+  "source_commit": "0ab251fe002b4c61eb25da8756d6db43062608b8",
+  "scientific_evidence_commit": "6f29a9f8375b21ac2894878aa424f12b8d6fa138"
+}

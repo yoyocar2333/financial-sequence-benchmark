@@ -111,4 +111,4 @@ python -B scripts/e9a_reproduce.py --bundle research/E9a --out /tmp/e9b_replay_N
 
 ## ICEIB2027 conference preparation
 
-[100字英文摘要](research/ICEIB2027/ICEIB2027_ABSTRACT_DRAFT.md)、[三個標題](research/ICEIB2027/ICEIB2027_TITLE_OPTIONS.md)、[完整英文正文](research/ICEIB2027/ICEIB2027_FULL_PAPER.md)與[準備索引](research/ICEIB2027/README.md)承接最新E9b。官方模板審閱版實測7頁，三表兩圖；因MDPI模板使用條款，模板及模板版Word/PDF只保留本機，不在GitHub張貼。作者、出版管道、表單欄位與原生字型仍待確認。本輪未投稿／付款／新增金融訓練，PR供審閱不自動合併。
+[教授補充修訂版](research/ICEIB2027/round5/ICEIB2027_FULL_PAPER.md)、[194字獨立摘要](research/ICEIB2027/round5/ABSTRACT.md)、[三項建議核對](research/ICEIB2027/round5/PROFESSOR_FOLLOWUP_RESPONSE.md)與[來源重現](research/ICEIB2027/round5/README.md)。Introduction/Related Work擴充為244字，2.4開發控制與統計評估保留，融合主表補齊Logistic、XGBoost、LightGBM、LSTM、Mamba十組設定。全文8頁、獨立摘要1頁；原字級／樣式／邊界保留，架構圖移補充材料。原始數值、校準器、檢定與前版不變，未新增金融訓練或2026評估。模板Word/PDF與學長範例私有保存；原生字型、投稿管道及作者最終批准仍需核對。更新PR #11，不合併或投稿。

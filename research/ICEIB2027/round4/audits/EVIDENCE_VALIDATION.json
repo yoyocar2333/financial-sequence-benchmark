@@ -1,0 +1,22 @@
+{
+  "status": "PASSED",
+  "protected_scientific_and_prior_revision_files": 291,
+  "abstract_words": 134,
+  "prior_abstract_words": 100,
+  "introduction_words": 158,
+  "prior_introduction_words": 41,
+  "author_metadata_user_confirmed": true,
+  "six_required_declarations_present": true,
+  "senior_example_grant_or_roles_reused": false,
+  "main_tables": 4,
+  "main_figures": 1,
+  "equations": 8,
+  "references": 12,
+  "all_scientific_results_unchanged": true,
+  "source_byte_reproduced": true,
+  "financial_fits": 0,
+  "calibrator_fits": 0,
+  "new_pvalues": 0,
+  "E3c2026_executed": false,
+  "independent_human_QA": false
+}

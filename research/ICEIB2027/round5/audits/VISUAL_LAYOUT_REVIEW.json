@@ -1,0 +1,15 @@
+{
+  "review_date": "2026-11-25",
+  "pages_visually_inspected": 8,
+  "standalone_abstract_pages_visually_inspected": 1,
+  "inspection": "Assistant visual review of rendered pages; not independent author approval",
+  "tables": 4,
+  "main_figures": 0,
+  "supplementary_diagram": 1,
+  "equations": 8,
+  "references": 12,
+  "body_font_or_margin_reduction": false,
+  "outside_page_text": false,
+  "table_split": false,
+  "font_fallback": "P052; native Palatino export pending"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASSED",
+  "pipelines": 6,
+  "per_seed_rows": 30,
+  "slopes_replayed_without_refit": true,
+  "max_probability_error": 2.220446049250313e-16,
+  "per_seed_Brier_AUC_SD_match_E9b": true,
+  "per_seed_decomposition_match_E9b": true,
+  "within_state_matches_source_where_available": true,
+  "strict_monotonic_auc_verified": true,
+  "new_financial_or_calibrator_fits": 0,
+  "new_pvalues": 0,
+  "latest_evaluation_label": "2025-12-09"
+}

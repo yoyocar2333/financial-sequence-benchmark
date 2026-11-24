@@ -1,0 +1,12 @@
+{
+  "revision": "ICEIB2027 round2",
+  "date": "2026-11-23",
+  "PDF_pages": 6,
+  "PDF_sha256": "e088c1090e78ea8e4d3714bc8503916375623e285694fc05e041f000aeb2d45e",
+  "Word_sha256": "0435ab6f50a61dc311bcda094133bc92f770ef382e37b84147ef9ce51299a31a",
+  "Word_exporter": "Microsoft Word2021",
+  "baseline_author": "Hsieh Hao-Hsuan",
+  "baseline_origin": "User-provided local current files; human-updated front matter and native Word rendering",
+  "published_source_commit": "2d44284d9d4b15674c28dbbb5a66e99813be34b2",
+  "older_working_paper_used_only_for_evidence_lookup": true
+}

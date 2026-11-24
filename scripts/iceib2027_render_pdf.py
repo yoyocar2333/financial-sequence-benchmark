@@ -65,4 +65,16 @@ def main(out,program,registry):
   if server.poll() is None:server.terminate()
   log.close()
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--out',type=Path,required=True);p.add_argument('--program',type=Path,required=True);p.add_argument('--registry',type=Path);a=p.parse_args();main(a.out,a.program,a.registry)
+ p=argparse.ArgumentParser();p.add_argument('--out',type=Path,required=True);p.add_argument('--program',type=Path,required=True);p.add_argument('--registry',type=Path);a=p.parse_args()
+ marker=a.out/'checks/template_generation.json'
+ import json
+ if marker.exists() and json.loads(marker.read_text()).get('baseline_is_current_round3_Word'):
+  from iceib2027_r4_render_pdf import main as active
+  active(a.out,a.program,a.registry)
+ elif marker.exists() and json.loads(marker.read_text()).get('baseline_is_current_round2_Word'):
+  from iceib2027_r3_render_pdf import main as active
+  active(a.out,a.program,a.registry)
+ elif (a.out/'ICEIB2027_REVISED_FULL_PAPER.docx').exists():
+  from iceib2027_r2_render_pdf import main as active
+  active(a.out,a.program,a.registry)
+ else:main(a.out,a.program,a.registry)

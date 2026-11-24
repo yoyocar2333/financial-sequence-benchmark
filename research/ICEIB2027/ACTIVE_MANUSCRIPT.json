@@ -1,0 +1,16 @@
+{
+  "stage": "ICEIB2027_R5",
+  "source_directory": "round5",
+  "manuscript": "round5/ICEIB2027_FULL_PAPER.md",
+  "source_template": "round5/PAPER_TEMPLATE.md",
+  "builder": "scripts/iceib2027_r5_build.py",
+  "private_output_names": [
+    "ICEIB2027_FULL_PAPER.docx",
+    "ICEIB2027_FULL_PAPER.pdf",
+    "ICEIB2027_ABSTRACT_ONLY.docx",
+    "ICEIB2027_ABSTRACT_ONLY.pdf",
+    "ICEIB2027_ABSTRACT_ONLY.txt"
+  ],
+  "baseline": "Preserved R4 professor version; supplemental requests on abstract, development controls and tree models",
+  "native_Word_baseline_SHA256": "f3b04e5bcce8214f32d285afe259a761afb64fbe99c6696a212775b78efb4ae8"
+}

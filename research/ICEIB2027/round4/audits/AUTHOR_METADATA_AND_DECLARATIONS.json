@@ -1,0 +1,17 @@
+{
+  "authors": "Hsieh Hao-Hsuan and Jian-Jiun Ding *",
+  "affiliation": "Graduate Institute of Communication Engineering, National Taiwan University, Taipei 106319, Taiwan;",
+  "correspondence": "* correspondence: jjding@ntu.edu.tw; Tel.: +886-3-33669652",
+  "conference": "\u2020 7th International Conference on Electronic Communications, Internet of Things and Big Data 2027 (ICEIB 2027). April 23-25, 2027, Tamkang University",
+  "funding": "No external funding; user confirmed",
+  "conflicts": "No conflicts; user confirmed",
+  "roles": {
+    "Hsieh Hao-Hsuan": "Investigation and experiments; user confirmed",
+    "Jian-Jiun Ding": "Supervision; user confirmed"
+  },
+  "final_author_approval": "Must be obtained before submission; not asserted as already granted",
+  "senior_reference_file": "User-provided private \u5b78\u9577\u8ad6\u6587.docx; formatting example only",
+  "senior_reference_SHA256": "87156b01bf389052c22552eccff326f98d83d9357b9bdaae567b7500174a2fe2",
+  "senior_grant_and_roles_copied": false,
+  "phone_and_conference_text": "Preserved as explicitly provided by professor/user; not independently substituted"
+}
